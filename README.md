@@ -17,12 +17,21 @@ Please provide quotes and time frames to complete each project.
 9. Install new slider
 
 
-Speed Up and Optimization Project  
+###Speed Up and Optimization Project  
 
+     [GTMetrix December 31st, 2014 Progress Report](http://gtmetrix.com/reports/dankstop.com/JhnQ1mix)
      Page load time: 5.62s  
      Total page size: 15.4MB  
      Total number of requests: 95  
 
+####List of Objectives for Site Speedup Project
+1. Reduce page load time  
+2. Reduce page requests  
+3. Reduce page sizes  
+4. Acheive a generally faster and smoother loading experience, on both desktop and mobile
+
+
+####List of Tasks for Site Speedup Project
 1. Optimize, scale and specify size for all front page images  
 2. Optimize, scale, and specify size for all product images (over 500+)  
 3. Create image sprite for small images and icons  
@@ -38,7 +47,8 @@ Speed Up and Optimization Project
 13. Minify JavaScript  
 14. Minify CSS  
 15. Remove query strings from static resources  
-16. 
+16. Make fewer HTTP requests  
+17. Use a Content Delivery Network (CDN) (possible or necessary?)  
 
 
 
