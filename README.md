@@ -18,11 +18,16 @@ Please provide quotes and time frames to complete each project.
 
 
 Speed Up and Optimization Project  
-1. Optimize all images  
-2. Clean up code  
+1. Optimize front page images  
+2. Clean up header code  
 3. Install gzip  
 4. Eliminate all or reduce HTML errors as according to W3C  
-5.    
+5. Investigate and Fix Pre-slider loading issue
+6. Optimize all product images (over 500+)
+7. Combine all custom JavaScript into custom.js
+8. Clean up footer code
+9. Make sure all JS loads properly
+10. 
 
 
 
