@@ -26,9 +26,9 @@ Speed Up and Optimization Project
 
 
 General questions:  
-1. Will everything work perfectly when the code is turned over to us?  
-2. How do you handle bugs that appear/popup in the future?   
-3. What guarantee/warranty would we get on your work and for hold long?  
+1. Is it possible there will be unforseen bugs in the code and how is this handled going forward?
+2. How do you handle bugs that appear/popup in the future due to updates in template or something of that nature?   
+3. What guarantee/warranty do you give on your work and for hold long?  
 
 
 ## Other BigCommerce modules
