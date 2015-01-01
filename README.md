@@ -11,7 +11,8 @@ List of Projects
 3. Product Page Videos  
 4. Category Page Videos  
 5. Product Page Descriptions
-6. 
+6. Category Page Out of Stock script
+7. 
 
 
 Speed Up and Optimization Project  
