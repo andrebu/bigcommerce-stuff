@@ -5,14 +5,16 @@ BigCommerce Projects - Plugins, Addons, Extensions, Features, and Custom Code fo
 
 Please provide quotes and time frames to complete each project.
 
-List of Projects  
+##List of Projects  
 1. Color Swatch on Category Pages  
 2. Alternate Thumbnail Images on Hover  
 3. Product Page Videos  
-4. Category Page Videos  
+4. Category Page Videos (is it extra for Brand pages?)  
 5. Product Page Brand Descriptions  
 6. Category Page Out of Stock script  
-7. 
+7. Custom Field 1 + 2 appear on right in a table
+8. Fix resizing issue on category pages when using BC admin panel "Show Newest" option
+9. 
 
 
 Speed Up and Optimization Project  
