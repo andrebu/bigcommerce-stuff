@@ -19,13 +19,11 @@ Please provide quotes and time frames to complete each project.
 
 ###Speed Up and Optimization Project  
 
-- [GTMetrix December 31st, 2014 Progress Report](http://gtmetrix.com/reports/dankstop.com/JhnQ1mix) - [PDF Version](https://github.com/iamandrebulatov/BigCommerce-Projects/blob/master/GTmetrix-report-dankstop.com-20141231T210004-eeLmiznt-full.pdf)
+| Date | Page Speed | YSlow | Page Load | Page Size | # of Requests |
+| --- | --- | --- | --- | --- | --- |
+| 12/31/2014 | C - 72% | C - 74% | 6.34s | 15.4MB | 102 |
 
-| Page Speed Grade: 72% | CYSlow Grade: 74% |
-
-     Page load time: 5.62s  
-     Total page size: 15.4MB  
-     Total number of requests: 95  
+> [GTMetrix December 31st, 2014 Progress Report](http://gtmetrix.com/reports/dankstop.com/eeLmiznt) - [PDF Version](https://github.com/iamandrebulatov/BigCommerce-Projects/blob/master/GTmetrix-report-dankstop.com-20141231T210004-eeLmiznt-full.pdf)
 
 ####List of Objectives for Site Speedup Project
 1. Reduce page load time  
@@ -56,7 +54,7 @@ Please provide quotes and time frames to complete each project.
 
 
 
-General questions:  
+###General questions:  
 1. Is it possible there will be unforseen bugs in the code and how is this handled going forward?
 2. How do you handle bugs that appear/popup in the future due to updates in template or something of that nature?   
 3. What guarantee/warranty do you give on your work and for hold long?  
