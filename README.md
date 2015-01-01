@@ -14,20 +14,31 @@ Please provide quotes and time frames to complete each project.
 6. Category Page Out of Stock script  
 7. Custom Field 1 + 2 appear on right in a table
 8. Fix resizing issue on category pages when using BC admin panel "Show Newest" option
-9. 
+9. Install new slider
 
 
 Speed Up and Optimization Project  
-1. Optimize front page images  
-2. Clean up header code  
-3. Install gzip  
+
+     Page load time: 5.62s  
+     Total page size: 15.4MB  
+     Total number of requests: 95  
+
+1. Optimize, scale and specify size for all front page images  
+2. Optimize, scale, and specify size for all product images (over 500+)  
+3. Create image sprite for small images and icons  
 4. Eliminate all or reduce HTML errors as according to W3C  
-5. Investigate and Fix Pre-slider loading issue
-6. Optimize all product images (over 500+)
-7. Combine all custom JavaScript into custom.js
-8. Clean up footer code
-9. Make sure all JS loads properly
-10. 
+5. Investigate and Fix Pre-slider loading issue  
+6. Clean up header code  
+7. Clean up footer code  
+8. Combine all custom JavaScript into custom.js  
+9. Defer parsing of JS / Make sure all JS loads properly  
+10. Optimize the order of styles and scripts  
+11. Completely change "Age Verify" banner style and behavior  
+12. Install gzip  
+13. Minify JavaScript  
+14. Minify CSS  
+15. Remove query strings from static resources  
+16. 
 
 
 
