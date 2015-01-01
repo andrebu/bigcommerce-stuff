@@ -19,11 +19,10 @@ Please provide quotes and time frames to complete each project.
 
 ###Speed Up and Optimization Project  
 
-| Date | Page Speed | YSlow | Page Load | Page Size | # of Requests |
-| --- | --- | --- | --- | --- | --- |
-| 12/31/2014 | C - 72% | C - 74% | 6.34s | 15.4MB | 102 |
+| Date | Page Speed | YSlow | Page Load | Page Size | # of Requests | Link |
+| --- | --- | --- | --- | --- | --- | --- |
+| 12/31/2014 | C - 72% | C - 74% | 6.34s | 15.4MB | 102 | [Site](http://gtmetrix.com/reports/dankstop.com/eeLmiznt) - [PDF](https://github.com/iamandrebulatov/BigCommerce-Projects/blob/master/GTmetrix-report-dankstop.com-20141231T210004-eeLmiznt-full.pdf)
 
-> [GTMetrix December 31st, 2014 Progress Report](http://gtmetrix.com/reports/dankstop.com/eeLmiznt) - [PDF Version](https://github.com/iamandrebulatov/BigCommerce-Projects/blob/master/GTmetrix-report-dankstop.com-20141231T210004-eeLmiznt-full.pdf)
 
 ####List of Objectives for Site Speedup Project
 1. Reduce page load time  
