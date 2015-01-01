@@ -10,8 +10,8 @@ List of Projects
 2. Alternate Thumbnail Images on Hover  
 3. Product Page Videos  
 4. Category Page Videos  
-5. Product Page Descriptions
-6. Category Page Out of Stock script
+5. Product Page Brand Descriptions  
+6. Category Page Out of Stock script  
 7. 
 
 
