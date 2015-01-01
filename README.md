@@ -19,7 +19,10 @@ Please provide quotes and time frames to complete each project.
 
 ###Speed Up and Optimization Project  
 
-     [GTMetrix December 31st, 2014 Progress Report](http://gtmetrix.com/reports/dankstop.com/JhnQ1mix)
+- [GTMetrix December 31st, 2014 Progress Report](http://gtmetrix.com/reports/dankstop.com/JhnQ1mix) - [PDF Version](https://github.com/iamandrebulatov/BigCommerce-Projects/blob/master/GTmetrix-report-dankstop.com-20141231T210004-eeLmiznt-full.pdf)
+
+| Page Speed Grade: 72% | CYSlow Grade: 74% |
+
      Page load time: 5.62s  
      Total page size: 15.4MB  
      Total number of requests: 95  
