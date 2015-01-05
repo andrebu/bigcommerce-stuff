@@ -70,4 +70,6 @@ Please provide quotes and time frames to complete each project.
 * [BigCommerce Category Page Videos](https://github.com/iamandrebulatov/BC-Category-Page-Demo-Videos)
 * [BigCommerce Category Page Out of Stock Ribbons](https://github.com/iamandrebulatov/BC-Category-Page-Out-of-Stock-Items)
 
-###Are commits on branches recorded in the commit log and count?
+###Resources and Inspiration
+
+- [Killer BigCommerce Tips and Tricks](http://www.onlinestorecreation.com/bigcommerce-tips-tricks.html)
