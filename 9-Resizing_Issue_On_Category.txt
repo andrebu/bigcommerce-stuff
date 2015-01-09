@@ -6,6 +6,6 @@ The issue is with Masonry plugin.
 Must deactive via  
 
 ```javascript
-  $('.ProductList').masonry( 'destroy' );
+  $('.ProductList').masonry().masonry( 'destroy' );
 ```
 
