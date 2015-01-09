@@ -37,8 +37,10 @@ Please provide quotes and time frames to complete each project.
 -- The slider on front page only allows up to 4-6 images.  We want a new slider installed that has similar features but will allow many more images (up to 10 or more)
 
 11.  **Implement swipeable "next" and "Prev" actions on Product Page images**  
--- On mobile product pages, the images must be selected by clicking the dots beneath the image.  We want the image to be changeable when a person swipes left or right on the image, bringing up the next or previous image in the list of images.
+-- On mobile product pages, the images must be selected by clicking the dots beneath the image.  We want the image to be changeable when a person swipes left or right on the image, bringing up the next or previous image in the list of images.   
 
+12.  **Fix MagicZoom and the conflict it causes with video**  
+-- messes up javascript.... breaks it because much of the jQuery-dependent JS written for the ProductThumb gets messed up due to "Undefined TypeError" cuases by missing HTML elements such as <div class="ProductThumb">
 
 
 ###Speed Up and Optimization Project  
