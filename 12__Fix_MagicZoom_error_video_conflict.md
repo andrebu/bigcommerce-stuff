@@ -1,4 +1,4 @@
-1.  Changed  **for product.html**
+1. Changed  **for product.html**
 ```HTML  
 %%Panel.HTMLHead%%
     <body class="productPage">
@@ -22,7 +22,8 @@ to
 ```
 
 
-2.  Changed  **for Snippets/ProductThumbImage.html **
+
+2. Changed  **for Snippets/ProductThumbImage.html **
 
 ```HTML  
 <div class="ProductThumbImage">
@@ -51,7 +52,8 @@ to
 ```
 
 
-3.  Changed  ** **
+
+3. Changed  **for Snippets/ProductTinyImage.html**
 
 ```HTML  
 <li style = "height:%%GLOBAL_ProductTinyBoxHeight%%px; width:%%GLOBAL_ProductTinyBoxWidth%%px;" id="TinyImageBox_%%GLOBAL_ProductThumbIndex%%" onclick="%%GLOBAL_TinyImageOverJavascript%%" class="prodThumbImage"> 
