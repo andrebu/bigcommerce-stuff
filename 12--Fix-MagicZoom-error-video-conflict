@@ -49,3 +49,32 @@ to
 
 <div id="productDemoVideo" class="%%GLOBAL_ProductId%%"></div>
 ```
+
+
+3.  Changed  ** **
+
+```HTML  
+<li style = "height:%%GLOBAL_ProductTinyBoxHeight%%px; width:%%GLOBAL_ProductTinyBoxWidth%%px;" id="TinyImageBox_%%GLOBAL_ProductThumbIndex%%" onclick="%%GLOBAL_TinyImageOverJavascript%%" class="prodThumbImage"> 
+    <!-- onmouseover="%%GLOBAL_TinyImageOverJavascript%%"  --> <!-- onclick="%%GLOBAL_TinyImageClickJavascript%%" -->
+
+    <div class="TinyOuterDiv" style = "height:%%GLOBAL_ProductMaxTinyHeight%%px; width:%%GLOBAL_ProductMaxTinyWidth%%px;">
+        <div style = "height:%%GLOBAL_ProductMaxTinyHeight%%px; width:%%GLOBAL_ProductMaxTinyWidth%%px;">
+            <a href="javascript:void(0);" rel='{"gallery": "prodImage", "smallimage": "%%GLOBAL_ProductThumbImageURL%%", "largeimage": "%%GLOBAL_ProductZoomImageURL%%"}'><img id="TinyImage_%%GLOBAL_ProductThumbIndex%%" style="padding-top:%%GLOBAL_TinyImageTopPadding%%px;" width="%%GLOBAL_TinyImageWidth%%" height="%%GLOBAL_TinyImageHeight%%" src="%%GLOBAL_ProductTinyImageURL%%" alt="%%GLOBAL_ImageDescription%%" title="%%GLOBAL_ImageDescription%%" /></a>
+        </div>
+    </div>
+</li>
+
+
+<!-- onclick="%%GLOBAL_TinyImageClickJavascript%%" -->
+```  
+
+to
+
+```HTML  
+<li class="magictoolbox-li prodThumbImage" id="TinyImageBox_%%GLOBAL_ProductThumbIndex%%" onclick="%%GLOBAL_TinyImageOverJavascript%%">
+    <a href="%%GLOBAL_ProductZoomImageURL%%" rel="zoom-id:mainMagicZoomPlusImage" rev="%%GLOBAL_ProductThumbImageURL%%" title="%%GLOBAL_ImageDescription%%">
+        <img src="%%GLOBAL_ProductTinyImageURL%%" alt="%%GLOBAL_ImageDescription%%" />
+    </a>
+</li>
+```  
+
