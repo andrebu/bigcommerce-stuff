@@ -20,3 +20,32 @@ to
         <script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/product.js?%%GLOBAL_JSCacheToken%%"></script>
         %%Panel.DrawerMenu%%
 ```
+
+
+2.  Changed  **for Snippets/ProductThumbImage.html **
+
+```HTML  
+<div class="ProductThumbImage">
+    <a rel="prodImage" style="margin:auto;" href="%%GLOBAL_InitialZoomImage%%"  onclick="%%GLOBAL_TinyImageClickJavascript%% return false;">
+        <img src="%%GLOBAL_ThumbImageURL%%" alt="%%GLOBAL_ImageDescription%%" title="%%GLOBAL_ImageDescription%%" class="category-thumb-image" />
+    </a>
+</div>
+
+<div id="productDemoVideo" class="%%GLOBAL_ProductId%%"></div>
+```  
+
+to 
+
+```HTML  
+%%Panel.MagicZoomPlusHeaders%%
+<div class="MagicToolboxContainer">
+    <a href="%%GLOBAL_InitialZoomImage%%" class="MagicZoomPlus" id="mainMagicZoomPlusImage" title="%%GLOBAL_ImageDescription%%" href="%%GLOBAL_InitialZoomImage%%">
+        <img itemprop="image" src="%%GLOBAL_ThumbImageURL%%" alt="%%GLOBAL_ImageDescription%%" />
+    </a>
+    <!-- <div class="MagicToolboxSelectorsContainer">
+        %% SNIPPET_ProductTinyImages %%
+    </div> -->
+</div>
+
+<div id="productDemoVideo" class="%%GLOBAL_ProductId%%"></div>
+```
