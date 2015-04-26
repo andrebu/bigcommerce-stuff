@@ -661,6 +661,7 @@ body table#QuickSearch.QuickSearch {
 	.header #Header {
 		margin: 0;
 	}
+/*
 	.header #Header .headerSearchContainer {
 		display: none;
 	}
@@ -670,10 +671,13 @@ body table#QuickSearch.QuickSearch {
 	.header #Header .inner .header-secondary {
 		top: 12px;
 	}
+*/
 /* SubHeader Header - bottom section of three section header */
+/*
 	#subHeader {
 		display:none;
 	}
+*/
 	.header-logo-mobile {
 		display: none !important;
 	}
@@ -733,6 +737,7 @@ body table#QuickSearch.QuickSearch {
 	.header #Header {
 		margin: 0;
 	}
+/*
 	.header #Header .headerSearchContainer {
 		display: none;
 	}
@@ -742,10 +747,13 @@ body table#QuickSearch.QuickSearch {
 	.header #Header .inner .header-secondary {
 		top: 12px;
 	}
+*/
 /* SubHeader Header - bottom section of three section header */
+/*
 	#subHeader {
 		display:none;
 	}
+*/
 	.header-logo-mobile {
 		display: none !important;
 	}
@@ -757,6 +765,7 @@ body table#QuickSearch.QuickSearch {
 	.header #Header {
 		margin: 0;
 	}
+/*
 	.header #Header .headerSearchContainer {
 		display: none;
 	}
@@ -766,10 +775,13 @@ body table#QuickSearch.QuickSearch {
 	.header #Header .inner .header-secondary {
 		top: 12px;
 	}
+*/
 /* SubHeader Header - bottom section of three section header */
+/*
 	#subHeader {
 		display:none;
 	}
+*/
 	.header-logo-mobile {
 		display: none !important;
 	}
@@ -856,7 +868,7 @@ body table#QuickSearch.QuickSearch {
 /*----------Bottom Ad Styles--------------*/
 #bottomAd {
   
-  width: 68%;
+  /*width: 68%;*/
   DISPLAY: BLOCK !IMPORTANT;
   MARGIN: 0 AUTO;
   BORDER: SOLID 1PX #DDD;
