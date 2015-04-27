@@ -606,6 +606,10 @@ body table#QuickSearch.QuickSearch {
 	.header-logo-mobile {
 		display: none !important;
 	}
+/* 	Front page */
+	#home .MagicScroll-horizontal .mcs-item {
+		width: 49% !important;
+	}
 }
 @media screen and (max-width: 767px) {
 /* Top Header - top section of three section header */
@@ -630,6 +634,10 @@ body table#QuickSearch.QuickSearch {
 	.header-logo-mobile {
 		display: none !important;
 	}
+/* 	Front page */
+	#home .MagicScroll-horizontal .mcs-item {
+		width: 49% !important;
+	}
 }
 @media screen and (max-width: 768px) {
 /* Top Header - top section of three section header */
@@ -653,6 +661,10 @@ body table#QuickSearch.QuickSearch {
 	}
 	.header-logo-mobile {
 		display: none !important;
+	}
+/* 	Front page */
+	#home .MagicScroll-horizontal .mcs-item {
+		width: 49% !important;
 	}
 }
 @media screen and (device-aspect-ratio: 2/3) {
@@ -943,7 +955,7 @@ margin-left:-11px;
 	border-bottom: 1px solid rgb(216, 216, 216);
 }
 #home .MagicScroll-horizontal {
-	Height:270px !important;
+	Height:280px !important;
 	margin-bottom: 19px;
 }
 #home .MagicScroll-horizontal .mcs-item {
@@ -954,7 +966,7 @@ margin-left:-11px;
 	width: 100%;
 	display: block;
 	margin: 0 auto;
-	padding: 0;
+	padding: 10px 0 0 0;
 }
 #home .MagicScroll-horizontal .mcs-item li .ProductImage img {
 /* 	max-width: 90%; */
@@ -992,6 +1004,89 @@ margin-left:-11px;
 #home .MagicScroll-horizontal .mcs-button-arrow:hover:before {
 	color: #39b54a;
 }
+@media screen and (max-width: 480px) {
+/* 	Front page */
+	#home .MagicScroll-horizontal .mcs-item {
+		width: 49% !important;
+	}
+}
+@media screen and (max-width: 767px) {
+/* 	Front page */
+	#home .MagicScroll-horizontal .mcs-item {
+		width: 49% !important;
+	}
+}
+/* Nexus 5 */
+@media screen and (max-device-width: 768px) and (orientation: portrait) {
+/* 	Front page */
+	#home .MagicScroll-horizontal {
+		Height: 260px !important;
+	}
+	#home .MagicScroll-horizontal .mcs-item {
+		width: 49.25% !important;
+	}
+	#home .MagicScroll-horizontal .mcs-item li .ProductDetails .pname {
+		line-height: initial;
+	}
+}
+@media screen and (max-device-width: 768px) and (orientation: landscape) {
+/* 	Front page */
+	#home .MagicScroll-horizontal {
+		Height: 370px !important;
+	}
+	#home .MagicScroll-horizontal .mcs-item {
+		width: 49.7% !important;
+	}
+}
+@media screen and (device-aspect-ratio: 2/3) {
+/* 	Front page */
+	#home .MagicScroll-horizontal .mcs-item {
+		width: 49% !important;
+	}
+}
+/* iPhone 5 */
+@media screen and (device-aspect-ratio: 40/71) {
+/* 	Front page */
+	#home .MagicScroll-horizontal {
+		Height: 230px !important;
+	}
+	#home .MagicScroll-horizontal .mcs-item {
+		width: 49% !important;
+	}
+	#home .MagicScroll-horizontal .mcs-item li .ProductDetails .pname {
+		line-height: initial;
+	}
+}
+/* iPad 1-4 */
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) {
+	#home .MagicScroll-horizontal {
+		Height: 310px !important;
+	}
+	#home .MagicScroll-horizontal .mcs-item {
+		width: 33% !important;
+	}
+}
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) {
+  	#home .MagicScroll-horizontal {
+		Height: 240px !important;
+		margin-bottom: 19px;
+	}
+/*
+	#home .MagicScroll-horizontal .mcs-item {
+		width: 33% !important;
+	}
+*/
+}
+
+
 
 
 /* Page width fix -- from 1200px to 1280px */
@@ -1005,6 +1100,14 @@ body .newsletter-subscription > .inner {
   max-width: 1280px;
   width: 91%;
 }
+
+/* MacBook 13" - make so 3 products can fit width wise on category pages */
+@media only screen and (device-width : 1280px) and (orientation: landscape) {
+	.CategoryContent .ProductList li {
+		width: 300px;
+	}
+}
+
 
 
 /*--------------Holiday/Weather Notice CSS-----------------*/
