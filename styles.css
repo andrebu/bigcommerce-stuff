@@ -966,7 +966,7 @@ margin-left:-11px;
 	width: 100%;
 	display: block;
 	margin: 0 auto;
-	padding: 10px 0 0 0;
+	padding: 0;
 }
 #home .MagicScroll-horizontal .mcs-item li .ProductImage img {
 /* 	max-width: 90%; */
@@ -993,6 +993,7 @@ margin-left:-11px;
 }
 #home .MagicScroll-horizontal .mcs-item li .ProductImage a {
 	border-top: 0;
+	padding-top: 10px;
 }
 #home .MagicScroll-horizontal .mcs-item li .ProductDetails {
 	width: 90%;
@@ -1099,6 +1100,9 @@ body .footer-links > .inner,
 body .newsletter-subscription > .inner {
   max-width: 1280px;
   width: 91%;
+}
+.bx-wrapper .bxslider img {
+	margin: 0 auto;
 }
 
 /* MacBook 13" - make so 3 products can fit width wise on category pages */
@@ -3537,7 +3541,7 @@ table tr td h3 {
 /* Below is required to overwrite __Master defaults */
 .productAttributeList .productAttributeRow, .productAttributeRow {
     padding-left: 0 !important;
-    margin: 0 0 10px 0 !important;
+    margin: 0 0 20px 0 !important;
     clear: both;
 }
 .productAttributeList li {
