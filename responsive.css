@@ -1,0 +1,2461 @@
+/*2600px */ 
+@media screen and (max-width: 2600px) {
+
+.Block.banner_home_page_bottom div .one-andre-box:hover .floatercontainer {
+
+/*   display: table; */ 
+     opacity: .9;
+     }
+
+     .Block.banner_home_page_bottom .floatercontainer .vertcentercentered {
+     display: block;
+     vertical-align: middle;
+     text-align: center;
+     padding: 4vw 1vw;
+     color: lime;
+     float: none;
+     }
+
+
+.Block.banner_home_page_bottom .floatercontainer h6 {
+     font-family: adobe-garamond-pro, "Times New Roman", Times, serif;
+     font-size: 1.8vw;
+     font-weight: bold;
+     padding: 12px 0;
+     }
+
+
+.Block.banner_home_page_bottom .tallpanel .floatercontainer .vertcentercentered {
+     padding: 11vw 30px;
+     }
+}
+
+/*1400px*/
+@media screen and (max-width: 1400px) {
+
+     .Block.banner_home_page_bottom .floatercontainer .vertcentercentered {
+     display: block;
+     vertical-align: middle;
+     text-align: center;
+     padding: 5.5vw 1vw;
+     color: lime;
+     float: none;
+     }
+
+.Block.banner_home_page_bottom .floatercontainer h6 {
+     font-family: adobe-garamond-pro, "Times New Roman", Times, serif;
+     font-size: 2vw;
+     font-weight: bold;
+     padding: 3px 0;
+     }
+
+.Block.banner_home_page_bottom .tallpanel .floatercontainer .vertcentercentered {
+     padding: 13.5vw 30px;
+     }
+
+}
+/* 1280px*/
+@media screen and (max-width: 1280px) {
+     .Block.banner_home_page_bottom .floatercontainer .vertcentercentered {
+     display: block;
+     vertical-align: middle;
+     text-align: center;
+     padding: 4.5vw 1vw;
+     color: lime;
+     float: none;
+     }
+
+.Block.banner_home_page_bottom .tallpanel .floatercontainer .vertcentercentered {
+     padding: 12.5vw 0px;
+     }
+
+}
+
+
+
+/* 900px*/
+@media screen and (max-width: 900px) {
+     .Block.banner_home_page_bottom .floatercontainer .vertcentercentered {
+     display: block;
+     vertical-align: middle;
+     text-align: center;
+     padding: 3vw 1vw;
+     color: lime;
+     float: none;
+     }
+.Block.banner_home_page_bottom .floatercontainer h6 {
+     font-family: adobe-garamond-pro, "Times New Roman", Times, serif;
+     font-size: 2vw;
+     font-weight: bold;
+     padding: 0px 0;
+     }
+
+.Block.banner_home_page_bottom .tallpanel .floatercontainer   .vertcentercentered {
+     padding: 9.5vw 0px;
+     }
+
+
+}
+
+
+
+
+
+/* 1024px */
+ @media screen and (max-width: 1024px) {
+    /* Hide */
+    .productOptionPreviewDisplay, .ExpressCheckoutBlockCompleted .ExpressCheckoutCompletedContent {
+        display: none !important;
+    }
+    /* Show */
+    /* Layout */
+    #home .ProductList li, .productPage .ProductList li {
+        width: 33.333333%;
+    }
+    /*----------Cart Styling---------- */
+    /* Cart Styling */
+    .ExpressCheckoutContent > div {
+        margin-bottom: 20px;
+    }
+    .TopMenu > .inner, #Header > .inner, .PageMenu > .inner, .main > .inner, .footer-main > .inner, .footer-links > .inner, .newsletter-subscription > .inner {
+        width:92%;
+    }
+    .newsletter-subscription .inner, .footer-main .inner, .footer-links .inner {
+        padding:10px 0;
+    }
+    .newsletter-subscription .inner {
+        padding: 31px 0;
+    }
+    /*----------Product Display-13-02-2014---------*/
+    #home .ProductList li, .productPage .ProductList li, .ProductList.WishlistProductList li {
+        width:33.333333%;
+    }
+    .ProductList li {
+        width: 33.333333%;
+    }
+    .btn.Small, .CompareButton .btn, .AccountOrderStatus .btn, .btn.Tiny, .btn {
+        padding:0 1em;
+    }
+    .CartCode .btn.alt {
+        width:100%;
+        padding:0 1em;
+        margin:10px 0 0 0;
+    }
+    .CartCode .CouponCode form .CouponCode {
+        width:95%;
+    }
+    /*----------Banner - 12/02/2014 ----------*/
+    .flex-viewport, .slide-show {
+        max-height:100% !important;
+        height:100%;
+    }
+    .slide-show .slide-overlay {
+        top: 7%;
+    }
+    /*----------Popup Window----------*/
+    #ModalContentContainer .ModalContent {
+        width:90% !important;
+        padding:5% !important;
+    }
+    .JointSizeHeightContainer .ProductOtherDetails .ProductDetailsGrid .DetailRow:first-child {
+		padding-right: 10%;
+	}
+	.JointSizeHeightContainer .ProductOtherDetails .ProductDetailsGrid .DetailRow:last-child {
+		padding-left: 10%;
+	}    
+}
+
+
+
+
+
+/* 1000px */
+ @media screen and (max-width: 1000px) {
+    /* Hide */
+    /* Show */
+    /* Layout */
+    #home .ProductList li, .productPage .ProductList li, .ProductList.WishlistProductList li {
+        width:33.333333%;
+    }
+    .ProductList li {
+        width: 33.333333%;
+    }
+
+/* FELIKS FLOATER STUFF */
+
+.Block.banner_home_page_bottom .floatercontainer .vertcentercentered {
+     display: block;
+     vertical-align: middle;
+     text-align: center;
+     padding: 3vw 0vw;
+     color: lime;
+     float: none;
+     }
+}
+
+/* 768px */
+ @media screen and (max-width: 768px) {
+
+/*------------Makes bottom 3 points and logo ad not get squished-----------*/
+
+#bottomAd {
+
+width: 100% !important;
+
+}
+
+/*------------Makes Magic Scroll Not take up as much height-----------------*/
+
+.MagicScroll[data-effect="scroll"], .MagicScroll[data-effect="bounce-items"] {
+
+Height:500px !important;
+}
+
+
+/*------------MAKES HOLIDAYSHIPPING NOTICE ATTACH TO BANNER WITH NO SPACE BETWEEN------------*/
+
+.holNote.multiLine {
+  MARGIN: -30px auto 20px;
+width: 82%;
+}
+
+
+/*-------------fix to make free shipping and other tiles not turn translucent on hover----------------*/
+.Block.banner_home_page_bottom div .one-andre-box:hover .floatercontainer {
+     /* display: table; */
+        opacity: 1;
+     }
+
+
+    /* Hide */
+    #ProductBreadcrumb, .productlist-page .Left, .Left {
+        display: none;
+    }
+    .Left {
+        float: none;
+        width: auto;
+        padding-right: 0;
+    }
+    .Left #SideCategoryList, .Left .slist, .Left #SideShopByBrand, .Left #SideCategoryShopByPrice {
+        display: none;
+    }
+    #LayoutColumn1 #HomeSlideShow, .TopMenu, #DrawerMenu h4, .header-logo, .PageMenu, .header-secondary, #BrandBreadcrumb, #AccountBreadcrumb, .desktop, #SideSubPageList, .brands-with-facets .Content .product-nav {
+        display: none !important;
+    }
+    /* Show */
+    /* Layout */
+    #home .ProductList li, .productPage .ProductList li {
+        width:33.333333%;
+    }
+    .ProductList li {
+    }
+    #ProductDetails .left-content {
+        float: none;
+        width: auto;
+    }
+    .PrimaryProductDetails .ProductMain {
+        float: none;
+        padding: 0 0 20px 0;
+        width: auto;
+    }
+    .footer-columns .grid__item {
+        width: 33.333333%;
+    }
+    #AjaxLoading {
+        background-color: rgba(0, 0, 0, .7);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    #AjaxLoading .ajax-loader {
+        position: absolute;
+        margin-top: -16px;
+        top: 50%;
+        right: 0;
+        left: 0;
+    }
+    #ModalOverlay {
+        background-color: #000;
+        opacity: 0.7 !important;
+    }
+    .productlist-page .CategoryContent {
+        padding: 0;
+    }
+    #ModalContainer, div#fancy_outer {
+        top:20% !important;
+        right:10px !important;
+        bottom:20% !important;
+        left: 10px !important;
+        width: auto !important;
+        margin-left: 0 !important;
+        height:auto !important;
+    }
+    #ModalContainer .fastCartSummaryBox {
+        margin: 0 auto;
+        float: none;
+        overflow: hidden;
+    }
+    .login-form .one-half {
+        width: 100%;
+    }
+    .login-form .CreateAccount {
+        margin-bottom: 20px;
+    }
+    .header-secondary {
+        clear: both;
+        float: none;
+    }
+    /* Multipage Cart Styling */
+    .TabNav {
+        border-bottom: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+    }
+    .TabNav li {
+        width: 100%;
+        text-align: center;
+    }
+    .TabNav li a {
+        box-sizing: border-box;
+        margin: 0;
+    }
+    /*----------Banner - 12/02/2014 ----------*/
+    .HomeSlideShowMobile, .HomeSlideShowMobile #HomeSlideShow, #ToggleMenu, #cart-amount, .mobile {
+        display:block !important;
+    }
+    #DrawerMenu.on-screen {
+        display: block;
+        position: fixed;
+        overflow-y: auto;
+    }
+    .AccountMenu, #GiftCertificatesMenuMobile {
+        margin:0 0 45px 0;
+    }
+    #SideAccountMenuMobile:after, #GiftCertificatesMenuMobile:after {
+        content:'';
+        height:20px;
+        width:100%;
+        position:absolute;
+    }
+    /*----------Banner Content----------*/
+    .slide-show .slide-overlay {
+        display:none;
+        text-align:center;
+        width:100%;
+        position:relative;
+        top:0;
+        left:0;
+        right:0;
+        padding:20px 0;
+    }
+    .slide-image-wrapper {
+        display:block;
+        position: relative;
+        padding-bottom:33.33%;
+        height:30PX;
+    }
+    .flex-control-nav {
+        display:none;
+    }
+    .flex-viewport {
+        position: relative !important;
+    }
+    .slide-show {
+        padding-bottom: 0;
+    }
+    .slide-button {
+        width:255px;
+        margin:0 auto;
+    }
+    .slide-button .btn {
+        background:#999;
+        border: 3px solid #999;
+        padding: 0 15px;
+    }
+    .slide-show .slide-text {
+        font-size:14px;
+        line-height:17px;
+    }
+    .slide-show h2 {
+        font-size:22px;
+        line-height:24px;
+    }
+    .flex-direction-nav {
+        left:1px;
+        position:absolute;
+        top:22px;
+        width:62px;
+    }
+    .flex-direction-nav .flex-prev, .flexslider:hover .flex-prev {
+        left:0;
+    }
+    .flex-direction-nav .flex-next, .flexslider:hover .flex-next {
+        right:0;
+    }
+    /*---------FELIKS FRONT PAGE STUFF--------*/
+    .Block.banner_home_page_bottom div .one-andre-column, .Block.banner_home_page_bottom span .one-andre-column {
+        width: 100%;
+    }
+    .Block.banner_home_page_bottom div .one-fk-wide, .Block.banner_home_page_bottom span .one-fk-wide {
+        width: 100%;
+    }
+
+    .slide-show {
+        margin-bottom: 10px !important;
+        padding: 0 0 10.9% 0 !important;
+    }
+    .slide-overlay {
+        display:none;
+    }
+    #leftcolumn {
+        width:100%;
+    }
+    #middlecolumn {
+        width:100%;
+    }
+    #rightcolumn {
+        width: 100%;
+    }
+    .Block.banner_home_page_bottom div div#leftcontainer {
+        font-size:16px;
+    }
+    /*----------Tab Display----------*/
+    ul#ProductTabsList.TabNav, .TabNav {
+        margin-bottom:10px;
+        border-bottom:1px solid #F0EFEE
+    }
+    ul#ProductTabsList li, .TabNav li {
+        width:auto;
+        padding:0 2px;
+    }
+    ul#ProductTabsList.TabNav li a, .TabNav li a {
+        border:none !important;
+        padding:0 10px;
+        border:none;
+    }
+    ul#ProductTabsList.TabNav li.Active a, .TabNav li.Active a {
+        border:none;
+    }
+    /*----------Gift Certificate----------*/
+    #LayoutColumn1 {
+        margin-top:0;
+    }
+    #LayoutColumn1.Right, .HorizontalFormContainer input[type="text"], .HorizontalFormContainer input[type="password"], .HorizontalFormContainer .fixedWidth, #ShippingAddressForm .HorizontalFormContainer input[type="text"] {
+        float:none;
+        width:100% !important;
+    }
+    #message, #frmGiftCertificate input {
+        width:100% !important;
+        resize:none;
+    }
+    /*----------Product Listing----------*/
+    .productlist-page .FloatRight {
+        float:none;
+    }
+    .productlist-page #CategoryHeading {
+        clear:both;
+    }
+    .productlist-page div.selector, .ProductList.List .ProductImage, .ProductList.List .QuickViewBtn, .ProductList .ProductRightCol, .ProductReviewFormContainer #uniform-revrating, #recaptcha_area #recaptcha_table, .EstimateShipping div.selector, #FormField_13, #FormField_23, dd div.selector, textarea, .mobile div.selector, .ProductReviewFormContainer dt, .ProductReviewFormContainer dd, .ProductReviewForm input[type="text"], .ProductReviewForm textarea, #slidemarginleft .inner, .CartCode .CouponCode input.btn, .CouponCodeWrapper input[type="text"], .GiftCertificateCode input[type="text"], .GiftCertificateCode input.btn {
+        width:100% !important;
+        float:none;
+    }
+    .CartCode .CouponCode input.btn, .GiftCertificateCode .btn, .CartCode .GiftCertificate input.btn, .CartCode .CouponCode input.btn {
+        margin-top:10px;
+        position:relative;
+        border-radius:3px;
+    }
+    .ProductList.List .QuickViewBtn {
+        top:100.5px;
+    }
+    .SortBox label, .SearchSorting label {
+        padding-bottom:10px;
+    }
+    #recaptcha_area {
+        margin-bottom:10px;
+    }
+    .ProductList .ProductDetails {
+        padding-right:0;
+    }
+    .Breadcrumb li:last-child {
+        padding-right:0;
+    }
+    .multiStep li {
+        margin:0 20px 0 0 !important;
+    }
+    #QuickViewProductDetails .required, #QuickViewProductDetails .Required, .ProductMain .Required, .required {
+        position:relative !important;
+        float:left;
+        left:0;
+    }
+    .HorizontalFormContainer dt {
+        text-align:right;
+    }
+    #ReorderForm table.CartContents thead tr th {
+        padding: 15px 10px;
+    }
+    #AccountNewReturnProducts .CartContents td:first-child {
+        width:35%;
+    }
+    .ProductName table.productAttributes td {
+        text-align:left !important;
+    }
+    #DrawerMenu .fa-chevron-down {
+        display:none;
+    }
+    /*----------Nav----------*/
+    #SearchForm {
+        float:none;
+        border: inherit;
+		border-radius: 0;
+		padding: 0;
+		transition: none;
+    }
+    #Header .search-mobile {
+        position:absolute;
+        top:11px;
+        left:45px;
+        width:65%;
+    }
+    #Header .search-mobile #SearchForm input.Textbox {
+        color:#666;
+        padding:2px 5px 2px 5px;
+        font-size:15px !important;
+        width:85%;
+    }
+    #Header #SearchForm .Button {
+        background:none !important;
+        width:25px;
+        height:22px;
+        color:#666;
+        font-size:15px;
+    }
+/*
+    #ToggleMenu.normal, #ToggleMenu.active {
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:46px;
+        height:45px;
+        font-size:21px;
+        line-height:45px;
+    }
+*/
+	/* Mobile Menu Trigger Bar Andre */
+    #ToggleMenu.normal, #ToggleMenu.active {
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:46px;
+        height:45px;
+        background-color: #39b54a;
+        line-height: 42px; 
+		font-family: 'Questrial', Tahoma, Geneva, sans-serif;
+		-webkit-font-smoothing: initial;
+    }
+    div#ToggleMenu.active {
+		background-color: #202020;
+	}
+    /* END Mobile Menu Trigger Bar Andre */
+    /*     Social link floating bar hide */
+    #FloatingSocialLinks {
+	    display: none; 
+    }
+    /*     Social link floating bar hide */
+    .treeview li {
+        border-bottom:none !important;
+        padding:0 !important;
+    }
+    .treeview li a, .BlockContent .pages-menu li a {
+        border-bottom: 1px solid #3F3F3F;
+    }
+    .treeview .hitarea {
+        background:none !important;
+        display:none;
+    }
+    .CurrencyWrapper .changeCurr, .CurrencyWrapper .selected-currency {
+        display:block;
+        float:none;
+        margin-left:0;
+    }
+    .CurrencyWrapper .selected-currency {
+        display:block;
+        position:absolute;
+        top:16px;
+        left:70px;
+    }
+    .CurrencyWrapper .changeCurr {
+        width:88%;
+    }
+    /*----------Cart Section top ----------*/
+    #cart-amount {
+        vertical-align: middle;
+        width:16px;
+        position:absolute;
+        top:5px;
+        right:14px;
+        display:none;
+    }
+    #cart-amount .Cart {
+        font-weight: bold;
+        padding:0px;
+        display: table-cell;
+        text-align: center;
+        width:auto;
+        position: relative;
+        padding:15px;
+    }
+    #cart-amount .Cart .total {
+        display:inline-block;
+        box-sizing: border-box;
+        padding:0px;
+        margin:0 auto;
+        min-width:16px;
+        height:16px;
+        display:none;
+    }
+    .CartLink .icon {
+        top:2px;
+        right:-25px !important;
+        left:inherit;
+        margin:0;
+        position:relative;
+    }
+    .header-secondary {
+        display:block !important;
+        background:none !important;
+        float:none;
+        position:absolute;
+        top:12px;
+        right:38px;
+        width:20px;
+    }
+    .CartLink {
+        width:20px;
+        height:20px;
+        margin:0;
+        line-height:inherit;
+    }
+    .CartLink a {
+        padding-top:2px;
+    }
+    .CartLink span {
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        width:20px;
+        height:20px;
+        line-height:18px;
+    }
+    /*----------Mob Logo ----------*/
+    .header-logo-mobile {
+        display:block;
+        margin:0 auto;
+        display:table;
+        width:96%;
+        text-align:center;
+        padding:20px 0 16px;
+    }
+    .header {
+        padding-top:45px;
+    }
+    #Header {
+        margin:0;
+    }
+    #Header {
+        position:fixed;
+        left:0%;
+        top:0;
+        z-index:100;
+        width:100%;
+        height:45px;
+    }
+    #Header > .inner {
+        width:100%;
+        display:table;
+        padding:0%;
+    }
+    .header-logo h1 {
+        padding: 0;
+    }
+    /*----------Mob----------*/
+    .Breadcrumb li {
+        padding-right:7px;
+    }
+    .Breadcrumb li a {
+        font-family: FontAwesome;
+        font-size:14px;
+        padding-right:7px;
+    }
+    /*----------Footer ----------*/
+    .newsletter-subscription .inner {
+        padding:20px 0 !important;
+    }
+    /*----------My Account ----------*/
+    #SideAccountMenu.AccountMenu {
+        margin:0 0 20px 0;
+    }
+    /*----------Wishlist View & Product Display----------*/
+    .qprod {
+        margin:10px 0 0 0;
+        vertical-align:top;
+    }
+    .dateselector select, select, div.selector, #uniform-EventDateMonth, #uniform-EventDateDay, #uniform-EventDateYear {
+        width:32.2% !important;
+    }
+    .Right .Block {
+        padding:0;
+    }
+    h1, .CouponCode h3, .GiftCertificate h3 {
+        font-size:18px;
+        text-align:center;
+    }
+    h1 {
+        font-size:26px;
+    }
+    .SubCategoryList, #uniform-sort {
+        margin:20px 0 !important;
+    }
+    /*----------Currency----------*/
+    .CurrencyChooser {
+        float:none;
+        left:12px;
+        top:auto;
+        bottom:51px;
+        width:50px;
+    }
+    .CurrencyChooser:before {
+        bottom:0;
+        background-image:none;
+    }
+    .CurrencyChooser:after, .CurrencyChooser:before {
+        top: 100%;
+        left:40px;
+        border: solid transparent;
+        content:" ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+    .CurrencyChooser:after {
+        border-color: rgba(255, 255, 255, 0);
+        border-top-color: #ffffff;
+        border-width: 10px;
+        margin-left: -10px;
+    }
+    .CurrencyChooser:before {
+        border-color: rgba(198, 198, 198, 0);
+        border-top-color: #c6c6c6;
+        border-width: 11px;
+        margin-left: -11px;
+    }
+    /*----------Serach----------*/
+    .SortBox, .SearchSorting {
+        float:none;
+    }
+    .SortBox label, .SearchSorting label, .SortBox div.selector, .SearchSorting div.selector, div.selector select, .shareSlide {
+        display:block;
+        float:none;
+        width:100% !important;
+    }
+    #productDetailsAddToCartForm .dateselector .selector {
+        width: 32.5% !important;
+    }
+    /*----------Share----------*/
+    .shareSlide {
+        margin-top:10px;
+    }
+    input[type="text"] {
+        margin-bottom:10px;
+    }
+    /*----------Mob Nav----------*/
+    #DrawerMenu li > ul li a {
+        padding-left:1.8em;
+    }
+    #DrawerMenu li > ul ul li a {
+        padding-left:2.6em;
+    }
+    #DrawerMenu li > ul ul ul li a {
+        padding-left:3.4em;
+    }
+    #DrawerMenu li > ul ul ul ul li a {
+        padding-left:4.2em;
+    }
+    #DrawerMenu li > ul ul ul ul ul li a {
+        padding-left:5em;
+    }
+    #DrawerMenu li > ul ul ul ul ul ul li a {
+        padding-left:5.8em;
+    }
+    .ChooseCurrencyBox a {
+        padding:.5em 1em !important;
+        margin:2px 0;
+    }
+    .LittleNotePassword {
+        padding-left:0;
+    }
+    #SaveCertificate {
+        margin-top:10px;
+    }
+    #CategoryBreadcrumbMobile {
+        margin-top:12px;
+        margin-bottom:0px;
+    }
+    .full-width #LayoutColumn1 {
+        margin-top:20px;
+    }
+    .TabNav li {
+        margin-bottom:0;
+    }
+    .TitleHeading {
+        margin-top:13px;
+        margin-bottom:13px;
+    }
+    /*----------Mob NavSecure Checkout----------*/
+    .OrderItem1 .selector, .OrderItem2 .selector, #NewBillingAddress .SelectBillingAddress #uniform-sel_billing_address, #NewShippingAddress div.selector, .productAddToCartRight .fixedWidth {
+        width:100% !important;
+    }
+    #NewShippingAddress div.selector {
+        margin-bottom:10px;
+    }
+    .SelectBillingAddress div.selector span, #NewShippingAddress div.selector span {
+        display:block !important;
+        overflow:hidden !important;
+    }
+    .SelectBillingAddress .FloatLeft, .SelectShippingAddress .FloatLeft {
+        float:left !important;
+    }
+    .ProductPrice {
+        display:block;
+        text-align:center !important;
+    }
+    .AccountOrderStatusList em.ProductPrice {
+        display:inline;
+    }
+    .ProductDetailsGrid .DetailRow .BrandName, .ProductDetails .DetailRow {
+        text-align:center;
+        margin-top:15px;
+    }
+    /*----------Change Your Forgot Password----------*/
+    #LayoutColumn1 .Right.mobile, .AddToWishlistLink input.btn {
+        float:none;
+        width:100%;
+        padding:0;
+    }
+    #LayoutColumn1 .Right.mobile #SideNewProducts .BlockContent {
+        margin:0;
+    }
+    ul.ShippingProviderList em.ProductPrice {
+        display:inline;
+    }
+    .WrappingOptionsSingle .HorizontalFormContainer dd .selector span {
+        display:block;
+        overflow:hidden;
+    }
+    .NotifyMessage em {
+        display:inline;
+    }
+    /*---------- Product Videos ----------*/
+    #VideoList li {
+        width:29%;
+        padding:10px 2%;
+    }
+    /*---------- Compare Product, CreateAccountForm----------*/
+    .ComparisonTable .ProductPrice, .ComparisonTable .CompareRating {
+        text-align:left !important;
+    }
+    #CreateAccountForm .HorizontalFormContainer input[type="text"], #CreateAccountForm .HorizontalFormContainer input[type="password"], #CreateAccountForm .HorizontalFormContainer .fixedWidth, .wishbtn {
+        width: 100% !important;
+    }
+    /*----------Login Form----------*/
+    .ExpressCheckoutContent .HorizontalFormContainer dt, .ExpressCheckoutContent .HorizontalFormContainer dd {
+        width:100% !important;
+        text-align:left;
+        padding:0 !important;
+    }
+    /*---------- Share ----------*/
+    .shareSlide {
+        margin-top:20px;
+    }
+    .WrappingOption {
+        float:none;
+    }
+    .InfoMessage {
+        margin-bottom:10px;
+    }
+    .PrimaryProductDetails .YouSave {
+        text-align:center;
+    }
+    /* 768 ends */
+}
+/* 600px */
+ @media screen and (max-width: 600px) {
+    /* Hide */
+    #shareDescription {
+        display: none;
+    }
+    /* Show */
+    /* Layout */
+    /*.ProductList li, #home .ProductList li, .productPage .ProductList li {width: 50%;}*/
+    .addto .BulkDiscount, .addto #SideProductAddToWishList {
+        display: block;
+    }
+    .CartCode .CouponCode, .CartCode .GiftCertificate {
+        float: none;
+        width: auto;
+    }
+    .ProceedToCheckout, .KeepShopping {
+        text-align: center;
+    }
+    /* Adjusting the size of the swatches for smaller screens */
+    .productOptionViewRectangle .option label {
+        padding: 0 !important;
+        line-height:25px;
+        height:25px;
+        width:25px;
+    }
+    .productOptionPickListSwatch .textureContainer, .productOptionPickListSwatch .swatchColours {
+        display: block !important;
+    }
+    .productOptionPickListSwatch .thumbnail, .productOptionPickListSwatch .swatchColour {
+        display: block !important;
+        height:25px !important;
+        width:25px !important;
+    }
+    .productOptionPickListSwatch li {
+        display: inline-block !important;
+    }
+    #tabcontent .photo {
+        float: none;
+        margin: 0;
+        width: auto;
+    }
+    .BillingDetails, .ShippingDetails {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+        padding-top: 15px;
+    }
+    .ShippingAddressList li {
+        width: 50%;
+    }
+    .CartContents tfoot .CheckoutRedeemCoupon {
+        text-align: left;
+    }
+    .CartContents tfoot .CheckoutRedeemCoupon td {
+        padding: 0;
+    }
+    .sharebutton {
+        display:block !important;
+        text-align:center;
+        margin-bottom:20px;
+    }
+    /*---------- Product Videos ----------*/
+    #VideoList li {
+        width:46% !important;
+        padding:10px 2% !important;
+    }
+    /* For Tabcontent text alignment */
+    #share-product #tabcontent {
+        text-align: center;
+    }
+}
+/* 480px */
+ @media screen and (max-width: 480px) {
+    /* Hide */
+    .TopMenu, .PageMenu, .QuickViewBtn, .footer-columns .BrandList, .footer-columns .CategoryList, .footer-columns .SocialConnect, .sf-menu li > ul, .productlist-page .Left, .ProductCompareButton
+    /*, .CompareButton*/
+    {
+        display: none !important;
+    }
+    .ProductList .ProductActionAdd {
+        display: none;
+    }
+    /* Show */
+    .header-secondary
+    /*, #home .PageMenu*/
+    {
+        display: block !important;
+    }
+    #ToggleMenu, #cart-amount {
+        display: table-cell;
+    }
+    /* Layout */
+    /* increasing input font sizes to avoid some zoom by webkit browsers */
+    input[type="date"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], textarea, select {
+        font-size: 13px !important;
+    }
+    .btn, textarea, input[type="text"], input[type="password"], input.Textbox {
+        display: block;
+        /*height:35px;line-height:35px;*/
+        width: 100%;
+        margin-bottom: 20px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    /*select, div.selector /* For uniform  { margin-bottom: 20px;}*/
+    .ProductList li, #home .ProductList li, .productPage .ProductList li, .SearchContainer .ProductList li {
+        width: 100% !important;
+    }
+    .TopMenu > .inner, #Header > .inner, .PageMenu > .inner, .main > .inner, .footer-main > .inner, .footer-links > .inner, .newsletter-subscription > .inner {
+        width: 90%;
+    }
+    #Header {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+    }
+    #Header > .inner {
+        width: 100%;
+        display: table;
+    }
+    .header-secondary .currency-converter {
+        display: none;
+    }
+    .header-secondary #SearchForm {
+        float: none;
+    }
+    .header-secondary #SearchForm input.Textbox {
+        width: 50%;
+        border: 0;
+        background: none;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .header-secondary #SearchForm input.Button {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        border: 0;
+    }
+    .header-logo {
+        display: table-cell;
+        float: none;
+        max-height: 60px;
+        vertical-align: middle;
+        text-align: center;
+        overflow: hidden;
+    }
+    .header-logo h1 {
+        padding: 0;
+    }
+    .QuickSearch {
+        margin: 0;
+        left: 0 !important;
+        width: 100% !important;
+    }
+    #cart-amount {
+        vertical-align: middle;
+        width: 60px;
+    }
+    #cart-amount .Cart {
+        font-weight: bold;
+        padding: 1em 0px;
+        display: table-cell;
+        text-align: center;
+        width: 60px;
+        position: relative;
+    }
+    #cart-amount .Cart .total {
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 4px 5px;
+        margin: 0 auto;
+        min-width: 25px;
+        height: 25px;
+    }
+    #cart-amount .Cart .bag-handle {
+        border-bottom: 0;
+        position: absolute;
+        top: 8px;
+        left: 24px;
+        height: 4px;
+        width: 8px;
+        border-radius: 7px 7px 0px 0px;
+    }
+    .PageMenu .inner {
+        padding: 0;
+    }
+    .PageMenu ul {
+        display: block;
+    }
+    .PageMenu .CategoryList {
+        padding: 0;
+    }
+    .PageMenu .pages-menu {
+        display: none;
+    }
+    .PageMenu li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid #efefef;
+    }
+    .PageMenu a {
+        padding: 1em;
+        font-size: 1.2em;
+    }
+    .SubCategoryList {
+        padding: 0;
+        margin-bottom: 0;
+    }
+    .SubCategoryList li {
+        padding: 0.9em;
+        background: none;
+        border-bottom: 1px solid #efefef;
+    }
+    #fastCartContainer {
+        max-height: none;
+    }
+    .footer-columns .grid__item, .CartCode .grid__item {
+        width: 100%;
+    }
+    /* Form Styling */
+    #fancy_outer {
+        z-index: 110 !important;
+    }
+    #fancy_overlay {
+        z-index: 105 !important;
+    }
+    #fancy_content h1 {
+        font-size: 22px;
+    }
+    .footer-links {
+        text-align: center;
+    }
+    .footer .powered-by {
+        float: none;
+        display: block;
+    }
+    .LittleNotePassword {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    /* Cart Styling */
+    table.CartContents tbody tr td {
+        padding: 10px 8px;
+    }
+    .CartCode .grid__item {
+        width: 100%;
+    }
+    .CartCode .GiftCertificate input, .CartCode .CouponCode input {
+        margin-bottom: 20px;
+    }
+    #CartContent .FloatRight, #CartContent .FloatLeft, .ExpressCheckoutContent .FloatLeft, .ExpressCheckoutContent .FloatRight #ConfirmOrder .FloatLeft, #ConfirmOrder .FloatRight {
+        float: none;
+    }
+    .PayPalExpressCheckout {
+        text-align: center;
+        padding:0;
+    }
+    .AddBillingAddress dd, .AddShippingAddress dd {
+        padding: 0 !important;
+        float: none;
+        width: auto;
+    }
+    .ShippingAddressList li {
+        width: 100%;
+    }
+    #home .ProductList li, .productPage .ProductList li, div.selector select {
+        width:100% !important;
+    }
+    div.selector span {
+        display:inherit;
+        overflow:inherit;
+        border-radius:3px;
+    }
+    form.SendMessage div.selector span {
+        overflow:hidden;
+        display:block;
+    }
+    /*---------- Compare Product ----------*/
+    .ComparisonTable td.CompareFieldName, .ComparisonTable th.CompareFieldTop {
+        font-size:13px;
+    }
+    .ComparisonTable td:nth-of-type(1), .ComparisonTable th:nth-of-type(1) {
+        width:22% !important;
+    }
+    .EstimateShippingButtons .btn.Small {
+        width: 100% !important;
+    }
+    .EstimateShippingButtons a {
+        text-align:center !important;
+        display:block;
+    }
+    .KeepShopping {
+        margin-top:20px;
+    }
+    #productDetailsAddToCartForm .dateselector .selector {
+        width: 31.6% !important;
+    }
+    /*---------- For Share Tabs alignment after Order Confirmation ----------*/
+    #share-product .tabs li {
+        float: none;
+        text-align: center;
+        margin-right:0px;
+    }
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~07-02-2014~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+ @media screen and (min-width:0px) and (max-width:320px) {
+    .header-logo-mobile {
+        width:92% !important;
+    }
+    #SimilarMultiProductsByCustomerViews .ProductList li {
+        width:100%;
+    }
+    #ChooseShippingAddress h2 {
+        padding-right:40px;
+    }
+    .RedeemCouponWrapper {
+        padding:0;
+        border:none;
+        float:none;
+        width:100%;
+        margin-left:0;
+        margin-right:0;
+    }
+    .RedeemCouponWrapper label {
+        float:none;
+        margin-bottom:10px;
+    }
+    .CheckoutRedeemCouponWrapper {
+        float:none;
+        width:90%;
+        margin-left:0;
+        margin-right:0;
+    }
+    .OrderContents .CartContents.General tr.SubTotal td:nth-of-type(2):before, #OrderConfirmationForm .CartContents tr.SubTotal td:nth-of-type(2):before {
+        display:none;
+    }
+    .CartContents tfoot .SubTotal td {
+        border-bottom:none;
+        padding:10px 8px !important;
+    }
+    #cartForm .CartContents tfoot .SubTotal td {
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
+    .CartContents tfoot .SubTotal td div {
+        padding:0;
+    }
+    #couponcode {
+        width:100%;
+    }
+    #ProductDetails .ProductTinyImageList ul li {
+        margin-left:3%;
+        margin-right:3%;
+    }
+    .SubTotal strong, tr.SubTotal td h3 {
+        text-align:center;
+    }
+    /*---------- Product Videos ----------*/
+    #VideoList li {
+        width:auto !important;
+        float:none;
+        padding:10px !important;
+    }
+    .ComparisonTable th:nth-of-type(4), .ComparisonTable td:nth-of-type(4), .ComparisonTable th:nth-of-type(5), .ComparisonTable td:nth-of-type(5) {
+        display:none;
+    }
+    #OrderConfirmationForm .CartContents td .ProductPrice {
+        text-align:center !important;
+    }
+}
+@media screen and (max-width:479px) {
+    /*---------- EstimateShipping ----------*/
+    .EstimateShipping dt, .EstimateShipping dd {
+        display:block;
+        float:none;
+        width:100%;
+    }
+    /*---------- Global Form----------*/
+    .HorizontalFormContainer dt, .HorizontalFormContainer dd {
+        width:100%;
+        float:none;
+        display:block;
+        text-align:left;
+        padding-bottom:0;
+    }
+    .HorizontalFormContainer dt {
+        vertical-align:bottom;
+    }
+    #wishlistsform table.CartContents tbody tr td, #wishlistsform table.CartContents thead tr th {
+        padding-left:3px !important;
+        padding-right:3px !important;
+    }
+    .dateselector select, select, div.selector, #uniform-EventDateMonth, #uniform-EventDateDay, #uniform-EventDateYear {
+        width:31.6% !important;
+    }
+    /*----------Confirm Order----------*/
+    .OrderContents .CartContents.General, #OrderConfirmationForm table {
+        border:none;
+    }
+    .OrderContents .CartContents.General thead, #OrderConfirmationForm .CartContents thead {
+        display:none;
+    }
+    .OrderContents .CartContents.General tbody tr:after, #OrderConfirmationForm .CartContents tr:after {
+        content:' . ';
+        opacity:0;
+    }
+    .OrderContents .CartContents.General td, #OrderConfirmationForm .CartContents td {
+        width:90% !important;
+        padding-left:5%;
+        padding-right:5%;
+        margin:0;
+        display:block;
+        text-align:left;
+    }
+    .OrderContents .CartContents.General td:nth-of-type(2), #OrderConfirmationForm .CartContents tbody td:nth-of-type(2) {
+        text-align:right !important;
+    }
+    .OrderContents .CartContents.General td:nth-of-type(2):before, #OrderConfirmationForm .CartContents tbody td:nth-of-type(2):before {
+        content:'Quantity :';
+        position:absolute;
+        left:9%;
+    }
+    .OrderContents .CartContents.General td:nth-of-type(3):before, #OrderConfirmationForm .CartContents tbody td:nth-of-type(3):before {
+        content:'Item Price :';
+        position:absolute;
+        left:9%;
+    }
+    .OrderContents .CartContents.General td:nth-of-type(4):before, #OrderConfirmationForm .CartContents tbody td:nth-of-type(4):before {
+        content:'Item Total :';
+        position:absolute;
+        left:9%;
+    }
+    #OrderConfirmationForm .CartContents td:nth-of-type(4) span.ProductPrice {
+        text-align:right !important;
+    }
+}
+@media screen and (min-width:321px) and (max-width:480px) {
+    .header-logo-mobile {
+        width:94% !important;
+		margin-top: 75px;
+    }
+    #saleinfo {
+		margin: 53px auto 0;
+		width: 100% !important;
+		flex-direction: column;
+	}
+    /*---------- Cart Table ----------*/
+    .CartContents td:nth-of-type(5) {
+        padding-right:3%;
+    }
+    /*---------- Order Confirmation ----------*/
+    #OrderConfirmationForm .RedeemCouponWrapper {
+        width:90%;
+    }
+    #couponcode {
+        width:100%;
+    }
+    #OrderConfirmationForm .CartContents tfoot .SubTotal td div {
+        text-align:right;
+        padding-left:10px;
+    }
+    #OrderConfirmationForm .CartContents td .ProductPrice {
+        text-align:right !important;
+    }
+}
+@media screen and (min-width:481px) and (max-width:767px) {
+    .header-logo-mobile {
+		margin-top: 75px;
+    }
+    #saleinfo {
+		margin: 53px auto 0;
+		width: 100% !important;
+		flex-direction: column;
+	}
+    /*---------- Cart Table ----------*/
+    .CartContents td:nth-of-type(5) {
+        padding-right:2.5%;
+    }
+    .EstimateShippingButtons .btn.Small {
+        width: inherit !important;
+    }
+    #OrderConfirmationForm .CartContents td .ProductPrice {
+        text-align:right !important;
+    }
+}
+@media screen and (min-width:481px) and (max-width:768px) {
+    .header-logo-mobile {
+		margin-top: 75px;
+    }
+    #saleinfo {
+		margin: 53px auto 0;
+		width: 100% !important;
+		flex-direction: column;
+	}
+    /*---------- Order Confirmation ----------*/
+    #OrderConfirmationForm .RedeemCouponWrapper {
+        width:90%;
+    }
+    #couponcode {
+        width:100%;
+    }
+    #OrderConfirmationForm .CartContents tfoot .SubTotal td div {
+        text-align:right;
+        padding-left:10px;
+    }
+    #MultipleWishListForm .btn.alt {
+        float:right;
+        clear:right;
+        width:96px !important;
+        height:26px;
+    }
+    #OrderConfirmationForm .CartContents td .ProductPrice {
+        text-align:right !important;
+    }
+}
+@media screen and (min-width:769px) and (max-width:1024px) {
+    /*---------- Cart Table ----------*/
+    .CartContents td:nth-of-type(5) {
+        padding-right:2.5%;
+    }
+    #SimilarMultiProductsByCustomerViews .ProductList li {
+        width:33.333333%;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:790px) {
+.Block.banner_home_page_bottom div .one-andre-column.panel6 p.onlineheadshop {
+     font-size: .97vw;
+     }
+}
+
+@media screen and (max-width:767px) {
+
+/*---------Makes bottom ad logo not off center-----------*/
+
+
+img.bottomAdImg {
+  BOTTOM: -18PX;
+  margin-bottom: 50px;
+  margin-right: 0px;
+
+}
+
+
+/*   drywetbutton   */
+.abtn {
+width: 84%;
+text-align: center;
+display: block
+}
+
+.choosedrywet {
+text-align: center;
+}
+
+/* Andre Felix floater box responsive styling  */
+
+.Content.Widest.Two{
+top:0px;
+}
+
+.Block.banner_home_page_bottom div .one-andre-column.panel6 p.welcome {
+     font-size:3vw;
+     }
+
+   /* .Block.banner_home_page_bottom div .one-andre-box .floatercontainer {
+        position: static;
+        top: auto;
+        bottom: auto;
+        width: 100%;
+        height: auto;
+        display: block;
+        opacity: 1;
+   }*/
+
+.Block.banner_home_page_bottom div .one-andre-box .floatercontainer {
+position: absolute;
+top: auto;
+bottom: auto;
+width: 100%;
+height: auto;
+display: block;
+opacity: 1;
+top: 16%;
+left: 0px;
+background: rgba(223, 223, 223, 0.89);
+box-shadow: 0 2px 8px -3px;
+}
+
+.Block.banner_home_page_bottom div .one-andre-box {
+display: block;
+width: 100%;
+height: 100%;
+padding-bottom: 14px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.45);
+margin-bottom: 14px;
+}
+
+  .Block.banner_home_page_bottom .floatercontainer h6 {
+font-size: 9vw;
+font-weight: bold;
+Margin-top: 13px;
+line-height: 8vw;
+padding-top: 14px;
+
+}
+    .Block.banner_home_page_bottom .floatercontainer p.color {
+	    display: none;     
+    }
+    .Block.banner_home_page_bottom .floatercontainer div.pricelink a {
+	    display: none;     
+    }
+    
+     .Block.banner_home_page_bottom div .one-andre-column.panel6 p.welcome{
+     font-size: 7vw;
+     text-align: center;
+     }
+     .Block.banner_home_page_bottom div .one-andre-column.panel6 .onlineheadshop{
+     font-size: 3.5vw;
+     text-align: center;
+     }
+
+.bottomlefttile {
+
+width:100%;
+}
+
+/* Andre Felix floater box responsive styling  END */
+
+
+    
+    
+    .BlockContent .ProductList, .BlockContent h1, .BlockContent h2, .BlockContent h4, #SimilarProductsByCustomerViews h2, #SideProductRelated h2, #HomeFeaturedProducts h2, #SideTopSellers h2, #HomeNewProducts h2, #CategoryHeading h1, .ProductList .p-name, .ProductList .ProductRightCol, .ProductList.List li .ProductCompareButton {
+        display:block;
+        text-align:center;
+    }
+    .BillingDetails h4, .ShippingDetails h4 {
+        text-align:left;
+    }
+    h2.subtitle, .footer-links p, .newsletter-subscription h4, .multiStep li, .multiStep {
+        text-align:left;
+    }
+    .TopMenu, .PageMenu, .header-secondary, .pie {
+        display:none;
+    }
+    .footer-columns .SocialConnect, .ProductCompareButton, .subscribe_form li, .HomeSlideShowMobile #HomeSlideShow, .mobile {
+        display:block !important;
+        border: none;
+    }
+    .ProductList .ProductActionAdd {
+/*         display:block; */
+        border:none;
+    }
+    .header-secondary, #cart-amount .Cart .bag-handle, .TopMenu .inner ul, .currency-converter, .footer-columns .CategoryList, #HomeSlideShow, .header-logo, .footer #SideShopByBrand, .QuickViewBtn {
+        display:none !important;
+    }
+    .TopMenu .inner #SearchForm .Button, .Right li {
+        border:none;
+    }
+    .TopMenu {
+        background:none;
+    }
+    #SideNewsletterBox .one-third, #SideNewsletterBox .two-thirds, input.Textbox, textarea, input[type="text"], input[type="password"], .btn, input.Textbox, textarea, input[type="text"], input[type="password"] {
+        margin-bottom:10px;
+    }
+    .footer .newsletter-subscription li.inputForm {
+        margin:0;
+    }
+    #ChooseShippingAddress ul.ShippingAddressList li {
+        min-height:inherit;
+    }
+    #ChooseShippingAddress ul.ShippingAddressList li p.NoMarginBottom br {
+        display:block !important;
+    }
+    .ShippingAddressList li {
+        min-height:inherit;
+        margin-bottom:0;
+    }
+    /*----------Show----------*/
+    .footer-main, .footer-links {
+        background:none;
+    }
+    .footer-links p {
+        font-size:12px;
+    }
+    .footer-links span.footer-left, .footer-links .powered-by, .footer-links span.footer-left a span, .copyRight {
+        display:block;
+        float:none;
+        margin-left:0;
+    }
+    .footer .footer-columns li {
+        font-size:12px;
+        padding:3px 0;
+    }
+    #socnet {
+        margin-top:20px;
+    }
+    .footer .powered-by a {
+        background-position:0 -50px;
+        opacity:0.7;
+    }
+    .footer .powered-by a:hover {
+        background-position:0 -50px;
+        opacity:0.7;
+    }
+    /* Show */
+    #ToggleMenu, #cart-amount {
+        display: table-cell;
+    }
+    #OrderConfirmationForm .CartContents td:first-child, #OrderConfirmationForm table.CartContents thead tr th:first-child {
+        width:30%;
+        text-align:left;
+    }
+    #Header.off-screen {
+        -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    #SideNewsletterBox .one-third, #SideNewsletterBox .two-thirds, .CartCode .GiftCertificate input.btn, #ContactForm .Submit .btn {
+        width:100% !important;
+    }
+    .QuickViewBtn {
+        top:114.5px;
+    }
+    .subscribe_form .btn {
+        margin:0;
+        border-radius:3px;
+        width:100%;
+    }
+    .qprod, #QuickViewProductDetails, #uniform-qty_, #qty_ {
+        width:100% !important;
+        padding-left:0 !important;
+    }
+    .btn, .btn.alt {
+        width:100% !important;
+    }
+    /*----------Poduct Display----------*/
+    #home .ProductList li, .productPage .ProductList li, #SimilarMultiProductsByCustomerViews .ProductList li, .WishlistProductList.ProductList li, .CategoryContent .ProductList li {
+        width:49.99999%;
+    }
+    .SearchContainer .ProductList li {
+        width:49%;
+    }
+    /*----------Poduct Display Popup----------*/
+    .TinyOuterDiv img {
+        display:none;
+    }
+    #ProductDetails .ProductTinyImageList ul li {
+        width:15px !important;
+        height:15px !important;
+        border-radius:50%;
+        -moz-border-radius:50%;
+        -webkit-border-radius:50%;
+        margin:10px 10px 0 10px;
+        background:#ccc;
+        border:none !important;
+    }
+    #ProductDetails .ProductTinyImageList ul li.selected {
+        background:#666 !important;
+        border:none !important;
+        cursor:none !important;
+    }
+    #ProductDetails .ProductTinyImageList ul {
+        text-align:center;
+        width:100%;
+    }
+    .BulkDiscountLink {
+        display:block;
+        float:none;
+        padding-bottom:10px;
+        text-align:center;
+    }
+    #ProductDetails .Content h3 {
+        font-size:18px;
+    }
+    /*----------Cart Section top ----------*/
+    #cart-amount {
+        vertical-align: middle;
+        width:16px;
+        position:absolute;
+        top:5px;
+        right:14px;
+        display:none;
+    }
+    #cart-amount .Cart {
+        font-weight: bold;
+        padding:0px;
+        display: table-cell;
+        text-align: center;
+        width:auto;
+        position: relative;
+        padding:15px;
+    }
+    #cart-amount .Cart .total {
+        display:inline-block;
+        box-sizing: border-box;
+        padding:0px;
+        margin:0 auto;
+        min-width:16px;
+        height:16px;
+        display:none;
+    }
+    .CartLink .icon {
+        top:2px;
+        right:-25px !important;
+        left:inherit;
+        height:16px;
+        margin:0;
+        color: #666;
+    }
+    .header-secondary {
+        display:block !important;
+        background:none !important;
+        float:none;
+        position:absolute;
+        top:12px;
+        right:40px;
+        width:20px;
+    }
+    .CartLink {
+        width:20px;
+        height:20px;
+        margin:0;
+    }
+    .CartLink a {
+        padding-top:2px;
+    }
+    form#cartForm table.CartContents thead tr th {
+        display:none;
+    }
+    form#cartForm table {
+        border:none;
+    }
+    form#cartForm table.CartContents tr td {
+        width:100% !important;
+        display:block;
+        position:relative;
+        margin:0;
+    }
+    .BlockContent .CartThumb img {
+        max-width:inherit;
+    }
+    form#cartForm table.CartContents tr td:nth-of-type(4):before, form#cartForm table.CartContents tr td:nth-of-type(5):before {
+        content:"Item Price : ";
+        position:absolute;
+        top:11px;
+        left:10px;
+        font-size:16px;
+        font-weight:400;
+    }
+    form#cartForm table.CartContents tr td:nth-of-type(5):before {
+        content:"Item Total :";
+    }
+    form#cartForm table.CartContents tr td h3 {
+        text-align:center;
+    }
+    form#cartForm table.CartContents tr td .CartRemoveLink, form#cartForm table.CartContents .SubTotal td .EstimateShipping {
+        float:none;
+    }
+    .CartItemQuantity .selector, .DetailRow.qty .selector, .EstimateShipping .fixedWidth, .EstimateShipping input[type="text"], .TabContainer .TabNav li#AddressSingle, .TabContainer .TabNav li#AddressMultiple, .CheckoutExpress .inner {
+        width:100% !important;
+    }
+    .ExpressCheckoutContent {
+        padding: 5% !important;
+    }
+    form#cartForm table.CartContents .SubTotal td div {
+        padding-right:0;
+    }
+    form#cartForm table.CartContents .SubTotal td {
+        border-top:none;
+    }
+    /*----------EstimateShipping----------*/
+    form#cartForm table.CartContents .SubTotal td .EstimateShipping {
+        width:89%;
+        margin:0 auto;
+        padding:20px 5% !important;
+    }
+    .CartCode .GiftCertificate input.btn, .CartCode .CouponCode input.btn {
+        border-radius:3px;
+        position:relative;
+    }
+    .CartContents tfoot .SubTotal td div {
+        text-align:left;
+        padding-left:10px;
+    }
+    /*----------Footer----------*/
+    .newsletter-subscription .inner {
+        padding:0;
+    }
+    /*----------Order Status----------*/
+    ul.AccountOrderStatusList .li-list .btns {
+        float:none;
+        position:relative;
+        height:130px;
+    }
+    ul.AccountOrderStatusList .li-list .btns .FloatRight, ul.AccountOrdersList .li-list .FloatRight {
+        width:100%;
+        float:left;
+    }
+    ul.AccountOrderStatusList .li-list .btns .FloatRight:nth-of-type(1) {
+        position:absolute;
+        top:60px;
+        left:0;
+        z-index:50;
+    }
+    ul.AccountOrderStatusList .li-list .btns .FloatRight:nth-of-type(2) {
+        position:absolute;
+        top:10px;
+        left:0;
+    }
+    ul.AccountOrderStatusList .li-list h4, ul.AccountOrdersList .li-list h4 {
+        width:100%;
+        text-align:left;
+    }
+    ul.AccountOrdersList .li-list .FloatRight .btn {
+        margin-top:20px;
+    }
+    .ReturnLink {
+        display:block;
+    }
+    /*----------Shipping Address----------*/
+    table.General thead tr th, table.General tbody tr.First td, table.General tbody tr.last td {
+        width:50% !important;
+    }
+    #multiAddressForm div.selector span {
+        display:block;
+        overflow:hidden;
+    }
+    table.General td div.selector {
+        width:150px !important;
+    }
+    /*----------Popup Window----------*/
+    .fastCartThumb, .fastCartItemBox, .fastCartSummaryBox {
+        width:100%;
+        display:block;
+        float:none;
+        margin:0 auto;
+        max-width:inherit;
+    }
+    .ModalContent .fastCartTop {
+        padding:0;
+    }
+    #fastCartContainer, table.General td dd div.selector, #cartForm table.General td.CartItemQuantity div.selector {
+        width:100% !important;
+    }
+    #ProductDetails .ProductThumbImage {
+        min-height:auto !important;
+    }
+    #ModalButtonRow .FloatLeft {
+        float:none;
+    }
+    #CategoryContent .ProductList, .CategoryContent .ProductList {
+        margin:0;
+    }
+    /*---------- Product Videos ----------*/
+    #VideoList li {
+        width:46%;
+        padding:10px 2%;
+    }
+    .AccountMessageList li h4 {
+        text-align:left;
+    }
+    /*---------- Footer Newsletter ----------*/
+    .newsletter-subscription-Cnt {
+        width:100%;
+    }
+    .newsletter-subscription h4, .newsletter-subscription-Cnt .subscribe_form {
+        float:none;
+    }
+    /*---------- Secure Checkout ----------*/
+    .ExpressCheckoutContent .grid__item.one-half, .ExpressCheckoutContent .grid__item.one-half, .subscribe_form input[type="text"] {
+        width:100%;
+    }
+    /*---------- Search Arrow Icon ----------*/
+    .fa-sort-asc {
+        left:85px;
+        position:relative;
+        top:-35px;
+    }
+    .fa-sort-desc {
+        left:85px;
+        position:relative;
+        top:-30px;
+    }
+    #ModalContentContainer .ModalContent .fastCartTop h4 {
+        text-align:center;
+    }
+    /*----------Add to Cart Modal Window----------*/
+    #ModalContainer .fastCartThumb, #ModalContainer .fastCartItemBox div, #ModalContainer .Quantity, #ModalContainer .fastCartBottom, .fastCartSummaryBox .subtotal, .fastCartSummaryBox .actionLink:last-child {
+        display:none;
+    }
+    .fastCartSummaryBox {
+        background:none;
+        padding:0;
+    }
+    .fastCartSummaryBox .actionLink {
+        margin-bottom:15px;
+    }
+    .actionLink .alt {
+        cursor: pointer;
+        color:#fff;
+        display:block;
+        height:36px;
+        line-height:33px;
+        font-size:13px;
+        padding:0 1em;
+        text-transform:uppercase;
+        *zoom:1;
+        text-align: center;
+        border: 2px solid #454545;
+        background:#454545;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius:3px;
+        -webkit-border-radius:3px;
+        -moz-border-radius:3px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    .actionLink .alt:hover {
+        background:#fff;
+    }
+    .fastCartSummaryBox .ProceedToCheckout, .ProceedToCheckout .PayPalExpressCheckout, #ModalContentContainer .ModalContent .fastCartTop {
+        margin-bottom:0;
+    }
+    /*---------- Product Image Lighbox ----------*/
+    div#fancy_outer {
+        padding:10px !important;
+    }
+    .ToggleSearchFormLink a {
+        display:block;
+        text-align:center;
+    }
+    #ModalContainer .fastCartItemBox {
+        text-align: center;
+    }
+    /* 767*/
+}
+@media screen and (min-width: 768px) and (max-width: 768px) {
+    #uniform-EventDateMonth, #uniform-EventDateDay, #uniform-EventDateYear {
+        width:32.4% !important;
+    }
+    #ModalContainer #uniform-EventDateMonth, #ModalContainer #uniform-EventDateDay, #ModalContainer #uniform-EventDateYear {
+        width:31.5% !important;
+    }
+    form#cartForm table.CartContents .SubTotal td .EstimateShipping {
+        width:66%
+    }
+    form#cartForm table.CartContents .SubTotal td {
+        width: 55% !important;
+    }
+    .EstimateShipping .EstimateShippingButtons input.btn.alt {
+        width:65%;
+    }
+    .SearchBySetting .btn {
+        width:100%;
+    }
+    /*----------Footer----------*/
+    .footer-columns .treeview li a {
+        border-bottom:none;
+        padding:5px 0;
+    }
+    .fastCartThumb {
+        overflow:hidden;
+    }
+    .CartItemTotalPrice h4.ProductPrice {
+        text-align:right !important;
+    }
+    #cartForm table.General thead tr td:nth-of-type(1), #cartForm table.General tr td:nth-of-type(2) {
+        width:30%;
+    }
+    #cartForm table.General tr td:nth-of-type(3), #cartForm table.General tr td:nth-of-type(4) {
+        width:25%;
+    }
+    #fastCartWrapper .fastCartTop {
+        width:100%;
+        margin:100px auto 0 auto;
+    }
+    #fastCartWrapper .fastCartTop h4 {
+        text-align:center;
+    }
+    #fastCartWrapper .fastCartTop .btn {
+        width:100%;
+        margin-bottom:20px;
+    }
+    #ModalContainer h1, #ModalContainer .CouponCode h3, #ModalContainer .GiftCertificate h3, #ModalContainer .ProductDetailsGrid .DetailRow .BrandName, #ModalContainer .ProductPrice {
+        text-align:left !important;
+    }
+}
+@media screen and (min-width: 768px) and (max-width:1023px) {
+    /*----------Secure Checkout----------*/
+    .AddBillingAddress .FloatLeft {
+        width:100%;
+    }
+    .AddBillingAddress img.FloatLeft {
+        width:auto;
+        float:left;
+    }
+    .AddBillingAddress .FloatLeft .HorizontalFormContainer dt {
+        clear:left;
+        float:left;
+        width:31% !important;
+        text-align:right;
+    }
+    .AddBillingAddress .FloatLeft .HorizontalFormContainer dd {
+        float:left;
+        width:60% !important;
+    }
+}
+@media screen and (min-width: 769px) and (max-width:1023px) {
+    /*----------Form  ----------*/
+    .HorizontalFormContainer dt, .HorizontalFormContainer dd {
+        float:none;
+        width:100%;
+    }
+    .HorizontalFormContainer dt {
+        line-height:20px;
+        text-align:left;
+    }
+    #ForgotPasswordForm .HorizontalFormContainer dt {
+        clear:left;
+        width: 30%;
+        float: left;
+        padding-right:2%;
+        text-align:right;
+        line-height:33px;
+    }
+    #ForgotPasswordForm .HorizontalFormContainer dd {
+        margin-left:0px;
+        position:relative;
+        width:60%;
+        float:left;
+    }
+    /*----------Cart Content ----------*/
+    form#cartForm table.CartContents thead tr th {
+        display:none;
+    }
+    form#cartForm table {
+        border:none;
+    }
+    form#cartForm table.CartContents tr td {
+        width:98% !important;
+        display:block;
+        position:relative;
+        margin:0;
+    }
+    .BlockContent .CartThumb img {
+        max-width:inherit;
+    }
+    form#cartForm table.CartContents tr td:nth-of-type(4):before, form#cartForm table.CartContents tr td:nth-of-type(5):before {
+        content:"Item Price : ";
+        position:absolute;
+        top:11px;
+        left:10px;
+        font-size:16px;
+        font-weight:400;
+    }
+    form#cartForm table.CartContents tr td:nth-of-type(5):before {
+        content:"Item Total :";
+    }
+    form#cartForm table.CartContents tr td h3 {
+        text-align:center;
+    }
+    form#cartForm table.CartContents tr td .CartRemoveLink, form#cartForm table.CartContents .SubTotal td .EstimateShipping {
+        float:none;
+    }
+    .CartItemQuantity .selector, .DetailRow.qty .selector, .EstimateShipping .fixedWidth, .EstimateShipping input[type="text"], .TabContainer .TabNav li#AddressSingle, .TabContainer .TabNav li#AddressMultiple, .CheckoutExpress .inner {
+        width:100% !important;
+    }
+    .ExpressCheckoutContent {
+        padding: 5% !important;
+    }
+    form#cartForm table.CartContents .SubTotal td div {
+        padding-right:0;
+    }
+    form#cartForm table.CartContents .SubTotal td {
+        border-top:none;
+    }
+    .EstimateShipping {
+        width:95%;
+    }
+    form#cartForm table.CartContents tr td tr td {
+        width:95% !important;
+    }
+    .EstimateShipping p.Submit {
+        margin-right:5%;
+    }
+    /*----------My Account ----------*/
+    .desktop_view1 {
+        display:block;
+    }
+    .desktop_view2 {
+        display:none;
+    }
+    .desktop_view1 li {
+        border-bottom: 1px solid #E4E4E4;
+    }
+    .desktop_view1 li a {
+        font-size: 15px;
+        font-weight:normal !important;
+        margin: 0;
+        padding: 13px 22px !important;
+    }
+    .desktop_view1 .Block {
+        margin:0;
+    }
+}
+@media screen and (min-width: 769px) and (max-width:839px) {
+    .BillingDetails, .ShippingDetails, #ReorderForm .btn {
+        width:100%;
+    }
+    .BillingDetails {
+        border-bottom:1px solid #C6C6C6;
+        padding-bottom:20px;
+    }
+}
+@media screen and (min-width:769px) and (max-width:980px) {
+    /*----------Order Status----------*/
+    ul.AccountOrderStatusList .li-list .btns {
+        float:none;
+        position:relative;
+        height:120px;
+    }
+    ul.AccountOrderStatusList .li-list .FloatRight {
+        width:100%;
+    }
+    ul.AccountOrderStatusList .li-list .FloatRight .btn {
+        width:100%;
+        margin-bottom:10px;
+    }
+    .ShippingAddressList li {
+        width: 50%;
+    }
+    /*----------View Order----------*/
+    ul.AccountOrdersList .li-list .FloatRight, ul.AccountOrdersList .li-list .FloatRight .btn {
+        width:100%;
+        float:none;
+    }
+    /*----------Main 3 Panel ----------*/
+    .Left {
+        padding-right:20px;
+    }
+    .Right {
+        padding-left:20px;
+    }
+    .CartContents .txt-hide {
+        margin:0 0 0 auto;
+    }
+}
+@media screen and (min-width:769px) and (max-width:1064px) {
+    .form li label #ShippingAddressForm .HorizontalFormContainer input[type="text"] {
+        text-align:left;
+        width:100% !important;
+    }
+    .HorizontalFormContainer.NarrowFormContainer input[type="text"], .HorizontalFormContainer.NarrowFormContainer .fixedWidth, #message_content {
+        width:100%;
+    }
+    .LittleNotePassword {
+        padding-left:0;
+    }
+    #OrderConfirmationForm .CartContents td:first-child, #OrderConfirmationForm table.CartContents thead tr th:first-child {
+        width:30%;
+    }
+    #ReorderForm table.CartContents thead tr th {
+        padding: 15px 10px;
+    }
+    #ReorderForm .CartContents td:first-child, #ReorderForm table.CartContents thead tr th:first-child, #ReorderForm .CartContents td:nth-of-type(2), #ReorderForm table.CartContents thead tr th:nth-of-type(2) {
+        width:inherit;
+    }
+    #AccountNewReturnProducts .CartContents td:first-child {
+        width:35%;
+    }
+    #WishLists .txt-hide a:last-child {
+        margin-right:0;
+    }
+    #WishLists .txt-hide {
+        position:relative;
+        overflow:inherit;
+    }
+    #WishLists .txt-hide a {
+        float:none;
+        position:absolute;
+        margin:0;
+        top:-2px;
+        right:0;
+        display:block;
+    }
+    #WishLists .txt-hide a:nth-of-type(1) {
+        right:53px;
+    }
+    #WishLists .txt-hide a:nth-of-type(2) {
+        right:25px;
+    }
+    #WishLists .txt-hide a:nth-of-type(3) {
+        right:0px;
+    }
+    /*----------Create Account----------*/
+    #CreateAccountForm .HorizontalFormContainer input[type="text"], #CreateAccountForm .HorizontalFormContainer input[type="password"], #CreateAccountForm .HorizontalFormContainer .fixedWidth {
+        width:100% !important;
+    }
+}
+@media screen and (max-width:1100px) {
+    /*----------Advance Search----------*/
+    #AdvancedSearchForm .HorizontalFormContainer {
+        width:90%;
+        margin:0 auto;
+        padding:10px 0 0 0;
+    }
+    #AccountInbox .NarrowFormContainer {
+        width:100%;
+        float:none;
+    }
+}
+@media screen and (min-width:481px) and (max-width:1100px) {
+    .SearchByPrice dd {
+        padding-top:4px !important;
+    }
+    #AdvancedSearchForm .HorizontalFormContainer input[type="text"], #AdvancedSearchForm .HorizontalFormContainer input[type="password"], #AdvancedSearchForm .HorizontalFormContainer .fixedWidth {
+        width:100% !important;
+        float:left !important;
+    }
+    #AdvancedSearchForm .HorizontalFormContainer.SearchByPrice input[type="text"], #AdvancedSearchForm .HorizontalFormContainer.SearchByPrice input[type="password"], #AdvancedSearchForm .HorizontalFormContainer.SearchByPrice .fixedWidth {
+        width:50px !important;
+        float:none !important;
+    }
+}
+@media screen and (min-width:769px) and (max-width:1100px) {
+    .btn.Small, .CompareButton .btn, .AccountOrderStatus .btn, .btn.Tiny, .btn {
+        padding:0 1em;
+    }
+    .pbn textarea, #uniform-revrating, .ProductReviewForm input[type="text"], .ProductReviewForm textarea {
+        width:100% !important;
+    }
+    /*---------- Product Videos ----------*/
+    #VideoList li {
+        width:46% !important;
+        padding:10px 2% !important;
+    }
+}
+@media screen and (min-width:1000px) and (max-width:1279px) {
+    /*----------Gift Certificate ----------*/
+    #AdvancedSearchForm .HorizontalFormContainer input[type="text"], #AdvancedSearchForm .HorizontalFormContainer input[type="password"], #AdvancedSearchForm .HorizontalFormContainer .fixedWidth {
+        width:70%;
+    }
+    .pbn textarea {
+        width:100%;
+    }
+    /*----------Change Password ----------*/
+    #CreateAccountForm .HorizontalFormContainer .borderB input[type="text"], #CreateAccountForm .HorizontalFormContainer .borderB input[type="password"], #CreateAccountForm .HorizontalFormContainer .borderB .fixedWidth {
+        width:100%
+    }
+    #CreateAccountForm .HorizontalFormContainer .borderB div.selector span {
+        padding-right:87px;
+    }
+}
+@media screen and (min-width:1025px) and (max-width:1100px) {
+    ul.AccountOrderStatusList .li-list .btns .FloatRight .btn {
+        padding:0 1em;
+    }
+}
+@media screen and (min-width:769px) and (max-width:1200px) {
+    /*----------Login Form----------*/
+    .ExpressCheckoutContent .HorizontalFormContainer dt, .ExpressCheckoutContent .HorizontalFormContainer dd {
+        width:100% !important;
+        text-align:left;
+        padding:0 !important;
+    }
+}
+@media screen and (min-width:769px) and (max-width:1250px) {
+    #uniform-EventDateMonth, #uniform-EventDateDay, #uniform-EventDateYear, #productDetailsAddToCartForm .dateselector .selector {
+        width: 31.5% !important;
+    }
+}
+@media screen and (min-width:769px) and (max-width:1050px) {
+    #uniform-EventDateMonth, #uniform-EventDateDay, #uniform-EventDateYear {
+        width: 30.7% !important;
+    }
+}
+@media screen and (min-width:1024px) and (max-width:1230px) {
+    /*----------Secure Checkout----------*/
+    .AddBillingAddress .FloatLeft {
+        width:100%;
+    }
+    .AddBillingAddress img.FloatLeft {
+        width:auto;
+        float:left;
+    }
+    /*----------Estimate ShippingButtons----------*/
+    .EstimateShippingButtons .btn.Small {
+        width:60%;
+    }
+}
+@media screen and (min-width:1101px) and (max-width:1250px) {
+    /*---------- Product Videos ----------*/
+    #VideoList li {
+        width:29%;
+        padding:10px 2%;
+    }
+    .ExpressCheckoutContent .HorizontalFormContainer dd {
+        padding-left:0 !important;
+    }
+}
+@media screen and (min-width:1025px) and (max-width:1225px) {
+    /*----------Wishlist Table----------*/
+    #wishlistsform table.CartContents tbody tr td, #wishlistsform table.CartContents thead tr th {
+        padding-left:5px;
+        padding-right:5px;
+    }
+    #wishlistsform .CartContents td:first-child, #wishlistsform table.CartContents thead tr th:first-child {
+        width:1%;
+        padding-left:5px;
+        padding-right:0;
+    }
+    #wishlistsform .CartContents td:nth-of-type(2), #wishlistsform table.CartContents thead tr th:nth-of-type(2) {
+        width:36%
+    }
+    #wishlistsform .CartContents td:nth-of-type(3), #wishlistsform table.CartContents thead tr th:nth-of-type(3) {
+        width:5%
+    }
+    #wishlistsform .CartContents td:nth-of-type(4), #wishlistsform table.CartContents thead tr th:nth-of-type(4) {
+        width:10%
+    }
+    #wishlistsform .CartContents td:nth-of-type(5), #wishlistsform table.CartContents thead tr th:nth-of-type(5) {
+        width:26%;
+    }
+    #OrderConfirmationForm .CartContents td:first-child, table.CartContents thead tr th:first-child {
+        width:30%;
+    }
+    #ReorderForm table.CartContents thead tr th {
+        padding: 15px 10px;
+    }
+    #ReorderForm .CartContents td:first-child, table.CartContents thead tr th:first-child, #ReorderForm .CartContents td:nth-of-type(2), table.CartContents thead tr th:nth-of-type(2) {
+        width:inherit;
+    }
+    #AccountNewReturnProducts .CartContents td:first-child {
+        width:35%;
+    }
+    #WishLists .txt-hide a:last-child {
+        margin-right:0;
+    }
+    #WishLists .txt-hide {
+        position:relative;
+        overflow:inherit;
+    }
+    #WishLists .txt-hide a {
+        float:none;
+        position:absolute;
+        margin:0;
+        top:-2px;
+        right:0;
+        display:block;
+    }
+    #WishLists .txt-hide a:nth-of-type(1) {
+        right:53px;
+    }
+    #WishLists .txt-hide a:nth-of-type(2) {
+        right:25px;
+    }
+    #WishLists .txt-hide a:nth-of-type(3) {
+        right:0px;
+    }
+    /*---------- Cart Table ----------*/
+    .CartContents td:nth-of-type(5) {
+        padding-right:2.5%;
+    }
+    #cartForm table.General thead tr td:nth-of-type(1), #cartForm table.General tr td:nth-of-type(2) {
+        width:30%;
+    }
+    #cartForm table.General tr td:nth-of-type(3), #cartForm table.General tr td:nth-of-type(4) {
+        width:25%;
+    }
+}
+@media screen and (min-width:480px) and (max-width:1225px) {
+    /*----------Order Confirmation----------*/
+    #OrderConfirmationForm .CartContents td:nth-of-type(2), #OrderConfirmationForm table.CartContents thead tr th:nth-of-type(2) {
+        width:5%
+    }
+    #OrderConfirmationForm .CartContents td:nth-of-type(3), #OrderConfirmationForm table.CartContents thead tr th:nth-of-type(3) {
+        width:10%
+    }
+    #OrderConfirmationForm .CartContents td:nth-of-type(4), #OrderConfirmationForm table.CartContents thead tr th:nth-of-type(4) {
+        width:10%
+    }
+}
+@media screen and (min-width:769px) and (max-width:3000px) {
+    .mobile {
+        display:none;
+    }
+    /*---------- Compare Product ----------*/
+    .ComparisonTable .ProductPrice, .ComparisonTable .CompareRating {
+        text-align:left !important;
+    }
+}
+/*===========================================================*/
+ @media screen and (min-width:1024px) and (max-width:3000px) {
+    #ModalContainer.QuickViewModal, #ModalContainer.ProductShareModal, #ModalContainer.ModalContentWithButtons {
+        bottom: 100px !important;
+        width: 70% !important;
+        margin-left:-35% !important;
+        left: 50% !important;
+    }
+    */ #ModalContainer.QuickViewModal .ModalContent, #ModalContainer.ProductShareModal .ModalContent, #ModalContainer.ModalContentWithButtons .ModalContent {
+        width:95% !important;
+    }
+    #ModalContent, .AddToCart .ModalContent {
+        width:70%;
+        margin:0 auto;
+    }
+    #ModalContainer.ProductShareModal {
+        height: 70% !important;
+    }
+    #price_from, #price_to {
+        width:30% !important;
+    }
+    /*---------- Global Form Width ----------*/
+    #ContactForm .HorizontalFormContainer dd, #CreateAccountForm .HorizontalFormContainer dd, #ForgotPasswordForm .HorizontalFormContainer dd, #AdvancedSearchForm .HorizontalFormContainer dd {
+        width:40%;
+    }
+    .autoSearchSubcategory {
+        margin:0 0 0 15px !important;
+    }
+}
+/* iPhone < 5: */
+@media screen and (device-aspect-ratio: 2/3) {
+	.header {
+		padding-top: 145px;
+	}
+	#saleinfo {
+		margin: 53px auto 0;
+		width: 100% !important;
+		flex-direction: column;
+	}
+}
+/* iPhone 5: */
+@media screen and (device-aspect-ratio: 40/71) {
+	.header {
+		padding-top: 145px;
+	}
+	#saleinfo {
+		margin: 53px auto 0;
+		width: 100% !important;
+		flex-direction: column;
+	}
+}
+/* iPhone 6: */
+@media screen and (device-aspect-ratio: 667/375) {
+	
+}
+/* iPhone 6 Plus: */
+@media screen and (device-aspect-ratio: 16/9) {
+	
+}
+/* iPad: */
+@media screen and (device-aspect-ratio: 3/4) {
+	
+}
