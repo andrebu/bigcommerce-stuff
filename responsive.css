@@ -1335,7 +1335,7 @@ width: 82%;
 @media screen and (min-width:321px) and (max-width:480px) {
     .header-logo-mobile {
         width:94% !important;
-		margin-top: 75px;
+/* 		margin-top: 75px; */
     }
     #saleinfo {
 		margin: 53px auto 0;
