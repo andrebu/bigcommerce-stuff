@@ -1363,7 +1363,7 @@ width: 82%;
 }
 @media screen and (min-width:481px) and (max-width:767px) {
     .header-logo-mobile {
-		margin-top: 75px;
+/* 		margin-top: 75px; */
     }
     #saleinfo {
 		margin: 53px auto 0;
@@ -1383,7 +1383,7 @@ width: 82%;
 }
 @media screen and (min-width:481px) and (max-width:768px) {
     .header-logo-mobile {
-		margin-top: 75px;
+/* 		margin-top: 75px; */
     }
     #saleinfo {
 		margin: 53px auto 0;
@@ -2440,7 +2440,8 @@ width:100%;
 /* iPhone 5: */
 @media screen and (device-aspect-ratio: 40/71) {
 	.header {
-		padding-top: 145px;
+/* 		padding-top: 145px; */
+		padding-top: 45px;
 	}
 	#saleinfo {
 		margin: 53px auto 0;
