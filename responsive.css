@@ -2428,7 +2428,8 @@ width:100%;
 /* iPhone < 5: */
 @media screen and (device-aspect-ratio: 2/3) {
 	.header {
-		padding-top: 145px;
+/* 		padding-top: 145px; */
+		padding-top: 45px;
 	}
 	#saleinfo {
 		margin: 53px auto 0;
