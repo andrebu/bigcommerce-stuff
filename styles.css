@@ -6,6 +6,52 @@ h1.smallh {
   line-height: 22px;
 }
 
+.CategoryContent .ProductList .ProductImage img {
+	background: #fff url("../images/loading-running-cat-dankstop.gif") no-repeat center center;
+	min-height: 369px;
+}
+
+/* Wholesale */
+.wholesalePage {
+	width: 100%;
+}
+.wholesalePage .wholesaleBanner img {
+	border-top: solid 1px gray; 
+	border-bottom: solid 1px gray;
+}
+.wholesalePage .wholesaleWelcome {
+	text-align: center; 
+	max-width: 650px; 
+	margin: 0 auto; 
+	border: solid 1px #909090; 
+	margin-bottom: 24px; 
+	padding: 13px;
+}
+.wholesalePage .wholesaleWelcome h3 {
+	text-align: center;
+}
+.wholesalePage .wholesaleBtnContainer {
+/* 	width: 605px;  */
+	margin: 0 auto;
+}
+.wholesalePage .wholesaleBtnContainer div {
+	margin: 0 auto;
+}
+.wholesalePage .wholesaleBtnContainer div .btn.cta {
+	font-size: 13px;
+	height: 33px;
+	line-height: 33px;
+}
+.wholesalePage .wholesaleBtnContainer div .wholesaleLogin {
+	margin-right: 5px;
+}
+.wholesalePage .wholesaleBtnContainer div .wholesaleApply {
+/* 	margin-left: 5px; */
+}
+
+
+
+
 
 /* Site Wide to go with new header */
 body#home {
@@ -187,6 +233,10 @@ body#home {
 }
 .header .TopMenu .inner #newTopMenu #helpMenu li .phoneNumber {
 	vertical-align: middle;
+	font-size: 15px;
+}
+.header .TopMenu .inner #newTopMenu #helpMenu li .helpMenuEmailLink {
+	font-size: 15px;
 }
 .header .TopMenu .inner #newTopMenu #helpMenu li .btn {
 	height:auto;
@@ -335,6 +385,7 @@ body table#QuickSearch.QuickSearch {
 }
 .header #Header .inner #myAccountDDMenu ul {
 	margin:0;
+	padding: 10px 0;
 }
 .header #Header .inner #myAccountDDMenu ul li {
 	display: block;
@@ -343,17 +394,25 @@ body table#QuickSearch.QuickSearch {
 	line-height: 27px;
 	width: 200px;
 }
+/*
 .header #Header .inner #myAccountDDMenu ul li:first-child a {
 	padding-top:10px;
 }
 .header #Header .inner #myAccountDDMenu ul li:last-child a {
 	padding-bottom:10px;
 }
+*/
 .header #Header .inner #myAccountDDMenu ul li a {
-	width: 100%;
+	width: 90%;
 	display: block;
-	padding: 0 20px;
+	padding: 0 10px 0 10px;
+	margin: 6px 0 6px 15px;
 	box-sizing: border-box;
+	border-left: 4px solid #eee;
+}
+.header #Header .inner #myAccountDDMenu ul li a:hover {
+	border-left-color: #39B54A;
+	background: #F3F4F4;
 }
 .header #Header .inner .header-secondary {
 	top: 0;
