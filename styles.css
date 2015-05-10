@@ -38,7 +38,7 @@ h1.smallh {
 */
 
 /* Wholesale */
-.wholesaleTree.treeview li a .navBrandListingImage {
+.wholesaleTree li a .navBrandListingImage {
 	display: block;
 	width: 100%;
 	padding: 0 16px 0 6px;
