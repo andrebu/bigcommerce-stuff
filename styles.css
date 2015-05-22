@@ -53,7 +53,7 @@ h1.smallh {
 	width: 650px;
 	max-width: 90%; 
 	margin: 0 auto; 
-	margin-bottom: 70px; 
+	margin-bottom: 10px; 
 	padding: 13px;
 	-webkit-box-shadow: -1px 0 0 0 #d2d2d2,-1px 0 0 0 #e6e6e6,1px 0 0 0 #d2d2d2,2px 0 0 0 #e6e6e6,0 -1px 0 0 #e8e8e8,0 2px 0 0 rgba(241,241,241,0.3),0 1px 0 0 #b1b1b1;
 	-moz-box-shadow: -1px 0 0 0 #d2d2d2,-1px 0 0 0 #e6e6e6,1px 0 0 0 #d2d2d2,2px 0 0 0 #e6e6e6,0 -1px 0 0 #e8e8e8,0 2px 0 0 rgba(241,241,241,0.3),0 1px 0 0 #b1b1b1;
@@ -63,7 +63,7 @@ h1.smallh {
 	border-radius: 4px;
 }
 .wholesalePage .wholesaleWelcome div span {
-	font-size: 15px;
+	font-size: 13px;
 	display: block;
 }
 .wholesalePage h2, 
@@ -918,13 +918,14 @@ margin-left:-11px;
 	border-top: 1px solid rgb(216, 216, 216);
 	border-bottom: 1px solid rgb(216, 216, 216);
 }
-#home .MagicScroll-horizontal {
+.page .main .MagicScroll-horizontal {
 	Height:280px !important;
 	margin-bottom: 19px;
 }
-#home .MagicScroll-horizontal .mcs-item {
+.page .main .MagicScroll-horizontal .mcs-item {
 	width: 19.75% !important;
 }
+.page .main .MagicScroll-horizontal .mcs-item li,
 #home .MagicScroll-horizontal .mcs-item li {
 /* 	width: 150px; */
 	width: 100%;
@@ -932,11 +933,11 @@ margin-left:-11px;
 	margin: 0 auto;
 	padding: 0;
 }
-#home .MagicScroll-horizontal .mcs-item li .ProductImage img {
+.page .main .MagicScroll-horizontal .mcs-item li .ProductImage img {
 /* 	max-width: 90%; */
 	max-width: 75%;
 }
-#home .MagicScroll-horizontal .mcs-item li .ProductDetails .pname {
+.page .main .MagicScroll-horizontal .mcs-item li .ProductDetails .pname {
 	white-space: pre-wrap; /* css-3 */    
 	white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
 	white-space: -pre-wrap; /* Opera 4-6 */    
@@ -946,79 +947,79 @@ margin-left:-11px;
 	min-height: 45px;
 }
 /* Home front page magic scroll styling */
-#home .MagicScroll-horizontal .mcs-item {
+.page .main .MagicScroll-horizontal .mcs-item {
 	border: 4px solid #eaeaea;
 	border-radius: 4px;
 /* 	margin: 0 2px; */
 	margin-right: 2.4px;
 }
-#home .MagicScroll-horizontal .mcs-item:hover {
+.page .main .MagicScroll-horizontal .mcs-item:hover {
 	border-color: #6ADA78;
 }
-#home .MagicScroll-horizontal .mcs-item li .ProductImage a {
+.page .main .MagicScroll-horizontal .mcs-item li .ProductImage a {
 	border-top: 0;
 	padding-top: 10px;
 }
-#home .MagicScroll-horizontal .mcs-item li .ProductDetails {
+.page .main .MagicScroll-horizontal .mcs-item li .ProductDetails {
 	width: 90%;
 	margin: 0 auto;
 }
-#home .MagicScroll-horizontal .mcs-button-arrow:before {
+.page .main .MagicScroll-horizontal .mcs-button-arrow:before {
 	color: #6ADA78;
 }
-#home .MagicScroll-horizontal .mcs-button-arrow:hover:before {
+.page .main .MagicScroll-horizontal .mcs-button-arrow:hover:before {
 	color: #39b54a;
 }
 @media screen and (max-width: 480px) {
 /* 	Front page */
-	#home .MagicScroll-horizontal .mcs-item {
+	.page .main .MagicScroll-horizontal .mcs-item {
 		width: 49% !important;
 	}
 }
 @media screen and (max-width: 767px) {
 /* 	Front page */
-	#home .MagicScroll-horizontal .mcs-item {
+	.page .main .MagicScroll-horizontal .mcs-item {
 		width: 49% !important;
 	}
 }
 /* Nexus 5 */
 @media screen and (max-device-width: 768px) and (orientation: portrait) {
 /* 	Front page */
-	#home .MagicScroll-horizontal {
+	.page .main .MagicScroll-horizontal {
 		Height: 260px !important;
 	}
-	#home .MagicScroll-horizontal .mcs-item {
+	.page .main .MagicScroll-horizontal .mcs-item {
 		width: 49.25% !important;
 	}
-	#home .MagicScroll-horizontal .mcs-item li .ProductDetails .pname {
+	.page .main .MagicScroll-horizontal .mcs-item li .ProductDetails .pname {
 		line-height: initial;
 	}
 }
 @media screen and (max-device-width: 768px) and (orientation: landscape) {
 /* 	Front page */
-	#home .MagicScroll-horizontal {
+	.page .main .MagicScroll-horizontal {
 		Height: 370px !important;
 	}
-	#home .MagicScroll-horizontal .mcs-item {
+	.page .main .MagicScroll-horizontal .mcs-item {
 		width: 49.7% !important;
 	}
 }
 @media screen and (device-aspect-ratio: 2/3) {
 /* 	Front page */
-	#home .MagicScroll-horizontal .mcs-item {
+	.page .main .MagicScroll-horizontal .mcs-item {
 		width: 49% !important;
 	}
 }
 /* iPhone 5 */
 @media screen and (device-aspect-ratio: 40/71) {
 /* 	Front page */
-	#home .MagicScroll-horizontal {
+	.page .main .MagicScroll-horizontal {
 		Height: 230px !important;
 	}
-	#home .MagicScroll-horizontal .mcs-item {
+	.page .main .MagicScroll-horizontal .mcs-item {
 		width: 49% !important;
 	}
-	#home .MagicScroll-horizontal .mcs-item li .ProductDetails .pname {
+	.page .main .MagicScroll-horizontal .mcs-item li .ProductDetails .pname {
 		line-height: initial;
 	}
 }
@@ -1028,10 +1029,10 @@ margin-left:-11px;
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (orientation: portrait) {
-	#home .MagicScroll-horizontal {
+	.page .main .MagicScroll-horizontal {
 		Height: 310px !important;
 	}
-	#home .MagicScroll-horizontal .mcs-item {
+	.page .main .MagicScroll-horizontal .mcs-item {
 		width: 33% !important;
 	}
 }
@@ -1040,12 +1041,12 @@ margin-left:-11px;
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (orientation: landscape) {
-  	#home .MagicScroll-horizontal {
+  	.page .main .MagicScroll-horizontal {
 		Height: 240px !important;
 		margin-bottom: 19px;
 	}
 /*
-	#home .MagicScroll-horizontal .mcs-item {
+	.page .main .MagicScroll-horizontal .mcs-item {
 		width: 33% !important;
 	}
 */
@@ -5943,6 +5944,9 @@ html.javascript .productOptionViewRectangle label {
     margin-bottom: 20px;
     position: relative;
 }
+.main .SearchContainer .ProductList li {
+	width: 32.5%;
+}
 .SearchContainer .ProductList .ProductImage {
     margin-right: 20px;
 }
@@ -6327,6 +6331,10 @@ input.Textbox, textarea, input[type="text"], input[type="password"] {
 /*Wishlist Sahre*/
 .fa-mail-forward:before, .fa-share:before {
     content: "\f064";
+}
+/* font awesome grid menu */
+.fa-th:before {
+	content: "\f00a";
 }
 /*Currency*/
 .CurrencyWrapper {
@@ -7295,8 +7303,22 @@ height: 100px;
 #crypto-payment a img {
     width: 60px;
     height: 23px;
+    vertical-align: middle;
 }
-
+#crypto-payment a {
+	height: 23px;
+	display: inline-block;
+	vertical-align: middle;
+}
+#crypto-payment span {
+	font-family: 'futura';
+	font-size: 12px;
+	margin-left: 7px;
+	vertical-align: middle;
+	line-height: 23px;
+	height: 23px;
+	display: inline-block;
+}
 
 
 /* Product Box Other Deatails and Features list */
