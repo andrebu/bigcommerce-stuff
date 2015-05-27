@@ -1,43 +1,77 @@
-<form action="http://dankstop.com/pages.php?action=sendContactForm" method="post" id="ContactForm">
-	<input type="hidden" name="page_id" id="page_id" value="5">
-	<fieldset>
-		<legend></legend>
-	    <div>
-	        <label for="contact_fullname"><span class="Required">*</span>Full Name:</label>
-	        <input type="text" name="contact_fullname" id="contact_fullname">
-	    </div>
-	    <div>
-	        <label for="contact_email"><span class="Required">*</span>E-mail Address:</label>
-	        <input type="text" name="contact_email" id="contact_email">
-	    </div>
-	    <div>
-	        <label for="contact_companyname">Company Name:</label>
-		    <input type="text" name="contact_companyname" id="contact_companyname">
-	    </div>
-	    <div>
-	        <label for="contact_phone">Phone Number:</label>
-		    <input type="text" name="contact_phone" id="contact_phone">
-	    </div>
-	    <div>
-	        <label for="contact_orderno">Order Number:</label>
-		    <input type="text" name="contact_orderno" id="contact_orderno">
-	    </div>
-	    <div>
-	        <label for="contact_rma">RMA Number:</label>
-		    <input type="text" name="contact_rma" id="contact_rma">
-	    </div>
-	    <div>
-	        <label for="contact_question">Details:</label>
-		    <textarea name="contact_question" id="contact_question" rows="5" cols="50"></textarea><div id="SearchResults"></div>
-	    </div>
-	    <div>
-	        <label for="captcha">CAPTCHA Text:</label>
-			<p class="Warning">Please copy the characters from the image into the text field below. Doing this helps us prevent automated submissions.</p>
-			<img src="http://dankstop.com/captcha.php?1557" alt="img"><br>
-			<input style="margin-top:10px; width:162px" type="text" name="captcha" id="captcha" class="Textbox">
-	    </div>
-	    <div class="button">
-	        <button type="submit" class="btn Small">Send your message</button>
-	    </div>
-	</fieldset>
-</form>
+<div id="wholesale-form-container"
+	<form action="http://dankstop.com/pages.php?action=sendContactForm" method="post" id="ContactForm">
+		<input type="hidden" name="page_id" id="page_id" value="5">
+		<fieldset>
+			<legend></legend>
+		    <div>
+			    <div class="form-left">
+			        <label for="contact_fullname"><span class="Required">*</span>Full Name:</label>
+			    </div>
+			    <div class="form-right">
+			        <input type="text" name="contact_fullname" id="contact_fullname">
+			    </div>
+		    </div>
+		    <div>
+			    <div class="form-left">
+			        <label for="contact_email"><span class="Required">*</span>E-mail Address:</label>
+			    </div>
+			    <div class="form-right">
+			        <input type="text" name="contact_email" id="contact_email">
+			    </div>
+		    </div>
+		    <div>
+			    <div class="form-left">
+			        <label for="contact_companyname">Company Name:</label>
+			    </div>
+			    <div class="form-right">
+				    <input type="text" name="contact_companyname" id="contact_companyname">
+			    </div>
+		    </div>
+		    <div>
+			    <div class="form-left">
+			        <label for="contact_phone">Phone Number:</label>
+			    </div>
+			    <div class="form-right">
+				    <input type="text" name="contact_phone" id="contact_phone">
+			    </div>
+		    </div>
+		    <div>
+			    <div class="form-left">
+			        <label for="contact_orderno">Order Number:</label>
+			    </div>
+			    <div class="form-right">
+				    <input type="text" name="contact_orderno" id="contact_orderno">
+			    </div>
+		    </div>
+		    <div>
+			    <div class="form-left">
+			        <label for="contact_rma">RMA Number:</label>
+			    </div>
+			    <div class="form-right">
+				    <input type="text" name="contact_rma" id="contact_rma">
+			    </div>
+		    </div>
+		    <div>
+			    <div class="form-left">
+			        <label for="contact_question">Details:</label>
+			    </div>
+			    <div class="form-right">
+				    <textarea name="contact_question" id="contact_question" rows="5" cols="50"></textarea><div id="SearchResults"></div>
+			    </div>
+		    </div>
+		    <div>
+			    <div class="form-left">
+			        <label for="captcha">CAPTCHA Text:</label>
+			    </div>
+			    <div class="form-right">
+					<p class="Warning">Please copy the characters from the image into the text field below. Doing this helps us prevent automated submissions.</p>
+					<img src="http://dankstop.com/captcha.php?1557" alt="img"><br>
+					<input style="margin-top:10px; width:162px" type="text" name="captcha" id="captcha" class="Textbox">
+			    </div>
+		    </div>
+		    <div class="button">
+		        <button type="submit" class="btn Small">Send your message</button>
+		    </div>
+		</fieldset>
+	</form>
+</div>
