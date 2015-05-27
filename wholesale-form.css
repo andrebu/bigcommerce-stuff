@@ -1,6 +1,7 @@
 #wholesale-form-container {
-    width: 60%;
-    margin: 0 auto;
+	margin: 50px auto 0;
+	width: 480px;
+	max-width: 100%;
 }
 #wholesale-form-container fieldset,
 #wholesale-form-container legend,
@@ -16,6 +17,12 @@
 #wholesale-form-container form:hover input,
 #wholesale-form-container form:hover textarea {
 	border-color: #D9F5DD;
+}
+#wholesale-form-container form .fa:before {
+    -webkit-transition: all 0.13s ease;
+    -moz-transition: all 0.13s ease;
+    -o-transition: all 0.13s ease;
+    transition: all 0.13s ease;
 }
 #wholesale-form-container fieldset {
     padding: 20px;
@@ -39,8 +46,25 @@
 	-moz-box-shadow: -1px 0 0 0 #d2d2d2,-1px 0 0 0 #e6e6e6,1px 0 0 0 #d2d2d2,2px 0 0 0 #e6e6e6,0 -1px 0 0 #e8e8e8,0 2px 0 0 rgba(241,241,241,0.3),0 1px 0 0 #b1b1b1;
 	box-shadow: -1px 0 0 0 #d2d2d2,-1px 0 0 0 #e6e6e6,1px 0 0 0 #d2d2d2,2px 0 0 0 #e6e6e6,0 -1px 0 0 #e8e8e8,0 2px 0 0 rgba(241,241,241,0.3),0 1px 0 0 #b1b1b1;
 }
+#wholesale-form-container label {
+    -webkit-transition: all 0.13s ease;
+    -moz-transition: all 0.13s ease;
+    -o-transition: all 0.13s ease;
+    transition: all 0.13s ease;
+	color: #999;
+}
 #wholesale-form-container .form-row {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
 	flex-direction: row;
 	margin: 0 0 13px;
 	position: relative;
@@ -59,7 +83,7 @@
     flex: 7;
 }
 #wholesale-form-container .form-right {
-    flex: 18;
+    flex: 17;
 }
 #wholesale-form-container form input,
 #wholesale-form-container form textarea {
@@ -71,9 +95,15 @@
     -o-transition: all 0.13s ease;
     transition: all 0.13s ease;
 }
-#wholesale-form-container form input:hover,
-#wholesale-form-container form textarea:hover {
-    border-color: rgb(106, 218, 120);
+#wholesale-form-container form .form-row:hover input,
+#wholesale-form-container form .form-row:hover textarea {
+    border-color: #6ADA78;
+}
+#wholesale-form-container form .form-row:hover .fa:before {
+	color: #6ADA78;
+}
+#wholesale-form-container form .form-row:hover label {
+	color: #555;
 }
 #wholesale-form-container .btn {
     margin: 0 0 0 auto;
