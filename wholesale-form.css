@@ -2,6 +2,21 @@
     width: 60%;
     margin: 0 auto;
 }
+#wholesale-form-container fieldset,
+#wholesale-form-container legend,
+#wholesale-form-container input,
+#wholesale-form-container textarea {
+    -webkit-transition: all 0.13s ease;
+    -moz-transition: all 0.13s ease;
+    -o-transition: all 0.13s ease;
+    transition: all 0.13s ease;
+}
+#wholesale-form-container form:hover fieldset,
+#wholesale-form-container form:hover legend,
+#wholesale-form-container form:hover input,
+#wholesale-form-container form:hover textarea {
+	border-color: #D9F5DD;
+}
 #wholesale-form-container fieldset {
     padding: 20px;
     border: 4px solid #eaeaea;
@@ -25,9 +40,17 @@
 	box-shadow: -1px 0 0 0 #d2d2d2,-1px 0 0 0 #e6e6e6,1px 0 0 0 #d2d2d2,2px 0 0 0 #e6e6e6,0 -1px 0 0 #e8e8e8,0 2px 0 0 rgba(241,241,241,0.3),0 1px 0 0 #b1b1b1;
 }
 #wholesale-form-container .form-row {
-    display: flex;
-    flex-direction: row;
-    margin: 0 0 13px;
+	display: flex;
+	flex-direction: row;
+	margin: 0 0 13px;
+	position: relative;
+}
+#wholesale-form-container .required-field:before {
+	content: "*";
+	position: absolute;
+	left: -12px;
+	color: red;
+	font-size: 16px;
 }
 #wholesale-form-container .form-row:last-child {
     margin: 20px 0 0;
@@ -38,8 +61,8 @@
 #wholesale-form-container .form-right {
     flex: 18;
 }
-#wholesale-form-container input,
-#wholesale-form-container textarea {
+#wholesale-form-container form input,
+#wholesale-form-container form textarea {
     border: 4px solid #eaeaea;
     border-radius: 4px;
     box-sizing: border-box;
@@ -48,8 +71,8 @@
     -o-transition: all 0.13s ease;
     transition: all 0.13s ease;
 }
-#wholesale-form-container input:hover,
-#wholesale-form-container textarea:hover {
+#wholesale-form-container form input:hover,
+#wholesale-form-container form textarea:hover {
     border-color: rgb(106, 218, 120);
 }
 #wholesale-form-container .btn {
