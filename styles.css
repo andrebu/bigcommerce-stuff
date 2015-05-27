@@ -106,7 +106,7 @@ h1.smallh {
 .wholesalePage #register {
 	width: 80%;
 	padding: 8%;
-	margin: 0 auto 70px;
+	margin: 0 auto 10px;
 }
 .wholesalePage #register {
 	-webkit-box-shadow: -1px 0 0 0 #d2d2d2,-1px 0 0 0 #e6e6e6,1px 0 0 0 #d2d2d2,2px 0 0 0 #e6e6e6,0 -1px 0 0 #e8e8e8,0 2px 0 0 rgba(241,241,241,0.3),0 1px 0 0 #b1b1b1;
@@ -137,13 +137,137 @@ h1.smallh {
 	font-size: 20px;
 }
 .wholesalePage .wholesaleCatSelection .wholesaleCategory span {
-	display:flex;
-	flex-direction:row; 
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
 }
 .wholesalePage .wholesaleCatSelection .wholesaleCategory span img {
 	flex-grow: 1; 
 	height: 100%;
 }
+
+
+
+#wholesale-form-container {
+	margin: 50px auto 0;
+	width: 480px;
+	max-width: 100%;
+}
+#wholesale-form-container fieldset,
+#wholesale-form-container legend,
+#wholesale-form-container input,
+#wholesale-form-container textarea {
+    -webkit-transition: all 0.13s ease;
+    -moz-transition: all 0.13s ease;
+    -o-transition: all 0.13s ease;
+    transition: all 0.13s ease;
+}
+#wholesale-form-container form:hover fieldset,
+#wholesale-form-container form:hover legend,
+#wholesale-form-container form:hover input,
+#wholesale-form-container form:hover textarea {
+	border-color: #D9F5DD;
+}
+#wholesale-form-container form .fa:before {
+    -webkit-transition: all 0.13s ease;
+    -moz-transition: all 0.13s ease;
+    -o-transition: all 0.13s ease;
+    transition: all 0.13s ease;
+}
+#wholesale-form-container fieldset {
+    padding: 20px;
+    border: 4px solid #eaeaea;
+    border-radius: 4px
+}
+#wholesale-form-container legend {
+	font-size: 23px;
+	border: 4px solid #eaeaea;
+	border-radius: 4px;
+	color: #39b54a;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	line-height: 33px;
+	padding: 10px;
+	display: block;
+	text-align: center;
+	font-family: Questrial;
+	font-family: futura;
+	-webkit-box-shadow: -1px 0 0 0 #d2d2d2,-1px 0 0 0 #e6e6e6,1px 0 0 0 #d2d2d2,2px 0 0 0 #e6e6e6,0 -1px 0 0 #e8e8e8,0 2px 0 0 rgba(241,241,241,0.3),0 1px 0 0 #b1b1b1;
+	-moz-box-shadow: -1px 0 0 0 #d2d2d2,-1px 0 0 0 #e6e6e6,1px 0 0 0 #d2d2d2,2px 0 0 0 #e6e6e6,0 -1px 0 0 #e8e8e8,0 2px 0 0 rgba(241,241,241,0.3),0 1px 0 0 #b1b1b1;
+	box-shadow: -1px 0 0 0 #d2d2d2,-1px 0 0 0 #e6e6e6,1px 0 0 0 #d2d2d2,2px 0 0 0 #e6e6e6,0 -1px 0 0 #e8e8e8,0 2px 0 0 rgba(241,241,241,0.3),0 1px 0 0 #b1b1b1;
+}
+#wholesale-form-container label {
+    -webkit-transition: all 0.13s ease;
+    -moz-transition: all 0.13s ease;
+    -o-transition: all 0.13s ease;
+    transition: all 0.13s ease;
+	color: #999;
+}
+#wholesale-form-container .form-row {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	margin: 0 0 13px;
+	position: relative;
+}
+#wholesale-form-container .required-field:before {
+	content: "*";
+	position: absolute;
+	left: -12px;
+	color: red;
+	font-size: 16px;
+}
+#wholesale-form-container .form-row:last-child {
+    margin: 20px 0 0;
+}
+#wholesale-form-container .form-left {
+    flex: 7;
+}
+#wholesale-form-container .form-right {
+    flex: 17;
+}
+#wholesale-form-container form input,
+#wholesale-form-container form textarea {
+    border: 4px solid #eaeaea;
+    border-radius: 4px;
+    box-sizing: border-box;
+    -webkit-transition: all 0.13s ease;
+    -moz-transition: all 0.13s ease;
+    -o-transition: all 0.13s ease;
+    transition: all 0.13s ease;
+}
+#wholesale-form-container form .form-row:hover input,
+#wholesale-form-container form .form-row:hover textarea {
+    border-color: #6ADA78;
+}
+#wholesale-form-container form .form-row:hover .fa:before {
+	color: #6ADA78;
+}
+#wholesale-form-container form .form-row:hover label {
+	color: #555;
+}
+#wholesale-form-container .btn {
+    margin: 0 0 0 auto;
+}
+
 
 
 
@@ -162,6 +286,21 @@ body#home {
 }
 .lightgreen {
 	color: #6ADA78;
+}
+.fa-copyright:before {
+	content: "\f1f9";
+}
+.fa-pencil-square-o:before {
+	content: "\f044";
+}
+.fa-picture-o:before {
+	content: "\f03e";
+}
+.fa-building:before {
+  content: "\f1ad";
+}
+.fa-building-o:before {
+  content: "\f0f7";
 }
 /* caret arrow down up */
 .fa-caret-up:before {
