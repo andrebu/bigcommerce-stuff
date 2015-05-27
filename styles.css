@@ -182,6 +182,24 @@ body#home {
 .fa-home:before {
 	content: "\f015";
 }
+.fa-money:before {
+	content: "\f0d6";
+}
+.fa-thumbs-o-up:before {
+  content: "\f087";
+}
+.fa-trophy:before {
+  content: "\f091";
+}
+.fa-check:before {
+  content: "\f00c";
+}
+.fa-key:before {
+  content: "\f084";
+}
+
+
+
 
 /* Category list improvements */
 #biosnippet {
@@ -927,22 +945,20 @@ margin-left:-11px;
 }
 .page .main .MagicScroll-horizontal .mcs-item li,
 #home .MagicScroll-horizontal .mcs-item li {
-/* 	width: 150px; */
 	width: 100%;
 	display: block;
 	margin: 0 auto;
 	padding: 0;
 }
 .page .main .MagicScroll-horizontal .mcs-item li .ProductImage img {
-/* 	max-width: 90%; */
 	max-width: 75%;
 }
 .page .main .MagicScroll-horizontal .mcs-item li .ProductDetails .pname {
-	white-space: pre-wrap; /* css-3 */    
-	white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-	white-space: -pre-wrap; /* Opera 4-6 */    
-	white-space: -o-pre-wrap; /* Opera 7 */    
-	word-wrap: break-word; /* Internet Explorer 5.5+ */
+	white-space: pre-wrap;  
+	white-space: -moz-pre-wrap; 
+	white-space: -pre-wrap;   
+	white-space: -o-pre-wrap;   
+	word-wrap: break-word; 
 	font-size: 11px;
 	min-height: 45px;
 }
@@ -950,8 +966,11 @@ margin-left:-11px;
 .page .main .MagicScroll-horizontal .mcs-item {
 	border: 4px solid #eaeaea;
 	border-radius: 4px;
-/* 	margin: 0 2px; */
 	margin-right: 2.4px;
+	-webkit-transition: border-color 0.5s ease 0s;
+	-moz-transition: border-color 0.5s ease 0s;
+	-o-transition: border-color 0.5s ease 0s;
+	transition: border-color 0.5s ease 0s;
 }
 .page .main .MagicScroll-horizontal .mcs-item:hover {
 	border-color: #6ADA78;
@@ -1045,11 +1064,6 @@ margin-left:-11px;
 		Height: 240px !important;
 		margin-bottom: 19px;
 	}
-/*
-	.page .main .MagicScroll-horizontal .mcs-item {
-		width: 33% !important;
-	}
-*/
 }
 
 
@@ -1073,7 +1087,6 @@ body .newsletter-subscription > .inner {
 /* MacBook 13" - make so 3 products can fit width wise on category pages */
 @media only screen and (device-width : 1280px) and (orientation: landscape) {
 	.CategoryContent .ProductList li {
-/* 		width: 300px; */
 		width: 33%;
 	}
 }
@@ -1181,15 +1194,20 @@ color: white;
 
 
 .Block.banner_brand_page_top .BrandInfoCustom {
-width: 100%;
-float: left;
+  width: auto;
+  float: left;
+  border: 2px solid #eaeaea;
+  padding: 10px;  
+  margin-bottom: 10px;
 }
+
 .Block.banner_brand_page_top .BrandLogoCustom {
 float:left;
 padding: 20px 10px;
 display: inline-block;
 vertical-align: middle;
 }
+
 .Block.banner_brand_page_top .AboutBrandLink {
 display: block;
 padding: 5px;
@@ -1197,12 +1215,14 @@ text-align: center;
 vertical-align: middle;
 margin: 0 auto;
 }
+
 .Block.banner_brand_page_top .AboutBrandSnippet {
 display: inline-block;
 width: 74%;
 padding: 5px 20px;
 vertical-align: middle;
 }
+
 @media screen and (max-width: 767px) {
 	.Block.banner_brand_page_top .BrandLogoCustom {
 		float: center;
@@ -2421,6 +2441,28 @@ display: none;
 .SideRecentlyViewed .ProductDetails {
     margin-left: 20px;
 }
+
+/* Product page DankStop byline description */
+div#DankStopTheBest {
+  display: table;
+  text-align: center;
+}
+i.fa.fa-trophy {
+  display: inline-block;
+  font-size: 120px;
+  vertical-align: middle;
+  color: #6ADA78;
+  margin-right: 10px;
+  display: table-cell;
+}
+div#DStext {
+  display: inline-block;
+  width: 80%;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+
 /* Product Comparisons */
 
 .ComparisonTable {
@@ -6504,8 +6546,10 @@ font-weight: bold;
 }*/
 /*Product Details*/
 .shareSlide {
-    /*background: #f0efee;*/
+/*
+    background: #f0efee;
     height: 30px;
+*/
     overflow: hidden;
     position: relative;
     width: 100%;
