@@ -23,28 +23,33 @@
 #wholesale-form-container input,
 #wholesale-form-container textarea,
 #wholesale-form-container form .fa:before,
-#wholesale-form-container label {
+#wholesale-form-container label,
+#wholesale-form-container div.selector span,
+#wholesale-form-container form div.selector:before {
     -webkit-transition: all 0.13s ease;
     -moz-transition: all 0.13s ease;
     -o-transition: all 0.13s ease;
     transition: all 0.13s ease;
+	border-radius: 3px;
 }
 #wholesale-form-container form:hover fieldset,
 #wholesale-form-container form:hover legend,
 #wholesale-form-container form:hover input:not([disabled]),
-#wholesale-form-container form:hover textarea:not([disabled]) {
+#wholesale-form-container form:hover textarea:not([disabled]),
+#wholesale-form-container form:hover div.selector span {
 	border-color: #D9F5DD;
+}
+#wholesale-form-container form:hover div.selector:before {
+	background: #D9F5DD;
 }
 #wholesale-form-container fieldset {
     padding: 20px;
     border: 4px solid #eaeaea;
-    border-radius: 4px;
     background: #f8f8f8;
 }
 #wholesale-form-container legend {
 	font-size: 23px;
 	border: 4px solid #eaeaea;
-	border-radius: 4px;
 	color: #39b54a;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -96,7 +101,6 @@
 #wholesale-form-container form textarea,
 #wholesale-form-container form div.selector span {
     border: 2px solid #eaeaea;
-    border-radius: 4px;
     box-sizing: border-box;
     background: #fff;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
@@ -108,12 +112,34 @@
 #wholesale-form-container form div.selector {
 	padding: 0 !important;
 	border: 0;
+	height: auto;
+	width: 100%;
 }
 #wholesale-form-container form div.selector span {
 	color: #666;
 	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 12px;
 	height: 36px;
+}
+#wholesale-form-container form div.selector:before {
+	content: "\f078";
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	position: absolute;
+	right: 0;
+	line-height: 32px;
+	border-radius: 0;
+	height: 32px;
+	width: 30px;
+	margin: 2px;
+	background: #eaeaea;
+	color: #fff;
 }
 #wholesale-form-container form input:disabled,
 #wholesale-form-container form textarea:disabled {
@@ -126,8 +152,12 @@
 	color: #555;
 }
 #wholesale-form-container form .form-row:not(.disabled-field):hover input,
-#wholesale-form-container form .form-row:not(.disabled-field):hover textarea {
+#wholesale-form-container form .form-row:not(.disabled-field):hover textarea,
+#wholesale-form-container form .form-row:hover div.selector span {
     border-color: #6ADA78;
+}
+#wholesale-form-container form .form-row:hover div.selector:before {
+	background: #D9F5DD;
 }
 #wholesale-form-container form .form-row:not(.disabled-field) input:focus,
 #wholesale-form-container form .form-row:not(.disabled-field) textarea:focus {
