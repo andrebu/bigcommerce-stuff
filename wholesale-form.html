@@ -1,6 +1,6 @@
 <div id="wholesale-form-container">
-	<p class="ErrorMessage" style="display: %%GLOBAL_HideFormError%%">
-	    %%LNG_BadContactFormCaptcha%%
+	<p class="ErrorMessage" style="display: none">
+		The characters you copied from the image are incorrect. Please try again.
 	</p>
 	<form action="http://dankstop.com/pages.php?action=sendContactForm" method="post" id="wholesale-form">
 		<input type="hidden" name="page_id" id="page_id" value="13">
@@ -73,7 +73,7 @@
 					<label for="contact_source"><span class="fa fa-newspaper-o"> How'd you hear of us?:</span></label>
 			    </div>
 			    <div class="form-right">
-					<select id="contact_source" name="contact_source">
+				    <select id="contact_source" name="contact_source">
 						<option>Our customer</option>
 						<option>Social Network</option>
 						<option>Online ad</option>
