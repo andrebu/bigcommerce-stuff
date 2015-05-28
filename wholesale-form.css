@@ -1,12 +1,31 @@
 #wholesale-form-container {
 	margin: 50px auto 0;
-	width: 480px;
+	width: 570px;
 	max-width: 100%;
+}
+#wholesale-form-container input:required:invalid, #wholesale-form-container textarea:required:invalid {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAT1JREFUeNpi/P//PwMpgImBRMACY/x7/uDX39sXt/67cMoDyOVgMjBjYFbV/8kkqcCBrIER5KS/967s+rmkXxzI5wJiRSBm/v8P7NTfHHFFl5mVdIzhGv4+u///x+xmuAlcdXPB9KeqeLgYd3bDU2ZpRRmwH4DOeAI07QXIRKipYPD35184/nn17CO4p/+cOfjl76+/X4GYAYThGn7/g+Mfh/ZZwjUA/aABpJVhpv6+dQUjZP78Z0YEK7OezS2gwltg64GmfTu6i+HL+mUMP34wgvGvL78ZOEysf8M1sGgZvQIqfA1SDAL8iUUMPIFRQLf+AmMQ4DQ0vYYSrL9vXDz2sq9LFsiX4dLRA0t8OX0SHKzi5bXf2HUMBVA0gN356N7p7xdOS3w5fAgcfNxWtn+BJi9gVVBOQfYPQIABABvRq3BwGT3OAAAAAElFTkSuQmCC);
+	background-position: right top;
+	background-repeat: no-repeat;
+	box-shadow: none;
+}
+#wholesale-form-container input:focus:invalid, #wholesale-form-container textarea:focus:invalid {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAeVJREFUeNqkU01oE1EQ/mazSTdRmqSxLVSJVKU9RYoHD8WfHr16kh5EFA8eSy6hXrwUPBSKZ6E9V1CU4tGf0DZWDEQrGkhprRDbCvlpavan3ezu+LLSUnADLZnHwHvzmJlvvpkhZkY7IqFNaTuAfPhhP/8Uo87SGSaDsP27hgYM/lUpy6lHdqsAtM+BPfvqKp3ufYKwcgmWCug6oKmrrG3PoaqngWjdd/922hOBs5C/jJA6x7AiUt8VYVUAVQXXShfIqCYRMZO8/N1N+B8H1sOUwivpSUSVCJ2MAjtVwBAIdv+AQkHQqbOgc+fBvorjyQENDcch16/BtkQdAlC4E6jrYHGgGU18Io3gmhzJuwub6/fQJYNi/YBpCifhbDaAPXFvCBVxXbvfbNGFeN8DkjogWAd8DljV3KRutcEAeHMN/HXZ4p9bhncJHCyhNx52R0Kv/XNuQvYBnM+CP7xddXL5KaJw0TMAF8qjnMvegeK/SLHubhpKDKIrJDlvXoMX3y9xcSMZyBQ+tpyk5hzsa2Ns7LGdfWdbL6fZvHn92d7dgROH/730YBLtiZmEdGPkFnhX4kxmjVe2xgPfCtrRd6GHRtEh9zsL8xVe+pwSzj+OtwvletZZ/wLeKD71L+ZeHHWZ/gowABkp7AwwnEjFAAAAAElFTkSuQmCC);
+	background-position: right top;
+	background-repeat: no-repeat;
+	-moz-box-shadow: none;
+}
+#wholesale-form-container input:required:valid, #wholesale-form-container textarea:required:valid {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAepJREFUeNrEk79PFEEUx9/uDDd7v/AAQQnEQokmJCRGwc7/QeM/YGVxsZJQYI/EhCChICYmUJigNBSGzobQaI5SaYRw6imne0d2D/bYmZ3dGd+YQKEHYiyc5GUyb3Y+77vfeWNpreFfhvXfAWAAJtbKi7dff1rWK9vPHx3mThP2Iaipk5EzTg8Qmru38H7izmkFHAF4WH1R52654PR0Oamzj2dKxYt/Bbg1OPZuY3d9aU82VGem/5LtnJscLxWzfzRxaWNqWJP0XUadIbSzu5DuvUJpzq7sfYBKsP1GJeLB+PWpt8cCXm4+2+zLXx4guKiLXWA2Nc5ChOuacMEPv20FkT+dIawyenVi5VcAbcigWzXLeNiDRCdwId0LFm5IUMBIBgrp8wOEsFlfeCGm23/zoBZWn9a4C314A1nCoM1OAVccuGyCkPs/P+pIdVIOkG9pIh6YlyqCrwhRKD3GygK9PUBImIQQxRi4b2O+JcCLg8+e8NZiLVEygwCrWpYF0jQJziYU/ho2TUuCPTn8hHcQNuZy1/94sAMOzQHDeqaij7Cd8Dt8CatGhX3iWxgtFW/m29pnUjR7TSQcRCIAVW1FSr6KAVYdi+5Pj8yunviYHq7f72po3Y9dbi7CxzDO1+duzCXH9cEPAQYAhJELY/AqBtwAAAAASUVORK5CYII=);
+	background-position: right top;
+	background-repeat: no-repeat;
 }
 #wholesale-form-container fieldset,
 #wholesale-form-container legend,
 #wholesale-form-container input,
-#wholesale-form-container textarea {
+#wholesale-form-container textarea,
+#wholesale-form-container form .fa:before,
+#wholesale-form-container label {
     -webkit-transition: all 0.13s ease;
     -moz-transition: all 0.13s ease;
     -o-transition: all 0.13s ease;
@@ -14,20 +33,15 @@
 }
 #wholesale-form-container form:hover fieldset,
 #wholesale-form-container form:hover legend,
-#wholesale-form-container form:hover input,
-#wholesale-form-container form:hover textarea {
+#wholesale-form-container form:hover input:not([disabled]),
+#wholesale-form-container form:hover textarea:not([disabled]) {
 	border-color: #D9F5DD;
-}
-#wholesale-form-container form .fa:before {
-    -webkit-transition: all 0.13s ease;
-    -moz-transition: all 0.13s ease;
-    -o-transition: all 0.13s ease;
-    transition: all 0.13s ease;
 }
 #wholesale-form-container fieldset {
     padding: 20px;
     border: 4px solid #eaeaea;
-    border-radius: 4px
+    border-radius: 4px;
+    background: #f8f8f8;
 }
 #wholesale-form-container legend {
 	font-size: 23px;
@@ -45,12 +59,9 @@
 	-webkit-box-shadow: -1px 0 0 0 #d2d2d2,-1px 0 0 0 #e6e6e6,1px 0 0 0 #d2d2d2,2px 0 0 0 #e6e6e6,0 -1px 0 0 #e8e8e8,0 2px 0 0 rgba(241,241,241,0.3),0 1px 0 0 #b1b1b1;
 	-moz-box-shadow: -1px 0 0 0 #d2d2d2,-1px 0 0 0 #e6e6e6,1px 0 0 0 #d2d2d2,2px 0 0 0 #e6e6e6,0 -1px 0 0 #e8e8e8,0 2px 0 0 rgba(241,241,241,0.3),0 1px 0 0 #b1b1b1;
 	box-shadow: -1px 0 0 0 #d2d2d2,-1px 0 0 0 #e6e6e6,1px 0 0 0 #d2d2d2,2px 0 0 0 #e6e6e6,0 -1px 0 0 #e8e8e8,0 2px 0 0 rgba(241,241,241,0.3),0 1px 0 0 #b1b1b1;
+	background: #fff;
 }
 #wholesale-form-container label {
-    -webkit-transition: all 0.13s ease;
-    -moz-transition: all 0.13s ease;
-    -o-transition: all 0.13s ease;
-    transition: all 0.13s ease;
 	color: #999;
 }
 #wholesale-form-container .form-row {
@@ -66,8 +77,9 @@
 	-webkit-flex-direction: row;
 	-ms-flex-direction: row;
 	flex-direction: row;
-	margin: 0 0 13px;
+	margin: 0 auto 13px;
 	position: relative;
+	width: 80%;
 }
 #wholesale-form-container .required-field:before {
 	content: "*";
@@ -76,35 +88,43 @@
 	color: red;
 	font-size: 16px;
 }
-#wholesale-form-container .form-row:last-child {
-    margin: 20px 0 0;
-}
 #wholesale-form-container .form-left {
     flex: 7;
 }
 #wholesale-form-container .form-right {
-    flex: 17;
+    flex: 13;
 }
 #wholesale-form-container form input,
 #wholesale-form-container form textarea {
     border: 4px solid #eaeaea;
     border-radius: 4px;
     box-sizing: border-box;
-    -webkit-transition: all 0.13s ease;
-    -moz-transition: all 0.13s ease;
-    -o-transition: all 0.13s ease;
-    transition: all 0.13s ease;
+    background: #fff;
 }
-#wholesale-form-container form .form-row:hover input,
-#wholesale-form-container form .form-row:hover textarea {
-    border-color: #6ADA78;
+#wholesale-form-container form input:disabled,
+#wholesale-form-container form textarea:disabled {
+	color: #999;
 }
-#wholesale-form-container form .form-row:hover .fa:before {
+#wholesale-form-container form .form-row:not(.disabled-field):hover .fa:before {
 	color: #6ADA78;
 }
-#wholesale-form-container form .form-row:hover label {
+#wholesale-form-container form .form-row:not(.disabled-field):hover label {
 	color: #555;
 }
-#wholesale-form-container .btn {
-    margin: 0 0 0 auto;
+#wholesale-form-container form .form-row:not(.disabled-field):hover input,
+#wholesale-form-container form .form-row:not(.disabled-field):hover textarea,
+#wholesale-form-container form .form-row:not(.disabled-field) input:focus,
+#wholesale-form-container form .form-row:not(.disabled-field) textarea:focus {
+    border-color: #6ADA78;
+}
+#wholesale-form-container form .form-row:not(.disabled-field) input:not([disabled]):invalid:focus,
+#wholesale-form-container form .form-row:not(.disabled-field) textarea:not([disabled]):invalid:focus {
+	border-color: #F47D77;
+	border-color: #F9BDBA;
+}
+#wholesale-form-container .form-row:last-child {
+	margin: 25px auto 10px;
+}
+#wholesale-form-container .form-row:last-child .btn {
+	margin: 0 auto;
 }
