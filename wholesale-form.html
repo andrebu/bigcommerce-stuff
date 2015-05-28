@@ -1,6 +1,6 @@
 <div id="wholesale-form-container">
 	<form action="http://dankstop.com/pages.php?action=sendContactForm" method="post" id="wholesale-form">
-		<input type="hidden" name="page_id" id="page_id" value="5">
+		<input type="hidden" name="page_id" id="page_id" value="13">
 		<fieldset>
 			<legend>DankStop Wholesale Program Registration</legend>
 		    <div class="form-row-nf">
@@ -8,7 +8,7 @@
 			    <p>Interested in our smoke shop supplies? Fill out the contact form below and we will get you set up with a wholesale account. A wholesale account allows you to view wholesale pricing and shop online.</p>
 		    </div>
 		    <hr>
-		    <div class="form-row">
+		    <div class="form-row disabled-field">
 			    <div class="form-left">
 			        <label for="contact_rma"><span class="fa fa-pencil-square-o"> Subject:</span></label>
 			    </div>
@@ -19,10 +19,18 @@
 			<hr>
 		    <div class="form-row">
 			    <div class="form-left required-field">
-			        <label for="contact_fullname"><span class="fa fa-user"> Full Name:</span></label>
+			        <label for="contact_fullname"><span class="fa fa-user"> Contact Name:</span></label>
 			    </div>
 			    <div class="form-right">
-			        <input type="text" name="contact_fullname" id="contact_fullname" placeholder="your full name">
+			        <input type="text" name="contact_fullname" id="contact_fullname" placeholder="contact's full name">
+			    </div>
+		    </div>
+		    <div class="form-row">
+			    <div class="form-left">
+			        <label for="contact_companyname"><span class="fa fa-building-o"> Store Name:</span></label>
+			    </div>
+			    <div class="form-right">
+				    <input type="text" name="contact_companyname" id="contact_companyname" placeholder="store name">
 			    </div>
 		    </div>
 		    <div class="form-row">
@@ -30,35 +38,33 @@
 			        <label for="contact_email"><span class="fa fa-envelope"> E-mail Address:</span></label>
 			    </div>
 			    <div class="form-right">
-			        <input type="text" name="contact_email" id="contact_email" placeholder="your email address">
+			        <input type="email" name="contact_email" id="contact_email" placeholder="contact email address" required>
 			    </div>
 		    </div>
 		    <div class="form-row">
-			    <div class="form-left">
-			        <label for="contact_companyname"><span class="fa fa-building-o"> Company Name:</span></label>
-			    </div>
-			    <div class="form-right">
-				    <input type="text" name="contact_companyname" id="contact_companyname" placeholder="your company name">
-			    </div>
-		    </div>
-		    <div class="form-row">
-			    <div class="form-left">
+			    <div class="form-left required-field">
 			        <label for="contact_phone"><span class="fa fa-phone"> Phone Number:</span></label>
 			    </div>
 			    <div class="form-right">
-				    <input type="text" name="contact_phone" id="contact_phone" placeholder="your phone number">
+				    <input type="tel" name="contact_phone" id="contact_phone" placeholder="contact phone number" required>
 			    </div>
 		    </div>
-<!--
 		    <div class="form-row">
-			    <div class="form-left">
-			        <label for="contact_question"><i class="fa fa-comment"></i> Details:</label>
+			    <div class="form-left required-field">
+			        <label for="contact_orderno"><span class="fa fa-gavel"> Tax ID:</span></label>
 			    </div>
 			    <div class="form-right">
-				    <textarea name="contact_question" id="contact_question" rows="5" cols="50" placeholder="your message"></textarea><div id="SearchResults"></div>
+				    <input type="text" name="contact_orderno" id="contact_orderno" placeholder="Tax ID" maxlength="10" required>
 			    </div>
 		    </div>
--->
+		    <div class="form-row">
+			    <div class="form-left">
+			        <label for="contact_question"><span class="fa fa-comment"> Notes:</span></label>
+			    </div>
+			    <div class="form-right">
+				    <textarea name="contact_question" id="contact_question" rows="4" cols="50" placeholder="your message"></textarea>
+			    </div>
+		    </div>
 		    <div class="form-row">
 			    <div class="form-left">
 			        <label for="captcha"><span class="fa fa-picture-o"> CAPTCHA Text:</span></label>
@@ -70,7 +76,7 @@
 			    </div>
 		    </div>
 		    <div class="form-row">
-		        <button type="submit" class="btn Small">Send your registration</button>
+		        <button type="submit" class="btn Large">Submit your registration</button>
 		    </div>
 		</fieldset>
 	</form>
