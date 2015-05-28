@@ -1,4 +1,7 @@
 <div id="wholesale-form-container">
+	<p class="ErrorMessage" style="display: %%GLOBAL_HideFormError%%">
+	    %%LNG_BadContactFormCaptcha%%
+	</p>
 	<form action="http://dankstop.com/pages.php?action=sendContactForm" method="post" id="wholesale-form">
 		<input type="hidden" name="page_id" id="page_id" value="13">
 		<fieldset>
@@ -22,7 +25,7 @@
 			        <label for="contact_fullname"><span class="fa fa-user"> Contact Name:</span></label>
 			    </div>
 			    <div class="form-right">
-			        <input type="text" name="contact_fullname" id="contact_fullname" placeholder="contact's full name">
+			        <input type="text" name="contact_fullname" id="contact_fullname" placeholder="enter contact's full name">
 			    </div>
 		    </div>
 		    <div class="form-row">
@@ -30,7 +33,7 @@
 			        <label for="contact_companyname"><span class="fa fa-building-o"> Store Name:</span></label>
 			    </div>
 			    <div class="form-right">
-				    <input type="text" name="contact_companyname" id="contact_companyname" placeholder="store name">
+				    <input type="text" name="contact_companyname" id="contact_companyname" placeholder="enter a store name">
 			    </div>
 		    </div>
 		    <div class="form-row">
@@ -38,7 +41,7 @@
 			        <label for="contact_email"><span class="fa fa-envelope"> E-mail Address:</span></label>
 			    </div>
 			    <div class="form-right">
-			        <input type="email" name="contact_email" id="contact_email" placeholder="contact email address" required>
+			        <input type="email" name="contact_email" id="contact_email" placeholder="enter a contact email address" required>
 			    </div>
 		    </div>
 		    <div class="form-row">
@@ -46,7 +49,7 @@
 			        <label for="contact_phone"><span class="fa fa-phone"> Phone Number:</span></label>
 			    </div>
 			    <div class="form-right">
-				    <input type="tel" name="contact_phone" id="contact_phone" placeholder="contact phone number" required>
+				    <input type="tel" name="contact_phone" id="contact_phone" placeholder="enter a contact phone number" required>
 			    </div>
 		    </div>
 		    <div class="form-row">
@@ -55,6 +58,14 @@
 			    </div>
 			    <div class="form-right">
 				    <input type="text" name="contact_orderno" id="contact_orderno" placeholder="Tax ID" required>
+			    </div>
+		    </div>
+		    <div class="form-row">
+			    <div class="form-left">
+			        <label for="contact_storeadd"><span class="fa fa-map-marker"> Store Address:</span></label>
+			    </div>
+			    <div class="form-right">
+				    <input type="text" name="contact_storeadd" id="contact_storeadd" placeholder="enter your store address" required>
 			    </div>
 		    </div>
 		    <div class="form-row">
