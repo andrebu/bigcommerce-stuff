@@ -120,13 +120,15 @@
 #wholesale-form-container form .form-row:not(.disabled-field) input:focus,
 #wholesale-form-container form .form-row:not(.disabled-field) textarea:focus {
     border-color: #6ADA78;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
-	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(106, 218, 120,.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(106, 218, 120,.6);
 }
 #wholesale-form-container form .form-row:not(.disabled-field) input:not([disabled]):invalid:focus,
 #wholesale-form-container form .form-row:not(.disabled-field) textarea:not([disabled]):invalid:focus {
 	border-color: #F47D77;
 	border-color: #F9BDBA;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(249, 189, 186,.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(249, 189, 186,.6);
 }
 #wholesale-form-container .form-row:last-child {
 	margin: 25px auto 10px;
