@@ -141,6 +141,9 @@
 	background: #eaeaea;
 	color: #fff;
 }
+#wholesale-form-container form div.selector:hover:before {
+	background-color: #666;
+}
 #wholesale-form-container form input:disabled,
 #wholesale-form-container form textarea:disabled {
 	color: #999;
@@ -157,7 +160,7 @@
     border-color: #6ADA78;
 }
 #wholesale-form-container form .form-row:hover div.selector:before {
-	background: #D9F5DD;
+	background: #6ADA78;
 }
 #wholesale-form-container form .form-row:not(.disabled-field) input:focus,
 #wholesale-form-container form .form-row:not(.disabled-field) textarea:focus {
