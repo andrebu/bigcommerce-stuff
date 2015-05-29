@@ -147,9 +147,11 @@
 		$('#ContactForm').hide();
     });
 	var $form = $('#wholesale-form');
-	var $formButton = $("#wholesale-form button[type='submit']");
+	var $formButton = $('#wholesale-form button[type="submit"]');
 	var $formResponse = $('#form-response');
-	var formUrl = "http://dankstop.com/pages.php?action=sendContactForm";
+	var formUrl = 'http://dankstop.com/pages.php?action=sendContactForm';
+	var captchaImg = $('#captcha-field img');
+	var captchaUrl = 'http://dankstop.com/captcha.php?1557';
 	$form.submit(function() {
 	    $.ajax({
 			type: "POST",
@@ -164,17 +166,15 @@
 					if (errorMsg) {
 						var errorMsg = '<span class="fa fa-exclamation-triangle"></span> <span id="error-message">' + errorMsg + '</span>';
 						$formResponse.css("visibility", "visible").addClass('submit-error').html(errorMsg);
+						captchaImg.attr('src', '').attr('src', captchaUrl);
 					} else if (infoMsg) {
-						var infoMsg = '<span class="fa fa-check-circl-o"></span> <span id="info-message">' + infoMsg + '</span>';
+						var infoMsg = '<span class="fa fa-check-circle-o"></span> <span id="info-message">' + infoMsg + '</span>';
 						$formResponse.css("visibility", "visible").addClass('submit-success').html(infoMsg);
 					}
 				}
 			});
 	    return false; 
 	});
-	var errorMessage = $('.ErrorMessage');
-	var $captchaField = $('#captcha-field');
-	errorMessage.appendTo(captchaField);
 //]]>
 </script></div>
 <!-- END .wholesalePage -->
