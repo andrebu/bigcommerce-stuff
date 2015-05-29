@@ -131,12 +131,14 @@
 					<input type="text" name="captcha" id="captcha"  placeholder="CAPTCHA text">
 			    </div>
 		    </div>
-		    <div class="form-row">
+		    <div class="form-row submission">
 		        <button type="submit" class="btn Large">Submit your registration</button>
+		    </div>
+		    <div class="form-row response">
+				<div id="form-response"></div>
 		    </div>
 		</fieldset>
 	</form>
-	<div id="form-response"></div>
 </div><!-- END .wholesale-form-container -->
 <script src="http://malsup.github.com/jquery.form.js"></script> 
 <script type="text/javascript">
@@ -160,9 +162,11 @@
 					var errorMsg = $response.find('#error-message').html();
 					var infoMsg = $response.find('#info-message').html();
 					if (errorMsg) {
-						$formResponse.html(errorMsg);
+						var errorMsg = '<span class="fa fa-exclamation-triangle"></span> <span id="error-message">' + errorMsg + '</span>';
+						$formResponse.css("visibility", "visible").addClass('submit-error').html(errorMsg);
 					} else if (infoMsg) {
-						$formResponse.html(infoMsg);
+						var infoMsg = '<span class="fa fa-check-circl-o"></span> <span id="info-message">' + infoMsg + '</span>';
+						$formResponse.css("visibility", "visible").addClass('submit-success').html(infoMsg);
 					}
 				}
 			});
