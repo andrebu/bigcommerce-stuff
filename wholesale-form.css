@@ -43,7 +43,7 @@
 	background: #D9F5DD;
 }
 #wholesale-form-container fieldset {
-    padding: 20px;
+    padding: 4vw;
     border: 4px solid #eaeaea;
     background: #f8f8f8;
 }
@@ -82,7 +82,6 @@
 	flex-direction: row;
 	margin: 0 auto 13px;
 	position: relative;
-	width: 80%;
 }
 #wholesale-form-container .required-field:before {
 	content: "*";
@@ -113,13 +112,14 @@
 	padding: 0 !important;
 	border: 0;
 	height: auto;
-	width: 100%;
+	width: 100% !important;
 }
 #wholesale-form-container form div.selector span {
 	color: #666;
 	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 12px;
 	height: 36px;
+	width: 100%;
 }
 #wholesale-form-container form div.selector:before {
 	content: "\f078";
@@ -141,9 +141,6 @@
 	background: #eaeaea;
 	color: #fff;
 }
-#wholesale-form-container form div.selector:hover:before {
-	background-color: #666;
-}
 #wholesale-form-container form input:disabled,
 #wholesale-form-container form textarea:disabled {
 	color: #999;
@@ -161,6 +158,9 @@
 }
 #wholesale-form-container form .form-row:hover div.selector:before {
 	background: #6ADA78;
+}
+#wholesale-form-container form .form-row div.selector:hover:before {
+	background-color: #666;
 }
 #wholesale-form-container form .form-row:not(.disabled-field) input:focus,
 #wholesale-form-container form .form-row:not(.disabled-field) textarea:focus {
