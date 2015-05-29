@@ -1,7 +1,37 @@
+<div class="wholesalePage">
+<div class="wholesaleBanner"><img title="Wholesale Headshop" src="http://dankstop.com/product_images/uploaded_images/wholesalebannersmall.png" alt="Wholesale Headshop" /></div>
+<div class="wholesaleWelcome">
+<h2>Welcome to the DankStop Wholesale Program</h2>
+<p>We strive to offer competitive wholesale pricing on a variety of glass water pipes, dab rigs, hand pipes, vaporizers, glass adapters and other smoking accessories. Browse our selection of high grade glassware and stock your store with our unique products. Log in with your existing wholesale account or apply for a wholesale account today, it's fast and easy!</p>
+<div class="wholesaleBtnContainer">
+<div><a class="wholesaleLogin btn cta" href="http://dankstop.com/login.php">Log in to my wholesale account</a> <a class="wholesaleApply btn cta" href="#wholesale-form-container">Apply for a wholesale account</a></div>
+</div>
+</div>
+<div class="wholesaleCatSelection">
+<h2>Wholesale Categories</h2>
+<p>Please select the category of our wholesale offerings that you'd like to peruse and shop.</p>
+<div class="wholesaleCategory">
+<h3><a class="wholesaleCatLink" href="http://dankstop.com/wholesale-water-pipes">Wholesale Water Pipes</a></h3>
+<a href="http://dankstop.com/wholesale-water-pipes"> <span> <img title="Wholesale Water Pipes" src="http://dankstop.com/content/images/wholesale-water-pipes.png" alt="Wholesale Water Pipes" width="1000" height="250" /> </span> </a></div>
+<hr />
+<div class="wholesaleCategory">
+<h3><a class="wholesaleCatLink" href="http://dankstop.com/wholesale-dab-rigs-and-concentrate-pipes">Wholesale Dab Rigs and Concentrate Pipes</a> <a href="http://dankstop.com/wholesale-dab-rigs-and-concentrate-pipes"> <span> <img title="Wholesale Dab Rigs and Concentrate Pipes" src="http://dankstop.com/content/images/wholesale-dab-rigs-and-concentrate-pipes.png" alt="Wholesale Dab Rigs and Concentrate Pipes" width="1000" height="250" /> </span> </a></h3>
+</div>
+<hr />
+<div class="wholesaleCategory">
+<h3><a class="wholesaleCatLink" href="http://dankstop.com/wholesale-recyclers">Wholesale Recyclers</a></h3>
+<a href="http://dankstop.com/wholesale-recyclers"> <span> <img title="Wholesale Recyclers" src="http://dankstop.com/content/images/wholesale-recyclers.png" alt="Wholesale Recyclers" width="1000" height="250" /> </span> </a></div>
+<hr />
+<div class="wholesaleCategory">
+<h3><a class="wholesaleCatLink" href="http://dankstop.com/wholesale-glass-pipes">Wholesale Hand Pipes</a></h3>
+<a href="http://dankstop.com/wholesale-glass-pipes"> <span> <img title="Wholesale Hand Pipes" src="http://dankstop.com/content/images/wholesale-glass-hand-pipes.png" alt="Wholesale Hand Pipes" width="1000" height="250" /> </span> </a></div>
+<hr />
+<div class="wholesaleCategory">
+<h3><a class="wholesaleCatLink" href="http://dankstop.com/wholesale-glass-adapters-and-parts">Wholesale Glass Adapters and Parts</a></h3>
+<a href="http://dankstop.com/wholesale-glass-adapters-and-parts"> <span> <img title="Wholesale Glass Adapters and Parts" src="http://dankstop.com/content/images/wholesale-glass-adapters-and-parts.png" alt="Wholesale Glass Adapters and Parts" width="1000" height="250" /> </span> </a></div>
+</div>
+<!-- END .wholesaleCatSelection --><hr />
 <div id="wholesale-form-container">
-	<p class="ErrorMessage" style="display: none">
-		The characters you copied from the image are incorrect. Please try again.
-	</p>
 	<form action="http://dankstop.com/pages.php?action=sendContactForm" method="post" id="wholesale-form">
 		<input type="hidden" name="page_id" id="page_id" value="13">
 		<fieldset>
@@ -54,10 +84,10 @@
 		    </div>
 		    <div class="form-row">
 			    <div class="form-left required-field">
-			        <label for="contact_orderno"><span class="fa fa-gavel"> enter the Tax ID:</span></label>
+			        <label for="contact_orderno"><span class="fa fa-gavel"> Tax ID:</span></label>
 			    </div>
 			    <div class="form-right">
-				    <input type="text" name="contact_orderno" id="contact_orderno" placeholder="Tax ID" required>
+				    <input type="text" name="contact_orderno" id="contact_orderno" placeholder="enter the Tax ID" required>
 			    </div>
 		    </div>
 		    <div class="form-row">
@@ -95,7 +125,7 @@
 			    <div class="form-left">
 			        <label for="captcha"><span class="fa fa-picture-o"> CAPTCHA Text:</span></label>
 			    </div>
-			    <div class="form-right">
+			    <div class="form-right" id="captcha-field">
 					<p class="Warning">Please copy the characters from the image into the text field below. Doing this helps us prevent automated submissions.</p>
 					<img src="http://dankstop.com/captcha.php?1557" alt="img"><br>
 					<input type="text" name="captcha" id="captcha"  placeholder="CAPTCHA text">
@@ -106,4 +136,41 @@
 		    </div>
 		</fieldset>
 	</form>
+	<div id="form-response"></div>
 </div><!-- END .wholesale-form-container -->
+<script src="http://malsup.github.com/jquery.form.js"></script> 
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function(){
+		$('#ContactForm').hide();
+    });
+	var $form = $('#wholesale-form');
+	var $formButton = $("#wholesale-form button[type='submit']");
+	var $formResponse = $('#form-response');
+	var formUrl = "http://dankstop.com/pages.php?action=sendContactForm";
+	$form.submit(function() {
+	    $.ajax({
+			type: "POST",
+			url: formUrl,
+			data: $form.serialize(), 
+			success: function(data)
+				{
+					$('#ContactForm').hide();
+					var $response = $(data);
+					var errorMsg = $response.find('#error-message').html();
+					var infoMsg = $response.find('#info-message').html();
+					if (errorMsg) {
+						$formResponse.html(errorMsg);
+					} else if (infoMsg) {
+						$formResponse.html(infoMsg);
+					}
+				}
+			});
+	    return false; 
+	});
+	var errorMessage = $('.ErrorMessage');
+	var $captchaField = $('#captcha-field');
+	errorMessage.appendTo(captchaField);
+//]]>
+</script></div>
+<!-- END .wholesalePage -->
