@@ -658,6 +658,26 @@ width: 82%;
         text-align:center;
         padding:20px 0 16px;
     }
+.header-logo-mobile .mobile-logo {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.header-logo-mobile .mobile-logo a {
+	display: block;
+/* 	width: 170px;
+	height: 170px; */
+}
+.header-logo-mobile .mobile-logo a img {
+	width: 160px;
+	height: 160px;
+}
+.header-logo-mobile .mobile-logo-text {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 33px;
+	font-family: futura;
+}
     .header {
         padding-top:45px;
     }
@@ -999,7 +1019,7 @@ width: 82%;
     }
     /*select, div.selector /* For uniform  { margin-bottom: 20px;}*/
     .ProductList li, #home .ProductList li, .productPage .ProductList li, .SearchContainer .ProductList li {
-        width: 100% !important;
+        width: 100%;
     }
     .TopMenu > .inner, #Header > .inner, .PageMenu > .inner, .main > .inner, .footer-main > .inner, .footer-links > .inner, .newsletter-subscription > .inner {
         width: 90%;
@@ -1337,6 +1357,28 @@ width: 82%;
         width:94% !important;
 /* 		margin-top: 75px; */
     }
+.header-logo-mobile .mobile-logo {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.header-logo-mobile .mobile-logo a {
+	display: block;
+/*
+	width: 70px;
+	height: 70px;
+*/
+}
+.header-logo-mobile .mobile-logo a img {
+	width: 70px;
+	height: 70px;
+}
+.header-logo-mobile .mobile-logo-text {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 17px;
+	font-family: futura;
+}
     #saleinfo {
 		margin: 53px auto 0;
 		width: 100% !important;
@@ -1541,9 +1583,12 @@ width:100%;
     .TopMenu, .PageMenu, .header-secondary, .pie {
         display:none;
     }
-    .footer-columns .SocialConnect, .ProductCompareButton, .subscribe_form li, .HomeSlideShowMobile #HomeSlideShow, .mobile {
+    .footer-columns .SocialConnect, .subscribe_form li, .HomeSlideShowMobile #HomeSlideShow, .mobile {
         display:block !important;
         border: none;
+    }
+    .ProductCompareButton {
+	    display: none;
     }
     .ProductList .ProductActionAdd {
 /*         display:block; */
