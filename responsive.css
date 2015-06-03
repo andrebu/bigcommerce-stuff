@@ -1741,6 +1741,15 @@ width:100%;
 	}
 	.yotpo .text-m {
 		font-size: 11px !important;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.yotpo.bottomLine .yotpo-bottomline .yotpo-icon-star, .yotpo.bottomLine .yotpo-bottomline .yotpo-icon-half-star, .yotpo.bottomLine .yotpo-bottomline .yotpo-icon-empty-star, .yotpo.bottomline .yotpo-bottomline .yotpo-icon-star, .yotpo.bottomline .yotpo-bottomline .yotpo-icon-half-star, .yotpo.bottomline .yotpo-bottomline .yotpo-icon-empty-star, .yotpo .yotpo-modal-bottom-line .yotpo-bottomline .yotpo-icon-star, .yotpo .yotpo-modal-bottom-line .yotpo-bottomline .yotpo-icon-half-star, .yotpo .yotpo-modal-bottom-line .yotpo-bottomline .yotpo-icon-empty-star {
+		font-size: 13px !important;
+	}
+	.yotpo.bottomLine .yotpo-bottomline .yotpo-stars {
+		display: inline-block;
+		vertical-align: middle;
 	}
 	
     .SearchContainer .ProductList li {
