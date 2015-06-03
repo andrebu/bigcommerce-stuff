@@ -7009,9 +7009,11 @@ font-weight: bold;
     font-size:16px;
     font-weight:500;
 }
+/*
 .ProductDetailsGrid .DetailRow .ProductPrice.VariationProductPrice {
 	color: red;
 }
+*/
 .ReviewEmailHint {
     margin:0;
 }
