@@ -1225,6 +1225,28 @@ width: 82%;
     .header-logo-mobile {
         width:92% !important;
     }
+.header-logo-mobile .mobile-logo {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.header-logo-mobile .mobile-logo a {
+	display: block;
+/*
+	width: 70px;
+	height: 70px;
+*/
+}
+.header-logo-mobile .mobile-logo a img {
+	width: 70px;
+	height: 70px;
+}
+.header-logo-mobile .mobile-logo-text {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 17px;
+	font-family: futura;
+}
     #SimilarMultiProductsByCustomerViews .ProductList li {
         width:100%;
     }
@@ -1427,6 +1449,28 @@ width: 82%;
     .header-logo-mobile {
 /* 		margin-top: 75px; */
     }
+.header-logo-mobile .mobile-logo {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.header-logo-mobile .mobile-logo a {
+	display: block;
+/*
+	width: 70px;
+	height: 70px;
+*/
+}
+.header-logo-mobile .mobile-logo a img {
+	width: 110px;
+	height: 110px;
+}
+.header-logo-mobile .mobile-logo-text {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 23px;
+	font-family: futura;
+}
     #saleinfo {
 		margin: 53px auto 0;
 		width: 100% !important;
@@ -1678,9 +1722,27 @@ width:100%;
         width:100% !important;
     }
     /*----------Poduct Display----------*/
+    /*---- two product 2-product 2 product wide 2-wide category mobile display  ---*/
     #home .ProductList li, .productPage .ProductList li, #SimilarMultiProductsByCustomerViews .ProductList li, .WishlistProductList.ProductList li, .CategoryContent .ProductList li {
         width:49.99999%;
     }
+	.on-sale-badge {
+		left: -28%;
+		font-size: 13px !important;
+	}
+	.sold-out-overlay {
+		font-size: 10px !important;
+	}
+	.catSizeSwatch {
+		top: calc(0px - -40px) !important;
+	}
+	.ProductList .pname {
+		line-height: 14px;
+	}
+	.yotpo .text-m {
+		font-size: 11px !important;
+	}
+	
     .SearchContainer .ProductList li {
         width:49%;
     }
