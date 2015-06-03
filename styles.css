@@ -1618,6 +1618,22 @@ display: none;
 	color: #F47D77;
 }
 
+.CatYotpoStars .yotpo.bottomLine.yotpo-small {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+/*
+.CatYotpoStars {
+margin-left: 25%;
+}
+*/
+
+
+.choosedrywet {
+	text-align: center;
+}
+
 
 .FAQRIGHTLINKS {
 
@@ -1630,9 +1646,6 @@ min-width:360px;
 float:left;
 }
 
-.CatYotpoStars {
-margin-left: 25%;
-}
 
 #InStockNotifyEmailAddress {
 color: #000000 !important;
@@ -4753,10 +4766,10 @@ div#fancy_bg_n, div#fancy_bg_ne, div#fancy_bg_e, div#fancy_bg_s, div#fancy_bg_se
     float: left;
 }
 .CategoryPagination .PagingList .ActivePage {
-    border:solid 1px #b2b2b2;
+    border: solid 1px #39B54A;
     padding:0 5px;
     color:#ffffff;
-    background:#b2b2b2;
+    background: #39B54A;
 }
 .CategoryPagination .PagingList li {
     margin: 0 10px 0 0;
@@ -4769,7 +4782,7 @@ div#fancy_bg_n, div#fancy_bg_ne, div#fancy_bg_e, div#fancy_bg_s, div#fancy_bg_se
 }
 .CategoryPagination .PagingList a:hover {
     color: #202020;
-    border-color:#b2b2b2;
+    border-color: #39B54A;
 }
 .inner #CategoryHeading {
     float: none;
