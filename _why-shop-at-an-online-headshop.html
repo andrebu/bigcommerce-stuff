@@ -1,6 +1,32 @@
+%%Panel.HTMLHead%%
+    <body>
+        %%Panel.DrawerMenu%%
+        <div class="page">
+            %%Panel.Header%%
+            <div class="main">
+                <div class="inner">
+                    <div class="Left fleft">
+                            %%Panel.SideCategoryList%%
+                            %%Panel.SideShopByBrand%%
+                          %%Panel.SideCategoryShopByPriceCustom%% 
+                          %%Panel.SocialLinks%%
+                          %%Panel.FloatingSocialLinks%%
+                    </div>
+                    <div class="Content Widest" id="LayoutColumn1">
+                        <div class="Right">
+                            %%Panel.SideSubPageList%%
+                        </div>
+                        <div class="Content" id="LayoutColumn2">
+                            %%Panel.WrapperBanner%%
+                            %%Panel.PageBreadcrumb%%
+                            <h1 class="TitleHeading">%%GLOBAL_PageTitle%%</h1>
+                                %%Panel.PageListMobile%%
+                            <div class="BlockContent PageContent">
+                                %%GLOBAL_PageDescriptionOptimizerScriptTag%%
+
 <style>
 #why-shop-page .section {
-	margin-bottom: 40px;
+	margin-bottom: 50px;
 }
 #why-shop-page .section-heading {
 	background-color: #39B54A;
@@ -25,10 +51,20 @@
 #why-shop-page img {
 	width: 50px;
 }
+/* Section 1 - Huge Selection */
+#why-shop-page .selection-section {
+}
+#why-shop-page .selection-section .sub-section {
+	background-color: #eee;
+	margin-bottom: 40px;
+}
+/* Section 2 - Low Prices */
+#why-shop-page .prices-section {
+}
 /* Section 3 - Fast Shipping */
 #why-shop-page .shipping-section .sub-section.clock {
 	background-color: #eee;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 #why-shop-page .shipping-section .sub-section.clock p {
 	display: inline-block;
@@ -57,7 +93,7 @@
 #why-shop-page .shipping-section .sub-section.map .section-left span {
 	color: #39B54A;
 }
-#why-shop-page .shipping-section .sub-section.map .section-left + span {
+#why-shop-page .shipping-section .sub-section.map .section-left span:first-child {
 	font-weight: bold;
 	display: block;
 	margin-bottom: 10px;
@@ -122,6 +158,9 @@
 	float: right;
 	margin: -70px 70px;
 }
+/* Section 6 - Assured Quality Prices */
+#why-shop-page .quality-section {
+}
 </style>
 
 <div id="why-shop-page">
@@ -135,26 +174,35 @@
 			<img src="/content/images/why-shop-at-an-online-smoke-shop/headerbong.png" alt="Huge Selection" />
 			<h2>Huge Selection</h2>
 		</div>
-		<p>A big factor when making any purchase is the selection of products to choose from.  As an online smoke shop, we focus on offering a large array of products so that every consumer can find the item perfectly fit for their needs.  Store front smoke shops typically have a smaller selection leaving the customer with a rather “one dimensional” set of options.  </p>
-		<p>We offer:</p>
-		<ul>
-		<li>Water Pipes</li>
-		<li>Bubblers</li>
-		<li>Recyclers</li>
-		<li>Concentrate/Dab Rigs</li>
-		<li>Hand Pipes</li>
-		<li>Ash Catchers</li>
-		<li>Grinders</li>
-		<li>Vaporizers</li>
-		<li>Rolling Papers</li>
-		<li>Cases</li>
-		<li>Accessories & More!</li>
-		</ul>
-		<p>It isn't just the diversity of the types of products we stock, but the quality brands we carry that set us apart from the typical brick and mortar shop.</p>
-		<p>Check out our wide variety of brands <a href="http://dankstop.com/brands" target="_blank">here</a>.</p>
-		<img src="/content/images/why-shop-at-an-online-smoke-shop/bong1.png" alt="Bong" />
-		<img src="/content/images/why-shop-at-an-online-smoke-shop/bong2.png" alt="Bong" />
-		<img src="/content/images/why-shop-at-an-online-smoke-shop/bong3.png" alt="Bong" />
+		<p>A big factor when making any purchase is the selection of products to choose from.  As an online smoke shop, we focus on offering a large array of products so that every consumer can find the item perfectly fit for their needs.  Store front smoke shops typically have a smaller selection leaving the customer with a rather “one dimensional” set of options.</p>
+		<div class="group">
+			<p>It isn't just the diversity of the types of products we stock, but the quality brands we carry that set us apart from the typical brick and mortar shop.</p>
+			<span>Check out our wide variety of brands <a href="/brands" target="_blank">HERE</a>.</span>
+		</div>
+		<div class="sub-section">
+			<div class="product-scroll">
+				<ul class="ProductList MagicScroll" data-options="items:fit;scrollOnWheel:false;">
+				    %%SNIPPET_HomeNewProducts%%
+				</ul>
+			</div>
+			<p>We offer:</p>
+			<ul>
+				<li>Water Pipes</li>
+				<li>Bubblers</li>
+				<li>Recyclers</li>
+				<li>Concentrate/Dab Rigs</li>
+				<li>Hand Pipes</li>
+				<li>Ash Catchers</li>
+				<li>Grinders</li>
+				<li>Vaporizers</li>
+				<li>Rolling Papers</li>
+				<li>Cases</li>
+				<li>Accessories & More!</li>
+			</ul>
+			<img src="/content/images/why-shop-at-an-online-smoke-shop/bong1.png" alt="Bong" />
+			<img src="/content/images/why-shop-at-an-online-smoke-shop/bong2.png" alt="Bong" />
+			<img src="/content/images/why-shop-at-an-online-smoke-shop/bong3.png" alt="Bong" />
+		</div>
 	</div>
 	
 	
@@ -283,3 +331,18 @@
 	</div>
 	
 </div>
+
+                                %%GLOBAL_PageDescriptionOptimizerNoScriptTag%%
+                            </div>
+                            %%Panel.PageComments%%
+                            %%Banner.BottomBanner%%
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    
+                </div>
+            </div>
+            %%Panel.Footer%%
+        </div>
+    </body>
+</html>​
