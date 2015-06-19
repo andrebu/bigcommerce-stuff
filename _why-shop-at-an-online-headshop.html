@@ -30,6 +30,7 @@
 }
 #why-shop-page .section {
 	margin-bottom: 50px;
+	position: relative;
 }
 #why-shop-page .section-heading {
 	background-color: #39B54A;
@@ -73,6 +74,7 @@
 	margin-bottom: 40px;
 	height: 170px;
 	font-size: 0;
+	position: relative;
 }
 #why-shop-page .selection-section .sub-section > div {
 	display: inline-block;
@@ -321,7 +323,119 @@
 	margin-top: -10px;
 }
 @media screen and (max-width: 480px) and (min-width: 321px) {
-	
+	#why-shop-page p {
+		padding: 0;
+	}
+/* Section 1 - Huge Selection */
+	#why-shop-page .selection-section .group {
+		margin: 0;
+		width: 50%;
+	}
+	#why-shop-page .selection-section .sub-section .section-right {
+		display: block;
+		position: absolute;
+		top: -180px;
+		right: -105px;
+		width: 290px;
+	}
+	#why-shop-page .selection-section .sub-section .section-right img + img {
+		margin: 0 0 0 -30px;
+	}
+	#why-shop-page .selection-section .sub-section {
+		height: inherit;
+	}
+	#why-shop-page .selection-section .sub-section .section-left {
+		width: 54%;
+	}
+	#why-shop-page .selection-section .sub-section .section-middle {
+		width: 46%;
+		margin: 10px 0;
+	}
+	#why-shop-page .selection-section .sub-section .section-middle ul {
+		height: inherit;
+	}
+/* Section 2 - Low Prices */
+	#why-shop-page .prices-section .section-right {
+		width: 100%;
+	}
+	#why-shop-page .prices-section .section-right .group-top {
+		margin-bottom: 0;
+	}
+	#why-shop-page .prices-section .section-right .group-top h3 {
+		padding: 0;
+	}
+	#why-shop-page .prices-section .section-left {
+		position: absolute;
+		top: 170px;
+	}
+	#why-shop-page .prices-section .section-right .group-bottom h3,  
+	#why-shop-page .prices-section .section-right .group-bottom ul {
+		padding: 0;
+		width: 50%;
+		margin: 0 0 0 auto;
+	}
+	#why-shop-page .prices-section .section-right .group-bottom ul li + li {
+		margin-top: 10px;
+	}
+	#why-shop-page .prices-section .section-right .group-bottom ul {
+		margin-bottom: 20px;
+	}
+/* Section 3 - Fast Shipping */
+	#why-shop-page .shipping-section .sub-section.clock p {
+		padding: 3% 0 3% 3%;;
+		width: 69%;
+		line-height: 18px;
+		font-size: 15px;
+	}
+	#why-shop-page .shipping-section .sub-section.clock img {
+		margin: 0;
+		width: 28%;
+		position: relative;
+		top: -12px;
+		right: 3px;
+	}
+	#why-shop-page .shipping-section .sub-section.map {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-moz-box-orient: vertical;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		/* optional */
+		-webkit-box-align: start;
+		-moz-box-align: start;
+		-ms-flex-align: start;
+		-webkit-align-items: flex-start;
+		align-items: flex-start;
+	}
+	#why-shop-page .shipping-section .sub-section.map .section-left {
+		width: 100%;
+		-webkit-box-ordinal-group: 2;
+		-moz-box-ordinal-group: 2;
+		-ms-flex-order: 2;
+		-webkit-order: 2;
+		order: 2;
+	}
+	#why-shop-page .shipping-section .sub-section.map .section-right {
+		width: 100%;
+		-webkit-box-ordinal-group: 1;
+		-moz-box-ordinal-group: 1;
+		-ms-flex-order: 1;
+		-webkit-order: 1;
+		order: 1;
+		margin-bottom: 30px;
+	}
+	#why-shop-page .shipping-section .sub-section.map .section-right ul {
+		width: 100%;
+		margin: 0;
+	}
+	#why-shop-page .shipping-section .sub-section.map .section-right ul li {
+		margin: 0 0 0 30px;
+	}
 }
 </style>
 
