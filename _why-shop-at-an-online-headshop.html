@@ -88,6 +88,7 @@
 	height: 200px;
 	position: relative;
 }
+
 #why-shop-page .why-shop.MagicScroll {
 	margin: 0;
 	border: 0;
@@ -118,8 +119,6 @@
 #why-shop-page .mcs-item:after {
 	display: none;
 }
-
-
 #why-shop-page .mcs-item.loading-placeholder li {
 	background-image: url('/content/images/dankstop-loading-running-cat-wbg3.gif');
 	background-size: contain;
@@ -128,9 +127,15 @@
 #why-shop-page .mcs-item li {
 	height: 100% !important;
 }
+#why-shop-page .mcs-item li .ProductImage {
+	display: block;
+	height: 100%;
+}
 #why-shop-page .mcs-item li .ProductImage a {
-	height: 100% !important;
 	border: 0;
+	display: block;
+	height: 80% !important;
+	padding: 10% 0;
 }
 #why-shop-page .mcs-item li .ProductImage a img {
 	width: 100%;
@@ -150,7 +155,7 @@
 
 #why-shop-page .selection-section .sub-section .section-middle {
 	width: 20%;
-	font-size: 13px;
+	font-size: 11px;
 }
 #why-shop-page .selection-section .sub-section .section-middle span {
 	font-weight: bold;
@@ -172,7 +177,8 @@
 }
 #why-shop-page .selection-section .sub-section .section-right {
 	width: 40%;
-	float: right;
+	position: absolute;
+	right: 1%;
 }
 #why-shop-page .selection-section .sub-section .section-right img {
 	width: 32%;
@@ -288,8 +294,9 @@
 	display: inline-block;
 	vertical-align: middle;
 	width: 220px;
-	float: right;
-	margin: -40px 70px;
+	position: absolute;
+	right: 10%;
+	top: -10%;
 }
 #why-shop-page .service-section .sub-section li {
 	margin: 10px 0;
@@ -624,6 +631,9 @@
 		line-height: 13px;
 	}
 }
+@media screen and (max-width: 320px) and (min-width: 0px) and (orientation: landscape){
+	
+}
 @media screen and (max-width: 480px) and (min-width: 321px) {
 	#why-shop-page .section-heading h2 {
 		font-size: 15px;
@@ -802,9 +812,16 @@
 	#why-shop-page .quality-section .section-top .section-right {
 		width: 100%;
 	}
+	#why-shop-page .quality-section .section-top .section-right p {
+		width: 70%;
+		padding: 0 0 0 30px;
+		font-size: 14px;
+		margin-top: 60px;
+	}
 	#why-shop-page .quality-section .section-top .section-right img {
-		width: 180px;
+		width: 150px;
 		top: 20px;
+		right: -20px;
 	}
 	#why-shop-page .quality-section .section-top {
 		margin: 20px 0 110px 0;
@@ -812,7 +829,7 @@
 	#why-shop-page .quality-section .section-top .section-left h3 {
 		padding: 0;
 		position: absolute;
-		top: 410px;
+		top: 397px;
 		text-align: center;
 		font-size: 13px;
 	}
@@ -822,11 +839,12 @@
 		line-height: 13px;
 	}
 }
+@media screen and (max-width: 480px) and (min-width: 321px) and (orientation: landscape) {
+	
+}
 </style>
 
 <div id="why-shop-page">
-	<h1>Why Shop Online?</h1>
-	
 	<!--===================-->
 	<!----- 1st Section ----->
 	<!--===================-->
