@@ -634,7 +634,212 @@
 @media screen and (max-width: 320px) and (min-width: 0px) and (orientation: landscape){
 	
 }
-@media screen and (max-width: 480px) and (min-width: 321px) {
+/* iPhone 6 and 6+ Landscape */
+/* @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : landscape){  */
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (orientation : landscape) 
+    and (-webkit-min-device-pixel-ratio : 2),
+only screen 
+    and (min-device-width : 414px) 
+    and (max-device-width : 736px) 
+    and (orientation : landscape) 
+    and (-webkit-min-device-pixel-ratio : 3) {
+	#why-shop-page .why-shop.MagicScroll {
+		width: 100% !important;
+	}
+	#why-shop-page .mcs-item li .ProductImage a {
+		padding: 30% 0;
+	}
+	#why-shop-page .selection-section .sub-section .section-left {
+		width: 37%;
+	}
+	#why-shop-page .selection-section .sub-section .section-middle {
+		height: 140px;
+		width: 60%;
+		vertical-align: bottom;
+	}
+	#why-shop-page .selection-section .sub-section .section-right {
+		width: 64%;
+		position: absolute;
+		right: -14%;
+		top: -134px;
+	}
+	#why-shop-page .selection-section .sub-section .section-right img {
+		margin-top: -20px;
+	}
+/* Section 2 - Low Prices */
+	#why-shop-page .prices-section .section-right {
+		width: 100%;
+	}
+	#why-shop-page .prices-section .section-right .group-top {
+		margin-bottom: 0;
+	}
+	#why-shop-page .prices-section .section-right .group-top h3 {
+		padding: 0;
+	}
+	#why-shop-page .prices-section .section-left {
+		position: absolute;
+		top: 120px;
+		left: 30px;
+		width: 90px;
+	}
+	#why-shop-page .prices-section .section-right .group-bottom h3,  
+	#why-shop-page .prices-section .section-right .group-bottom ul {
+		padding: 0;
+		width: 73%;
+		margin: 0 0 0 auto;
+	}
+	#why-shop-page .prices-section .section-right .group-bottom ul li + li {
+		margin-top: 10px;
+	}
+	#why-shop-page .prices-section .section-right .group-bottom ul {
+		margin-bottom: 20px;
+	}
+/* Section 3 - Fast Shipping */
+	#why-shop-page .shipping-section .sub-section.clock p {
+		padding: 3% 0 3% 3%;;
+		width: 69%;
+		line-height: 18px;
+		font-size: 15px;
+	}
+	#why-shop-page .shipping-section .sub-section.clock img {
+		margin: 0;
+		width: 16%;
+		position: relative;
+		top: -12px;
+		right: 33px;
+	}
+	#why-shop-page .shipping-section .sub-section.map {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-moz-box-orient: vertical;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		/* optional */
+		-webkit-box-align: start;
+		-moz-box-align: start;
+		-ms-flex-align: start;
+		-webkit-align-items: flex-start;
+		align-items: flex-start;
+	}
+	#why-shop-page .shipping-section .sub-section.map .section-left {
+		width: 100%;
+		-webkit-box-ordinal-group: 2;
+		-moz-box-ordinal-group: 2;
+		-ms-flex-order: 2;
+		-webkit-order: 2;
+		order: 2;
+	}
+	#why-shop-page .shipping-section .sub-section.map .section-right {
+		width: 100%;
+		-webkit-box-ordinal-group: 1;
+		-moz-box-ordinal-group: 1;
+		-ms-flex-order: 1;
+		-webkit-order: 1;
+		order: 1;
+		margin-bottom: 30px;
+	}
+	#why-shop-page .shipping-section .sub-section.map .section-right ul {
+		width: 100%;
+		margin: 0;
+	}
+	#why-shop-page .shipping-section .sub-section.map .section-right ul li {
+		margin: 0 0 0 30px;
+	}
+/* Section 4 - Customer Service */
+	#why-shop-page .service-section p {
+		font-size: 12px;
+	}
+	#why-shop-page .service-section .sub-section {
+		margin-bottom: 60px;
+	}
+	#why-shop-page .service-section .sub-section ul {
+		  margin: 10px 0 10px 10px;
+	}
+	#why-shop-page .service-section .sub-section li .span-left {
+		width: 120px;
+	}
+	#why-shop-page .service-section .sub-section img {
+		margin: 0;
+		width: 200px;
+		position: absolute;
+		right: 100px;
+		top: -37px;
+	}
+/* Section 5 - Convenience */
+	#why-shop-page .convenient-section .sub-section {
+		  margin-bottom: 60px;
+	}
+	#why-shop-page .convenient-section .sub-section ul {
+		padding: 10px 0 30px 60px;
+	}
+	#why-shop-page .convenient-section .sub-section ul li:nth-of-type(3),
+	#why-shop-page .convenient-section .sub-section ul li:nth-of-type(4) {
+		width: auto;
+	}
+	#why-shop-page .convenient-section .sub-section img {
+		margin: 0;
+		position: absolute;
+		bottom: -49px;
+		right: 0;
+		width: 270px;
+	}
+/* Section 6 - Quality */
+	#why-shop-page .quality-section .section-top .section-left {
+		font-size: 12px;
+		width: 100%;
+		display: block;
+		margin-bottom: 20px;
+	}
+	#why-shop-page .quality-section .section-top .section-right {
+		width: 100%;
+	}
+	#why-shop-page .quality-section .section-top .section-right p {
+		width: 70%;
+		padding: 0 0 0 30px;
+		font-size: 16px;
+		margin-top: 80px;
+	}
+	#why-shop-page .quality-section .section-top .section-right img {
+		width: 160px;
+		top: 40px;
+		right: 0px;
+	}
+	#why-shop-page .quality-section .section-top {
+		margin: 20px 0 110px 0;
+	}
+	#why-shop-page .quality-section .section-top .section-left h3 {
+		padding: 0;
+		position: absolute;
+		top: 377px;
+		left: 20px;
+		text-align: center;
+		font-size: 13px;
+	}
+	#why-shop-page .quality-section .section-bottom .quality-step span {
+		font-size: 10px;
+		margin-top: -5px;
+		line-height: 13px;
+	}
+}
+/* iPhone 6 and 6+ Portrait */
+/* @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : portrait){  */
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (orientation : portrait) 
+    and (-webkit-min-device-pixel-ratio : 2),
+only screen and (min-device-width : 414px) 
+    and (max-device-width : 736px) 
+    and (orientation : portrait) 
+    and (-webkit-min-device-pixel-ratio : 3) {
 	#why-shop-page .section-heading h2 {
 		font-size: 15px;
 		vertical-align: text-bottom;
@@ -672,6 +877,8 @@
 	#why-shop-page .selection-section .sub-section .section-middle {
 		width: 46%;
 		margin: 10px 0;
+		height: inherit;
+		vertical-align: middle;
 	}
 	#why-shop-page .selection-section .sub-section .section-middle ul {
 		height: inherit;
@@ -813,13 +1020,13 @@
 		width: 100%;
 	}
 	#why-shop-page .quality-section .section-top .section-right p {
-		width: 70%;
+		width: 60%;
 		padding: 0 0 0 30px;
 		font-size: 14px;
-		margin-top: 60px;
+		margin-top: 70px;
 	}
 	#why-shop-page .quality-section .section-top .section-right img {
-		width: 150px;
+		width: 170px;
 		top: 20px;
 		right: -20px;
 	}
@@ -838,9 +1045,6 @@
 		margin-top: -5px;
 		line-height: 13px;
 	}
-}
-@media screen and (max-width: 480px) and (min-width: 321px) and (orientation: landscape) {
-	
 }
 </style>
 
