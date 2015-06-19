@@ -133,7 +133,8 @@
 	border: 0;
 }
 #why-shop-page .mcs-item li .ProductImage a img {
-	width: 100%
+	width: 100%;
+	max-width: 100%;
 }
 #why-shop-page .mcs-item .ProductDetails,
 #why-shop-page .mcs-item .p-price,
@@ -225,6 +226,7 @@
 	background-color: #eee;
 	margin-bottom: 40px;
 	color: #777;
+	position: relative;
 }
 #why-shop-page .shipping-section .sub-section.clock p {
 	display: inline-block;
@@ -393,15 +395,24 @@
 	display: block;
 	margin-top: -10px;
 }
+/* iPhone 55555 Why Shop */
 @media screen and (max-width: 320px) and (min-width: 0px) {
+	#why-shop-page .section-heading img {
+		margin: -7px 10px 0 20px;
+	}
 	#why-shop-page .section-heading h2 {
-		font-size: 15px;
+		font-size: 13px;
 		vertical-align: text-bottom;
 	}
 	#why-shop-page p {
 		padding: 0;
+		font-size: 11px;
+		line-height: 17px;
 	}
 /* Section 1 - Huge Selection */
+	#why-shop-page .selection-section {
+		font-size: 11px;
+	}
 	#why-shop-page .selection-section .group {
 		margin: 0;
 		width: 50%;
@@ -409,9 +420,9 @@
 	#why-shop-page .selection-section .sub-section .section-right {
 		display: block;
 		position: absolute;
-		top: -180px;
+		top: -170px;
 		right: -105px;
-		width: 290px;
+		width: 270px;
 	}
 	#why-shop-page .selection-section .sub-section .section-right img {
 		float: none;
@@ -431,6 +442,8 @@
 	#why-shop-page .selection-section .sub-section .section-middle {
 		width: 46%;
 		margin: 10px 0;
+		font-size: 11px;
+		line-height: 17px;
 	}
 	#why-shop-page .selection-section .sub-section .section-middle ul {
 		height: inherit;
@@ -441,19 +454,26 @@
 		width: 100% !important;
 	}
 /* Section 2 - Low Prices */
+	#why-shop-page .prices-section {
+		margin-bottom: 40px;
+	}
 	#why-shop-page .prices-section .section-right {
 		width: 100%;
+		font-size: 11px;
 	}
 	#why-shop-page .prices-section .section-right .group-top {
 		margin-bottom: 0;
+	}
+	#why-shop-page .prices-section .section-right h3 {
+		font-size: 11px;
 	}
 	#why-shop-page .prices-section .section-right .group-top h3 {
 		padding: 0;
 	}
 	#why-shop-page .prices-section .section-left {
 		position: absolute;
-		top: 170px;
-		width: 150px;
+		top: 135px;
+		width: 135px;
 	}
 	#why-shop-page .prices-section .section-right .group-bottom h3,  
 	#why-shop-page .prices-section .section-right .group-bottom ul {
@@ -466,6 +486,7 @@
 	}
 	#why-shop-page .prices-section .section-right .group-bottom ul {
 		margin-bottom: 20px;
+		line-height: 17px;
 	}
 /* Section 3 - Fast Shipping */
 	#why-shop-page .shipping-section .sub-section.clock p {
@@ -476,10 +497,10 @@
 	}
 	#why-shop-page .shipping-section .sub-section.clock img {
 		margin: 0;
-		width: 28%;
-		position: relative;
-		top: -12px;
-		right: 3px;
+		width: 35%;
+		position: absolute;
+		top: -8px;
+		right: -4px;
 	}
 	#why-shop-page .shipping-section .sub-section.map {
 		display: -webkit-box;
@@ -516,36 +537,48 @@
 		order: 1;
 		margin-bottom: 30px;
 	}
+	#why-shop-page .shipping-section .sub-section.map .section-right p {
+		font-size: 14px;
+	}
 	#why-shop-page .shipping-section .sub-section.map .section-right ul {
 		width: 100%;
 		margin: 0;
+		font-size: 12px;
 	}
 	#why-shop-page .shipping-section .sub-section.map .section-right ul li {
 		margin: 0 0 0 30px;
 	}
 /* Section 4 - Customer Service */
-	#why-shop-page .service-section p {
+	#why-shop-page .service-section .section-heading h2 {
 		font-size: 12px;
+	}
+	#why-shop-page .service-section p {
+		font-size: 10px;
 	}
 	#why-shop-page .service-section .sub-section {
 		margin-bottom: 60px;
+		font-size: 11px;
 	}
 	#why-shop-page .service-section .sub-section ul {
-		  margin: 10px 0 10px 10px;
+		margin: 10px 0 10px 10px;
+	}
+	#why-shop-page .service-section .sub-section li {
+		margin: 7px 0;
 	}
 	#why-shop-page .service-section .sub-section li .span-left {
-		width: 120px;
+		width: 97px;
 	}
 	#why-shop-page .service-section .sub-section img {
 		margin: 0;
-		width: 100px;
+		width: 90px;
 		position: absolute;
-		right: -8px;
+		right: -5px;
 		top: 23px;
 	}
 /* Section 5 - Convenience */
 	#why-shop-page .convenient-section .sub-section {
-		  margin-bottom: 60px;
+		margin-bottom: 60px;
+		font-size: 14px;
 	}
 	#why-shop-page .convenient-section .sub-section ul {
 		padding: 10px 0 30px 60px;
@@ -557,9 +590,9 @@
 	#why-shop-page .convenient-section .sub-section img {
 		margin: 0;
 		position: absolute;
-		bottom: -33px;
+		bottom: -28px;
 		right: 0;
-		width: 170px;
+		width: 150px;
 	}
 /* Section 6 - Quality */
 	#why-shop-page .quality-section .section-top .section-left {
@@ -586,7 +619,7 @@
 		font-size: 13px;
 	}
 	#why-shop-page .quality-section .section-bottom .quality-step span {
-		font-size: 10px;
+		font-size: 9px;
 		margin-top: -5px;
 		line-height: 13px;
 	}
@@ -1028,7 +1061,7 @@
             result = data;
             var frontPage = result;
             var $productSlider = $(frontPage).find('.ProductList.MagicScroll.why-shop');
-            $('#m-scroll-box').html($productSlider);
+            $('#m-scroll-box').append($productSlider);
 	});
 </script>
 
