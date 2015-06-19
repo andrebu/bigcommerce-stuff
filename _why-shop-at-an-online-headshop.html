@@ -51,6 +51,7 @@
 }
 #why-shop-page p {
 	padding: 0 20px;
+	margin-bottom: 10px;
 }
 #why-shop-page img {
 	width: 50px;
@@ -61,7 +62,7 @@
 #why-shop-page .selection-section .group {
 	margin: 0 0 0 auto;
 	display: block;
-	width: 80%;
+	width: 70%;
 }
 #why-shop-page .selection-section .group p {
 	padding: 0;
@@ -83,11 +84,64 @@
 	text-transform: uppercase;
 }
 #why-shop-page .selection-section .sub-section .section-left {
-	width: 20%;
+	width: 30%;
 	height: 200px;
+	position: relative;
 }
+
+#why-shop-page .why-shop.MagicScroll {
+	margin: 0;
+	border: 0;
+	position: absolute;
+	bottom: 0;
+	padding: 20px;
+	height: 260px !important;
+	width: 90% !important;
+}
+#why-shop-page .why-shop.MagicScroll .mcs-wrapper {
+	top: auto;
+	right: auto;
+	bottom: auto;
+	left: auto;
+	width: 90%;
+	display: block !important;
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+	top: -20px;
+}
+#why-shop-page .mcs-item {
+	width: 100% !important;
+	height: 100%;
+	border-color: #6ADA78;
+}
+#why-shop-page .mcs-item:after {
+	display: none;
+}
+#why-shop-page .mcs-item li {
+	height: 100% !important;
+}
+#why-shop-page .mcs-item li .ProductImage a {
+	height: 100% !important;
+	border: 0;
+}
+#why-shop-page .mcs-item li .ProductImage a img {
+	width: 100%
+}
+#why-shop-page .mcs-item .ProductDetails,
+#why-shop-page .mcs-item .p-price,
+#why-shop-page .mcs-item .ProductPriceRating {
+	display: none;
+}
+#why-shop-page .MagicScroll-horizontal .mcs-button-arrow-prev {
+	left: -5px;
+}
+#why-shop-page .MagicScroll-horizontal .mcs-button-arrow-next {
+	right: -5px;
+}
+
 #why-shop-page .selection-section .sub-section .section-middle {
-	width: 40%;
+	width: 20%;
 	font-size: 13px;
 }
 #why-shop-page .selection-section .sub-section .section-middle span {
@@ -110,10 +164,15 @@
 }
 #why-shop-page .selection-section .sub-section .section-right {
 	width: 40%;
+	float: right;
 }
 #why-shop-page .selection-section .sub-section .section-right img {
-	width: 30%;
+	width: 32%;
 	margin-top: -40px;
+	float: right;
+}
+#why-shop-page .selection-section .sub-section .section-right img + img {
+	margin-right: -30px;
 }
 /* Section 2 - Low Prices */
 #why-shop-page .prices-section {
@@ -209,6 +268,7 @@
 	background-color: #eee;
 	margin-bottom: 110px;
 	color: #777;
+	position: relative;
 }
 #why-shop-page .service-section .sub-section ul {
 	display: inline-block;
@@ -235,6 +295,7 @@
 	margin-bottom: 110px;
 	color: #fff;
 	font-size: 16px;
+	position: relative;
 }
 #why-shop-page .convenient-section .sub-section span {
 	display: block;
@@ -263,6 +324,7 @@
 	width: 50%;
 	display: inline-block;
 	vertical-align: middle;
+	position: relative;
 }
 #why-shop-page .quality-section .section-top .section-left h3 {
 	padding: 0 0 0 20px;
@@ -288,6 +350,7 @@
 	background-color: #A4C9CF;
 	max-height: 192px;
 	height: 192px;
+	position: relative;
 }
 #why-shop-page .quality-section .section-top .section-right p {
 	display: inline-block;
@@ -309,6 +372,7 @@
 #why-shop-page .quality-section .section-bottom .quality-step {
 	display: inline-block;
 	width: 25%;
+	vertical-align: top;
 }
 #why-shop-page .quality-section .section-bottom .quality-step img {
 	width: 100%;
@@ -323,6 +387,10 @@
 	margin-top: -10px;
 }
 @media screen and (max-width: 480px) and (min-width: 321px) {
+	#why-shop-page .section-heading h2 {
+		font-size: 15px;
+		vertical-align: text-bottom;
+	}
 	#why-shop-page p {
 		padding: 0;
 	}
@@ -354,6 +422,11 @@
 	#why-shop-page .selection-section .sub-section .section-middle ul {
 		height: inherit;
 	}
+	#why-shop-page .why-shop.MagicScroll {
+		padding: 10px;
+		height: 200px !important;
+		width: 100% !important;
+	}
 /* Section 2 - Low Prices */
 	#why-shop-page .prices-section .section-right {
 		width: 100%;
@@ -367,6 +440,7 @@
 	#why-shop-page .prices-section .section-left {
 		position: absolute;
 		top: 170px;
+		width: 150px;
 	}
 	#why-shop-page .prices-section .section-right .group-bottom h3,  
 	#why-shop-page .prices-section .section-right .group-bottom ul {
@@ -436,6 +510,73 @@
 	#why-shop-page .shipping-section .sub-section.map .section-right ul li {
 		margin: 0 0 0 30px;
 	}
+/* Section 4 - Customer Service */
+	#why-shop-page .service-section p {
+		font-size: 12px;
+	}
+	#why-shop-page .service-section .sub-section {
+		margin-bottom: 60px;
+	}
+	#why-shop-page .service-section .sub-section ul {
+		  margin: 10px 0 10px 10px;
+	}
+	#why-shop-page .service-section .sub-section li .span-left {
+		width: 120px;
+	}
+	#why-shop-page .service-section .sub-section img {
+		margin: 0;
+		width: 100px;
+		position: absolute;
+		right: -8px;
+		top: 23px;
+	}
+/* Section 5 - Convenience */
+	#why-shop-page .convenient-section .sub-section {
+		  margin-bottom: 60px;
+	}
+	#why-shop-page .convenient-section .sub-section ul {
+		padding: 10px 0 30px 60px;
+	}
+	#why-shop-page .convenient-section .sub-section ul li:nth-of-type(3),
+	#why-shop-page .convenient-section .sub-section ul li:nth-of-type(4) {
+		width: 60%;
+	}
+	#why-shop-page .convenient-section .sub-section img {
+		margin: 0;
+		position: absolute;
+		bottom: -33px;
+		right: 0;
+		width: 170px;
+	}
+/* Section 6 - Quality */
+	#why-shop-page .quality-section .section-top .section-left {
+		font-size: 12px;
+		width: 100%;
+		display: block;
+		margin-bottom: 20px;
+	}
+	#why-shop-page .quality-section .section-top .section-right {
+		width: 100%;
+	}
+	#why-shop-page .quality-section .section-top .section-right img {
+		width: 180px;
+		top: 20px;
+	}
+	#why-shop-page .quality-section .section-top {
+		margin: 20px 0 110px 0;
+	}
+	#why-shop-page .quality-section .section-top .section-left h3 {
+		padding: 0;
+		position: absolute;
+		top: 410px;
+		text-align: center;
+		font-size: 13px;
+	}
+	#why-shop-page .quality-section .section-bottom .quality-step span {
+		font-size: 10px;
+		margin-top: -5px;
+		line-height: 13px;
+	}
 }
 </style>
 
@@ -456,7 +597,7 @@
 			<p>Check out our wide variety of brands <a href="/brands" target="_blank">HERE</a>.</p>
 		</div>
 		<div class="sub-section">
-			<div class="section-left">
+			<div class="section-left" id="m-scroll-box">
 		        <ul class="ProductList MagicScroll" data-options="items:fit;scrollOnWheel:false;">
 		            %%SNIPPET_HomeNewProducts%%
 		        </ul>
@@ -611,7 +752,7 @@
 		<div class="section-top">
 			<div class="section-left">
 				<h3>Eight Steps Of Quality Assurance Before Your Order Reaches You</h3>
-				<p>Product quality is always a huge factor when making a purchase.  At DankStop, we have a very high standard for quality. Every item goes through a rigorous process to check for any defects so the customer receives the best quality products.  </p>
+				<p>Product quality is always a huge factor when making a purchase.  At DankStop, we have a very high standard for quality. Every item goes through a rigorous process to check for any defects so the customer receives the best quality products.</p>
 				<p>Wouldn't you hate to wait anxiously for your shipment, and when it arrives, have a defected item?</p>
 			</div>
 			<div class="section-right">
@@ -656,6 +797,24 @@
 	</div>
 	
 </div>
+<script type="text/javascript">
+    var $this = $(this);
+
+    function getOptionSwatches() {
+        return $.ajax({
+            url: '/',
+            type: 'GET',
+            dataType: 'html',
+        });
+    }
+    getOptionSwatches()
+        .done(function(data) {
+            result = data;
+            var frontPage = result;
+            var $productSlider = $(frontPage).find('.ProductList.MagicScroll.why-shop');
+            $('#m-scroll-box').html($productSlider);
+	});
+</script>
 
                                 %%GLOBAL_PageDescriptionOptimizerNoScriptTag%%
                             </div>
