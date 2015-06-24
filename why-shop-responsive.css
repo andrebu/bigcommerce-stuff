@@ -3,23 +3,8 @@
 @media only screen 
   and (max-device-width: 768px) 
   and (orientation: portrait) {
-	#why-shop-page:before {
-		content: "iPaaaddd PORTRAIT";
-		background-color: purple;
-		color: #fff;
-		font-size: 50px;
-		line-height: 90px;
-		width: 100%;
-		text-align: center;
-		display: block;
-		height: 190px;
-	}
 	#why-shop-page p {
 		padding: 0;
-	}
-	#why-shop-page p {
-		/* font-size: 11px; */
-		/* line-height: 17px; */
 	}
 /* Section 1 - Huge Selection */
 	#why-shop-page .selection-section .group {
@@ -174,17 +159,6 @@
 @media only screen 
   and (max-device-width: 1024px) 
   and (orientation: landscape) {
-	#why-shop-page:before {
-		content: "iPaaaaddd LANDSCAPE";
-		background-color: purple;
-		color: #fff;
-		font-size: 50px;
-		line-height: 90px;
-		width: 100%;
-		text-align: center;
-		display: block;
-		height: 190px;
-	}
 /* Section 1 - Huge Selection */
 	#why-shop-page .mcs-item li .ProductImage a {
 		padding: 20% 0 0;
@@ -197,7 +171,7 @@
 		width: 17%;
 		position: absolute;
 		top: 34%;
-		left: 30px;
+		left: 7%;
 	}
 	#why-shop-page .prices-section .section-right .group-top {
 		width: 100%;
@@ -239,14 +213,6 @@
 }
 
 
-/* Section 1 - Huge Selection */
-/* Section 2 - Low Prices */
-/* Section 3 - Fast Shipping */
-/* Section 4 - Customer Service */
-/* Section 5 - Convenience */
-/* Section 6 - Quality */
-
-
 
 
 
@@ -257,63 +223,52 @@
 /* ----------- iPhone 6+ ----------- */
 /* iPhone 6+    Portrait */
 @media only screen and (max-device-width: 414px) and (orientation: portrait) { 
-#why-shop-page:before {
-  content: "iPnone 6+++ PORTRAIT";
-  background-color: yellow;
-  color: #fff;
-  font-size: 50px;
-  line-height: 90px;
-  width: 100%;
-  text-align: center;
-  display: block;
-  height: 190px;
-}
-#why-shop-page .section-heading h2 {
-	font-size: 17px;
-	vertical-align: text-bottom;
-}
+	#why-shop-page .section-heading h2 {
+		font-size: 17px;
+		vertical-align: text-bottom;
+	}
 /* Section 1 - Huge Selection */
-#why-shop-page .selection-section .group {
-  width: 50%;
-  margin: 0;
-}
-#why-shop-page .selection-section .sub-section .section-right {
-  width: 67%;
-  top: -76%;
-  right: 0;
-}
-#why-shop-page .selection-section .sub-section .section-right img + img {
-  margin-right: -20px;
-}
-#why-shop-page .selection-section .sub-section {
-  height: auto;
-}
-#why-shop-page .selection-section .sub-section .section-left {
-  width: 50%;
-}
-#why-shop-page .selection-section .sub-section .section-middle {
-  width: 50%;
-  line-height: 13.5px;
-  padding: 2% 0;
-}
+	#why-shop-page .selection-section .group {
+		width: 50%;
+		margin: 0;
+	}
+	#why-shop-page .selection-section .sub-section .section-right {
+		width: 67%;
+		top: -76%;
+		right: 0;
+	}
+	#why-shop-page .selection-section .sub-section .section-right img + img {
+		margin-right: -20px;
+	}
+	#why-shop-page .selection-section .sub-section {
+		height: auto;
+	}
+	#why-shop-page .selection-section .sub-section .section-left {
+		width: 50%;
+	}
+	#why-shop-page .selection-section .sub-section .section-middle {
+		width: 50%;
+		line-height: 13.5px;
+		padding: 2% 0;
+	}
 /* Section 2 - Low Prices */
-#why-shop-page .prices-section h3 {
-  font-size: 15px;
-}
-#why-shop-page .prices-section .section-left {
-  width: 26%;
-  left: 3%;
-}
+	#why-shop-page .prices-section h3 {
+		font-size: 15px;
+	}
+	#why-shop-page .prices-section .section-left {
+		width: 26%;
+		left: 3%;
+	}
 /* Section 3 - Fast Shipping */
-#why-shop-page .shipping-section .sub-section.clock p {
-  width: 56%;
-}
-#why-shop-page .shipping-section .sub-section.clock img {
-  width: 41%;
-  margin: -5% 3% -2% 0;
-  position: absolute;
-  right: 0;
-}
+	#why-shop-page .shipping-section .sub-section.clock p {
+		width: 56%;
+	}
+	#why-shop-page .shipping-section .sub-section.clock img {
+		width: 41%;
+		margin: -5% 3% -2% 0;
+		position: absolute;
+		right: 0;
+	}
 /* Section 4 - Customer Service */
 	#why-shop-page .service-section .sub-section {
 		margin-bottom: 60px;
@@ -352,30 +307,19 @@
 		width: 47%;
 	}
 /* Section 6 - Quality */
-#why-shop-page .quality-section .section-top .section-right p {
-  width: 59%;
-}
-#why-shop-page .quality-section .section-top .section-right img {
-  width: 46%;
-  margin: 0;
-  top: -57px;
-}
+	#why-shop-page .quality-section .section-top .section-right p {
+		width: 59%;
+	}
+	#why-shop-page .quality-section .section-top .section-right img {
+		width: 46%;
+		margin: 0;
+		top: -57px;
+	}
 }
 /* iPhone 6+     Landscape */
 @media only screen 
   and (max-device-width: 736px) 
   and (orientation: landscape) { 
-#why-shop-page:before {
-  content: "iPnone 6+++ LANDSCAPE";
-  background-color: yellow;
-  color: #fff;
-  font-size: 50px;
-  line-height: 90px;
-  width: 100%;
-  text-align: center;
-  display: block;
-  height: 190px;
-}
 /* Section 1 - Huge Selection */
 /* Section 2 - Low Prices */
 /* Section 3 - Fast Shipping */
@@ -393,53 +337,43 @@
 @media only screen 
   and (max-device-width: 375px) 
   and (orientation: portrait) { 
-#why-shop-page:before {
-  content: "iPnone 6666 PORTRAIT";
-  background-color: blue;
-  color: #fff;
-  font-size: 50px;
-  line-height: 90px;
-  width: 100%;
-  text-align: center;
-  display: block;
-  height: 190px;
-}
-#why-shop-page .section-heading h2 {
-  font-size: 14px;
-  vertical-align: text-bottom;
-}
-#why-shop-page .shipping-section .sub-section.clock p {
-  font-size: 15px;
-}
-#why-shop-page .shipping-section .sub-section.clock img {
-  width: 44%;
-  right: -1%;
-}
-#why-shop-page .quality-section .section-top .section-right img {
-  width: 50%;
-}
-#why-shop-page .quality-section .section-top {
-  margin: 20px 0 80px 0;
-}
-#why-shop-page .quality-section .section-top .section-left h3 {
-  top: 380px;
-}
+	#why-shop-page .section-heading h2 {
+		font-size: 14px;
+		vertical-align: text-bottom;
+	}
+	#why-shop-page .shipping-section .sub-section.clock p {
+		font-size: 15px;
+	}
+	#why-shop-page .shipping-section .sub-section.clock img {
+		width: 44%;
+		right: -1%;
+	}
+	#why-shop-page .quality-section .section-top .section-right img {
+		width: 50%;
+	}
+	#why-shop-page .quality-section .section-top {
+		margin: 20px 0 80px 0;
+	}
+	#why-shop-page .quality-section .section-top .section-left h3 {
+		top: 380px;
+	}
 }
 /* ----------- iPhone 6 Landscape ----------- */
 @media only screen 
   and (max-device-width: 667px) 
   and (orientation: landscape) { 
-#why-shop-page:before {
-  content: "iPnone 6666 LANDSCAPE";
-  background-color: blue;
-  color: #fff;
-  font-size: 50px;
-  line-height: 90px;
-  width: 100%;
-  text-align: center;
-  display: block;
-  height: 190px;
-}
+	#why-shop-page .prices-section .section-left {
+		top: 39%;
+		width: 19%;
+		left: 7%;
+	}
+	#why-shop-page .shipping-section .sub-section.clock img {
+		width: 26%;
+		margin: -4% 6% -2% 0;
+	}
+	#why-shop-page .quality-section .section-top .section-right img {
+		margin: -72px 0 0 -24%;
+	}
 }
 
 
@@ -453,17 +387,6 @@
 @media only screen 
   and (max-device-width: 568px)
   and (orientation: landscape) {
-#why-shop-page:before {
-  content: "iPnone 5/5s LANDSCAPE";
-  background-color: red;
-  color: #fff;
-  font-size: 50px;
-  line-height: 90px;
-  width: 100%;
-  text-align: center;
-  display: block;
-  height: 190px;
-}
 }
 
 
@@ -481,33 +404,11 @@
 @media only screen 
   and (max-device-width: 480px)
   and (orientation: landscape) {
-#why-shop-page:before {
-  content: "iPnone 444 LANDSCAPE";
-  background-color: green;
-  color: #fff;
-  font-size: 50px;
-  line-height: 90px;
-  width: 100%;
-  text-align: center;
-  display: block;
-  height: 190px;
-}
 }
 /* iPhone 4 and 4s and 5 and 5s    Portrait */
 @media only screen 
   and (max-device-width: 320px)
   and (orientation: portrait) {
-#why-shop-page:before {
-  content: "iPnone 4 and 4s and 5 and 5s PORTRAIT";
-  background-color: green;
-  color: #fff;
-  font-size: 50px;
-  line-height: 90px;
-  width: 100%;
-  text-align: center;
-  display: block;
-  height: 190px;
-}
 	#why-shop-page .section-heading img {
 		margin: -7px 10px 0 20px;
 	}
@@ -521,22 +422,5 @@
 		line-height: 17px;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
