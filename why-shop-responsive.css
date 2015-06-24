@@ -412,6 +412,11 @@
 @media only screen 
   and (max-device-width: 320px)
   and (orientation: portrait) {
+	#why-shop-page p {
+		padding: 0;
+		font-size: 11px;
+		line-height: 17px;
+	}
 	#why-shop-page .section-heading img {
 		margin: -7px 10px 0 20px;
 	}
@@ -419,10 +424,33 @@
 		font-size: 13px;
 		vertical-align: text-bottom;
 	}
-	#why-shop-page p {
-		padding: 0;
+	#why-shop-page .mcs-item li .ProductImage a {
+		padding: 30% 0 0;
+	}
+	#why-shop-page .prices-section h3,
+	#why-shop-page .prices-section .section-right {
 		font-size: 11px;
-		line-height: 17px;
+	}
+	#why-shop-page .shipping-section .sub-section.clock p {
+		font-size: 13px;
+	}
+	#why-shop-page .shipping-section .sub-section.clock img {
+		top: 6px;
+		right: -6px;
+	}
+	#why-shop-page .service-section .sub-section img {
+		right: 0;
+		top: 25px;
+	}
+	#why-shop-page .convenient-section .sub-section img {
+		bottom: -35px;
+		right: -6px;
+		width: 53%;
+	}
+	#why-shop-page .quality-section .section-top .section-right img {
+		top: -46px;
+		right: -20px;
+		width: 55%;
 	}
 }
 
