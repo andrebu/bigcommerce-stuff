@@ -341,6 +341,9 @@
 		font-size: 14px;
 		vertical-align: text-bottom;
 	}
+	#why-shop-page .prices-section h3 {
+		font-size: 13px;
+	}
 	#why-shop-page .shipping-section .sub-section.clock p {
 		font-size: 15px;
 	}
