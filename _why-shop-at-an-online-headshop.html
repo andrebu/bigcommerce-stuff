@@ -41,7 +41,7 @@
 	display: inline-block;
 	vertical-align: middle;
 	width: 50px;
-	margin: -7px 20px 0;
+	margin: -7px 4% 0;
 }
 #why-shop-page .section-heading h2 {
 	color: #fff;
@@ -59,12 +59,15 @@
 #why-shop-page li {
 	position: relative;
 }
+#why-shop-page .convenient-section .sub-section ul li:before,
 #why-shop-page .shipping-section .sub-section.map .section-right li:before {
 	content: '';
 	display: inline-block;
+	vertical-align: middle;
 	height: 20px;
 	width: 20px;
-	margin-left: -20px;
+	position: absolute;
+	left: -25px;
 	background-image: url('/content/images/why-shop-at-an-online-smoke-shop/checkmark.png');
 	background-position: center center;
 	background-size: contain;
@@ -114,6 +117,7 @@
 	background-image: url('/content/images/dankstop-loading-running-cat-wbg3.gif');
 	background-size: contain;
 	background-position: center center;
+	background-repeat: no-repeat;
 	background-color: #fff;
 	border: 4px solid #6ADA78;
 	border-radius: 3px;
@@ -194,7 +198,7 @@
 #why-shop-page .selection-section .sub-section .section-middle span {
 	font-weight: bold;
 	display: block;
-	margin: 5px 0 0;
+	margin: 1% 0;
 }
 #why-shop-page .selection-section .sub-section .section-middle ul {
 	-webkit-column-fill: auto;
@@ -216,7 +220,7 @@
 }
 #why-shop-page .selection-section .sub-section .section-right img {
 	width: 32%;
-	margin-top: -40px;
+	margin-top: -60px;
 	float: right;
 }
 #why-shop-page .selection-section .sub-section .section-right img + img {
@@ -312,20 +316,7 @@
 #why-shop-page .shipping-section .sub-section.map .section-right li {
 	margin: 13px 0;
 	list-style: none;
-	padding-left: 30px;
-}
-#why-shop-page .shipping-section .sub-section.map .section-right li:before {
-	content: '';
-	display: inline-block;
-	height: 20px;
-	width: 20px;
-	margin-left: -20px;
-	position: absolute;
-	left: 25px;
-	background-image: url('/content/images/why-shop-at-an-online-smoke-shop/checkmark.png');
-	background-position: center center;
-	background-size: contain;
-	box-sizing: border-box;
+	margin-left: 40px;
 }
 /* Section 4 - Customer Service */
 #why-shop-page .service-section > p {
@@ -340,7 +331,7 @@
 #why-shop-page .service-section .sub-section ul {
 	display: inline-block;
 	list-style: none;
-	margin: 10px 40px;
+	margin: 2% 0 2% 3%;
 }
 #why-shop-page .service-section .sub-section img {
 	display: inline-block;
@@ -376,7 +367,9 @@
 	display: inline-block;
 	padding: 2% 0 3% 10%;
 	margin: 0;
-	width: 40%;
+}
+#why-shop-page .convenient-section .sub-section ul li {
+	list-style: none;
 }
 #why-shop-page .convenient-section .sub-section img {
 	display: inline-block;
@@ -384,6 +377,7 @@
 	width: 30%;
 	margin: -7% 10% -7% 0;
 	position: absolute;
+	right: 0;
 }
 /* Section 6 - Assured Quality Prices */
 #why-shop-page .quality-section .section-top {

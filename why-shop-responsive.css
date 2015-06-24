@@ -1,71 +1,4 @@
 /* ----------- iPad ----------- */
-/* iPad    Landscape */
-@media only screen 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) {
-	#why-shop-page:before {
-		content: "iPaaaaddd LANDSCAPE";
-		background-color: purple;
-		color: #fff;
-		font-size: 50px;
-		line-height: 90px;
-		width: 100%;
-		text-align: center;
-		display: block;
-		height: 190px;
-	}
-/* Section 1 - Huge Selection */
-	#why-shop-page .mcs-item li .ProductImage a {
-		padding: 20% 0 0;
-	}
-	#why-shop-page .selection-section .sub-section .section-right img {
-		margin-top: 0;
-	}
-/* Section 2 - Low Prices */
-	#why-shop-page .prices-section .section-left {
-		width: 17%;
-		position: absolute;
-		top: 34%;
-		left: 30px;
-	}
-	#why-shop-page .prices-section .section-right .group-top {
-		width: 100%;
-		margin-bottom: 20px;
-	}
-	#why-shop-page .prices-section .section-right {
-		width: 100%;
-	}
-	#why-shop-page .prices-section .section-right .group-bottom h3,  
-	#why-shop-page .prices-section .section-right .group-bottom ul {
-		padding: 0;
-		width: 70%;
-		margin: 0 0 0 auto;
-	}
-	#why-shop-page .prices-section .section-right .group-bottom ul li + li {
-		margin-top: 10px;
-	}
-	#why-shop-page .prices-section .section-right .group-bottom ul {
-		margin-bottom: 4vw;
-		line-height: 17px;
-	}
-/* Section 3 - Fast Shipping */
-	#why-shop-page .shipping-section .sub-section.clock img {
-		width: 21%;
-	}
-/* Section 4 - Customer Service */
-	#why-shop-page .service-section .sub-section img {
-		width: 30%;
-	}
-/* Section 5 - Convenience */
-	#why-shop-page .convenient-section .sub-section img {
-		width: 40%;
-		margin: -9% 5%;
-	}
-/* Section 6 - Quality */
-	#why-shop-page .quality-section .section-top .section-right img {
-		margin: -72px 0 0 -20%;
-	}
-}
 /* iPad   Portrait */
 @media only screen 
   and (max-device-width: 768px) 
@@ -237,6 +170,73 @@
 		line-height: 13px;
 	}
 }
+/* iPad    Landscape */
+@media only screen 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) {
+	#why-shop-page:before {
+		content: "iPaaaaddd LANDSCAPE";
+		background-color: purple;
+		color: #fff;
+		font-size: 50px;
+		line-height: 90px;
+		width: 100%;
+		text-align: center;
+		display: block;
+		height: 190px;
+	}
+/* Section 1 - Huge Selection */
+	#why-shop-page .mcs-item li .ProductImage a {
+		padding: 20% 0 0;
+	}
+	#why-shop-page .selection-section .sub-section .section-right img {
+		margin-top: 0;
+	}
+/* Section 2 - Low Prices */
+	#why-shop-page .prices-section .section-left {
+		width: 17%;
+		position: absolute;
+		top: 34%;
+		left: 30px;
+	}
+	#why-shop-page .prices-section .section-right .group-top {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	#why-shop-page .prices-section .section-right {
+		width: 100%;
+	}
+	#why-shop-page .prices-section .section-right .group-bottom h3,  
+	#why-shop-page .prices-section .section-right .group-bottom ul {
+		padding: 0;
+		width: 70%;
+		margin: 0 0 0 auto;
+	}
+	#why-shop-page .prices-section .section-right .group-bottom ul li + li {
+		margin-top: 10px;
+	}
+	#why-shop-page .prices-section .section-right .group-bottom ul {
+		margin-bottom: 4vw;
+		line-height: 17px;
+	}
+/* Section 3 - Fast Shipping */
+	#why-shop-page .shipping-section .sub-section.clock img {
+		width: 21%;
+	}
+/* Section 4 - Customer Service */
+	#why-shop-page .service-section .sub-section img {
+		width: 30%;
+	}
+/* Section 5 - Convenience */
+	#why-shop-page .convenient-section .sub-section img {
+		width: 40%;
+		margin: -9% 5%;
+	}
+/* Section 6 - Quality */
+	#why-shop-page .quality-section .section-top .section-right img {
+		margin: -72px 0 0 -20%;
+	}
+}
 
 
 /* Section 1 - Huge Selection */
@@ -255,32 +255,8 @@
 
 
 /* ----------- iPhone 6+ ----------- */
-/* iPhone 6+     Landscape */
-@media only screen 
-  and (max-device-width: 736px) 
-  and (orientation: landscape) { 
-#why-shop-page:before {
-  content: "iPnone 6+++ LANDSCAPE";
-  background-color: yellow;
-  color: #fff;
-  font-size: 50px;
-  line-height: 90px;
-  width: 100%;
-  text-align: center;
-  display: block;
-  height: 190px;
-}
-/* Section 1 - Huge Selection */
-/* Section 2 - Low Prices */
-/* Section 3 - Fast Shipping */
-/* Section 4 - Customer Service */
-/* Section 5 - Convenience */
-/* Section 6 - Quality */
-}
 /* iPhone 6+    Portrait */
-@media only screen 
-  and (max-device-width: 414px) 
-  and (orientation: portrait) { 
+@media only screen and (max-device-width: 414px) and (orientation: portrait) { 
 #why-shop-page:before {
   content: "iPnone 6+++ PORTRAIT";
   background-color: yellow;
@@ -385,18 +361,40 @@
   top: -57px;
 }
 }
+/* iPhone 6+     Landscape */
+@media only screen 
+  and (max-device-width: 736px) 
+  and (orientation: landscape) { 
+#why-shop-page:before {
+  content: "iPnone 6+++ LANDSCAPE";
+  background-color: yellow;
+  color: #fff;
+  font-size: 50px;
+  line-height: 90px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  height: 190px;
+}
+/* Section 1 - Huge Selection */
+/* Section 2 - Low Prices */
+/* Section 3 - Fast Shipping */
+/* Section 4 - Customer Service */
+/* Section 5 - Convenience */
+/* Section 6 - Quality */
+}
 
 
 
 
 
 /* ----------- iPhone 6 ----------- */
-/* ----------- iPhone 6 Landscape ----------- */
+/* ----------- iPhone 6 Portrait ----------- */
 @media only screen 
-  and (max-device-width: 667px) 
-  and (orientation: landscape) { 
+  and (max-device-width: 375px) 
+  and (orientation: portrait) { 
 #why-shop-page:before {
-  content: "iPnone 6666 LANDSCAPE";
+  content: "iPnone 6666 PORTRAIT";
   background-color: blue;
   color: #fff;
   font-size: 50px;
@@ -406,13 +404,33 @@
   display: block;
   height: 190px;
 }
+#why-shop-page .section-heading h2 {
+  font-size: 14px;
+  vertical-align: text-bottom;
 }
-/* ----------- iPhone 6 Portrait ----------- */
+#why-shop-page .shipping-section .sub-section.clock p {
+  font-size: 15px;
+}
+#why-shop-page .shipping-section .sub-section.clock img {
+  width: 44%;
+  right: -1%;
+}
+#why-shop-page .quality-section .section-top .section-right img {
+  width: 50%;
+}
+#why-shop-page .quality-section .section-top {
+  margin: 20px 0 80px 0;
+}
+#why-shop-page .quality-section .section-top .section-left h3 {
+  top: 380px;
+}
+}
+/* ----------- iPhone 6 Landscape ----------- */
 @media only screen 
-  and (max-device-width: 375px) 
-  and (orientation: portrait) { 
+  and (max-device-width: 667px) 
+  and (orientation: landscape) { 
 #why-shop-page:before {
-  content: "iPnone 6666 PORTRAIT";
+  content: "iPnone 6666 LANDSCAPE";
   background-color: blue;
   color: #fff;
   font-size: 50px;
