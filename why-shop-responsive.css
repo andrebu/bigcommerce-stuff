@@ -1,7 +1,7 @@
 /* ----------- iPad ----------- */
 /* iPad    Landscape */
 @media only screen 
-  and (max-device-width: 768px) 
+  and (max-device-width: 1024px) 
   and (orientation: landscape) {
 	#why-shop-page:before {
 		content: "iPaaaaddd LANDSCAPE";
@@ -103,7 +103,7 @@
 		width: 70%;
 	}
 	#why-shop-page .selection-section .sub-section .section-middle ul {
-		height: 2% !important;
+		height: 100% !important;
 	}
 	#why-shop-page .selection-section .sub-section .section-right {
 		width: 42%;
@@ -257,35 +257,70 @@
 /* ----------- iPhone 6+ ----------- */
 /* iPhone 6+     Landscape */
 @media only screen 
-  and (max-device-width: 414px) 
+  and (max-device-width: 736px) 
   and (orientation: landscape) { 
-	#why-shop-page:before {
-		content: "iPnone 6+++ LANDSCAPE";
-		background-color: green;
-		color: #fff;
-		font-size: 50px;
-		line-height: 90px;
-		width: 100%;
-		text-align: center;
-		display: block;
-		height: 190px;
-	}
+#why-shop-page:before {
+  content: "iPnone 6+++ LANDSCAPE";
+  background-color: yellow;
+  color: #fff;
+  font-size: 50px;
+  line-height: 90px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  height: 190px;
+}
+/* Section 1 - Huge Selection */
+/* Section 2 - Low Prices */
+/* Section 3 - Fast Shipping */
+/* Section 4 - Customer Service */
+/* Section 5 - Convenience */
+/* Section 6 - Quality */
 }
 /* iPhone 6+    Portrait */
 @media only screen 
   and (max-device-width: 414px) 
   and (orientation: portrait) { 
-	#why-shop-page:before {
-		content: "iPnone 6+++ PORTRAIT";
-		background-color: green;
-		color: #fff;
-		font-size: 50px;
-		line-height: 90px;
-		width: 100%;
-		text-align: center;
-		display: block;
-		height: 190px;
-	}
+#why-shop-page:before {
+  content: "iPnone 6+++ PORTRAIT";
+  background-color: yellow;
+  color: #fff;
+  font-size: 50px;
+  line-height: 90px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  height: 190px;
+}
+/* Section 1 - Huge Selection */
+#why-shop-page .selection-section .group {
+  width: 50%;
+  margin: 0;
+}
+#why-shop-page .selection-section .sub-section .section-right {
+  width: 67%;
+  top: -76%;
+  right: 0;
+}
+#why-shop-page .selection-section .sub-section .section-right img + img {
+  margin-right: -20px;
+}
+#why-shop-page .selection-section .sub-section {
+  height: auto;
+}
+#why-shop-page .selection-section .sub-section .section-left {
+  width: 50%;
+}
+#why-shop-page .selection-section .sub-section .section-middle {
+  width: 50%;
+  line-height: 13.5px;
+  padding: 2% 0;
+}
+/* Section 2 - Low Prices */
+/* Section 3 - Fast Shipping */
+/* Section 4 - Customer Service */
+/* Section 5 - Convenience */
+/* Section 6 - Quality */
 }
 
 
@@ -295,35 +330,35 @@
 /* ----------- iPhone 6 ----------- */
 /* ----------- iPhone 6 Landscape ----------- */
 @media only screen 
-  and (max-device-width: 375px) 
+  and (max-device-width: 667px) 
   and (orientation: landscape) { 
-	#why-shop-page:before {
-		content: "iPnone 6666 LANDSCAPE";
-		background-color: blue;
-		color: #fff;
-		font-size: 50px;
-		line-height: 90px;
-		width: 100%;
-		text-align: center;
-		display: block;
-		height: 190px;
-	}
+#why-shop-page:before {
+  content: "iPnone 6666 LANDSCAPE";
+  background-color: blue;
+  color: #fff;
+  font-size: 50px;
+  line-height: 90px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  height: 190px;
+}
 }
 /* ----------- iPhone 6 Portrait ----------- */
 @media only screen 
   and (max-device-width: 375px) 
   and (orientation: portrait) { 
-	#why-shop-page:before {
-		content: "iPnone 6666 PORTRAIT";
-		background-color: blue;
-		color: #fff;
-		font-size: 50px;
-		line-height: 90px;
-		width: 100%;
-		text-align: center;
-		display: block;
-		height: 190px;
-	}
+#why-shop-page:before {
+  content: "iPnone 6666 PORTRAIT";
+  background-color: blue;
+  color: #fff;
+  font-size: 50px;
+  line-height: 90px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  height: 190px;
+}
 }
 
 
@@ -332,47 +367,66 @@
 
 
 
-
-
-
-
-
-
-
-
-
-/* ----------- iPhone 4, 4s, 5, 5s ----------- */
-/* iPhone 4, 4s, 5, 5s    Landscape */
+/* ----------- iPhone 5 and 5S ----------- */
+/* iPhone 5 and 5S    Landscape */
 @media only screen 
-  and (max-device-width: 320px)
+  and (max-device-width: 568px)
   and (orientation: landscape) {
-	#why-shop-page:before {
-		content: "iPnone 4, 4s, 5, 5s LANDSCAPE";
-		background-color: green;
-		color: #fff;
-		font-size: 50px;
-		line-height: 90px;
-		width: 100%;
-		text-align: center;
-		display: block;
-		height: 190px;
-	}
+#why-shop-page:before {
+  content: "iPnone 5/5s LANDSCAPE";
+  background-color: red;
+  color: #fff;
+  font-size: 50px;
+  line-height: 90px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  height: 190px;
 }
-/* iPhone 4, 4s, 5, 5s    Portrait */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- iPhone 4 and 4S ----------- */
+/* iPhone 4 and 4S    Landscape */
+@media only screen 
+  and (max-device-width: 480px)
+  and (orientation: landscape) {
+#why-shop-page:before {
+  content: "iPnone 444 LANDSCAPE";
+  background-color: green;
+  color: #fff;
+  font-size: 50px;
+  line-height: 90px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  height: 190px;
+}
+}
+/* iPhone 4 and 4s and 5 and 5s    Portrait */
 @media only screen 
   and (max-device-width: 320px)
   and (orientation: portrait) {
-	#why-shop-page:before {
-		content: "iPnone 4, 4s, 5, 5s PORTRAIT";
-		background-color: green;
-		color: #fff;
-		font-size: 50px;
-		line-height: 90px;
-		width: 100%;
-		text-align: center;
-		display: block;
-		height: 190px;
-	}
+#why-shop-page:before {
+  content: "iPnone 4 and 4s and 5 and 5s PORTRAIT";
+  background-color: green;
+  color: #fff;
+  font-size: 50px;
+  line-height: 90px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  height: 190px;
+}
 	#why-shop-page .section-heading img {
 		margin: -7px 10px 0 20px;
 	}
