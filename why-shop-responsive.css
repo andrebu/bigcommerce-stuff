@@ -1,8 +1,7 @@
 /* ----------- iPad ----------- */
 /* iPad    Landscape */
 @media only screen 
-/*   and (min-device-width: 768px)  */
-  and (max-device-width: 1024px) 
+  and (max-device-width: 768px) 
   and (orientation: landscape) {
 	#why-shop-page:before {
 		content: "iPaaaaddd LANDSCAPE";
@@ -68,7 +67,9 @@
 	}
 }
 /* iPad   Portrait */
-@media only screen and (max-device-width: 1024px) and (orientation: portrait) {
+@media only screen 
+  and (max-device-width: 768px) 
+  and (orientation: portrait) {
 	#why-shop-page:before {
 		content: "iPaaaddd PORTRAIT";
 		background-color: purple;
@@ -256,39 +257,35 @@
 /* ----------- iPhone 6+ ----------- */
 /* iPhone 6+     Landscape */
 @media only screen 
-/*   and (min-device-width: 414px)  */
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
+  and (max-device-width: 414px) 
   and (orientation: landscape) { 
-#why-shop-page:before {
-  content: "iPnone 6+++ LANDSCAPE";
-  background-color: green;
-  color: #fff;
-  font-size: 50px;
-  line-height: 90px;
-  width: 100%;
-  text-align: center;
-  display: block;
-  height: 190px;
-}
+	#why-shop-page:before {
+		content: "iPnone 6+++ LANDSCAPE";
+		background-color: green;
+		color: #fff;
+		font-size: 50px;
+		line-height: 90px;
+		width: 100%;
+		text-align: center;
+		display: block;
+		height: 190px;
+	}
 }
 /* iPhone 6+    Portrait */
 @media only screen 
-/*   and (min-device-width: 414px)  */
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
+  and (max-device-width: 414px) 
   and (orientation: portrait) { 
-#why-shop-page:before {
-  content: "iPnone 6+++ PORTRAIT";
-  background-color: green;
-  color: #fff;
-  font-size: 50px;
-  line-height: 90px;
-  width: 100%;
-  text-align: center;
-  display: block;
-  height: 190px;
-}
+	#why-shop-page:before {
+		content: "iPnone 6+++ PORTRAIT";
+		background-color: green;
+		color: #fff;
+		font-size: 50px;
+		line-height: 90px;
+		width: 100%;
+		text-align: center;
+		display: block;
+		height: 190px;
+	}
 }
 
 
@@ -298,40 +295,36 @@
 /* ----------- iPhone 6 ----------- */
 /* ----------- iPhone 6 Landscape ----------- */
 @media only screen 
-/*   and (min-device-width: 375px)  */
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
+  and (max-device-width: 375px) 
   and (orientation: landscape) { 
-#why-shop-page:before {
-  content: "iPnone 6666 LANDSCAPE";
-  background-color: blue;
-  color: #fff;
-  font-size: 50px;
-  line-height: 90px;
-  width: 100%;
-  text-align: center;
-  display: block;
-  height: 190px;
-}
+	#why-shop-page:before {
+		content: "iPnone 6666 LANDSCAPE";
+		background-color: blue;
+		color: #fff;
+		font-size: 50px;
+		line-height: 90px;
+		width: 100%;
+		text-align: center;
+		display: block;
+		height: 190px;
+	}
 }
 /* ----------- iPhone 6 Portrait ----------- */
 @media only screen 
-/*   and (min-device-width: 375px)  */
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
+  and (max-device-width: 375px) 
   and (orientation: portrait) { 
-#why-shop-page:before {
-  content: "iPnone 6666 PORTRAIT";
-  background-color: blue;
-  color: #fff;
-  font-size: 50px;
-  line-height: 90px;
-  width: 100%;
-  text-align: center;
-  display: block;
-  height: 190px;
+	#why-shop-page:before {
+		content: "iPnone 6666 PORTRAIT";
+		background-color: blue;
+		color: #fff;
+		font-size: 50px;
+		line-height: 90px;
+		width: 100%;
+		text-align: center;
+		display: block;
+		height: 190px;
+	}
 }
-}
 
 
 
@@ -339,90 +332,47 @@
 
 
 
-/* ----------- iPhone 5 and 5S ----------- */
-/* iPhone 5 and 5S    Landscape */
+
+
+
+
+
+
+
+
+
+/* ----------- iPhone 4, 4s, 5, 5s ----------- */
+/* iPhone 4, 4s, 5, 5s    Landscape */
 @media only screen 
-/*   and (min-device-width: 320px)  */
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
+  and (max-device-width: 320px)
   and (orientation: landscape) {
-#why-shop-page:before {
-  content: "iPnone 5/5s LANDSCAPE";
-  background-color: red;
-  color: #fff;
-  font-size: 50px;
-  line-height: 90px;
-  width: 100%;
-  text-align: center;
-  display: block;
-  height: 190px;
+	#why-shop-page:before {
+		content: "iPnone 4, 4s, 5, 5s LANDSCAPE";
+		background-color: green;
+		color: #fff;
+		font-size: 50px;
+		line-height: 90px;
+		width: 100%;
+		text-align: center;
+		display: block;
+		height: 190px;
+	}
 }
-}
-/* iPhone 5 and 5S    Portrait */
+/* iPhone 4, 4s, 5, 5s    Portrait */
 @media only screen 
-/*   and (min-device-width: 320px)  */
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
+  and (max-device-width: 320px)
   and (orientation: portrait) {
-#why-shop-page:before {
-  content: "iPnone 5/5s PORTRAIT";
-  background-color: red;
-  color: #fff;
-  font-size: 50px;
-  line-height: 90px;
-  width: 100%;
-  text-align: center;
-  display: block;
-  height: 190px;
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-/* ----------- iPhone 4 and 4S ----------- */
-/* iPhone 4 and 4S    Landscape */
-@media only screen 
-/*   and (min-device-width: 320px)  */
-  and (max-device-width: 480px)
-/*   and (-webkit-min-device-pixel-ratio: 2) */
-  and (orientation: landscape) {
-#why-shop-page:before {
-  content: "iPnone 444 LANDSCAPE";
-  background-color: green;
-  color: #fff;
-  font-size: 50px;
-  line-height: 90px;
-  width: 100%;
-  text-align: center;
-  display: block;
-  height: 190px;
-}
-}
-/* iPhone 4 and 4S    Portrait */
-@media only screen 
-/*   and (min-device-width: 320px)  */
-  and (max-device-width: 480px)
-/*   and (-webkit-min-device-pixel-ratio: 2) */
-  and (orientation: portrait) {
-#why-shop-page:before {
-  content: "iPnone 444 PORTRAIT";
-  background-color: green;
-  color: #fff;
-  font-size: 50px;
-  line-height: 90px;
-  width: 100%;
-  text-align: center;
-  display: block;
-  height: 190px;
-}
+	#why-shop-page:before {
+		content: "iPnone 4, 4s, 5, 5s PORTRAIT";
+		background-color: green;
+		color: #fff;
+		font-size: 50px;
+		line-height: 90px;
+		width: 100%;
+		text-align: center;
+		display: block;
+		height: 190px;
+	}
 	#why-shop-page .section-heading img {
 		margin: -7px 10px 0 20px;
 	}
