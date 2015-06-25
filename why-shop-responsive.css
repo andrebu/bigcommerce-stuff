@@ -390,6 +390,105 @@
 @media only screen 
   and (max-device-width: 568px)
   and (orientation: landscape) {
+	#why-shop-page p {
+		padding: 0;
+	}
+/* Section 1 - Huge Selection */
+	#why-shop-page .selection-section .group {
+		width: 45%;
+		margin: 0 auto 0 0;
+	}
+	#why-shop-page .selection-section .sub-section .section-right {
+		width: 62%;
+		top: -74%;
+		right: 13px;
+	}
+	#why-shop-page .selection-section .sub-section .section-right img + img {
+		margin-right: -23px;
+	}
+	#why-shop-page .selection-section .sub-section {
+		height: auto;
+	}
+	#why-shop-page .selection-section .sub-section .section-left {
+		width: 40%;
+	}
+	#why-shop-page .loading-placeholder,
+	#why-shop-page .why-shop.MagicScroll {
+	    height: 100% !important;
+	}
+	#why-shop-page .selection-section .sub-section .section-middle {
+		width: 21%;
+		height: 130px;
+		line-height: 22px;
+	}
+/* Section 2 - Low Prices */
+	#why-shop-page .prices-section .section-right h3 {
+		padding: 0;
+	}
+	#why-shop-page .prices-section .section-left {
+		width: 22%;
+		left: 3%;
+	}
+/* Section 3 - Fast Shipping */
+	#why-shop-page .shipping-section .sub-section.clock p {
+		width: 56%;
+	}
+	#why-shop-page .shipping-section .sub-section.clock img {
+		width: 30%;
+		margin: -5% 3% -2% 0;
+		position: absolute;
+		right: 0;
+	}
+/* Section 4 - Customer Service */
+	#why-shop-page .service-section .sub-section {
+		margin-bottom: 60px;
+		font-size: 11px;
+	}
+	#why-shop-page .service-section .sub-section ul {
+		margin: 2% 0 2% 2%;
+	}
+	#why-shop-page .service-section .sub-section li {
+		margin: 7px 0;
+	}
+	#why-shop-page .service-section .sub-section li .span-left {
+		width: 97px;
+	}
+	#why-shop-page .service-section .sub-section img {
+	}
+/* Section 5 - Convenience */
+	#why-shop-page .convenient-section .sub-section {
+		margin-bottom: 60px;
+		font-size: 14px;
+	}
+	#why-shop-page .convenient-section .sub-section ul {
+		padding: 10px 0 30px 60px;
+	}
+	#why-shop-page .convenient-section .sub-section img {
+		margin: 0;
+		bottom: -29%;
+		width: 50%;
+	}
+/* Section 6 - Quality */
+	#why-shop-page .quality-section .section-top .section-left h3 {
+		padding: 0;
+	}
+	#why-shop-page .quality-section .section-top .section-right {
+		max-height: 258px;
+		height: 258px;
+	}
+	#why-shop-page .quality-section .section-top .section-right p {
+		width: 55%;
+		margin-top: 90px;
+	
+		padding: 0 0 0 20px;
+}
+	#why-shop-page .quality-section .section-top .section-right img {
+		margin: 0;
+		top: -57px;
+		left: 80px;
+	
+		width: 220px;
+}
 }
 
 
