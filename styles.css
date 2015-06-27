@@ -5193,7 +5193,6 @@ a.ChangeLink {
     font-weight: 400;
     margin: 0 0 2px 0;
     line-height: 20px;
-    text-align: left !important;
     position: relative;
 }
 .ProductDetailsGrid .s-price .YouSave {
@@ -7843,10 +7842,22 @@ height: 100px;
     margin-bottom: 10px;
 }
 .ProductMain #ProductWarranty .ProductWarrantyContainer ul {
-    list-style-type: inherit; 
-    margin-bottom: 0; 
+	list-style-type: inherit; 
+	margin-bottom: 0; 
+	-webkit-column-fill: auto; 
+	-webkit-column-width: 170px; 
+	-webkit-column-gap: 0px; 
+	-moz-column-fill: auto; 
+	-moz-column-width: 170px; 
+	-moz-column-gap: 0px; 
+	column-fill: auto; 
+	column-width: 170px; 
+	column-gap: 0px;
 }
-
+.ProductWarrantyContainer li {
+	list-style-position: inside;
+	list-style-type: circle;
+}
 
 /* ShopByPriceCustom */
 .ShopByPriceCustom a {
@@ -7915,15 +7926,11 @@ height: 100px;
 	-ms-flex: 1; 
 	flex: 1;
     margin: 0;
+	text-align: center;
 }
 .JointSizeHeightContainer .ProductOtherDetails .ProductDetailsGrid .DetailRow:first-child {  
 }
 .JointSizeHeightContainer .ProductOtherDetails .ProductDetailsGrid .DetailRow:nth-child(2) {
-	-webkit-box-flex: 1; 
-	-moz-box-flex: 1; 
-	-webkit-flex: 1; 
-	-ms-flex: 1; 
-	flex: 1;
 }
 .JointSizeHeightContainer .ProductOtherDetails .ProductDetailsGrid .DetailRow .Label {
     font-weight: bold;
@@ -8206,11 +8213,21 @@ div.sold-out-overlay {
 }
 
 
-.FreeShippingContainer {
+.ProductDetailsGrid .DetailRow.FreeShippingContainer {
 	text-align: center;
+	margin: 27px 0;
 }
-.FreeShippingHeading {
+.FreeShippingHeading,
+#shipping-time {
 	padding: 0;
+	font-family: Geneva;
+}
+#shipping-time {
+	font-size: 12px;
+}
+.FreeShippingHeading .fa-truck {
+	color: #888;
+	font-size: 17px;
 }
 .FreeShippingList {
 	margin: 0;
