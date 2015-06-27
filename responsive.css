@@ -157,12 +157,6 @@
         width:90% !important;
         padding:5% !important;
     }
-    .JointSizeHeightContainer .ProductOtherDetails .ProductDetailsGrid .DetailRow:first-child {
-		padding-right: 10%;
-	}
-	.JointSizeHeightContainer .ProductOtherDetails .ProductDetailsGrid .DetailRow:last-child {
-		padding-left: 10%;
-	}    
 }
 
 
@@ -1232,10 +1226,6 @@ width: 82%;
 }
 .header-logo-mobile .mobile-logo a {
 	display: block;
-/*
-	width: 70px;
-	height: 70px;
-*/
 }
 .header-logo-mobile .mobile-logo a img {
 	width: 70px;
@@ -1759,16 +1749,17 @@ width:100%;
     .TinyOuterDiv img {
         display:none;
     }
+    
     #ProductDetails .ProductTinyImageList ul li {
         width:15px !important;
-        height:15px !important;
-        border-radius:50%;
-        -moz-border-radius:50%;
-        -webkit-border-radius:50%;
+        height:18px !important;
         margin:10px 10px 0 10px;
         background:#ccc;
         border:none !important;
     }
+    #ProductDetails .ProductTinyImageList ul li a {
+		height: 16px;
+	}
     #ProductDetails .ProductTinyImageList ul li.selected {
         background:#666 !important;
         border:none !important;
