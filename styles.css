@@ -2023,7 +2023,7 @@ input, select, textarea {
     border-radius: 0px;
     -moz-border-radius: 0px;
     -webkit-border-radius: 0px;
-    background: url(%%GLOBAL_TPL_PATH%%/images/blank.png) 50% 50% no-repeat transparent;
+    background: url(//cdn6.bigcommerce.com/r-678b8dcecd8097c9a0dc483a251b63f87782244e/themes/Hawaii/images/blank.png) 50% 50% no-repeat transparent;
     -moz-transition: background-color 150ms ease;
     -webkit-transition: background-color 150ms ease;
     -o-transition: background-color 150ms ease;
@@ -7816,7 +7816,18 @@ height: 100px;
 */
 
 .ProductMain #ProductOtherDetails .ProductDetailsGrid {
-    display: block !important; 
+	display: -webkit-box !important; 
+	display: -moz-box !important; 
+	display: -ms-flexbox !important; 
+	display: -webkit-flex !important; 
+	display: flex !important; 
+	-webkit-box-orient: horizontal;  
+	-moz-box-orient: horizontal;  
+	-webkit-box-direction: normal;  
+	-moz-box-direction: normal;  
+	-webkit-flex-direction: row;  
+	-ms-flex-direction: row;  
+	flex-direction: row;
 }
 
 .ProductMain #ProductWarranty .ProductWarrantyContainer {
@@ -7882,60 +7893,13 @@ height: 100px;
 
 
 /* Joint Size and Height */
-/* .JointSizeHeightContainer {
-    display: none;
-} 
 .JointSizeHeightContainer {
-    width: 100%;
-    height: 36px; 
-    margin-bottom: 10px;
-    display: none;
-} 
-*/
-/* 
-.JointSizeHeightContainer > div, 
-.JointSizeHeightContainer .JointSizeHeightWrapper {
-    width: 100%;
-    height: 36px;
-    margin-bottom: 10px;
-} 
-*/
-/*
-.JointSizeHeightContainer .JointSize {
-    display: block;
-    height: 100%;
-    float: left;
-    padding-right: 40px;
-    border-right: 1px solid lightgray;
-}
-
-.JointSizeHeightContainer .Height {
-    display: block;
-    height: 100%;
-    float: left;
-    padding-left: 40px;
-}
-
-.JointSizeHeightContainer .JointSizeLabel, 
-.JointSizeHeightContainer .HeightLabel {
-    float: left;
-    clear: both;
-    font-weight: bold;
-}
-
-.JointSizeHeightContainer .JointSizeValue, 
-.JointSizeHeightContainer .HeightValue {
-    float: left;
-    clear: both;
-}
-*/
-.JointSizeHeightContainer {
+    margin-bottom: 16px;
 }
 .JointSizeHeightContainer .ProductOtherDetails {
     margin: 0; 
-    border-top: 1px solid lightgray; 
-    border-bottom: 1px solid lightgray; 
-/*    width: 266px; */
+    border-top: 1px solid #ededed; 
+    border-bottom: 1px solid #ededed; 
 }
 .JointSizeHeightContainer .ProductOtherDetails .subtitle {
     display: none; 
@@ -7945,17 +7909,30 @@ height: 100px;
     padding: 5px 0; 
 } 
 .JointSizeHeightContainer .ProductOtherDetails .ProductDetailsGrid .DetailRow {
-    float: left;
+	-webkit-box-flex: 1; 
+	-moz-box-flex: 1; 
+	-webkit-flex: 1; 
+	-ms-flex: 1; 
+	flex: 1;
+    margin: 0;
 }
-.JointSizeHeightContainer .ProductOtherDetails .ProductDetailsGrid .DetailRow:first-child {
-    padding-right: 22%; 
-    border-right: 1px solid lightgray; 
+.JointSizeHeightContainer .ProductOtherDetails .ProductDetailsGrid .DetailRow:first-child {  
 }
 .JointSizeHeightContainer .ProductOtherDetails .ProductDetailsGrid .DetailRow:nth-child(2) {
-    padding-left: 10%; 
+	-webkit-box-flex: 1; 
+	-moz-box-flex: 1; 
+	-webkit-flex: 1; 
+	-ms-flex: 1; 
+	flex: 1;
 }
 .JointSizeHeightContainer .ProductOtherDetails .ProductDetailsGrid .DetailRow .Label {
-    font-weight:bold;
+    font-weight: bold;
+	font-size: 12px;
+    font-family: Geneva;
+}
+.JointSizeHeightContainer .ProductOtherDetails .ProductDetailsGrid .DetailRow .Value {
+	font-size: 11px;
+	font-family: Geneva;
 }
 .PriceBorderBottom {
     border: 0; 
