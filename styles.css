@@ -7935,11 +7935,11 @@ height: 100px;
 .JointSizeHeightContainer .ProductOtherDetails .ProductDetailsGrid .DetailRow .Label {
     font-weight: bold;
 	font-size: 12px;
-    font-family: Geneva;
+    font-family: Geneva, 'Questrial', sans-serif;
 }
 .JointSizeHeightContainer .ProductOtherDetails .ProductDetailsGrid .DetailRow .Value {
 	font-size: 11px;
-	font-family: Geneva;
+	font-family: Geneva, 'Questrial', sans-serif;
 }
 .PriceBorderBottom {
     border: 0; 
@@ -8220,7 +8220,7 @@ div.sold-out-overlay {
 .FreeShippingHeading,
 #shipping-time {
 	padding: 0;
-	font-family: Geneva;
+	font-family: Geneva, 'Questrial', sans-serif;
 }
 #shipping-time {
 	font-size: 12px;
