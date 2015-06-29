@@ -7846,13 +7846,13 @@ height: 100px;
 	margin-bottom: 0; 
 	-webkit-column-fill: auto; 
 	-webkit-column-width: 170px; 
-	-webkit-column-gap: 0px; 
+	-webkit-column-gap: 10px; 
 	-moz-column-fill: auto; 
 	-moz-column-width: 170px; 
-	-moz-column-gap: 0px; 
+	-moz-column-gap: 10px; 
 	column-fill: auto; 
 	column-width: 170px; 
-	column-gap: 0px;
+	column-gap: 10px;
 }
 .ProductWarrantyContainer li {
 	list-style-position: inside;
@@ -8221,6 +8221,7 @@ div.sold-out-overlay {
 #shipping-time {
 	padding: 0;
 	font-family: Geneva, 'Questrial', sans-serif;
+	margin: 0 0 10px;
 }
 #shipping-time {
 	font-size: 12px;
@@ -8229,15 +8230,8 @@ div.sold-out-overlay {
 	color: #888;
 	font-size: 17px;
 }
-.FreeShippingList {
-	margin: 0;
-	font-size: 11px;
-	list-style: none;
-	display: none;
-}
-.FreeShippingText {
-	font-size: 12px;
-	display: block;
+#shipping-time div {
+	margin: 0 0 10px;
 }
 .green {
 	color: #39b54a;
@@ -8249,6 +8243,9 @@ div.sold-out-overlay {
 }
 .up-case {
 	text-transform: uppercase;
+}
+.muted {
+	color: #949494;
 }
 .free-shipping-list {
 	margin: 0;
