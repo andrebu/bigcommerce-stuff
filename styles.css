@@ -8247,6 +8247,9 @@ div.sold-out-overlay {
 	background: #22a358;
 	color: #fff;
 }
+.up-case {
+	text-transform: uppercase;
+}
 .free-shipping-list {
 	margin: 0;
 	font-size: 11px;
