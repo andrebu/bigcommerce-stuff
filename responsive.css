@@ -221,6 +221,12 @@ width: 82%;
      }
 
 
+
+
+	/* q-Tips */
+	#qtip-404 {
+		display: none !important;
+	}
     /* Hide */
     #ProductBreadcrumb, .productlist-page .Left, .Left {
         display: none;
@@ -536,7 +542,7 @@ width: 82%;
         line-height:45px;
     }
 */
-	/* Mobile Menu Trigger Bar Andre */
+	/* Mobile Menu Trigger Bar  */
     #ToggleMenu.normal, #ToggleMenu.active {
         position:absolute;
         top:0px;
@@ -551,7 +557,6 @@ width: 82%;
     div#ToggleMenu.active {
 		background-color: #202020;
 	}
-    /* END Mobile Menu Trigger Bar Andre */
     /*     Social link floating bar hide */
     #FloatingSocialLinks {
 	    display: none; 
@@ -1742,9 +1747,9 @@ width:100%;
 		vertical-align: middle;
 	}
 	
-    .SearchContainer .ProductList li {
-        width:49%;
-    }
+	.main .SearchContainer .ProductList li {
+		width: 49%;
+	}
     /*----------Poduct Display Popup----------*/
     .TinyOuterDiv img {
         display:none;
