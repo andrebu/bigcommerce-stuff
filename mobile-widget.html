@@ -1,0 +1,14 @@
+<script type="text/javascript">
+$(document).ready(function() {
+	if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		
+	} else {
+		$('[title!=""]').qtip({
+			position: {
+				target: 'mouse', // Track the mouse as the positioning target
+				adjust: { x: 5, y: 5 } // Offset it slightly from under the mouse
+			}
+		})
+	}
+});
+</script>
