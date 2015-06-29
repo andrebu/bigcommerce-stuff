@@ -8259,11 +8259,6 @@ div.sold-out-overlay {
 	padding-left: 1em;      
 	text-indent: -.7em;
 }
-.free-shipping-list li:before {
-	content: "•";     
-	color: rgb(57, 181, 74);
-	padding-right: 7px;
-}
 
 
 
