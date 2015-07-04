@@ -6578,7 +6578,7 @@ html.javascript .productOptionViewRectangle label {
     position: relative;
 }
 .main .SearchContainer .ProductList li {
-	width: 49%;
+	width: 32.5%;
 }
 .SearchContainer .ProductList .ProductImage {
     margin-right: 20px;
@@ -6982,10 +6982,6 @@ font-weight: bold;
 }*/
 /*Product Details*/
 .shareSlide {
-/*
-    background: #f0efee;
-    height: 30px;
-*/
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -6995,6 +6991,22 @@ font-weight: bold;
     border-radius:3px;
     -webkit-border-radius:3px;
     -moz-border-radius:3px;
+}
+.shareSlide span {
+	font-family: 'Questrial', sans-serif;
+	color: #666666;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 14px;
+	line-height: 17px; 
+}
+.shareSlide span strong.green {
+	font-family: 'futura', 'Questrial', sans-serif;
+	font-size: 19px;
+}
+.shareSlide span strong.green strong.dollar-symb {
+	font-size: 13px;
+	vertical-align: text-top;
 }
 .shareSlide .inner {
     position: absolute;
@@ -7843,7 +7855,6 @@ height: 100px;
 }
 .ProductMain #ProductWarranty .ProductWarrantyContainer ul {
 	list-style-type: inherit; 
-	margin-bottom: 0; 
 	-webkit-column-fill: auto; 
 	-webkit-column-width: 170px; 
 	-webkit-column-gap: 10px; 
@@ -7853,10 +7864,19 @@ height: 100px;
 	column-fill: auto; 
 	column-width: 170px; 
 	column-gap: 10px;
+	margin: 0 0 0 6px;
 }
 .ProductWarrantyContainer li {
 	list-style-position: inside;
-	list-style-type: circle;
+	list-style-type: none;
+	padding-left: 13px;
+}
+.ProductWarrantyContainer li:before {
+	content: "•";     
+	color: rgb(57, 181, 74);
+	margin-left: -10px; 
+	margin-right: 3px;
+	font-size: 16px;
 }
 
 /* ShopByPriceCustom */
