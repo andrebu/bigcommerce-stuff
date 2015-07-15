@@ -1,0 +1,37 @@
+<script type="text/javascript">
+/*
+var xhr = new XMLHttpRequest,
+    content,
+    doc,
+    scripts;
+
+xhr.open( "GET", document.URL, false );
+xhr.send(null);
+content = xhr.responseText;
+
+doc = document.implementation.createHTMLDocument(""+(document.title || ""));
+
+doc.open();
+doc.write(content);
+doc.close();
+
+doc = document.implementation.createHTMLDocument(""+(document.title || ""));
+
+scripts = doc.getElementsByTagName("script");
+//Modify scripts as you please
+[].forEach.call( scripts, function( script ) {
+    if(script.getAttribute("src") == "http://cdn4.bigcommerce.com/r-223e6742ad4b97aa8810a12173168a6fe0710cce/app/assets/js/vendor/bigcommerce/fornax.min.js"
+       || script.getAttribute("src") == "http://cdn4.bigcommerce.com/r-223e6742ad4b97aa8810a12173168a6fe0710cce/app/assets/js/vendor/bigcommerce/analytics.min.js") {
+
+        script.removeAttribute("src");
+    }
+});
+*/
+    
+    
+//Doing this will activate all the modified scripts and the "old page" will be gone as the document is replaced
+//document.replaceChild( document.importNode(doc.documentElement, true), document.documentElement);
+    
+    
+    window.analytics = function () {};
+</script>
