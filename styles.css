@@ -842,9 +842,8 @@ body table#QuickSearch.QuickSearch {
 	transition: all 0.27s ease;
 }
 .header #subHeader .inner .freeShippingContainer .freeShippingTruck {
-	background-image: url('//cdn3.bigcommerce.com/s-mixi7d/templates/__custom/images/freeshippingtruck.png?t=1429230948');
-	background-position: center;
-	background-size: 41px 20px;
+	background-image: url('%%ASSET_images/dankstop-sprite.png%%');
+	background-position: -8px -1px;
 	background-repeat: no-repeat;
 	width: 41px;
 	height: 40px;
@@ -1153,6 +1152,8 @@ img.bottomAdImg {
   BOTTOM: -18PX;
   POSITION: RELATIVE;
   MARGIN-RIGHT: 40PX;
+  width: 100px;
+  height: 100px;
 }
 
 span.bottomAdText {
@@ -1402,6 +1403,36 @@ body .newsletter-subscription > .inner {
 }
 /* Font Awesome icons
  -------------------------- */
+.fa-instagram:before {
+	content: "\f16d";
+}
+.fa-google-plus:before {
+	content: "\f0d5";
+}
+.fa-youtube:before {
+	content: "\f167";
+}
+.fa-pinterest:before {
+	content: "\f0d2";
+}
+.fa-facebook-f:before, .fa-facebook:before {
+	content: "\f09a";
+}
+.fa-twitter:before {
+	content: "\f099";
+}
+/* people */
+.fa-group:before, .fa-users:before {
+	content: "\f0c0";
+}
+/* eye */
+.fa-eye:before {
+	content: "\f06e";
+}
+/* clock */
+.fa-clock-o:before {
+	content: "\f017";
+}
 /* Dollar USD */
 .fa-dollar:before, .fa-usd:before {
 	content: "\f155";
@@ -6940,11 +6971,11 @@ input.Textbox, textarea, input[type="text"], input[type="password"], input[type=
 .on-sale-badge {
 position: absolute;
 z-index: 1;
-background: rgba(24, 136, 0, 0.66);
+background: #6ADA78;
 width: 100% !important;
 height: 40px !important;
 top: 8%;
-left: -33.5%;
+left: -32%;
 /* border-radius: 50%; */
 /* -webkit-border-radius: 50%; */
 -moz-border-radius: 50%;
@@ -6992,7 +7023,7 @@ font-weight: bold;
     -webkit-border-radius:3px;
     -moz-border-radius:3px;
 }
-.shareSlide span {
+.shareSlide > span {
 	font-family: 'Questrial', sans-serif;
 	color: #666666;
 	text-transform: uppercase;
@@ -7004,9 +7035,19 @@ font-weight: bold;
 	font-family: 'futura', 'Questrial', sans-serif;
 	font-size: 19px;
 }
+.shareSlide span strong.green .savings-amount {
+	letter-spacing: 0;	
+}
 .shareSlide span strong.green strong.dollar-symb {
 	font-size: 13px;
-	vertical-align: text-top;
+	position: relative;
+	top: -4px;
+}
+.shareSlide span strong.green .cents {
+	font-size: 12px;
+	top: -6px;
+	position: relative;
+	margin-left: 2px;
 }
 .shareSlide .inner {
     position: absolute;
@@ -7343,6 +7384,9 @@ div#fancy_content {
     background:#fff;
     border:2px solid #f0efee;
     z-index:1;
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 /*--Wishlist Icon---*/
 .txt-hide a span, .txt-hide .icon-share a {
@@ -7795,18 +7839,49 @@ height: 100px;
     width:40px; 
     height: 25px; 
 }
+#payment-methods .cc-method {
+	margin-right: 5px;
+	width: 40px;
+	height: 25px;
+	display: inline-block;
+	background-repeat: no-repeat;
+}
+#payment-methods .cc-method.cc-amex {
+	background-image: url('%%ASSET_images/dankstop-sprite.png%%');
+	background-position: -10px -50px;
+}
+#payment-methods .cc-method.cc-discover {
+	background-image: url('%%ASSET_images/dankstop-sprite.png%%');
+	background-position: -10px -95px;
+}
+#payment-methods .cc-method.cc-visa {
+	background-image: url('%%ASSET_images/dankstop-sprite.png%%');
+	background-position: -10px -140px;
+}
+#payment-methods .cc-method.cc-mastercard {
+	background-image: url('%%ASSET_images/dankstop-sprite.png%%');
+	background-position: -10px -185px;
+}
+#payment-methods .cc-method.cc-bitcoin {
+	background-image: url('%%ASSET_images/dankstop-sprite.png%%');
+	background-position: -10px -230px;
+}
 #crypto-payment {
 	padding: 10px 0 0; 
-}
-#crypto-payment a img {
-    width: 60px;
-    height: 23px;
-    vertical-align: middle;
 }
 #crypto-payment a {
 	height: 23px;
 	display: inline-block;
 	vertical-align: middle;
+}
+#crypto-payment a .pay-with-bitcoin {
+    width: 60px;
+    height: 23px;
+    vertical-align: middle;
+    display: inline-block;
+    background-repeat: no-repeat;
+	background-image: url('%%ASSET_images/dankstop-sprite.png%%');
+	background-position: -10px -275px;
 }
 #crypto-payment span {
 	font-family: 'futura';
@@ -7816,6 +7891,19 @@ height: 100px;
 	line-height: 23px;
 	height: 23px;
 	display: inline-block;
+}
+#paymentmethods .AuthorizeNetSeal {
+	padding-top: 20px; 
+	float: left; 
+}
+#paymentmethods .VeriSign-Seal {
+	float: left;
+	width: 120px;
+	height: 67px;
+	margin: 20px 0 0 20px;
+	background-repeat: no-repeat;
+	background-image: url('%%ASSET_images/dankstop-sprite.png%%');
+	background-position: -10px -317px;
 }
 
 
@@ -7901,21 +7989,6 @@ height: 100px;
 
 
 
-.footer .AuthorizeNetSeal {
-	padding-top: 20px; 
-	float: left; 
-}
-
-.footer .VeriSign-Seal {
-	float: left;
-	width: 120px;
-	padding: 20px 0 0 20px;
-}
-
-.footer .VeriSign-Seal img {
-	width: 120px;
-	height: 67px;
-}
 
 
 
@@ -8015,19 +8088,6 @@ div.sold-out-overlay {
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;  
 	top: 30%;
-/*
-        -webkit-transform-origin: 0% 50%;
-	-webkit-transform: rotate(-90deg) translate(-50%, 50%);
-	-moz-transform-origin: 0 50%;
-	-moz-transform: rotate(-90deg) translate(-50%, 50%);
-	-ms-transform-origin: 0 50%;
-	-ms-transform: rotate(-90deg) translate(-50%, 50%);
-	-o-transform-origin: 0 50%;
-	-o-transform: rotate(-90deg) translate(-50%, 50%);
-	transform-origin: 0 50%;
-	transform: rotate(-90deg) translate(-50%, 50%);
-*/
-/* 	display: none;  */
 }
 #FloatingSocialLinks .floatingsociallink {
 	height: 32px; 
@@ -8035,44 +8095,43 @@ div.sold-out-overlay {
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s; 
-/* 	float: left;  */
 }
 #FloatingSocialLinks .floatingsociallink:hover {
 	width: 52px;
 }
-
-#FloatingSocialLinks .floatingsociallink {
-	background-repeat: no-repeat; 
-	background-position: center right; 
-}
 #FloatingSocialLinks .instagram {
 	background-color: #cd5959; 
-	background-image: url(//cdn6.bigcommerce.com/s-ss4br/templates/__custom/images/32-instagram.png?t=1422426660)
 }
 #FloatingSocialLinks .facebook {
 	background-color: #3b5998; 
-	background-image: url('//cdn6.bigcommerce.com/s-ss4br/templates/__custom/images/32-facebook.png?t=1422426660')
 }
-#FloatingSocialLinks .pintrest {
+#FloatingSocialLinks .pinterest {
 	background-color: #cb211d; 
-	background-image: url('//cdn6.bigcommerce.com/s-ss4br/templates/__custom/images/32-pinterest.png?t=1422426660')
 }
 #FloatingSocialLinks .youtube {
 	background-color: #c02b29; 
-	background-image: url('//cdn6.bigcommerce.com/s-ss4br/templates/__custom/images/32-youtube-2.png?t=1422426660')
 }
 #FloatingSocialLinks .googleplus {
 	background-color: #dd4b39; 
-	background-image: url('//cdn6.bigcommerce.com/s-ss4br/templates/__custom/images/32-googleplus.png?t=1422426660')
 }
 #FloatingSocialLinks .twitter {
 	background-color: #56a3d9; 
-	background-image: url('//cdn6.bigcommerce.com/s-ss4br/templates/__custom/images/32-twitter.png?t=1422426660')
 }
-
+#FloatingSocialLinks .floatingsociallink a {
+	display: block;
+	height: 32px;
+}
 #FloatingSocialLinks .floatingsociallink a .inner-floatingsociallink {
-	width: 100%; 
-	height: 100%; 
+	width: 32px;
+	height: 100%;
+	float: right;
+}
+#FloatingSocialLinks .floatingsociallink .fa {
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	line-height: 34px;
+	font-size: 21px;
 }
 
 .yotpo.testimonials .yotpo-testimonials {
@@ -8312,4 +8371,63 @@ div.sold-out-overlay {
 /* Reweards Program link height fix */
 .sloyalty-loyaltyprogram-points {
 	height: 14px;
+}
+
+.some-class {
+	animation-name: fadein;
+	animation-duration: 1.75s;
+	animation-iteration-count: 1;
+	-webkit-animation-name: fadein;
+	-webkit-animation-duration: 1.75s;
+	-webkit-animation-iteration-count: 1
+}
+
+@-webkit-keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(48px);
+        -webkit-transform: translateY(48px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px)
+    }
+}
+@-moz-keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(48px);
+        -webkit-transform: translateY(48px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px)
+    }
+}
+@-o-keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(48px);
+        -webkit-transform: translateY(48px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px)
+    }
+}
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(48px);
+        -webkit-transform: translateY(48px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px)
+    }
 }
