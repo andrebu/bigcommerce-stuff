@@ -1,36 +1,61 @@
 <form method="post" action="#" onsubmit="ExpressCheckout.ChooseShippingProvider(); return false;">
-    <p><span class="Required">*</span>%%LNG_ExpressCheckoutSelectShippingProvider%%</p>
-    %%GLOBAL_ShippingQuotes%%
-    <input type="submit" value="%%LNG_Continue%%" class="btn Small" />
-    %%GLOBAL_DeliveryDisclaimer%%
+	<p><span class="Required">*</span>%%LNG_ExpressCheckoutSelectShippingProvider%%</p>
+	%%GLOBAL_ShippingQuotes%%
+	<hr>
+	<div class="shipping-addons">
+	    <h3>Security &amp; Insurance</h3>
+	    <div class="del-sig">
+	        <span class="del-sig-text">Add the added security of a required signature upon delivery for just $5.</span>
+	        <button onclick="$.post('/cart.php?action=add&amp;product_id=690');" class="btn Small" title="Add To Cart">Add Delivery Signature</button>
+	    </div>
+	</div>
+	<input type="submit" value="%%LNG_Continue%%" class="btn Small" />
+	%%GLOBAL_DeliveryDisclaimer%%
 </form>
 
 <script type="text/javascript">
 //<![CDATA[
-  $(document).ready(function(){
-    var shippingItem1 = $('.ShippingProviderList').find("span.ShipperName:contains('Free Shipping')");
-        shippingItem2 = $('.ShippingProviderList').find("span.ShipperName:contains('Ground Home Delivery')");
-        shippingItem3 = $('.ShippingProviderList').find("span.ShipperName:contains('Priority Mail')");
-        shippingItem4 = $('.ShippingProviderList').find("span.ShipperName:contains('FedEx 2 Day')");
-        shippingItem5 = $('.ShippingProviderList').find("span.ShipperName:contains('Express Mail')");
-        shippingItem6 = $('.ShippingProviderList').find("span.ShipperName:contains('Standard Overnight')");
-        bestValue = '<em style="color:#39b54a; "> - Best Value!</em>';
+	//Hide "Free Shipping" from wholesale accounts
+	function wholesaleHide() {
+		var $wholesaleSpecials = $('.CategoryList ul li:contains("Wholesale Specials")');
+		if ($wholesaleSpecials.length) {
+			if ($('.main.CheckoutExpress')) {
+				$('.ShipperName:contains("Free Shipping")').parents('li').remove();
+			};
+		};
+	}
+	function shipperText() {
+		var shippingItem1 = $('.ShippingProviderList').find("span.ShipperName:contains('Free Shipping')");
+			shippingItem2 = $('.ShippingProviderList').find("span.ShipperName:contains('Ground Home Delivery')");
+			shippingItem3 = $('.ShippingProviderList').find("span.ShipperName:contains('Priority Mail')");
+			shippingItem4 = $('.ShippingProviderList').find("span.ShipperName:contains('FedEx 2 Day')");
+			shippingItem5 = $('.ShippingProviderList').find("span.ShipperName:contains('Express Mail')");
+			shippingItem6 = $('.ShippingProviderList').find("span.ShipperName:contains('Standard Overnight')");
+			bestValue = '<em style="color:#39b54a; "> - Best Value!</em>';
 
-    shippingItem1.text('Free Shipping \(3-6 business days\)');
-    shippingItem2.text('FedEx Ground \(3-6 business days\)');
-    shippingItem3.text('USPS Priority Mail \(1-3 business days\)');
-        shippingItem3.parent().append(bestValue);
-    shippingItem4.text('FedEx 2-Day \(1-2 business days\)');
-    shippingItem5.text('USPS Priority Express \(1-2 business days\)');
-    shippingItem6.text('FedEx Overnight \(1 business day\)');
-    //Hide "Free Shipping" from wholesale accounts
-    var $wholesaleSpecials = $('.CategoryList ul li:contains("Wholesale Specials")');
-    //if ($wholesaleSpecials.length) {
-    //    if ($('.main.CheckoutExpress')) {
-    //        $('.ShipperName:contains("Free Shipping")').parents('li').remove();
-    //    };
-    //};
-  });
+		shippingItem1.text('Free Shipping \(3-6 business days\)');
+		shippingItem2.text('FedEx Ground \(3-6 business days\)');
+		shippingItem3.text('USPS Priority Mail \(1-3 business days\)');
+		shippingItem3.parent().append(bestValue);
+		shippingItem4.text('FedEx 2-Day \(1-2 business days\)');
+		shippingItem5.text('USPS Priority Express \(1-2 business days\)');
+		shippingItem6.text('FedEx Overnight \(1 business day\)');
+	}
+	function shippingAddons() {
+		$('.shipping-addons').append('<div class="mtotal" style="display: none;"></div>');
+		$('.mtotal').load('//store-mixi7d.mybigcommerce.com/cart.php .gtotal .ProductPrice');
+		setTimeout(function(){ 
+			var cartText = $('.mtotal .ProductPrice').text();
+			cartText = cartText.replace('$','');
+			console.log('carttext is ' + cartText)
+			var cartAmt = parseFloat( cartText );
+		},1000);
+	}
+	$(document).ready(function(){
+		shipperText();
+		shippingAddons();
+		//wholesaleHide();
+	});
 //]]>
 </script>
 ​
