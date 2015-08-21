@@ -31,7 +31,8 @@
 	.wiki-header {
 		background-color: #39b54a;
 		color: #fff;
-		padding: 10px 30px;
+		padding: 10px 30px 20px;
+/*
 		display: -webkit-box;
 		display: -moz-box;
 		display: -ms-flexbox;
@@ -44,8 +45,10 @@
 		-webkit-flex-direction: row;
 		-ms-flex-direction: row;
 		flex-direction: row;
+*/
 		margin-bottom: 30px;
 	}
+/*
 	.wiki-header-text {
 		-webkit-box-flex: 7;
 		-moz-box-flex: 7;
@@ -55,13 +58,20 @@
 		flex: 7;
 		padding-right: 10px;
 	}
-	.wiki-header-text h1 {
+*/
+	.wiki-header h1 {
+		display: inline-block;
+		width: 70%;
 		color: #fff;
+		padding-bottom: 0px;
 	}
-	.wiki-header-text p {
+	.wiki-header p {
+		display: inline-block;
+		width: 70%;
 		margin: 0;
 		line-height: 16px;
 	}
+/*
 	.wiki-header-banner {
 		-webkit-box-flex: 3;
 		-moz-box-flex: 3;
@@ -70,12 +80,14 @@
 		-ms-flex: 3;
 		flex: 3;
 	}
-	.wiki-header-banner img {
+*/
+	.wiki-header img {
 		max-width: 100%;
 		height: auto;
-		width: 100%;
+		width: 30%;
 		position: relative;
-		top: -20px;
+		top: -58px;
+		float: right;
 	}
 	.wiki-item-grid {
 		
@@ -155,18 +167,87 @@
 		font-size: 12px;
 		margin: 0;
 	}
+	/* iPad   Portrait */
+	@media only screen 
+	  and (max-device-width: 768px) 
+	  and (orientation: portrait) {
+			
+	}
+	/* iPhone 6+ Plus and below Portrait */
+	@media only screen and (max-device-width: 414px) and (orientation: portrait) { 
+		.wiki-item-grid .wiki-item .wiki-right p {
+			text-align: center;
+		}
+		.wiki-header {
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-moz-box-orient: vertical;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			/* optional */
+			-webkit-box-align: start;
+			-moz-box-align: start;
+			-ms-flex-align: start;
+			-webkit-align-items: flex-start;
+			align-items: flex-start;
+		}
+		.wiki-header .wiki-header-text {
+			width: 100%;
+			padding: 0;
+			text-align: center;
+		}
+		.wiki-header h1 {
+			width: 100%;
+			-webkit-box-ordinal-group: 1;
+			-moz-box-ordinal-group: 1;
+			-ms-flex-order: 1;
+			-webkit-order: 1;
+			order: 1;
+			margin-bottom: 20px;
+			font-size: 40px;
+		}
+		.wiki-header img {
+			width: 100%;
+			-webkit-box-ordinal-group: 2;
+			-moz-box-ordinal-group: 2;
+			-ms-flex-order: 2;
+			-webkit-order: 2;
+			order: 2;
+			top: 0;
+			margin-bottom: 10px;
+		}
+		.wiki-header p {
+			text-align: center;
+			width: 100%;
+			-webkit-box-ordinal-group: 3;
+			-moz-box-ordinal-group: 3;
+			-ms-flex-order: 3;
+			-webkit-order: 3;
+			order: 3;
+			margin-bottom: 10px;
+		}
+		.wiki-item-grid .wiki-item {
+			width: 100%;
+		}
+	}
 </style>
 
 <div class="wiki-container">
 	<div class="wiki-header">
-		<div class="wiki-header-text">
+<!-- 		<div class="wiki-header-text"> -->
 			<h1>Dank Wiki</h1>
 			<p>Not sure how to choose the right water pipe for you? Want to learn how to properly clean your glass piece? Our knowledge base is a list of helpful articles that can answer all types of questions you might have. Whether you are interested in product maintenance, finding the right product for your smoking needs, or gaining a general understanding of how some of our products work, these articles will teach you what you want to know.</p>
+<!--
 		</div>
 		<div class="wiki-header-banner">
+-->
 			<img src="/content/images/wiki/dankstop-online-headshop-wiki.png" alt="DankStop Online Headshop Wiki"/>
-			</div>
-		</a>	
+<!-- 		</div> -->
 	</div>
 </div>
 
