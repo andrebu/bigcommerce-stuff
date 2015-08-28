@@ -449,6 +449,9 @@ body#home {
 .lightgreen {
 	color: #6ADA78;
 }
+.lightgray {
+	color: #BCB7B7;
+}
 
 
 
@@ -519,20 +522,24 @@ body#home {
 .header .TopMenu .inner #newTopMenu #helpMenuTrigger {
 	line-height: 30px;
 	box-sizing: border-box;
-	position: absolute;
+	position: relative;
 	z-index: 106;
 	cursor: default;
 }
 .header .TopMenu .inner #newTopMenu #helpMenuTrigger.open {
-	border-color: #999;
-	border-style: solid;
-	border-width: 1px 1px 0 1px;
-	background-color: #fff;
-	box-shadow: 2px -4px 4px 3px rgba(0,0,0,0.1);
-	color: #39B54A;
+	padding: 0 !important;
+}
+.header .TopMenu .inner #newTopMenu #helpMenuTrigger.open .helpMenuTriggerText {
+	line-height: 24px !important;     
+	padding: 2px 9px !important;
+	border-color: #999;     
+	border-style: solid;     
+	border-width: 1px 1px 0 1px;     
+	background-color: #fff;     
+	box-shadow: 2px -4px 4px 3px rgba(0,0,0,0.1);     
+	color: #39B54A;     
 	z-index: 999 !important;
-	line-height: 28px !important;
-	padding: 0 9px !important;
+	position: relative;
 }
 .header .TopMenu .inner #newTopMenu #helpMenu {
 	border: solid 1px #999;
@@ -839,6 +846,9 @@ body table#QuickSearch.QuickSearch {
 	display: inline-block;
 	font-family: "Futura";
 	color: #fff;
+	-webkit-transition: all 0.27s ease;
+	-moz-transition: all 0.27s ease;
+	-o-transition: all 0.27s ease;
 	transition: all 0.27s ease;
 }
 .header #subHeader .inner .freeShippingContainer .freeShippingTruck {
@@ -874,6 +884,9 @@ body table#QuickSearch.QuickSearch {
 	vertical-align: middle;
 	float: right;
 	margin: 0px 4px;
+	-webkit-transition: all 0.27s ease;
+	-moz-transition: all 0.27s ease;
+	-o-transition: all 0.27s ease;
 	transition: all 0.27s ease;
 }
 .header #subHeader .inner .freeShippingContainer .shippingLines:before {
@@ -907,6 +920,9 @@ body table#QuickSearch.QuickSearch {
 	position: relative;
 	top: -3px;
 	left: 10px;
+	-webkit-transition: all 0.27s ease;
+	-moz-transition: all 0.27s ease;
+	-o-transition: all 0.27s ease;
 	transition: all 0.27s ease;
 }
 .header #subHeader .inner .freeShippingContainer .shippingLines span:before {
@@ -935,6 +951,27 @@ body table#QuickSearch.QuickSearch {
 }
 .header #subHeader .inner .freeShippingContainer:hover .freeShippingText {
 	color: #6ADA78;
+}
+#nav-cover {
+	position: absolute;
+	top: 146px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	background-color: #000;
+	-ms-filter: opacity(.6);
+	filter: alpha(opacity=60);
+	-webkit-opacity: .6;
+	-moz-opacity: .6;
+	-o-opacity: .6;
+	opacity: .6;
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	z-index: 4;
 }
 
 
@@ -8084,9 +8121,6 @@ div.sold-out-overlay {
 #FloatingSocialLinks {
 	position: fixed; 
 	left: 0; 
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;  
 	top: 30%;
 }
 #FloatingSocialLinks .floatingsociallink {
@@ -8373,12 +8407,14 @@ div.sold-out-overlay {
 	height: 14px;
 }
 
-.some-class {
+.main, 
+.main .Left.fleft,
+.category-list.treeview li {
 	animation-name: fadein;
-	animation-duration: 1.75s;
+	animation-duration: .75s;
 	animation-iteration-count: 1;
 	-webkit-animation-name: fadein;
-	-webkit-animation-duration: 1.75s;
+	-webkit-animation-duration: .75s;
 	-webkit-animation-iteration-count: 1
 }
 
@@ -8430,4 +8466,13 @@ div.sold-out-overlay {
         transform: translateY(0px);
         -webkit-transform: translateY(0px)
     }
+}
+
+.CartContents .CartThumb {
+	padding: 10px;
+	width: 7%;
+}
+.CartContents .CartThumb a {
+	display: block;
+	margin-top: 10px;
 }
