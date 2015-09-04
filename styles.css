@@ -1116,57 +1116,6 @@ body table#QuickSearch.QuickSearch {
 		margin: 0;
 	}
 }
-@media only screen and (device-width : 800px) and (orientation: portrait) {
-	.header #Header .inner #myAccountTrigger {
-		margin: 0 20px;
-	}
-}
-@media only screen and (width : 603px) and (orientation: portrait) {
-	.header #Header .inner #myAccountTrigger {
-		margin: 0 20px;
-	}
-}
-@media only screen and (width : 961px) and (orientation: landscape) {
-	.header #Header .inner #myAccountTrigger {
-		margin: 0 20px;
-	}
-}
-/*– iPad 1Gen/2Gen iPad Mini, Kindle Fire –*/
-@media only screen and (-webkit-min-device-pixel-ratio: 1) and (max-device-width:1024px) {
-	.header #Header .inner #myAccountTrigger {
-		margin: 0 20px;
-	}
-}
-/*– Nexus 7 (2012)–*/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.325) and (max-device-width:1280px) {
-	.header #Header .inner #myAccountTrigger {
-		margin: 0 20px;
-	}
-}
-/*– Nexus 7, Samsung Galaxy Note III, iPad 3 / 4 –*/
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width:1920px) {
-	.header #Header .inner #myAccountTrigger {
-		margin: 0 20px;
-	}
-}
-/*– iPad 3Gen/4Gen, –*/
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width:2048px) {
-	.header #Header .inner #myAccountTrigger {
-		margin: 0 20px;
-	}
-}
-/*– Macbook Pro 13″, Samsung Nexus 10 –*/
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width:2560px) {
-	.header #Header .inner #myAccountTrigger {
-		margin: 0 20px;
-	}
-}
-/*– Macbook Pro 15″ –*/
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width:2880px) {
-	.header #Header .inner #myAccountTrigger {
-		margin: 0 20px;
-	}
-}
 
 
 
