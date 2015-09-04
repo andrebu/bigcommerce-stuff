@@ -743,8 +743,8 @@ body table#QuickSearch.QuickSearch {
 }
 .header #subHeader .inner {
 	margin: 0 auto;
-	width: 90%;	
-	max-width: 1200px;
+	width: 91%;	
+	max-width: 1280px;
 }
 .header #subHeader .inner {
 	color: #fff;
@@ -770,6 +770,7 @@ body table#QuickSearch.QuickSearch {
 	padding: 5px;
 }
 .header #subHeader .inner .PageMenu {
+	display: block;
 	-webkit-box-flex: 7;
 	-moz-box-flex: 7;
 	width: 65%;
@@ -821,15 +822,14 @@ body table#QuickSearch.QuickSearch {
 	display: none;
 }
 .header #subHeader .inner .freeShippingContainer {
-	display: table-cell;
 	vertical-align: middle;
 	height: 40px;
-	-webkit-box-flex: 4;
-	-moz-box-flex: 4;
+	-webkit-box-flex: 3;
+	-moz-box-flex: 3;
 	width: 30%;
-	-webkit-flex: 4;
-	-ms-flex: 4;
-	flex: 4;
+	-webkit-flex: 3;
+	-ms-flex: 3;
+	flex: 3;
 }
 .header #subHeader .inner .freeShippingContainer a {
 	display: block;
