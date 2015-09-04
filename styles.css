@@ -773,7 +773,7 @@ body table#QuickSearch.QuickSearch {
 	display: block;
 	-webkit-box-flex: 7;
 	-moz-box-flex: 7;
-	width: 65%;
+	width: 70%;
 	-webkit-flex: 7;
 	-ms-flex: 7;
 	flex: 7;
@@ -837,7 +837,6 @@ body table#QuickSearch.QuickSearch {
 }
 .header #subHeader .inner .freeShippingContainer .freeShippingText {
 	float: right;
-	margin: 0 10px 0 0;
 	font-style: italic;
 	height: 40px;
 	line-height: 40px;
@@ -849,13 +848,16 @@ body table#QuickSearch.QuickSearch {
 	-moz-transition: all 0.27s ease;
 	-o-transition: all 0.27s ease;
 	transition: all 0.27s ease;
+	font-size: 11px;
 }
 .header #subHeader .inner .freeShippingContainer .freeShippingTruck {
-	background-image: url('%%ASSET_images/dankstop-sprite.png%%');
+	background-image: url('//cdn6.bigcommerce.com/s-ss4br/templates/__custom/images/dankstop-sprite.png?t=1441330339');
 	background-position: -8px -1px;
 	background-repeat: no-repeat;
-	width: 41px;
-	height: 40px;
+	background-size: 250%;
+	width: 37px;
+	height: 21px;
+	margin: 8px 0;
 	line-height: 40px;
 	display: inline-block;
 	float: right;
@@ -877,7 +879,7 @@ body table#QuickSearch.QuickSearch {
 .header #subHeader .inner .freeShippingContainer .shippingLines {
 	content: "";
 	height: 40px;
-	width: 40px;
+	width: 30px;
 	line-height: 40px;
 	display: inline-block;
 	vertical-align: middle;
@@ -892,21 +894,21 @@ body table#QuickSearch.QuickSearch {
 	content: "";
 	display: block;
 	height: 1px;
-	width: 30px;
+	width: 20px;
 	background: #777;
 	position: relative;
 	top: 17px;
-	left: 8px;
+	left: 23px;
 }
 .header #subHeader .inner .freeShippingContainer .shippingLines:after {
 	content: "";
 	display: block;
 	height: 1px;
-	width: 35px;
+	width: 25px;
 	background: #777;
 	position: relative;
-	top: -20px;
-	left: -1px;
+	top: -21px;
+	left: 18px;
 }
 .header #subHeader .inner .freeShippingContainer .shippingLines span {
 	content: "";
@@ -914,11 +916,11 @@ body table#QuickSearch.QuickSearch {
 	line-height: 40px;
 	display: inline-block;
 	vertical-align: middle;
-	width: 30px;
+	width: 19px;
 	background: #eaeaea;
 	position: relative;
 	top: -3px;
-	left: 10px;
+	left: 19px;
 	-webkit-transition: all 0.27s ease;
 	-moz-transition: all 0.27s ease;
 	-o-transition: all 0.27s ease;
@@ -930,10 +932,10 @@ body table#QuickSearch.QuickSearch {
 	line-height: 40px;
 	display: block;
 	vertical-align: middle;
-	width: 25px;
+	width: 15px;
 	background: #eaeaea;
 	position: relative;
-	top: -5px;
+	top: -3px;
 	left: 9px;
 }
 .header #subHeader .inner .freeShippingContainer .shippingLines span:after {
@@ -942,10 +944,10 @@ body table#QuickSearch.QuickSearch {
 	line-height: 40px;
 	display: block;
 	vertical-align: middle;
-	width: 35px;
+	width: 25px;
 	background: #eaeaea;
 	position: relative;
-	top: 3px;
+	top: 2px;
 	left: -8px;
 }
 .header #subHeader .inner .freeShippingContainer:hover .freeShippingText {
