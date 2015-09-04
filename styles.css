@@ -507,7 +507,6 @@ body#home {
 .header .TopMenu .inner #newTopMenu {
 	color: #777;
 	position: relative;
-	padding-right: 50px;
 	overflow: visible;
 }
 .header .TopMenu .inner #newTopMenu > li {
