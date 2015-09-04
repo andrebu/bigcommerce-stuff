@@ -8296,8 +8296,97 @@ div.sold-out-overlay {
 #shipping-time div {
 	margin: 0 0 10px;
 }
-.green {
-	color: #39b54a;
+.user-info {
+	display: none;
+    margin-bottom: 7px;
+}
+.user-info .user-time, 
+.user-info .user-location {
+    display: inline-block;
+    font-size: 11px;
+    width: 44%;
+    color: #999;
+    font-weight: bold;
+	vertical-align: middle;
+}
+.user-info .user-time {
+    text-align: left;
+}
+.user-info .user-location {
+    text-align: right;
+}
+.user-info div span {
+    font-weight: normal;
+    font-size: 10px;
+}
+.user-info .clock-circle {
+	width: 24px;
+	height: 24px;
+	margin: 0 auto;
+	position: relative;
+	border: 2px solid #999;
+	border-radius: 50%;
+	box-shadow: 0 1px 3px rgba(34, 34, 34, 0.3),inset 0 1px 3px rgba(34, 34, 34, 0.3);
+	display: inline-block;
+	vertical-align: middle;
+}
+.user-info .clock-face {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.user-info .clock-face:after {
+	position: absolute;
+	top: 16px;
+	left: 16px;
+	width: 4px;
+	height: 4px;
+	margin: -6px 0 0 -6px;
+	background: #999;
+	border-radius: 50%;
+	content: "";
+	display: block;
+}
+.user-info .clock-hour {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 0 0 0 -25%;
+	padding: 1px 0 1px 25%;
+	background: #999;
+	-webkit-transform-origin: 100% 50%;
+	-ms-transform-origin: 100% 50%;
+	transform-origin: 100% 50%;
+	border-radius: 4px 0 0 4px;
+}
+.user-info .clock-minute {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -40% 0 0;
+	padding: 40% 1px 0;
+	background: #999;
+	-webkit-transform-origin: 50% 100%;
+	-ms-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	border-radius: 3px 3px 0 0;
+}
+.user-info .clock-second {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -40% 0 0 0;
+	padding: 40% 1px 0 0;
+	background: #999;
+	-webkit-transform-origin: 50% 100%;
+	-ms-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
 }
 .green-bg-white-text {
 	padding: 2px 8px;
