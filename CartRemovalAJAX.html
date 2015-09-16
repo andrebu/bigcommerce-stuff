@@ -1,3 +1,35 @@
+<style>
+	.CartContents.CartItemQuantity {
+		position: relative;
+	}
+	.confirm-removal-prompt {
+		display: inline-block;
+		width: 100%;
+		height: 100px;
+		position: absolute;
+		background-color: #fff;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		padding: 10px;
+		box-sizing: border-box;
+	}
+	.confirm-removal-prompt span {
+		font-size: 11px;
+	}
+	.confirm-removal-prompt .conf-btn {
+		display: inline-block;
+		border-radius: 50%;
+		font-size: 30px;
+		margin: 20px 10px 0;
+	}
+	.fa-check-circle {
+		color: #6ada78;
+	}
+	.fa-times-circle {
+		color: #f47d77;
+	}
+</style>
 <script>
 // Panels/CartContent.html --> <tbody>SNIPPET_CartItems%%</tbody> -- > place %%Panel.CartRemovalAJAX%% here
 // Add removal prompt
@@ -17,14 +49,31 @@
 	}
 	
 	function newCartRemovalFunc(globalItemId, removeAnch) {
-		var thisItemQuantity = parseInt(removeAnch.parents('.CartItemQuantity').find('.quantityInput').val());
+		//Remove any prompt that is already open
+		$('.confirm-removal-prompt').fadeOut().remove();
+		//Add "Are you sure?" prompt with green and red button
+		var cartItemQtyBox = removeAnch.parents('.CartItemQuantity');
+		var confirmButtons = '<i class="conf-btn fa fa-check-circle"></i><i class="conf-btn fa fa-times-circle"></i></div>';
+		var confirmPrompt = '<div class="confirm-removal-prompt"><span>Are you sure you want to remove this item?</span>' + confirmButtons:
+		cartItemQtyBox.append(confirmPrompt);
+		//Find current qty and find item qty and calculate what the cart-aty would be if item was removed
+		var thisItemQuantity = parseInt(cartItemQtyBox.find('.quantityInput').val());
 		var cartQuantity = $('.header-secondary .CartLink span');
 		var currentCartQuantity = parseInt($('.header-secondary .CartLink span').text());
 		var newCartQuantity = (currentCartQuantity - thisItemQuantity);
+		//Define confirmation button on-click behavior 
 		var thisCartItem = removeAnch.parents().eq(2);
-		$.post('https://dankstop.com/cart.php?action=remove&item=' + globalItemId + '', function() {
-			thisCartItem.slideUp('slow');
-			cartQuantity.hide().html(newCartQuantity).fadeIn('slow');
+			//Confirm YES button action
+		$('.conf-btn.fa-check-circle').on('click', function(e) {
+			e.stopPropagation();
+			$.post('https://dankstop.com/cart.php?action=remove&item=' + globalItemId + '', function() {
+				thisCartItem.slideUp('slow');
+				cartQuantity.hide().html(newCartQuantity).fadeIn('slow');
+			});
+		});
+			//Confirm NO button action
+		$(document).on('click', function (e) {
+			$('.confirm-removal-prompt').fadeOut().remove();
 		});
 	}
 
