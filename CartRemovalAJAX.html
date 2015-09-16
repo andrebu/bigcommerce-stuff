@@ -1,5 +1,5 @@
 <style>
-	.CartContents.CartItemQuantity {
+	.CartContents .CartItemQuantity {
 		position: relative;
 	}
 	.confirm-removal-prompt {
@@ -23,6 +23,9 @@
 		font-size: 30px;
 		margin: 20px 10px 0;
 	}
+	.confirm-removal-prompt .conf-btn:hover {
+		cursor: pointer;
+	}
 	.fa-check-circle {
 		color: #6ada78;
 	}
@@ -35,7 +38,7 @@
 // Add removal prompt
 // Add new html to tr on removal confirm which allows customer to re-add the removed item -- use item image for id
 
-	//ajaxifyCartRemoval();
+	ajaxifyCartRemoval();
 
 	function ajaxifyCartRemoval() {
 		var allCartLinks = $('a.CartRemoveLink');
@@ -43,19 +46,21 @@
 			var removeLink = $(this).attr('href');
 			var removeLinkSplit = removeLink.split('item=');
 			var removeItemId = removeLinkSplit[1];
-			var origItemOnclick = $(this).unbind().attr('onclick', 'newCartRemovalFunc("' + removeItemId + '", $(this));');
+			var origItemOnclick = $(this).unbind().attr('onclick', 'newCartRemovalFunc("' + removeItemId + '", $(this)); return false;');
 			$(this).attr('href', '#');
 		});
 	}
 	
 	function newCartRemovalFunc(globalItemId, removeAnch) {
 		//Remove any prompt that is already open
-		$('.confirm-removal-prompt').fadeOut().remove();
+		$('.confirm-removal-prompt').fadeOut();
 		//Add "Are you sure?" prompt with green and red button
 		var cartItemQtyBox = removeAnch.parents('.CartItemQuantity');
+		console.log(cartItemQtyBox);
 		var confirmButtons = '<i class="conf-btn fa fa-check-circle"></i><i class="conf-btn fa fa-times-circle"></i></div>';
-		var confirmPrompt = '<div class="confirm-removal-prompt"><span>Are you sure you want to remove this item?</span>' + confirmButtons:
-		cartItemQtyBox.append(confirmPrompt);
+		var confirmPrompt = '<div class="confirm-removal-prompt"><span>Are you sure you want to remove this item?</span>' + confirmButtons;
+		console.log(confirmPrompt);
+		cartItemQtyBox.wrapInner('<div />').html(confirmPrompt);
 		//Find current qty and find item qty and calculate what the cart-aty would be if item was removed
 		var thisItemQuantity = parseInt(cartItemQtyBox.find('.quantityInput').val());
 		var cartQuantity = $('.header-secondary .CartLink span');
