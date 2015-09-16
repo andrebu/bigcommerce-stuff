@@ -1,0 +1,30 @@
+<script>
+// Panels/CartContent.html --> <tbody>SNIPPET_CartItems%%</tbody> -- > place %%Panel.CartRemovalAJAX%% here
+
+	//ajaxifyCartRemoval();
+
+	function ajaxifyCartRemoval() {
+		var allCartLinks = $('a.CartRemoveLink');
+		allCartLinks.each( function() {
+			var removeLink = $(this).attr('href');
+			var removeLinkSplit = removeLink.split('item=');
+			var removeItemId = removeLinkSplit[1];
+			var origItemOnclick = $(this).unbind().attr('onclick', 'newCartRemovalFunc("' + removeItemId + '", $(this));');
+			$(this).attr('href', '#');
+		});
+	}
+	
+	function newCartRemovalFunc(globalItemId, removeAnch) {
+		var thisItemQuantity = parseInt(removeAnch.parents('.CartItemQuantity').find('.quantityInput').val());
+		var cartQuantity = $('.header-secondary .CartLink span');
+		var currentCartQuantity = parseInt($('.header-secondary .CartLink span').text());
+		var newCartQuantity = (currentCartQuantity - thisItemQuantity);
+		var thisCartItem = removeAnch.parents().eq(2);
+		$.post('https://dankstop.com/cart.php?action=remove&item=' + globalItemId + '', function() {
+			thisCartItem.slideUp('slow');
+			cartQuantity.hide().html(newCartQuantity).fadeIn('slow');
+		});
+	}
+
+console.log('Hello! this workkksssss....');
+</script>
