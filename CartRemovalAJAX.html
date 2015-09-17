@@ -49,7 +49,7 @@
 		padding-right: 10px;
 	}
 	.restore-item-box div:nth-of-type(2) a {
-		color: #6ada78;
+		color: #39b54a;
 	}
 	.restore-item-box div:nth-of-type(2) a:hover {
 		color: #6ada78;
@@ -72,7 +72,6 @@
 			$(this).attr('href', '#');
 		});
 	}
-	
 	function newCartRemovalFunc(globalItemId, removeAnch) {
 		//Remove any prompt that is already open
 		$('.confirm-removal-prompt').fadeOut().remove();
@@ -80,10 +79,15 @@
 		//Get product info
 		var thisCartItem = removeAnch.parents().eq(2);
 		var thisProdAnch = $('<div />').append( $(thisCartItem.find('.ProductName > a').get(0)).clone() ).html();
+		var thisProdHref = thisCartItem.find('.ProductName > a').attr('href');
+		var pathHolder = document.createElement('a');
+		pathHolder.href = thisProdHref;
+		var thisProdPathname = pathHolder.pathname;
 		var thisProdThumbSrc = thisCartItem.find('.CartThumb img').attr('src');
 		console.log(thisCartItem);
 		console.log(thisProdAnch);
 		console.log(thisProdThumbSrc);
+		console.log(thisProdPathname);
 		var origItemRowHeight = thisCartItem.height();
 		var origItemRowHTML = thisCartItem[0].innerHTML;
 
@@ -111,7 +115,7 @@
 		//Add "Are you sure?" prompt with green and red button
 		var confirmButtons = '<i class="conf-btn fa fa-check-circle"></i><i class="conf-btn fa fa-times-circle"></i></div>';
 		var confirmPrompt = '<div class="confirm-removal-prompt"><span>Are you sure you want to remove this item?</span>' + confirmButtons;
-		thisItemQtyBox.hide().append(confirmPrompt).fadeIn();
+		thisItemQtyBox.hide().append(confirmPrompt).fadeIn('slow');
 		
 		//Define confirmation button on-click behavior 
 			//Confirm YES button action
@@ -130,7 +134,11 @@
 	}
 	
 	
-	function restoreThisItem() {
+	function restoreThisItem(pathname) {
+		var getProdIdQuery = '' + pathname + ' .productAddToCartRight input[name="ProductCode"])'
+		$('<div />').load(getProdIdQuery, function(){
+		    console.log($(this));
+		});
 		console.log('It works!!!');
 	}
 </script>
