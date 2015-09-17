@@ -60,6 +60,7 @@
 // Add new html to tr on removal confirm which allows customer to re-add the removed item -- use item image for id
 // https://dankstop.com/cart.php?action=add&product_id=504&qty=3
 
+	var cartQuantity = $('.header-secondary .CartLink span');
 	ajaxifyCartRemoval();
 
 	function ajaxifyCartRemoval() {
@@ -76,7 +77,7 @@
 		//Remove any prompt that is already open
 		$('.confirm-removal-prompt').fadeOut().remove();
 
-		//Get product info
+		//Get some product info
 		var thisCartItem = removeAnch.parents().eq(2);
 		var thisProdAnch = $('<div />').append( $(thisCartItem.find('.ProductName > a').get(0)).clone() ).html();
 		var thisProdHref = thisCartItem.find('.ProductName > a').attr('href');
@@ -90,32 +91,21 @@
 		//Find current qty and find item qty and calculate what the cart-aty would be if item was removed
 		var thisItemQtyBox = removeAnch.parents('.CartItemQuantity');
 		var thisItemQuantity = parseInt(thisItemQtyBox.find('.quantityInput').val());
-		var cartQuantity = $('.header-secondary .CartLink span');
 		var currentCartQuantity = parseInt($('.header-secondary .CartLink span').text());
 		var newCartQuantity = (currentCartQuantity - thisItemQuantity);
-
-		var restoreBoxHTML = '<td class="restore-item-box" colspan="5"><div><i class="conf-btn fa fa-check-circle"></i> ';
-		restoreBoxHTML += thisProdAnch + ' x ' + thisItemQuantity + ' was removed from your cart</div>';
-		restoreBoxHTML += '<div style="display:none;"><a href="#" onclick=\"restoreThisItem(\'' + thisProdPathname + '\'); return false;\">';
-		restoreBoxHTML += 'Click here</a> to put it back in your cart</div></td>';
-		//console.log(thisProdPathname);
-		//console.log(typeof thisProdPathname);
-		//console.log(restoreBoxHTML);
-		
-		//var thisProdId = thisProdThumbSrc.split('ducts/');
-		//var thisProdId = thisProdId[1].split('/images');
-		//var thisProdId = thisProdId[0];
-		// New method to get ID before re-adding product to cart: When customer clicks the "Restore thi item [item name] x [item quantity]" link, the widget navigates to product page, retrieves ID, and re-adds the product to the cart, for back by $.post and visually by restoring the original HTML
-
-
-
-
 		
 		//Add "Are you sure?" prompt with green and red button
 		var confirmButtons = '<i class="conf-btn fa fa-check-circle"></i><i class="conf-btn fa fa-times-circle"></i></div>';
 		var confirmPrompt = '<div class="confirm-removal-prompt"><span>Are you sure you want to remove this item?</span>' + confirmButtons;
 		thisItemQtyBox.hide().append(confirmPrompt).fadeIn('slow');
 		
+		//Construct the HTML for the 'Restore this item' prompt
+		var restoreBoxHTML = '<td class="restore-item-box" colspan="5"><div><i class="conf-btn fa fa-check-circle"></i> ';
+		restoreBoxHTML += thisProdAnch + ' x ' + thisItemQuantity + ' was removed from your cart</div>';
+		restoreBoxHTML += '<div style="display:none;"><a href="#" onclick=\"restoreThisItem(\'' + thisProdPathname;
+		restoreBoxHTML += '\', ' + thisItemQuantity + '); return false;\">'; // ', ' + origItemRowHTML +
+		restoreBoxHTML += 'Click here</a> to put it back in your cart</div></td>';
+
 		//Define confirmation button on-click behavior 
 			//Confirm YES button action
 		$('.conf-btn.fa-check-circle').on('click', function(e) {
@@ -132,13 +122,15 @@
 	}
 	
 	
-	function restoreThisItem(prodPath) {
+	function restoreThisItem(prodPath, prodQty) {
 		var getProdIdQuery = '' + prodPath + ' .productAddToCartRight #productDetailsAddToCartForm input[name="product_id"]'
-		console.log(getProdIdQuery);
+		var currentCartQuantity = parseInt($('.header-secondary .CartLink span').text());
+		var restoreCartQuantity = (currentCartQuantity + prodQty);
 		$('<div />').load(getProdIdQuery, function(){
-		    console.log($(this));
-		    console.log($(this).find('input[name="product_id"]').val());
+		    var thisProId = $(this).find('input[name="product_id"]').val();
+		    $.post('https://dankstop.com/cart.php?action=add&product_id=' + thisProId + '&qty=' + prodQty + '');
+			cartQuantity.hide().html(restoreCartQuantity).fadeIn('slow');
+			//thisCartItem.hide().html(restoreBoxHTML).css({'height':origItemRowHeight}).fadeIn('slow');
 		});
-		console.log('It works!!!');
 	}
 </script>
