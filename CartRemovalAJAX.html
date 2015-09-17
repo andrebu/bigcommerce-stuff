@@ -33,8 +33,26 @@
 		color: #f47d77;
 	}
 	.CartContents .restore-item-box {
-		padding: 40px;
+		padding: 25px;
 		text-align: center;
+		padding: 20px 0;
+		text-align: center;
+		font-size: 12px;
+		font-family: futura;
+	}
+	.CartContents .restore-item-box > div {
+		margin-bottom: 10px;
+	}
+	.CartContents .restore-item-box i {
+		font-size: 20px;
+		vertical-align: middle;
+		padding-right: 10px;
+	}
+	.restore-item-box div:nth-of-type(2) a {
+		color: #6ada78;
+	}
+	.restore-item-box div:nth-of-type(2) a:hover {
+		color: #6ada78;
 	}
 </style>
 <script>
@@ -61,44 +79,47 @@
 
 		//Get product info
 		var thisCartItem = removeAnch.parents().eq(2);
-		var thisProdAnch = thisCartItem.find('.ProductName > a');
+		var thisProdAnch = $('<div />').append( $(thisCartItem.find('.ProductName > a').get(0)).clone() ).html();
 		var thisProdThumbSrc = thisCartItem.find('.CartThumb img').attr('src');
 		console.log(thisCartItem);
 		console.log(thisProdAnch);
 		console.log(thisProdThumbSrc);
-
 		var origItemRowHeight = thisCartItem.height();
-		console.log(origItemRowHeight);
 		var origItemRowHTML = thisCartItem[0].innerHTML;
-		var restoreBoxHTML = '<td class="restore-item-box" colspan="5"><div>Click here to restore this item</div></td>';
 
-		//var thisProdId = thisProdThumbSrc.split('ducts/');
-		//var thisProdId = thisProdId[1].split('/images');
-		//var thisProdId = thisProdId[0];
-		//console.log('this product is at ----  ' + thisProdAnch + '  and it\'s ID is ' + thisProdId);
-		// New method to get ID before re-adding product to cart: When customer clicks the "Restore thi item [item name] x [item quantity]" link, the widget navigates to product page, retrieves ID, and re-adds the product to the cart, for back by $.post and visually by restoring the original HTML
-		
-		
-		//Add "Are you sure?" prompt with green and red button
-		var cartQtyBox = removeAnch.parents('.CartItemQuantity');
-		console.log(cartQtyBox);
-		var confirmButtons = '<i class="conf-btn fa fa-check-circle"></i><i class="conf-btn fa fa-times-circle"></i></div>';
-		var confirmPrompt = '<div class="confirm-removal-prompt"><span>Are you sure you want to remove this item?</span>' + confirmButtons;
-		cartQtyBox.hide().append(confirmPrompt).fadeIn();
-		
 		//Find current qty and find item qty and calculate what the cart-aty would be if item was removed
-		var thisItemQuantity = parseInt(cartQtyBox.find('.quantityInput').val());
+		var thisItemQtyBox = removeAnch.parents('.CartItemQuantity');
+		var thisItemQuantity = parseInt(thisItemQtyBox.find('.quantityInput').val());
 		var cartQuantity = $('.header-secondary .CartLink span');
 		var currentCartQuantity = parseInt($('.header-secondary .CartLink span').text());
 		var newCartQuantity = (currentCartQuantity - thisItemQuantity);
 
+		var restoreBoxHTML = '<td class="restore-item-box" colspan="5"><div><i class="conf-btn fa fa-check-circle"></i> ';
+		restoreBoxHTML += thisProdAnch + ' x ' + thisItemQuantity + ' was removed from your cart</div>';
+		restoreBoxHTML += '<div><a href="#" onclick="restoreThisItem(); return false;">Click here</a> to put it back in your cart</div></td>';
+		
+		
+		//var thisProdId = thisProdThumbSrc.split('ducts/');
+		//var thisProdId = thisProdId[1].split('/images');
+		//var thisProdId = thisProdId[0];
+		// New method to get ID before re-adding product to cart: When customer clicks the "Restore thi item [item name] x [item quantity]" link, the widget navigates to product page, retrieves ID, and re-adds the product to the cart, for back by $.post and visually by restoring the original HTML
+
+
+
+
+		
+		//Add "Are you sure?" prompt with green and red button
+		var confirmButtons = '<i class="conf-btn fa fa-check-circle"></i><i class="conf-btn fa fa-times-circle"></i></div>';
+		var confirmPrompt = '<div class="confirm-removal-prompt"><span>Are you sure you want to remove this item?</span>' + confirmButtons;
+		thisItemQtyBox.hide().append(confirmPrompt).fadeIn();
+		
 		//Define confirmation button on-click behavior 
 			//Confirm YES button action
 		$('.conf-btn.fa-check-circle').on('click', function(e) {
 			e.stopPropagation();
 			$.post('https://dankstop.com/cart.php?action=remove&item=' + globalItemId + '', function() {
-				//thisCartItem.hide().html(restoreBoxHTML).css({'height':origItemRowHeight}).fadeIn('slow');
-				thisCartItem.slideUp('slow');
+				thisCartItem.hide().html(restoreBoxHTML).css({'height':origItemRowHeight}).fadeIn('slow');
+				//thisCartItem.slideUp('slow');
 				cartQuantity.hide().html(newCartQuantity).fadeIn('slow');
 			});
 		});
@@ -106,5 +127,10 @@
 		$('.conf-btn.fa-times-circle').on('click', function (e) {
 			$('.confirm-removal-prompt').fadeOut().remove();
 		});
+	}
+	
+	
+	function restoreThisItem() {
+		console.log('It works!!!');
 	}
 </script>
