@@ -2,7 +2,7 @@
 	.CartContents .CartItemQuantity {
 		position: relative;
 	}
-	.confirm-removal-prompt {
+	.confRemPrompt {
 		display: inline-block;
 		width: 100%;
 		height: 100px;
@@ -14,16 +14,16 @@
 		padding: 10px;
 		box-sizing: border-box;
 	}
-	.confirm-removal-prompt span {
+	.confRemPrompt span {
 		font-size: 11px;
 	}
-	.confirm-removal-prompt .conf-btn {
+	.confRemPrompt .conf-btn {
 		display: inline-block;
 		border-radius: 50%;
 		font-size: 30px;
 		margin: 20px 10px 0;
 	}
-	.confirm-removal-prompt .conf-btn:hover {
+	.confRemPrompt .conf-btn:hover {
 		cursor: pointer;
 	}
 	.fa-check-circle {
@@ -32,13 +32,15 @@
 	.fa-times-circle {
 		color: #f47d77;
 	}
+	.prompt-table {
+		
+	}
 </style>
 <script>
 // Panels/CartContent.html --> <tbody>SNIPPET_CartItems%%</tbody> -- > place %%Panel.CartRemovalAJAX%% here
 // Add removal prompt
 // Add new html to tr on removal confirm which allows customer to re-add the removed item -- use item image for id
 
-	ajaxifyCartRemoval();
 
 	function ajaxifyCartRemoval() {
 		var allCartLinks = $('a.CartRemoveLink');
@@ -51,18 +53,45 @@
 		});
 	}
 	
+	//ajaxifyCartRemoval();
+
 	function newCartRemovalFunc(globalItemId, removeAnch) {
 		//Remove any prompt that is already open
-		$('.confirm-removal-prompt').fadeOut();
+		$('.confRemPrompt').fadeOut().remove();
+		
 		//Add "Are you sure?" prompt with green and red button
-		var cartItemQtyBox = removeAnch.parents('.CartItemQuantity');
-		console.log(cartItemQtyBox);
-		var confirmButtons = '<i class="conf-btn fa fa-check-circle"></i><i class="conf-btn fa fa-times-circle"></i></div>';
-		var confirmPrompt = '<div class="confirm-removal-prompt"><span>Are you sure you want to remove this item?</span>' + confirmButtons;
-		console.log(confirmPrompt);
-		cartItemQtyBox.wrapInner('<div />').html(confirmPrompt);
+		var cartQtyBox = removeAnch.parents('.CartItemQuantity');
+		var origQtyBoxHtml = cartQtyBox.html();
+		console.log(cartQtyBox);
+		console.log(origQtyBoxHtml);
+		
+		var confirmButtons = '<span class="conf-btn fa fa-check-circle">.</span><span class="conf-btn fa fa-times-circle">.</span></span>';
+		var confirmPrompt = '<span class="confRemPrompt"><span>Are you sure you want to remove this item?</span>' + confirmButtons;
+		var newQtyBoxHtml = confirmPrompt;
+		console.log(newQtyBoxHtml);
+		var fuckingTable = '<table class="prompt-table"><thead></thead><tbody><tr><td>' + newQtyBoxHtml + '</td></tr></tbody></table>';
+				
+		//cartQtyBox.html(newQtyBoxHtml);
+		cartQtyBox.html(newQtyBoxHtml);
+
+		var checkHTML = function(html) {
+			var doc = document.createElement('div');
+			doc.innerHTML = html;
+			return ( doc.innerHTML === html );
+		}
+		function tidyHTML(html) {
+			var d = document.createElement('div');
+			d.innerHTML = html;
+			return d.innerHTML;
+		}
+		console.log(checkHTML(newQtyBoxHtml));
+		console.log(newQtyBoxHtml);
+		console.log(tidyHTML(newQtyBoxHtml));
+		
+		
+		
 		//Find current qty and find item qty and calculate what the cart-aty would be if item was removed
-		var thisItemQuantity = parseInt(cartItemQtyBox.find('.quantityInput').val());
+		var thisItemQuantity = parseInt(cartQtyBox.find('.quantityInput').val());
 		var cartQuantity = $('.header-secondary .CartLink span');
 		var currentCartQuantity = parseInt($('.header-secondary .CartLink span').text());
 		var newCartQuantity = (currentCartQuantity - thisItemQuantity);
@@ -77,9 +106,11 @@
 			});
 		});
 			//Confirm NO button action
+/*
 		$(document).on('click', function (e) {
-			$('.confirm-removal-prompt').fadeOut().remove();
+			$('.confRemPrompt').fadeOut().remove();
 		});
+*/
 	}
 
 console.log('Hello! this workkksssss....');
