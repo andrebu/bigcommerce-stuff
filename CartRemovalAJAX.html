@@ -41,6 +41,7 @@
 // Add removal prompt
 // Add new html to tr on removal confirm which allows customer to re-add the removed item -- use item image for id
 
+	//ajaxifyCartRemoval();
 
 	function ajaxifyCartRemoval() {
 		var allCartLinks = $('a.CartRemoveLink');
@@ -53,8 +54,6 @@
 		});
 	}
 	
-	//ajaxifyCartRemoval();
-
 	function newCartRemovalFunc(globalItemId, removeAnch) {
 		//Remove any prompt that is already open
 		$('.confirm-removal-prompt').fadeOut().remove();
@@ -62,10 +61,10 @@
 		//Add "Are you sure?" prompt with green and red button
 		var cartQtyBox = removeAnch.parents('.CartItemQuantity');
 		
-		var confirmButtons = '<span class="conf-btn fa fa-check-circle">.</span><span class="conf-btn fa fa-times-circle">.</span></div>';
+		var confirmButtons = '<i class="conf-btn fa fa-check-circle"></i><i class="conf-btn fa fa-times-circle"></i></div>';
 		var confirmPrompt = '<div class="confirm-removal-prompt"><span>Are you sure you want to remove this item?</span>' + confirmButtons;
 				
-		cartQtyBox.append(confirmPrompt);
+		cartQtyBox.hide().append(confirmPrompt).fadeIn();
 		
 		//Find current qty and find item qty and calculate what the cart-aty would be if item was removed
 		var thisItemQuantity = parseInt(cartQtyBox.find('.quantityInput').val());
@@ -87,6 +86,4 @@
 			$('.confirm-removal-prompt').fadeOut().remove();
 		});
 	}
-
-console.log('Hello! this workkksssss....');
 </script>
