@@ -32,7 +32,7 @@
 	.fa-times-circle {
 		color: #f47d77;
 	}
-	.restore-item {
+	.restore-item-box {
 		padding: 20px;
 	}
 </style>
@@ -60,27 +60,26 @@
 
 		//Get product info
 		var thisCartItem = removeAnch.parents().eq(2);
-		var thisProdAnch = thisCartItem.find('.ProductName a');
+		var thisProdAnch = thisCartItem.find('.ProductName > a');
 		var thisProdThumbSrc = thisCartItem.find('.CartThumb img').attr('src');
-		console.log(thisProdThumbSrc);
+		console.log(thisCartItem);
 		console.log(thisProdAnch);
-/*
-		var thisProdId = thisProdThumbSrc.split('ducts/');
-		var thisProdId = thisProdId[1].split('/images');
-		var thisProdId = thisProdId[0];
-*/
+		console.log(thisProdThumbSrc);
+
+		//var origItemRowHTML = thisCartItem.innerHTML();
+		//console.log(origItemRowHTML);
+		var restoreBoxHTML = '<td class="restore-item-box" colspan="5"><div>Click here to restore this item</div></td>';
+
+		//var thisProdId = thisProdThumbSrc.split('ducts/');
+		//var thisProdId = thisProdId[1].split('/images');
+		//var thisProdId = thisProdId[0];
 		//console.log('this product is at ----  ' + thisProdAnch + '  and it\'s ID is ' + thisProdId);
-		
-		//
-		//
-		// New method to get ID before re-adding product to cart:
-		//   When customer clicks the "Restore thi item [item name] x [item quantity]" link, 
-		//   the widget navigates to product page, retrieves ID, and re-adds the product to the cart, 
-		//   for back by $.post and visually by restoring the original HTML
+		// New method to get ID before re-adding product to cart: When customer clicks the "Restore thi item [item name] x [item quantity]" link, the widget navigates to product page, retrieves ID, and re-adds the product to the cart, for back by $.post and visually by restoring the original HTML
 		
 		
 		//Add "Are you sure?" prompt with green and red button
 		var cartQtyBox = removeAnch.parents('.CartItemQuantity');
+		console.log(cartQtyBox);
 		var confirmButtons = '<i class="conf-btn fa fa-check-circle"></i><i class="conf-btn fa fa-times-circle"></i></div>';
 		var confirmPrompt = '<div class="confirm-removal-prompt"><span>Are you sure you want to remove this item?</span>' + confirmButtons;
 		cartQtyBox.hide().append(confirmPrompt).fadeIn();
