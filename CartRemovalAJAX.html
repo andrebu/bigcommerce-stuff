@@ -32,8 +32,9 @@
 	.fa-times-circle {
 		color: #f47d77;
 	}
-	.restore-item-box {
-		padding: 20px;
+	.CartContents .restore-item-box {
+		padding: 40px;
+		text-align: center;
 	}
 </style>
 <script>
@@ -60,15 +61,14 @@
 
 		//Get product info
 		var thisCartItem = removeAnch.parents().eq(2);
-		var thisCartItem2 = removeAnch.parents().get(2);
 		var thisProdAnch = thisCartItem.find('.ProductName > a');
 		var thisProdThumbSrc = thisCartItem.find('.CartThumb img').attr('src');
 		console.log(thisCartItem);
-		console.log(thisCartItem2);
-		console.log(thisCartItem[0]);
 		console.log(thisProdAnch);
 		console.log(thisProdThumbSrc);
 
+		var origItemRowHeight = thisCartItem.height();
+		console.log(origItemRowHeight);
 		var origItemRowHTML = thisCartItem[0].innerHTML;
 		var restoreBoxHTML = '<td class="restore-item-box" colspan="5"><div>Click here to restore this item</div></td>';
 
@@ -97,6 +97,7 @@
 		$('.conf-btn.fa-check-circle').on('click', function(e) {
 			e.stopPropagation();
 			$.post('https://dankstop.com/cart.php?action=remove&item=' + globalItemId + '', function() {
+				//thisCartItem.hide().html(restoreBoxHTML).css({'height':origItemRowHeight}).fadeIn('slow');
 				thisCartItem.slideUp('slow');
 				cartQuantity.hide().html(newCartQuantity).fadeIn('slow');
 			});
