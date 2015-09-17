@@ -84,10 +84,6 @@
 		pathHolder.href = thisProdHref;
 		var thisProdPathname = pathHolder.pathname;
 		var thisProdThumbSrc = thisCartItem.find('.CartThumb img').attr('src');
-		console.log(thisCartItem);
-		console.log(thisProdAnch);
-		console.log(thisProdThumbSrc);
-		console.log(thisProdPathname);
 		var origItemRowHeight = thisCartItem.height();
 		var origItemRowHTML = thisCartItem[0].innerHTML;
 
@@ -100,8 +96,11 @@
 
 		var restoreBoxHTML = '<td class="restore-item-box" colspan="5"><div><i class="conf-btn fa fa-check-circle"></i> ';
 		restoreBoxHTML += thisProdAnch + ' x ' + thisItemQuantity + ' was removed from your cart</div>';
-		restoreBoxHTML += '<div><a href="#" onclick="restoreThisItem(); return false;">Click here</a> to put it back in your cart</div></td>';
-		
+		restoreBoxHTML += '<div style="display:none;"><a href="#" onclick=\"restoreThisItem(\'' + thisProdPathname + '\'); return false;\">';
+		restoreBoxHTML += 'Click here</a> to put it back in your cart</div></td>';
+		//console.log(thisProdPathname);
+		//console.log(typeof thisProdPathname);
+		//console.log(restoreBoxHTML);
 		
 		//var thisProdId = thisProdThumbSrc.split('ducts/');
 		//var thisProdId = thisProdId[1].split('/images');
@@ -123,7 +122,6 @@
 			e.stopPropagation();
 			$.post('https://dankstop.com/cart.php?action=remove&item=' + globalItemId + '', function() {
 				thisCartItem.hide().html(restoreBoxHTML).css({'height':origItemRowHeight}).fadeIn('slow');
-				//thisCartItem.slideUp('slow');
 				cartQuantity.hide().html(newCartQuantity).fadeIn('slow');
 			});
 		});
@@ -134,10 +132,12 @@
 	}
 	
 	
-	function restoreThisItem(pathname) {
-		var getProdIdQuery = '' + pathname + ' .productAddToCartRight input[name="ProductCode"])'
+	function restoreThisItem(prodPath) {
+		var getProdIdQuery = '' + prodPath + ' .productAddToCartRight #productDetailsAddToCartForm input[name="product_id"]'
+		console.log(getProdIdQuery);
 		$('<div />').load(getProdIdQuery, function(){
 		    console.log($(this));
+		    console.log($(this).find('input[name="product_id"]').val());
 		});
 		console.log('It works!!!');
 	}
