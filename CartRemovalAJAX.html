@@ -60,10 +60,10 @@
 </style>
 <script>
 // Panels/CartContent.html --> <tbody>SNIPPET_CartItems%%</tbody> -- > place %%Panel.CartRemovalAJAX%% here
-// Add new html to tr on removal confirm which allows customer to re-add the removed item -- use item image for id
-// https://dankstop.com/cart.php?action=add&product_id=504&qty=3
-
+// Only thing left to do is to dynamically change the cart total and subtotal
 	var cartQuantity = $('.header-secondary .CartLink span');
+	var cartTotal;
+	var cartSubTotal;
 	ajaxifyCartRemoval();
 
 	function ajaxifyCartRemoval() {
@@ -108,8 +108,7 @@
 		restoreBoxHTML += '<div><a href="#" onclick=\"restoreThisItem(\'' + thisProdPathname;
 		restoreBoxHTML += '\', ' + thisItemQuantity + ', $(this)); return false;\">'; // ', ' + origItemRowHTML +
 		restoreBoxHTML += 'Click here</a> to put it back in your cart</div></div>'; //</td>
-
-
+			//RestoreBoxHTML position
 		var rowPos = thisCartItem.position();
 		var thisItemTop = rowPos.top;
 		var thisItemLeft = rowPos.left;
@@ -128,9 +127,7 @@
 					    width: thisItemWidth,
 					    height: thisItemHeight
 					});
-				//thisCartItem.append(restoreContainer).fadeIn('slow');
 				$(restoreContainer).hide().appendTo(thisCartItem).fadeIn('slow');
-				//thisCartItem.hide().html(restoreBoxHTML).css({'height':origItemRowHeight}).fadeIn('slow');
 				cartQuantity.hide().html(newCartQuantity).fadeIn('slow');
 				$('.confirm-removal-prompt').fadeOut('slow').remove();
 			});
@@ -141,7 +138,6 @@
 		});
 	}
 	
-	
 	function restoreThisItem(prodPath, prodQty, thisItem) {
 		var getProdIdQuery = '' + prodPath + ' .productAddToCartRight #productDetailsAddToCartForm input[name="product_id"]'
 		var currentCartQuantity = parseInt($('.header-secondary .CartLink span').text());
@@ -150,9 +146,7 @@
 		    var thisProId = $(this).find('input[name="product_id"]').val();
 		    thisItem.parents().eq(1).fadeOut('slow');
 		    $.post('https://dankstop.com/cart.php?action=add&product_id=' + thisProId + '&qty=' + prodQty + '');
-		    
 			cartQuantity.hide().html(restoreCartQuantity).fadeIn('slow');
-			//thisCartItem.hide().html(restoreBoxHTML).css({'height':origItemRowHeight}).fadeIn('slow');
 		});
 	}
 </script>
