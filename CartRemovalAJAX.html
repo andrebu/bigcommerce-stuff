@@ -104,9 +104,9 @@
 			var thisProdThumbSrc = thisCartItem.find('.CartThumb img').attr('src');
 			
 			//Find item total cost
-			var currentCartTotal = parseFloat(cartTotal.text().replace('$',''));
-			var thisItemTotal = parseFloat(thisCartItem.find('.CartItemTotalPrice .ProductPrice').text().replace('$',''));
-			var newCartTotal = (currentCartTotal - thisItemTotal);
+			var currentCartTotal = parseFloat(cartTotal.text().replace('$','')).toFixed(2);
+			var thisItemTotal = parseFloat(thisCartItem.find('.CartItemTotalPrice .ProductPrice').text().replace('$','')).toFixed(2);
+			var newCartTotal = (currentCartTotal - thisItemTotal).toFixed(2);
 	
 			//Find current qty and find item qty and calculate what the cart-qty would be if item was removed
 			var currentCartQuantity = parseInt(cartQuantity.text());
