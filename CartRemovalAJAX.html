@@ -84,7 +84,7 @@
 
 		//Add "Are you sure?" prompt with green and red button
 		var thisItemQtyBox = removeAnch.parents('.CartItemQuantity');
-		var confirmPrompt = '<div class="confirm-removal-prompt"><span>Are you sure you want to remove this item?</span>';
+		var confirmPrompt = '<div class="confirm-removal-prompt"><span>Are you sure you want to remove this item?</span><br>';
 			confirmPrompt += '<i class="conf-btn fa fa-check-circle"></i><i class="conf-btn fa fa-times-circle"></i></div>';
 		thisItemQtyBox.hide().append(confirmPrompt).fadeIn('slow');
 		
@@ -156,7 +156,7 @@
 					removeThisItem();
 				});
 			} else {
-				thisItemVarAttr = 'N, N';
+				thisItemVarAttr = '0, 0';
 				removeThisItem();
 			}
 		});
@@ -176,7 +176,7 @@
 		$('<div />').load(getProdIdQuery, function(data){
 		    var thisProId = $(data).find('input[name="product_id"]').val();
 			var restoreItemUrl = 'https://dankstop.com/cart.php?action=add&product_id=' + thisProId + '&qty=' + itemQty + '';
-			if (attr != 'N') {
+			if (attr != '0') {
 				restoreItemUrl += '&attribute['+attr+']='+val+'';
 				restoreItem();
 			} else {restoreItem()}
