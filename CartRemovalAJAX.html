@@ -60,7 +60,6 @@
 </style>
 <script>
 // Panels/CartContent.html --> <tbody>SNIPPET_CartItems%%</tbody> -- > place %%Panel.CartRemovalAJAX%% here
-// Only thing left to do is to dynamically change the cart total and subtotal
 	var cartTotal = $('.gtotal .ProductPrice');
 	var cartQuantity = $('.header-secondary .CartLink span');
 	ajaxifyCartRemoval();
@@ -78,6 +77,7 @@
 	}
 	function newCartRemovalFunc(globalItemId, removeAnch) {
 		var thisCartItem = removeAnch.parents().eq(2);
+		var restoreBoxHTML;
 
 		//Remove any prompt that is already open
 		$('.confirm-removal-prompt').fadeOut().remove();
@@ -87,25 +87,6 @@
 		var confirmPrompt = '<div class="confirm-removal-prompt"><span>Are you sure you want to remove this item?</span>';
 			confirmPrompt += '<i class="conf-btn fa fa-check-circle"></i><i class="conf-btn fa fa-times-circle"></i></div>';
 		thisItemQtyBox.hide().append(confirmPrompt).fadeIn('slow');
-		
-		if ($(thisCartItem.find('.CustomizeItemLink')).length > 0) {
-			console.log(thisCartItem.find('.CustomizeItemLink'));
-			var selectedOptText = thisCartItem.find('.productAttributes tr td:nth-child(2) span').text();
-			var getVariationUrl = 'https://dankstop.com/remote.php?w=editconfigurablefieldsincart&itemid=' + globalItemId;
-				getVariationUrl += ' .productOptionViewRectangle';
-			console.log(selectedOptText);
-			console.log(globalItemId);
-			console.log(getVariationUrl);
-			$('<div />').load(getVariationUrl, function(){
-				console.log($(this));
-				console.log(this);
-				var slectedOption = $(this).find('.option.selected');
-				console.log(slectedOption);
-				var slectedOptionAttribute = slectedOption.find('.validation').attr('name');
-				var slectedOptionValue = slectedOption.find('.validation').attr('value');
-				console.log('attribute is: ' + slectedOptionAttribute + ' and value is: ' + slectedOptionValue);
-			});
-		}
 		
 		//Define confirmation button on-click behavior 
 		var removeBtn = $('.conf-btn.fa-check-circle');
@@ -133,51 +114,78 @@
 			var newCartQuantity = (currentCartQuantity - thisItemQuantity);
 			
 			//Construct the HTML for the 'Restore this item' prompt
-			var restoreBoxHTML = '<div class="restore-item-box"><div><i class="conf-btn fa fa-check-circle"></i> ';
-			restoreBoxHTML += thisProdAnch + ' x ' + thisItemQuantity + ' was removed from your cart</div>';
-			restoreBoxHTML += '<div><a href="#" onclick=\"restoreThisItem(\'' + thisProdPathname;
-			restoreBoxHTML += '\', ' + thisItemQuantity + ', ' + thisItemTotal + ', $(this)); return false;\">';
-			restoreBoxHTML += 'Click here</a> to put it back in your cart</div></div>';
+			function removeThisItem() {
+				restoreBoxHTML = '<div class="restore-item-box"><div><i class="conf-btn fa fa-check-circle"></i> ';
+				restoreBoxHTML += thisProdAnch + ' x ' + thisItemQuantity + ' was removed from your cart</div>';
+				restoreBoxHTML += '<div><a href="#" onclick=\"restoreThisItem(\'' + thisProdPathname;
+				restoreBoxHTML += '\', ' + thisItemQuantity + ', ' + thisItemTotal + ', ' + thisItemVarAttr + ', $(this)); return false;\">';
+				restoreBoxHTML += 'Click here</a> to put it back in your cart</div></div>';
 				//current item position and dimensions for restoreBoxHTML position
-			var rowPos = thisCartItem.position();
-			var thisItemTop = rowPos.top;
-			var thisItemLeft = rowPos.left;
-			var thisItemWidth = thisCartItem.css('width');
-			var thisItemHeight = thisCartItem.css('height');
-	
-			$.post('https://dankstop.com/cart.php?action=remove&item=' + globalItemId + '', function() {
-				var restoreContainer = $(restoreBoxHTML).css({
-					    position: 'absolute',
-					    top: thisItemTop,
-					    left: thisItemLeft,
-					    width: thisItemWidth,
-					    height: thisItemHeight
-					});
-				$(restoreContainer).hide().appendTo(thisCartItem).fadeIn('slow');
-				cartTotal.hide().html('$'+newCartTotal).fadeIn('slow'); //'$'+
-				cartQuantity.hide().html(newCartQuantity).fadeIn('slow');
-				$('.confirm-removal-prompt').fadeOut('slow').remove();
-			});
+				var rowPos = thisCartItem.position();
+				var thisItemTop = rowPos.top;
+				var thisItemLeft = rowPos.left;
+				var thisItemWidth = thisCartItem.css('width');
+				var thisItemHeight = thisCartItem.css('height');
+				//Remove item ajax call
+				$.post('https://dankstop.com/cart.php?action=remove&item=' + globalItemId + '', function() {
+					var restoreContainer = $(restoreBoxHTML).css({
+						    position: 'absolute',
+						    top: thisItemTop,
+						    left: thisItemLeft,
+						    width: thisItemWidth,
+						    height: thisItemHeight
+						});
+					$(restoreContainer).hide().appendTo(thisCartItem).fadeIn('slow');
+					cartTotal.hide().html('$'+newCartTotal).fadeIn('slow'); //'$'+
+					cartQuantity.hide().html(newCartQuantity).fadeIn('slow');
+					$('.confirm-removal-prompt').fadeOut('slow').remove();
+				});
+			}
+			
+			//Get product variation attributes if there are any
+			var thisItemVarAttr;
+			if ($(thisCartItem.find('.CustomizeItemLink')).length > 0) {
+				var selectedOptText = thisCartItem.find('.productAttributes tr td:nth-child(2) span').text();
+				var getVariationUrl = 'https://dankstop.com/remote.php?w=editconfigurablefieldsincart&itemid=' + globalItemId;
+					getVariationUrl += ' .productOptionViewRectangle';
+				$('<div />').load(getVariationUrl, function(data){
+					var slectedOption = $(data).find('.option.selected');
+					var slectedOptionAttribute = slectedOption.find('.validation').attr('name').replace(/\D/g,'');
+					var slectedOptionValue = slectedOption.find('.validation').attr('value');
+					thisItemVarAttr = slectedOptionAttribute + ', ' + slectedOptionValue;
+					removeThisItem();
+				});
+			} else {
+				thisItemVarAttr = 'N, N';
+				removeThisItem();
+			}
 		});
+
 			//Confirm NO button action
 		doNotRemoveBtn.on('click', function (e) {
 			$('.confirm-removal-prompt').fadeOut('slow').remove();
 		});
 	}
 	
-	function restoreThisItem(prodPath, itemQty, itemTotal, thisBox) {
+	function restoreThisItem(prodPath, itemQty, itemTotal, attr, val, thisBox) {
 		var getProdIdQuery = 'https://dankstop.com' + prodPath + ' .productAddToCartRight #productDetailsAddToCartForm input[name="product_id"]'
 		var currentCartTotal = parseFloat(cartTotal.text().replace('$',''));
 		var restoreCartTotal = (currentCartTotal + itemTotal);		
 		var currentCartQuantity = parseInt(cartQuantity.text());
-		var restoreCartQuantity = (currentCartQuantity + itemQty);		
-		$('<div />').load(getProdIdQuery, function(){
-		    var thisProId = $(this).find('input[name="product_id"]').val();
-		console.log(thisProId);
-		    thisBox.parents().eq(1).fadeOut('slow');
-		    $.post('https://dankstop.com/cart.php?action=add&product_id=' + thisProId + '&qty=' + itemQty + '');
-			cartTotal.hide().html('$'+restoreCartTotal).fadeIn('slow');
-			cartQuantity.hide().html(restoreCartQuantity).fadeIn('slow');
+		var restoreCartQuantity = (currentCartQuantity + itemQty);	
+		$('<div />').load(getProdIdQuery, function(data){
+		    var thisProId = $(data).find('input[name="product_id"]').val();
+			var restoreItemUrl = 'https://dankstop.com/cart.php?action=add&product_id=' + thisProId + '&qty=' + itemQty + '';
+			if (attr != 'N') {
+				restoreItemUrl += '&attribute['+attr+']='+val+'';
+				restoreItem();
+			} else {restoreItem()}
+			function restoreItem() {
+			    $.post(restoreItemUrl);
+				thisBox.parents().eq(1).fadeOut('slow');
+				cartTotal.hide().html('$'+restoreCartTotal).fadeIn('slow');
+				cartQuantity.hide().html(restoreCartQuantity).fadeIn('slow');
+			}
 		});
 	}
 </script>
