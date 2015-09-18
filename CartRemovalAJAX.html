@@ -77,6 +77,8 @@
 		});
 	}
 	function newCartRemovalFunc(globalItemId, removeAnch) {
+		var thisCartItem = removeAnch.parents().eq(2);
+
 		//Remove any prompt that is already open
 		$('.confirm-removal-prompt').fadeOut().remove();
 
@@ -86,6 +88,25 @@
 			confirmPrompt += '<i class="conf-btn fa fa-check-circle"></i><i class="conf-btn fa fa-times-circle"></i></div>';
 		thisItemQtyBox.hide().append(confirmPrompt).fadeIn('slow');
 		
+		if ($(thisCartItem.find('.CustomizeItemLink')).length > 0) {
+			console.log(thisCartItem.find('.CustomizeItemLink'));
+			var selectedOptText = thisCartItem.find('.productAttributes tr td:nth-child(2) span').text();
+			var getVariationUrl = 'https://dankstop.com/remote.php?w=editconfigurablefieldsincart&itemid=' + globalItemId;
+				getVariationUrl += ' .productOptionViewRectangle';
+			console.log(selectedOptText);
+			console.log(globalItemId);
+			console.log(getVariationUrl);
+			$('<div />').load(getVariationUrl, function(){
+				console.log($(this));
+				console.log(this);
+				var slectedOption = $(this).find('.option.selected');
+				console.log(slectedOption);
+				var slectedOptionAttribute = slectedOption.find('.validation').attr('name');
+				var slectedOptionValue = slectedOption.find('.validation').attr('value');
+				console.log('attribute is: ' + slectedOptionAttribute + ' and value is: ' + slectedOptionValue);
+			});
+		}
+		
 		//Define confirmation button on-click behavior 
 		var removeBtn = $('.conf-btn.fa-check-circle');
 		var doNotRemoveBtn = $('.conf-btn.fa-times-circle');
@@ -94,7 +115,6 @@
 			e.stopPropagation();
 			
 			//Get some product info
-			var thisCartItem = removeAnch.parents().eq(2);
 			var thisProdAnch = $('<div />').append( $(thisCartItem.find('.ProductName > a').get(0)).clone() ).html();
 			var thisProdHref = thisCartItem.find('.ProductName > a').attr('href');
 			var pathHolder = document.createElement('a');
