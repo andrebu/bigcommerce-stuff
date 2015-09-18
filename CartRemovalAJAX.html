@@ -61,11 +61,11 @@
 <script>
 // Panels/CartContent.html --> <tbody>SNIPPET_CartItems%%</tbody> -- > place %%Panel.CartRemovalAJAX%% here
 // Only thing left to do is to dynamically change the cart total and subtotal
+	var cartTotal = $('.gtotal .ProductPrice');
 	var cartQuantity = $('.header-secondary .CartLink span');
-	var cartTotal;
-	var cartSubTotal;
 	ajaxifyCartRemoval();
 
+	//Change the HTML 'onclick=' value to new function
 	function ajaxifyCartRemoval() {
 		var allCartLinks = $('a.CartRemoveLink');
 		allCartLinks.each( function() {
@@ -80,45 +80,51 @@
 		//Remove any prompt that is already open
 		$('.confirm-removal-prompt').fadeOut().remove();
 
-		//Get some product info
-		var thisCartItem = removeAnch.parents().eq(2);
-		var thisProdAnch = $('<div />').append( $(thisCartItem.find('.ProductName > a').get(0)).clone() ).html();
-		var thisProdHref = thisCartItem.find('.ProductName > a').attr('href');
-		var pathHolder = document.createElement('a');
-		pathHolder.href = thisProdHref;
-		var thisProdPathname = pathHolder.pathname;
-		var thisProdThumbSrc = thisCartItem.find('.CartThumb img').attr('src');
-		var origItemRowHeight = thisCartItem.height();
-		var origItemRowHTML = thisCartItem[0].innerHTML;
-
-		//Find current qty and find item qty and calculate what the cart-aty would be if item was removed
-		var thisItemQtyBox = removeAnch.parents('.CartItemQuantity');
-		var thisItemQuantity = parseInt(thisItemQtyBox.find('.quantityInput').val());
-		var currentCartQuantity = parseInt($('.header-secondary .CartLink span').text());
-		var newCartQuantity = (currentCartQuantity - thisItemQuantity);
-		
 		//Add "Are you sure?" prompt with green and red button
-		var confirmButtons = '<i class="conf-btn fa fa-check-circle"></i><i class="conf-btn fa fa-times-circle"></i></div>';
-		var confirmPrompt = '<div class="confirm-removal-prompt"><span>Are you sure you want to remove this item?</span>' + confirmButtons;
+		var thisItemQtyBox = removeAnch.parents('.CartItemQuantity');
+		var confirmPrompt = '<div class="confirm-removal-prompt"><span>Are you sure you want to remove this item?</span>';
+			confirmPrompt += '<i class="conf-btn fa fa-check-circle"></i><i class="conf-btn fa fa-times-circle"></i></div>';
 		thisItemQtyBox.hide().append(confirmPrompt).fadeIn('slow');
 		
-		//Construct the HTML for the 'Restore this item' prompt
-		var restoreBoxHTML = '<div class="restore-item-box"><div><i class="conf-btn fa fa-check-circle"></i> '; //<td  colspan="5">
-		restoreBoxHTML += thisProdAnch + ' x ' + thisItemQuantity + ' was removed from your cart</div>';
-		restoreBoxHTML += '<div><a href="#" onclick=\"restoreThisItem(\'' + thisProdPathname;
-		restoreBoxHTML += '\', ' + thisItemQuantity + ', $(this)); return false;\">'; // ', ' + origItemRowHTML +
-		restoreBoxHTML += 'Click here</a> to put it back in your cart</div></div>'; //</td>
-			//RestoreBoxHTML position
-		var rowPos = thisCartItem.position();
-		var thisItemTop = rowPos.top;
-		var thisItemLeft = rowPos.left;
-		var thisItemWidth = thisCartItem.css('width');
-		var thisItemHeight = thisCartItem.css('height');
-
 		//Define confirmation button on-click behavior 
+		var removeBtn = $('.conf-btn.fa-check-circle');
+		var doNotRemoveBtn = $('.conf-btn.fa-times-circle');
 			//Confirm YES button action
-		$('.conf-btn.fa-check-circle').on('click', function(e) {
+		removeBtn.on('click', function(e) {
 			e.stopPropagation();
+			
+			//Get some product info
+			var thisCartItem = removeAnch.parents().eq(2);
+			var thisProdAnch = $('<div />').append( $(thisCartItem.find('.ProductName > a').get(0)).clone() ).html();
+			var thisProdHref = thisCartItem.find('.ProductName > a').attr('href');
+			var pathHolder = document.createElement('a');
+			pathHolder.href = thisProdHref;
+			var thisProdPathname = pathHolder.pathname;
+			var thisProdThumbSrc = thisCartItem.find('.CartThumb img').attr('src');
+			
+			//Find item total cost
+			var currentCartTotal = parseFloat(cartTotal.text().replace('$',''));
+			var thisItemTotal = parseFloat(thisCartItem.find('.CartItemTotalPrice .ProductPrice').text().replace('$',''));
+			var newCartTotal = (currentCartTotal - thisItemTotal);
+	
+			//Find current qty and find item qty and calculate what the cart-qty would be if item was removed
+			var currentCartQuantity = parseInt(cartQuantity.text());
+			var thisItemQuantity = parseInt(thisItemQtyBox.find('.quantityInput').val());
+			var newCartQuantity = (currentCartQuantity - thisItemQuantity);
+			
+			//Construct the HTML for the 'Restore this item' prompt
+			var restoreBoxHTML = '<div class="restore-item-box"><div><i class="conf-btn fa fa-check-circle"></i> ';
+			restoreBoxHTML += thisProdAnch + ' x ' + thisItemQuantity + ' was removed from your cart</div>';
+			restoreBoxHTML += '<div><a href="#" onclick=\"restoreThisItem(\'' + thisProdPathname;
+			restoreBoxHTML += '\', ' + thisItemQuantity + ', ' + thisItemTotal + ', $(this)); return false;\">';
+			restoreBoxHTML += 'Click here</a> to put it back in your cart</div></div>';
+				//current item position and dimensions for restoreBoxHTML position
+			var rowPos = thisCartItem.position();
+			var thisItemTop = rowPos.top;
+			var thisItemLeft = rowPos.left;
+			var thisItemWidth = thisCartItem.css('width');
+			var thisItemHeight = thisCartItem.css('height');
+	
 			$.post('https://dankstop.com/cart.php?action=remove&item=' + globalItemId + '', function() {
 				var restoreContainer = $(restoreBoxHTML).css({
 					    position: 'absolute',
@@ -128,24 +134,29 @@
 					    height: thisItemHeight
 					});
 				$(restoreContainer).hide().appendTo(thisCartItem).fadeIn('slow');
+				cartTotal.hide().html('$'+newCartTotal).fadeIn('slow'); //'$'+
 				cartQuantity.hide().html(newCartQuantity).fadeIn('slow');
 				$('.confirm-removal-prompt').fadeOut('slow').remove();
 			});
 		});
 			//Confirm NO button action
-		$('.conf-btn.fa-times-circle').on('click', function (e) {
+		doNotRemoveBtn.on('click', function (e) {
 			$('.confirm-removal-prompt').fadeOut('slow').remove();
 		});
 	}
 	
-	function restoreThisItem(prodPath, prodQty, thisItem) {
-		var getProdIdQuery = '' + prodPath + ' .productAddToCartRight #productDetailsAddToCartForm input[name="product_id"]'
-		var currentCartQuantity = parseInt($('.header-secondary .CartLink span').text());
-		var restoreCartQuantity = (currentCartQuantity + prodQty);		
+	function restoreThisItem(prodPath, itemQty, itemTotal, thisBox) {
+		var getProdIdQuery = 'https://dankstop.com' + prodPath + ' .productAddToCartRight #productDetailsAddToCartForm input[name="product_id"]'
+		var currentCartTotal = parseFloat(cartTotal.text().replace('$',''));
+		var restoreCartTotal = (currentCartTotal + itemTotal);		
+		var currentCartQuantity = parseInt(cartQuantity.text());
+		var restoreCartQuantity = (currentCartQuantity + itemQty);		
 		$('<div />').load(getProdIdQuery, function(){
 		    var thisProId = $(this).find('input[name="product_id"]').val();
-		    thisItem.parents().eq(1).fadeOut('slow');
-		    $.post('https://dankstop.com/cart.php?action=add&product_id=' + thisProId + '&qty=' + prodQty + '');
+		console.log(thisProId);
+		    thisBox.parents().eq(1).fadeOut('slow');
+		    $.post('https://dankstop.com/cart.php?action=add&product_id=' + thisProId + '&qty=' + itemQty + '');
+			cartTotal.hide().html('$'+restoreCartTotal).fadeIn('slow');
 			cartQuantity.hide().html(restoreCartQuantity).fadeIn('slow');
 		});
 	}
