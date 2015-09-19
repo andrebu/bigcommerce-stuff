@@ -1,0 +1,27 @@
+<script>
+//li.magictoolbox-li
+
+//a.MagicThumb-swap .mt-active-selector
+
+
+function prodImgSwipe() {
+
+	$(".MagicToolboxContainer").on("swipeleft",function(){
+		swipeLeft();
+	});
+
+	$(".MagicToolboxContainer").on("swiperight",function(){
+		swipeRight();
+	});
+
+	function swipeLeft() {
+		$('.mt-active-selector').parent().next().click();
+	}
+	
+	function swipeRight() {
+		$('.mt-active-selector').parent().prev().click();	
+	}
+
+}
+prodImgSwipe();
+</script>
