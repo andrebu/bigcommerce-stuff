@@ -104,15 +104,12 @@
 			var thisProdThumbSrc = thisCartItem.find('.CartThumb img').attr('src');
 			
 			//Find item total cost
-			var currentCartTotal = parseFloat(cartTotal.text().replace(/[,$]/g, '')).toFixed(2);
-			var thisItemTotal = parseFloat(thisCartItem.find('.CartItemTotalPrice .ProductPrice').text().replace(/[,$]/g, '')).toFixed(2);
-			var newCartTotal = (currentCartTotal - thisItemTotal).toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+			var currentCartTotal = formatStringToNum(cartTotal);
 			console.log(cartTotal);
-			console.log(cartTotal.text());
-			console.log(cartTotal.text().replace(/[,$]/g, ''));
-			console.log(cartTotal.text().replace(/\D/g,''));
 			console.log(currentCartTotal);
+			var thisItemTotal = formatStringToNum(thisCartItem.find('.CartItemTotalPrice .ProductPrice'));
 			console.log(thisItemTotal);
+			var newCartTotal = formatNumToCurrency((currentCartTotal - thisItemTotal).toFixed(2));
 			console.log(newCartTotal);
 	
 			//Find current qty and find item qty and calculate what the cart-qty would be if item was removed
@@ -207,7 +204,7 @@
 		var getProdIdQuery = 'https://dankstop.com' + prodPath + ' .productAddToCartRight #productDetailsAddToCartForm input[name="product_id"]'
 		var currentCartTotal = formatStringToNum(cartTotal);
 		console.log(currentCartTotal);
-		var restoreCartTotal = formatNumToCurrency((currentCartTotal2 + itemTotal));		
+		var restoreCartTotal = formatNumToCurrency((currentCartTotal + itemTotal));		
 		console.log(restoreCartTotal);
 		var currentCartQuantity = parseInt(cartQuantity.text());
 		var restoreCartQuantity = (currentCartQuantity + itemQty);	
@@ -234,4 +231,16 @@
 	function formatNumToCurrency(number) {
 		return number.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 	}
+/*
+	$.ajaxSetup({
+		beforeSend:function(){
+			// show gif here, eg:
+			ShowLoadingIndicator();
+		},
+		complete:function(){
+			// hide gif here, eg:
+			HideLoadingIndicator();
+		}
+	});	
+*/
 </script>
