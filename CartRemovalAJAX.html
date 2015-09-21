@@ -179,6 +179,13 @@
 						console.log('all Option Sets from Variation page are below:   ');
 						console.log(allOpts);
 						$(allOpts).each( function() {
+							console.log('IS INDEX '+index+' THE SAME AS MATCHES FOUND '+matchedOpts.length+' ????')
+							if (matchedOpts.length == index) {
+								console.log('YES '+index+' EQUALS '+matchedOpts+' , So we\'re stopping this loop here');
+								return false;
+							} else {
+								console.log('no, ' +index+' does not equal ' +matchedOpts+' so we\'re gonna do another loop');
+							}
 							console.log('on variation page, search through ALL "productAttributeValue" option sets for matches to option names');
 							var thisOptOptionSets = $(this).find('li');
 							console.log('this option set LI list item from variation page is below:  ');
@@ -195,8 +202,9 @@
 									//matchedObj[index] = value;
 									matchedOpts.push(matchedObj);
 									attrPath += '&attribute['+matchName+']='+matchVal+'';
-									console.log('the attribute path so far is ' + attrPath );
+									console.log('the attribute path so far is ' + attrPath + '      NOW RETURNING    ');
 									console.log(attrPath);
+									return false;
 								} else {
 									console.log(thisOptSetsName +' does not equal '+ value);
 								}
