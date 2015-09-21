@@ -103,19 +103,11 @@
 			var thisProdPathname = pathHolder.pathname;
 			var thisProdThumbSrc = thisCartItem.find('.CartThumb img').attr('src');
 			
-			//Find item total cost
-			var currentCartTotal = formatStringToNum(cartTotal);
-			console.log(cartTotal);
-			console.log(currentCartTotal);
+			//Find item total cost to pass on to Remove/Restore functions
 			var thisItemTotal = formatStringToNum(thisCartItem.find('.CartItemTotalPrice .ProductPrice'));
-			console.log(thisItemTotal);
-			var newCartTotal = formatNumToCurrency((currentCartTotal - thisItemTotal).toFixed(2));
-			console.log(newCartTotal);
 	
-			//Find current qty and find item qty and calculate what the cart-qty would be if item was removed
-			var currentCartQuantity = parseInt(cartQuantity.text());
+			//Find this item qty to pass on to Remove/Restore functions
 			var thisItemQuantity = parseInt(thisItemQtyBox.find('.quantityInput').val());
-			var newCartQuantity = (currentCartQuantity - thisItemQuantity);
 			
 			//Construct the HTML for the 'Restore this item' prompt
 			function removeThisItem() {
@@ -140,8 +132,7 @@
 						    height: thisItemHeight
 						});
 					$(restoreContainer).hide().appendTo(thisCartItem).fadeIn('slow');
-					setCartTotals(thisItemTotal, 'remove');
-					cartQuantity.hide().html(newCartQuantity).fadeIn('slow');
+					setCartTotals(thisItemQuantity, thisItemTotal, 'remove');
 					$('.confirm-removal-prompt').fadeOut('slow').remove();
 				});
 			}
@@ -154,7 +145,7 @@
 				attrPath = 0;
 				removeThisItem();
 			}
-
+			//Define function to get variation option attributes if there are any
 			function getItemAttributes() {
 				var selectedOptText = [];
 				var optionNames = $(thisCartItem.find('.productAttributes tr td:nth-child(2) span'));
@@ -199,15 +190,11 @@
 			$('.confirm-removal-prompt').fadeOut('slow').remove();
 		});
 	}
-	
+	//Function to restore item that was removed
 	function restoreThisItem(prodPath, itemQty, itemTotal, attrPath, thisBox) {
 		var getProdIdQuery = 'https://dankstop.com' + prodPath + ' .productAddToCartRight #productDetailsAddToCartForm input[name="product_id"]'
 		var currentCartTotal = formatStringToNum(cartTotal);
-		console.log(currentCartTotal);
 		var restoreCartTotal = formatNumToCurrency((currentCartTotal + itemTotal));		
-		console.log(restoreCartTotal);
-		var currentCartQuantity = parseInt(cartQuantity.text());
-		var restoreCartQuantity = (currentCartQuantity + itemQty);	
 		if (attrPath != '0') {
 			var attrPath = attrPath;
 		} else {
@@ -219,61 +206,68 @@
 			function restoreItem() {
 			    $.post(restoreItemUrl);
 				thisBox.parents().eq(1).fadeOut('slow');
-				setCartTotals(itemTotal, 'add');
-				cartQuantity.hide().html(restoreCartQuantity).fadeIn('slow');
+				setCartTotals(itemQty, itemTotal, 'add');
 			}
 			restoreItem();
 		});
 	}
+	//Function to format number-strings to numbers
 	function formatStringToNum(string) {
 		return parseFloat($(string).text().replace(/[,$]/g, ''));
 	}
+	//Function to format numbers to currency format by separating each 3 digits with a comma
 	function formatNumToCurrency(number) {
 		return number.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 	}
-	function setCartTotals(itemPrice, action) {
+	//Construct function to set new cart total  costs and quantity
+	function setCartTotals(itemQty, itemPrice, action) {
+		//Find current cart qty 
+		var currentCartQuantity = parseInt(cartQuantity.text());
+		
+		//Define function to retrieve table footer cost prices
 		function getPrice(text) {
 			var thisTextNum = $('tfoot h4:contains("'+text+'")').closest('tr').find('.ProductPrice');
 			if (thisTextNum.text().length > 1) {
 				return thisTextNum;
 			} else {return $('<div />').html('0');}
 		}
+		
+		//Construct JQ selector for SubTotal and Tax fields for later use
 		var subTotalField = $('tfoot h4:contains("Subtotal")').closest('tr').find('.ProductPrice h4');
 		var taxField = $('tfoot tr td.Odd:contains("Tax")').closest('tr').find('.ProductPrice');
 		
+		//Retrieve all the SubTotal table footer values for all the costs
 		var subTotalNum = formatStringToNum(getPrice('Subtotal'));
 		var giftWrappingNum = formatStringToNum(getPrice('Gift Wrapping'));
 		var discountNum = formatStringToNum(getPrice('Discount'));
 		var shippingNum = formatStringToNum(getPrice('Shipping'));
 		var handlingNum = formatStringToNum(getPrice('Handling'));
 		var taxNum = formatStringToNum(getPrice('Tax'));
-		console.log(subTotalNum);
-		console.log(giftWrappingNum);
-		console.log(discountNum);
-		console.log(shippingNum);
-		console.log(handlingNum);
-		console.log(taxNum);
 		
+		//Check if taxes should be applied by seeing if "Tax" row is visible 
 		if ($('tfoot tr td.Odd:contains("Tax")').closest('tr').is(':visible')) {
 			var itemTaxRate = 0.07;
 		} else {
 			var itemTaxRate = 0;
 		}
-		console.log(itemTaxRate);
 		
+		//Set price difference and quantity difference to either positive or negative depending on action parameter 
 		if (action == 'remove') {
 			var adjItemPrice = -Math.abs(itemPrice);
+			var adjCartQuantity = -Math.abs(itemQty);
 		} else if (action == 'add') {
 			var adjItemPrice = Math.abs(itemPrice);
+			var adjCartQuantity = Math.abs(itemQty);
 		}
-		console.log(adjItemPrice);
 
+		//Define new totals in number format for adding up the new Grand Total
 		var newSubTotalNum = (subTotalNum + adjItemPrice);		
 		var newTaxTotalNum = (newSubTotalNum * itemTaxRate);
 		var newCartTotalNum = (newSubTotalNum+giftWrappingNum+discountNum+shippingNum+handlingNum+newTaxTotalNum).toFixed(2);
-
-		console.log('' + newSubTotalNum + ' + ' + giftWrappingNum + ' + ' + discountNum + ' + ' + shippingNum + ' + ' + handlingNum + ' + ' + newTaxTotalNum + ' = ' + newCartTotalNum);
 		
+		//Turn all the new total Numbers into currency formatted strings and add them to their fields with dollar signs
+		var newCartQuantity = (currentCartQuantity + adjCartQuantity);
+		cartQuantity.hide().html(newCartQuantity).fadeIn('slow');
 		var newSubTotal = formatNumToCurrency(newSubTotalNum);
 		subTotalField.hide().html('$'+newSubTotal).fadeIn('slow');
 		var newTaxTotal = formatNumToCurrency((newTaxTotalNum).toFixed(2));
@@ -281,6 +275,7 @@
 		var newCartTotal = formatNumToCurrency(newCartTotalNum);
 		cartTotal.hide().html('$'+newCartTotal).fadeIn('slow');		
 	}
+	//Define AJAX start and finish behavior -- loading indicator
 /*
 	$.ajaxSetup({
 		beforeSend:function(){
