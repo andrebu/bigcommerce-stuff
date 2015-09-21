@@ -176,21 +176,27 @@
 					$(selectedOptText).each( function(index, value) {
 						console.log('Doing SEARCh for each option name in cart item row of this product, "selectedOptText".  STEP --- ' + index)
 						var allOpts = $($(data).find('.productAttributeValue'));
+						console.log('all Option Sets from Variation page are below:   ');
+						console.log(allOpts);
 						$(allOpts).each( function() {
 							console.log('on variation page, search through ALL "productAttributeValue" option sets for matches to option names');
 							var thisOptOptionSets = $(this).find('li');
+							console.log('this option set LI list item from variation page is below:  ');
+							console.log(thisOptOptionSets);
 							$(thisOptOptionSets).each( function() {
-								
+								console.log('Searching through each Option Set List Item LI from product variation page to look for attribute match.');
 								var thisOptSetsName = $(this).find('.name').text().replace(/[\u200B-\u200D\uFEFF]/g, '');
 								console.log(thisOptSetsName);
 								if (thisOptSetsName == value) {
-									console.log('Does ' + thisOptSetsName + ' match ' + value + '?');
+									console.log('ATTRIBUTE NAME MATCH FOUND!!! ::: ' + value ' matches ' + thisOptSetsName + ' !');
 									var matchName = $(this).find('.validation').attr('name').replace(/\D/g,'');
 									var matchVal = $(this).find('.validation').attr('value');
 									matchedObj[matchName] = matchVal;
 									//matchedObj[index] = value;
 									matchedOpts.push(matchedObj);
 									attrPath += '&attribute['+matchName+']='+matchVal+'';
+									console.log('the attribute path so far is ' + attrPath );
+									console.log(attrPath);
 								} else {
 									console.log(thisOptSetsName +' does not equal '+ value);
 								}
