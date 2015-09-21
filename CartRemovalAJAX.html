@@ -104,9 +104,16 @@
 			var thisProdThumbSrc = thisCartItem.find('.CartThumb img').attr('src');
 			
 			//Find item total cost
-			var currentCartTotal = parseFloat(cartTotal.text().replace('$','')).toFixed(2);
-			var thisItemTotal = parseFloat(thisCartItem.find('.CartItemTotalPrice .ProductPrice').text().replace('$','')).toFixed(2);
-			var newCartTotal = (currentCartTotal - thisItemTotal).toFixed(2);
+			var currentCartTotal = parseFloat(cartTotal.text().replace(/[,$]/g, '')).toFixed(2);
+			var thisItemTotal = parseFloat(thisCartItem.find('.CartItemTotalPrice .ProductPrice').text().replace(/[,$]/g, '')).toFixed(2);
+			var newCartTotal = (currentCartTotal - thisItemTotal).toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+			console.log(cartTotal);
+			console.log(cartTotal.text());
+			console.log(cartTotal.text().replace(/[,$]/g, ''));
+			console.log(cartTotal.text().replace(/\D/g,''));
+			console.log(currentCartTotal);
+			console.log(thisItemTotal);
+			console.log(newCartTotal);
 	
 			//Find current qty and find item qty and calculate what the cart-qty would be if item was removed
 			var currentCartQuantity = parseInt(cartQuantity.text());
@@ -198,8 +205,9 @@
 	
 	function restoreThisItem(prodPath, itemQty, itemTotal, attrPath, thisBox) {
 		var getProdIdQuery = 'https://dankstop.com' + prodPath + ' .productAddToCartRight #productDetailsAddToCartForm input[name="product_id"]'
-		var currentCartTotal = parseFloat(cartTotal.text().replace('$',''));
-		var restoreCartTotal = (currentCartTotal + itemTotal);		
+		var currentCartTotal = parseFloat(cartTotal.text().replace(/[,$]/g, ''));
+		var restoreCartTotal = (currentCartTotal + itemTotal).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");		
+		console.log(restoreCartQuantity);
 		var currentCartQuantity = parseInt(cartQuantity.text());
 		var restoreCartQuantity = (currentCartQuantity + itemQty);	
 		if (attrPath != '0') {
