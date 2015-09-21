@@ -111,7 +111,6 @@
 			console.log(thisItemTotal);
 			var newCartTotal = formatNumToCurrency((currentCartTotal - thisItemTotal).toFixed(2));
 			console.log(newCartTotal);
-			setCartTotals(thisItemTotal, 'remove');
 	
 			//Find current qty and find item qty and calculate what the cart-qty would be if item was removed
 			var currentCartQuantity = parseInt(cartQuantity.text());
@@ -141,7 +140,7 @@
 						    height: thisItemHeight
 						});
 					$(restoreContainer).hide().appendTo(thisCartItem).fadeIn('slow');
-					cartTotal.hide().html('$'+newCartTotal).fadeIn('slow'); //'$'+
+					setCartTotals(thisItemTotal, 'remove');
 					cartQuantity.hide().html(newCartQuantity).fadeIn('slow');
 					$('.confirm-removal-prompt').fadeOut('slow').remove();
 				});
@@ -202,7 +201,6 @@
 	}
 	
 	function restoreThisItem(prodPath, itemQty, itemTotal, attrPath, thisBox) {
-		setCartTotals(itemTotal, 'add');
 		var getProdIdQuery = 'https://dankstop.com' + prodPath + ' .productAddToCartRight #productDetailsAddToCartForm input[name="product_id"]'
 		var currentCartTotal = formatStringToNum(cartTotal);
 		console.log(currentCartTotal);
@@ -221,7 +219,7 @@
 			function restoreItem() {
 			    $.post(restoreItemUrl);
 				thisBox.parents().eq(1).fadeOut('slow');
-				cartTotal.hide().html('$'+restoreCartTotal).fadeIn('slow');
+				setCartTotals(itemTotal, 'add');
 				cartQuantity.hide().html(restoreCartQuantity).fadeIn('slow');
 			}
 			restoreItem();
@@ -240,7 +238,7 @@
 				return thisTextNum;
 			} else {return $('<div />').html('0');}
 		}
-		var subTotalField = $('tfoot h4:contains("Subtotal")').closest('tr').find('.ProductPrice');
+		var subTotalField = $('tfoot h4:contains("Subtotal")').closest('tr').find('.ProductPrice h4');
 		var taxField = $('tfoot h4:contains("Tax")').closest('tr').find('.ProductPrice');
 		
 		var subTotalNum = formatStringToNum(getPrice('Subtotal'));
@@ -269,17 +267,19 @@
 			var adjItemPrice = Math.abs(itemPrice);
 		}
 		console.log(adjItemPrice);
-		var newSubTotalNum = (subTotalNum + adjItemPrice);
-		
+
+		var newSubTotalNum = (subTotalNum + adjItemPrice);		
 		var newTaxTotalNum = (newSubTotalNum * itemTaxRate);
-		console.log(newTaxTotal);
-		var newCartTotal = (newSubTotalNum+giftWrappingNum+discountNum+shippingNum+handlingNum+newTaxTotalNum).toFixed(2);
+		var newCartTotalNum = (newSubTotalNum+giftWrappingNum+discountNum+shippingNum+handlingNum+newTaxTotalNum).toFixed(2);
+
 		console.log('' + newSubTotalNum + ' + ' + giftWrappingNum + ' + ' + discountNum + ' + ' + shippingNum + ' + ' + handlingNum + ' + ' + newTaxTotalNum + ' = ' + newCartTotal);
 		
 		var newSubTotal = formatNumToCurrency(newSubTotalNum);
 		subTotalField.hide().html('$'+newSubTotal).fadeIn('slow');
 		var newTaxTotal = formatNumToCurrency(newTaxTotalNum);
 		taxField.hide().html('$'+newTaxTotal).fadeIn('slow');		
+		var newCartTotal = formatNumToCurrency(newCartTotalNum);
+		cartTotal.hide().html('$'+newCartTotal).fadeIn('slow');		
 	}
 /*
 	$.ajaxSetup({
