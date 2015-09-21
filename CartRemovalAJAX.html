@@ -62,7 +62,7 @@
 // Panels/CartContent.html --> <tbody>SNIPPET_CartItems%%</tbody> -- > place %%Panel.CartRemovalAJAX%% here
 	var cartTotal = $('.gtotal .ProductPrice');
 	var cartQuantity = $('.header-secondary .CartLink span');
-	ajaxifyCartRemoval();
+	//ajaxifyCartRemoval();
 
 	//Change the HTML 'onclick=' value to new function
 	function ajaxifyCartRemoval() {
@@ -118,7 +118,7 @@
 				restoreBoxHTML = '<div class="restore-item-box"><div><i class="conf-btn fa fa-check-circle"></i> ';
 				restoreBoxHTML += thisProdAnch + ' x ' + thisItemQuantity + ' was removed from your cart</div>';
 				restoreBoxHTML += '<div><a href="#" onclick=\"restoreThisItem(\'' + thisProdPathname;
-				restoreBoxHTML += '\', ' + thisItemQuantity + ', ' + thisItemTotal + ', ' + thisItemVarAttr + ', $(this)); return false;\">';
+				restoreBoxHTML += '\', ' + thisItemQuantity + ', ' + thisItemTotal + ', ' + attrPath + ', $(this)); return false;\">';
 				restoreBoxHTML += 'Click here</a> to put it back in your cart</div></div>';
 				//current item position and dimensions for restoreBoxHTML position
 				var rowPos = thisCartItem.position();
@@ -143,32 +143,44 @@
 			}
 			
 			//Get product variation attributes if there are any
-			var thisItemVarAttr;
+			var attrPath;
 			if ($(thisCartItem.find('.CustomizeItemLink')).length > 0) {
 				getItemAttributes();
 			} else {
-				thisItemVarAttr = '0, 0';
+				attrPath = 0;
 				removeThisItem();
 			}
 
 			function getItemAttributes() {
+				console.log('STARTING getItemAttributes() function ===============================')
+				console.log('STARTING getItemAttributes() function ===============================')
+				console.log('STARTING getItemAttributes() function ===============================')
 				var selectedOptText = [];
 				var optionNames = $(thisCartItem.find('.productAttributes tr td:nth-child(2) span'));
+				console.log('All option names that are in table row of this item are in this jQuery array below: .....')
+				console.log(optionNames)
 				optionNames.each( function() {
+					console.log('Starting RETRIEVAL of each option name TEXT that is present in table row of this jQuery obj "optionNames".')
 					selectedOptText.push($(this).text().replace(/[\u200B-\u200D\uFEFF]/g, ''));
 				});
+				console.log('All option names which were found and must be searched for in array "selectedOptText" are below:  |||||||||');
+				console.log(selectedOptText)
 				var getVariationUrl = 'https://dankstop.com/remote.php?w=editconfigurablefieldsincart&itemid=' + globalItemId;
 					getVariationUrl += ' .productAttributeList';
 				$('<div />').load(getVariationUrl, function(data){
+					console.log('GEOING to variation URL complete.')
 					var slectedOptions = [];
 					var matchedObj = {};
 					var matchedOpts = [];
 					var slectedOptionAttributes = [];
 					$(selectedOptText).each( function(index, value) {
+						console.log('Doing SEARCh for each option name in cart item row of this product, "selectedOptText".  STEP --- ' + index)
 						var allOpts = $($(data).find('.productAttributeValue'));
 						$(allOpts).each( function() {
+							console.log('on variation page, search through ALL "productAttributeValue" option sets for matches to option names');
 							var thisOptOptionSets = $(this).find('li');
 							$(thisOptOptionSets).each( function() {
+								
 								var thisOptSetsName = $(this).find('.name').text().replace(/[\u200B-\u200D\uFEFF]/g, '');
 								console.log(thisOptSetsName);
 								if (thisOptSetsName == value) {
@@ -178,6 +190,7 @@
 									matchedObj[matchName] = matchVal;
 									//matchedObj[index] = value;
 									matchedOpts.push(matchedObj);
+									attrPath += '&attribute['+matchName+']='+matchVal+'';
 								} else {
 									console.log(thisOptSetsName +' does not equal '+ value);
 								}
@@ -185,12 +198,16 @@
 						})
 						console.log(matchedOpts);
 					});
-					var slectedOption = $(data).find('.option.selected');
-					var slectedOptionAttribute = slectedOption.find('.validation').attr('name').replace(/\D/g,'');
-					var slectedOptionValue = slectedOption.find('.validation').attr('value');
-					thisItemVarAttr = slectedOptionAttribute + ', ' + slectedOptionValue;
+					//var slectedOption = $(data).find('.option.selected');
+					//var slectedOptionAttribute = slectedOption.find('.validation').attr('name').replace(/\D/g,'');
+					//var slectedOptionValue = slectedOption.find('.validation').attr('value');
+					//thisItemVarAttr = slectedOptionAttribute + ', ' + slectedOptionValue;
+					//attrPath = '';
 					removeThisItem();
 				});
+				console.log('ENDING getItemAttributes() function =============================== COMPLETE')
+				console.log('ENDING getItemAttributes() function =============================== COMPLETE')
+				console.log('ENDING getItemAttributes() function =============================== COMPLETE')
 			}
 		});
 
@@ -200,25 +217,27 @@
 		});
 	}
 	
-	function restoreThisItem(prodPath, itemQty, itemTotal, attr, val, thisBox) {
+	function restoreThisItem(prodPath, itemQty, itemTotal, attrPath, thisBox) {
 		var getProdIdQuery = 'https://dankstop.com' + prodPath + ' .productAddToCartRight #productDetailsAddToCartForm input[name="product_id"]'
 		var currentCartTotal = parseFloat(cartTotal.text().replace('$',''));
 		var restoreCartTotal = (currentCartTotal + itemTotal);		
 		var currentCartQuantity = parseInt(cartQuantity.text());
 		var restoreCartQuantity = (currentCartQuantity + itemQty);	
+		if (attrPath != '0') {
+			var attrPath = attrPath;
+		} else {
+			var attrPath = '';
+		}
 		$('<div />').load(getProdIdQuery, function(data){
 		    var thisProId = $(data).find('input[name="product_id"]').val();
-			var restoreItemUrl = 'https://dankstop.com/cart.php?action=add&product_id=' + thisProId + '&qty=' + itemQty + '';
-			if (attr != '0') {
-				restoreItemUrl += '&attribute['+attr+']='+val+'';
-				restoreItem();
-			} else {restoreItem()}
+			var restoreItemUrl = 'https://dankstop.com/cart.php?action=add&product_id=' + thisProId + '&qty=' + itemQty + '' + attrPath;
 			function restoreItem() {
 			    $.post(restoreItemUrl);
 				thisBox.parents().eq(1).fadeOut('slow');
 				cartTotal.hide().html('$'+restoreCartTotal).fadeIn('slow');
 				cartQuantity.hide().html(restoreCartQuantity).fadeIn('slow');
 			}
+			restoreItem();
 		});
 	}
 </script>
