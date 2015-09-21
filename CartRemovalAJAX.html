@@ -172,19 +172,27 @@
 					var slectedOptions = [];
 					var matchedObj = {};
 					var matchedOpts = [];
+					console.log('matchedOpts lengthright after definign as [] is :::: ' + matchedOpts.length);
+					console.log(matchedOpts);
 					var slectedOptionAttributes = [];
+					var allOpts = $($(data).find('.productAttributeValue'));
 					$(selectedOptText).each( function(index, value) {
 						console.log('Doing SEARCh for each option name in cart item row of this product, "selectedOptText".  STEP --- ' + index)
-						var allOpts = $($(data).find('.productAttributeValue'));
-						console.log('all Option Sets from Variation page are below:   ');
+						console.log('all Option Sets "LESS the amount of sets that have been matche" from Variation page are below:   ');
 						console.log(allOpts);
 						$(allOpts).each( function() {
-							console.log('IS INDEX '+index+' THE SAME AS MATCHES FOUND '+matchedOpts.length+' ????')
-							if (matchedOpts.length == index) {
-								console.log('YES '+index+' EQUALS '+matchedOpts+' , So we\'re stopping this loop here');
+							console.log(matchedOpts);
+							console.log(matchedOpts.length);
+							console.log('IS INDEX '+index+' THE SAME AS MATCHES FOUND '+(matchedOpts.length - 1)+' ????')
+							if ((matchedOpts.length - 1) == index) {
+								console.log('YES '+index+' EQUALS '+(matchedOpts.length - 1)+' , So we\'re stopping this loop here');
+								console.log(typeof allOpts);
+								allOpts.splice(0,1);
+								console.log('allOpts AFTER AFTER AFTER AFTER splice');
+								console.log(allOpts);
 								return false;
 							} else {
-								console.log('no, ' +index+' does not equal ' +matchedOpts+' so we\'re gonna do another loop');
+								console.log('no, ' +index+' does not equal ' +(matchedOpts.length - 1)+' so we\'re gonna do another loop');
 							}
 							console.log('on variation page, search through ALL "productAttributeValue" option sets for matches to option names');
 							var thisOptOptionSets = $(this).find('li');
