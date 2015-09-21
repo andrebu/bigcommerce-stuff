@@ -239,7 +239,7 @@
 			} else {return $('<div />').html('0');}
 		}
 		var subTotalField = $('tfoot h4:contains("Subtotal")').closest('tr').find('.ProductPrice h4');
-		var taxField = $('tfoot h4:contains("Tax")').closest('tr').find('.ProductPrice');
+		var taxField = $('tfoot tr td.Odd:contains("Tax")').closest('tr').find('.ProductPrice');
 		
 		var subTotalNum = formatStringToNum(getPrice('Subtotal'));
 		var giftWrappingNum = formatStringToNum(getPrice('Gift Wrapping'));
@@ -272,11 +272,11 @@
 		var newTaxTotalNum = (newSubTotalNum * itemTaxRate);
 		var newCartTotalNum = (newSubTotalNum+giftWrappingNum+discountNum+shippingNum+handlingNum+newTaxTotalNum).toFixed(2);
 
-		console.log('' + newSubTotalNum + ' + ' + giftWrappingNum + ' + ' + discountNum + ' + ' + shippingNum + ' + ' + handlingNum + ' + ' + newTaxTotalNum + ' = ' + newCartTotal);
+		console.log('' + newSubTotalNum + ' + ' + giftWrappingNum + ' + ' + discountNum + ' + ' + shippingNum + ' + ' + handlingNum + ' + ' + newTaxTotalNum + ' = ' + newCartTotalNum);
 		
 		var newSubTotal = formatNumToCurrency(newSubTotalNum);
 		subTotalField.hide().html('$'+newSubTotal).fadeIn('slow');
-		var newTaxTotal = formatNumToCurrency(newTaxTotalNum);
+		var newTaxTotal = formatNumToCurrency((newTaxTotalNum).toFixed(2));
 		taxField.hide().html('$'+newTaxTotal).fadeIn('slow');		
 		var newCartTotal = formatNumToCurrency(newCartTotalNum);
 		cartTotal.hide().html('$'+newCartTotal).fadeIn('slow');		
