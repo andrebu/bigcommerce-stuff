@@ -11,7 +11,7 @@
 		left: 0;
 		top: 0;
 		z-index: 1;
-		padding: 10px;
+		padding: 10px 0;
 		box-sizing: border-box;
 	}
 	.confirm-removal-prompt span {
@@ -62,7 +62,7 @@
 // Panels/CartContent.html --> <tbody>SNIPPET_CartItems%%</tbody> -- > place %%Panel.CartRemovalAJAX%% here
 	var cartTotal = $('.gtotal .ProductPrice');
 	var cartQuantity = $('.header-secondary .CartLink span');
-	ajaxifyCartRemoval();
+	//ajaxifyCartRemoval();
 
 	//Change the HTML 'onclick=' value to new function
 	function ajaxifyCartRemoval() {
@@ -145,19 +145,52 @@
 			//Get product variation attributes if there are any
 			var thisItemVarAttr;
 			if ($(thisCartItem.find('.CustomizeItemLink')).length > 0) {
-				var selectedOptText = thisCartItem.find('.productAttributes tr td:nth-child(2) span').text();
+				getItemAttributes();
+			} else {
+				thisItemVarAttr = '0, 0';
+				removeThisItem();
+			}
+
+			function getItemAttributes() {
+				var selectedOptText = [];
+				var optionNames = $(thisCartItem.find('.productAttributes tr td:nth-child(2) span'));
+				optionNames.each( function() {
+					selectedOptText.push($(this).text());
+				});
 				var getVariationUrl = 'https://dankstop.com/remote.php?w=editconfigurablefieldsincart&itemid=' + globalItemId;
-					getVariationUrl += ' .productOptionViewRectangle';
+					getVariationUrl += ' .productAttributeList';
 				$('<div />').load(getVariationUrl, function(data){
+					var slectedOptions = [];
+					var matchedObj = {};
+					var matchedOpts = [];
+					var slectedOptionAttributes = [];
+					$(selectedOptText).each( function(index, value) {
+						var allOpts = $($(data).find('.productAttributeValue'));
+						$(allOpts).each( function() {
+							var thisOptOptionSets = $(this).find('li');
+							$(thisOptOptionSets).each( function() {
+								var thisOptSetsName = $('<div>').html($(this).find('.name').text()).text();
+								console.log(thisOptSetsName);
+								if (thisOptSetsName == value) {
+									console.log('Does ' + thisOptSetsName + ' match ' + value + '?');
+									var matchName = $(this).find('.validation').attr('name').replace(/\D/g,'');
+									var matchVal = $(this).find('.validation').attr('value');
+									matchedObj[matchName] = matchVal;
+									//matchedObj[index] = value;
+									matchedOpts.push(matchedObj);
+								} else {
+									console.log(thisOptSetsName +' does not equal '+ value);
+								}
+							});
+						})
+						console.log(matchedOpts);
+					});
 					var slectedOption = $(data).find('.option.selected');
 					var slectedOptionAttribute = slectedOption.find('.validation').attr('name').replace(/\D/g,'');
 					var slectedOptionValue = slectedOption.find('.validation').attr('value');
 					thisItemVarAttr = slectedOptionAttribute + ', ' + slectedOptionValue;
 					removeThisItem();
 				});
-			} else {
-				thisItemVarAttr = '0, 0';
-				removeThisItem();
 			}
 		});
 
