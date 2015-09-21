@@ -118,7 +118,7 @@
 				restoreBoxHTML = '<div class="restore-item-box"><div><i class="conf-btn fa fa-check-circle"></i> ';
 				restoreBoxHTML += thisProdAnch + ' x ' + thisItemQuantity + ' was removed from your cart</div>';
 				restoreBoxHTML += '<div><a href="#" onclick=\"restoreThisItem(\'' + thisProdPathname;
-				restoreBoxHTML += '\', ' + thisItemQuantity + ', ' + thisItemTotal + ', ' + attrPath + ', $(this)); return false;\">';
+				restoreBoxHTML += '\', ' + thisItemQuantity + ', ' + thisItemTotal + ', \'' + attrPath + '\', $(this)); return false;\">';
 				restoreBoxHTML += 'Click here</a> to put it back in your cart</div></div>';
 				//current item position and dimensions for restoreBoxHTML position
 				var rowPos = thisCartItem.position();
@@ -143,7 +143,7 @@
 			}
 			
 			//Get product variation attributes if there are any
-			var attrPath;
+			var attrPath = '';
 			if ($(thisCartItem.find('.CustomizeItemLink')).length > 0) {
 				getItemAttributes();
 			} else {
@@ -209,11 +209,11 @@
 					//var slectedOptionValue = slectedOption.find('.validation').attr('value');
 					//thisItemVarAttr = slectedOptionAttribute + ', ' + slectedOptionValue;
 					//attrPath = '';
+					console.log('ENDING getItemAttributes() function =============================== COMPLETE')
+					console.log('ENDING getItemAttributes() function =============================== COMPLETE')
+					console.log('ENDING getItemAttributes() function =============================== COMPLETE')
 					removeThisItem();
 				});
-				console.log('ENDING getItemAttributes() function =============================== COMPLETE')
-				console.log('ENDING getItemAttributes() function =============================== COMPLETE')
-				console.log('ENDING getItemAttributes() function =============================== COMPLETE')
 			}
 		});
 
