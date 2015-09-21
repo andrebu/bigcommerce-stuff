@@ -1,0 +1,13 @@
+<script>
+var pageLayoutColumn = $('#LayoutColumn1');
+$('#subHeader li a').each( function() {
+
+	$(this).on('click', function(e) {
+		e.stopPropagation();
+		var navLinkUrl = '' + $(this).attr('href') + ' #LayoutColumn1'
+		$('#LayoutColumn1').load(navLinkUrl, function(data){
+			console.log('Page changed!');
+		});
+	})
+})
+</script>
