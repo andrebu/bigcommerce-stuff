@@ -205,9 +205,10 @@
 	
 	function restoreThisItem(prodPath, itemQty, itemTotal, attrPath, thisBox) {
 		var getProdIdQuery = 'https://dankstop.com' + prodPath + ' .productAddToCartRight #productDetailsAddToCartForm input[name="product_id"]'
-		var currentCartTotal = parseFloat(cartTotal.text().replace(/[,$]/g, ''));
-		var restoreCartTotal = (currentCartTotal + itemTotal).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");		
-		console.log(restoreCartQuantity);
+		var currentCartTotal = formatStringToNum(cartTotal);
+		console.log(currentCartTotal);
+		var restoreCartTotal = formatNumToCurrency((currentCartTotal2 + itemTotal));		
+		console.log(restoreCartTotal);
 		var currentCartQuantity = parseInt(cartQuantity.text());
 		var restoreCartQuantity = (currentCartQuantity + itemQty);	
 		if (attrPath != '0') {
@@ -226,5 +227,11 @@
 			}
 			restoreItem();
 		});
+	}
+	function formatStringToNum(number) {
+		return parseFloat(number.text().replace(/[,$]/g, ''));
+	}
+	function formatNumToCurrency(number) {
+		return number.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 	}
 </script>
