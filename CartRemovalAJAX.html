@@ -62,7 +62,7 @@
 // Panels/CartContent.html --> <tbody>SNIPPET_CartItems%%</tbody> -- > place %%Panel.CartRemovalAJAX%% here
 	var cartTotal = $('.gtotal .ProductPrice');
 	var cartQuantity = $('.header-secondary .CartLink span');
-	//ajaxifyCartRemoval();
+	ajaxifyCartRemoval();
 
 	//Change the HTML 'onclick=' value to new function
 	function ajaxifyCartRemoval() {
@@ -155,7 +155,7 @@
 				var selectedOptText = [];
 				var optionNames = $(thisCartItem.find('.productAttributes tr td:nth-child(2) span'));
 				optionNames.each( function() {
-					selectedOptText.push($(this).text());
+					selectedOptText.push($(this).text().replace(/[\u200B-\u200D\uFEFF]/g, ''));
 				});
 				var getVariationUrl = 'https://dankstop.com/remote.php?w=editconfigurablefieldsincart&itemid=' + globalItemId;
 					getVariationUrl += ' .productAttributeList';
@@ -169,7 +169,7 @@
 						$(allOpts).each( function() {
 							var thisOptOptionSets = $(this).find('li');
 							$(thisOptOptionSets).each( function() {
-								var thisOptSetsName = $('<div>').html($(this).find('.name').text()).text();
+								var thisOptSetsName = $(this).find('.name').text().replace(/[\u200B-\u200D\uFEFF]/g, '');
 								console.log(thisOptSetsName);
 								if (thisOptSetsName == value) {
 									console.log('Does ' + thisOptSetsName + ' match ' + value + '?');
