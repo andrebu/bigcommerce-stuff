@@ -1,13 +1,13 @@
 <script>
-var pageLayoutColumn = $('#LayoutColumn1');
-$('#subHeader li a').each( function() {
-
-	$(this).on('click', function(e) {
-		e.stopPropagation();
-		var navLinkUrl = '' + $(this).attr('href') + ' #LayoutColumn1'
-		$('#LayoutColumn1').load(navLinkUrl, function(data){
-			console.log('Page changed!');
-		});
+	var pageLayoutColumn = $('.main #LayoutColumn1');
+	$('#subHeader li a').on('click', function(e) {
+		var navLinkUrl = '' + $(this).attr('href');
+	    $('<div />').load(navLinkUrl + ' .main #LayoutColumn1', function(data){
+		    var clickedPageHtml = $(this).html();
+			pageLayoutColumn.fadeOut('slow', function(){
+					pageLayoutColumn.html(clickedPageHtml).fadeIn('slow');
+			});
+	    });
+		e.preventDefault();
 	})
-})
 </script>
