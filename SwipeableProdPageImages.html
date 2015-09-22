@@ -17,32 +17,27 @@ function loadJQMobile() {
 loadJQMobile();
 
 //li.magictoolbox-li
-
 //a.MagicThumb-swap .mt-active-selector
 
-
 function prodImgSwipe() {
-
-	$(".MagicToolboxContainer").on("swipeleft",function(e){
+	$(".ProductThumb").on("swipeleft",function(e){
 		swipeLeft();
         e.stopPropagation();
 	});
-
-	$(".MagicToolboxContainer").on("swiperight",function(e){
+	$(".ProductThumb").on("swiperight",function(e){
 		swipeRight();
         e.stopPropagation();
 	});
-
 	function swipeLeft() {
-		$('.mt-active-selector').parent().next('li a').click();
+		console.log($('.ProductTinyImageList .mt-active-selector').parent().next().find('a'));
 		console.log('Swiped LEFT!');
-	}
-	
+		$('.ProductTinyImageList .mt-active-selector').parent().next().find('a').click();
+	}	
 	function swipeRight() {
-		$('.mt-active-selector').parent().prev('li a').click();	
+		console.log($('.ProductTinyImageList .mt-active-selector').parent().prev().find('a'));	
 		console.log('Swiped RIGHT!');
+		$('.ProductTinyImageList .mt-active-selector').parent().prev().find('a').click();	
 	}
-
 }
 prodImgSwipe();
 </script>
