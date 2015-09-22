@@ -16,28 +16,29 @@ function loadJQMobile() {
 }
 loadJQMobile();
 
+//.ProductThumb .MagicToolboxContainer .MagicZoomPlus img
+	//.MagicZoomPup .MagicZoomPlusHint .MagicZoomBigImageCont.inner-zoom
 //li.magictoolbox-li
 //a.MagicThumb-swap .mt-active-selector
 
 function prodImgSwipe() {
-	$(".ProductThumb").on("swipeleft",function(e){
+	$(".ProductThumb").on("img", "swipeleft",function(e){
 		swipeLeft();
         e.stopPropagation();
 	});
-	$(".ProductThumb").on("swiperight",function(e){
+	$(".ProductThumb").on("img", "swiperight",function(e){
 		swipeRight();
         e.stopPropagation();
 	});
 	function swipeLeft() {
 		console.log($('.ProductTinyImageList .mt-active-selector').parent().next().find('a'));
 		console.log('Swiped LEFT!');
-		$('.ProductTinyImageList .mt-active-selector').parent().next().find('a').click();
-	}	
+		$('.ProductTinyImageList .mt-active-selector').parent().next().find('a img').click();
+	}
 	function swipeRight() {
 		console.log($('.ProductTinyImageList .mt-active-selector').parent().prev().find('a'));	
 		console.log('Swiped RIGHT!');
-		$('.ProductTinyImageList .mt-active-selector').parent().prev().find('a').click();	
-	}
-}
+		$('.ProductTinyImageList .mt-active-selector').parent().prev().find('a img').click();	
+	}}
 prodImgSwipe();
 </script>
