@@ -200,7 +200,7 @@ width: 100% !important;
 
 /*------------Makes Magic Scroll Not take up as much height-----------------*/
 
-.MagicScroll[data-effect="scroll"], .MagicScroll[data-effect="bounce-items"] {
+.ProductScroll[data-effect="scroll"], .ProductScroll[data-effect="bounce-items"] {
 
 Height:500px !important;
 }

@@ -1201,24 +1201,24 @@ margin-left:-11px;
 	border-top: 1px solid rgb(216, 216, 216);
 	border-bottom: 1px solid rgb(216, 216, 216);
 }
-.page .main .MagicScroll-horizontal {
+.page .main .ProductScroll {
 	Height:280px !important;
 	margin-bottom: 19px;
 }
-.page .main .MagicScroll-horizontal .mcs-item {
+.page .main .ProductScroll .mcs-item {
 	width: 19.75% !important;
 }
-.page .main .MagicScroll-horizontal .mcs-item li,
-#home .MagicScroll-horizontal .mcs-item li {
+.page .main .ProductScroll .mcs-item li,
+#home .ProductScroll .mcs-item li {
 	width: 100%;
 	display: block;
 	margin: 0 auto;
 	padding: 0;
 }
-.page .main .MagicScroll-horizontal .mcs-item li .ProductImage img {
+.page .main .ProductScroll .mcs-item li .ProductImage img {
 	max-width: 75%;
 }
-.page .main .MagicScroll-horizontal .mcs-item li .ProductDetails .pname {
+.page .main .ProductScroll .mcs-item li .ProductDetails .pname {
 	white-space: pre-wrap;  
 	white-space: -moz-pre-wrap; 
 	white-space: -pre-wrap;   
@@ -1228,7 +1228,7 @@ margin-left:-11px;
 	min-height: 45px;
 }
 /* Home front page magic scroll styling */
-.page .main .MagicScroll-horizontal .mcs-item {
+.page .main .ProductScroll .mcs-item {
 	border: 4px solid #eaeaea;
 	border-radius: 4px;
 	margin-right: 2.4px;
@@ -1237,73 +1237,73 @@ margin-left:-11px;
 	-o-transition: border-color 0.5s ease 0s;
 	transition: border-color 0.5s ease 0s;
 }
-.page .main .MagicScroll-horizontal .mcs-item:hover {
+.page .main .ProductScroll .mcs-item:hover {
 	border-color: #6ADA78;
 }
-.page .main .MagicScroll-horizontal .mcs-item li .ProductImage a {
+.page .main .ProductScroll .mcs-item li .ProductImage a {
 	border-top: 0;
 	padding-top: 10px;
 }
-.page .main .MagicScroll-horizontal .mcs-item li .ProductDetails {
+.page .main .ProductScroll .mcs-item li .ProductDetails {
 	width: 90%;
 	margin: 0 auto;
 }
-.page .main .MagicScroll-horizontal .mcs-button-arrow:before {
+.page .main .ProductScroll .mcs-button-arrow:before {
 	color: #6ADA78;
 }
-.page .main .MagicScroll-horizontal .mcs-button-arrow:hover:before {
+.page .main .ProductScroll .mcs-button-arrow:hover:before {
 	color: #39b54a;
 }
 @media screen and (max-width: 480px) {
 /* 	Front page */
-	.page .main .MagicScroll-horizontal .mcs-item {
+	.page .main .ProductScroll .mcs-item {
 		width: 49% !important;
 	}
 }
 @media screen and (max-width: 767px) {
 /* 	Front page */
-	.page .main .MagicScroll-horizontal .mcs-item {
+	.page .main .ProductScroll .mcs-item {
 		width: 49% !important;
 	}
 }
 /* Nexus 5 */
 @media screen and (max-device-width: 768px) and (orientation: portrait) {
 /* 	Front page */
-	.page .main .MagicScroll-horizontal {
+	.page .main .ProductScroll {
 		Height: 260px !important;
 	}
-	.page .main .MagicScroll-horizontal .mcs-item {
+	.page .main .ProductScroll .mcs-item {
 		width: 49.25% !important;
 	}
-	.page .main .MagicScroll-horizontal .mcs-item li .ProductDetails .pname {
+	.page .main .ProductScroll .mcs-item li .ProductDetails .pname {
 		line-height: initial;
 	}
 }
 @media screen and (max-device-width: 768px) and (orientation: landscape) {
 /* 	Front page */
-	.page .main .MagicScroll-horizontal {
+	.page .main .ProductScroll {
 		Height: 370px !important;
 	}
-	.page .main .MagicScroll-horizontal .mcs-item {
+	.page .main .ProductScroll .mcs-item {
 		width: 49.7% !important;
 	}
 }
 @media screen and (device-aspect-ratio: 2/3) {
 /* 	Front page */
-	.page .main .MagicScroll-horizontal .mcs-item {
+	.page .main .ProductScroll .mcs-item {
 		width: 49% !important;
 	}
 }
 /* iPhone 5 */
 @media screen and (device-aspect-ratio: 40/71) {
 /* 	Front page */
-	.page .main .MagicScroll-horizontal {
+	.page .main .ProductScroll {
 		Height: 230px !important;
 	}
-	.page .main .MagicScroll-horizontal .mcs-item {
+	.page .main .ProductScroll .mcs-item {
 		width: 49% !important;
 	}
-	.page .main .MagicScroll-horizontal .mcs-item li .ProductDetails .pname {
+	.page .main .ProductScroll .mcs-item li .ProductDetails .pname {
 		line-height: initial;
 	}
 }
@@ -1313,10 +1313,10 @@ margin-left:-11px;
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (orientation: portrait) {
-	.page .main .MagicScroll-horizontal {
+	.page .main .ProductScroll {
 		Height: 310px !important;
 	}
-	.page .main .MagicScroll-horizontal .mcs-item {
+	.page .main .ProductScroll .mcs-item {
 		width: 33% !important;
 	}
 }
@@ -1325,12 +1325,11 @@ margin-left:-11px;
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (orientation: landscape) {
-  	.page .main .MagicScroll-horizontal {
+  	.page .main .ProductScroll {
 		Height: 240px !important;
 		margin-bottom: 19px;
 	}
 }
-
 
 
 
@@ -1435,6 +1434,12 @@ body .newsletter-subscription > .inner {
 /*modify*/
 .fa-check-square-o:before {
     content: "\f046";
+}
+.fa-check-circle:before {
+	content: "\f058";
+}
+.fa-times-circle:before {
+	content: "\f057";
 }
 /*Phone*/
 .fa-phone:before {
@@ -2301,6 +2306,9 @@ h6, .h6 {
 }
 .productPage .p-price {
 /*font-size: 26px;*/
+}
+.ProductDetailsGrid.ProductAddToCart .DetailRow.InventoryLevel {
+	display: none !important;	
 }
 .footer-main, .footer-main a {
 }
@@ -8298,7 +8306,7 @@ div.sold-out-overlay {
 }
 .user-info {
 	display: none;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
 }
 .user-info .user-time, 
 .user-info .user-location {
@@ -8329,6 +8337,7 @@ div.sold-out-overlay {
 	box-shadow: 0 1px 3px rgba(34, 34, 34, 0.3),inset 0 1px 3px rgba(34, 34, 34, 0.3);
 	display: inline-block;
 	vertical-align: middle;
+	box-sizing: border-box;
 }
 .user-info .clock-face {
 	width: 100%;
@@ -8337,8 +8346,8 @@ div.sold-out-overlay {
 }
 .user-info .clock-face:after {
 	position: absolute;
-	top: 16px;
-	left: 16px;
+	top: 70%;
+	left: 70%;
 	width: 4px;
 	height: 4px;
 	margin: -6px 0 0 -6px;
@@ -8351,7 +8360,7 @@ div.sold-out-overlay {
 	width: 0;
 	height: 0;
 	position: absolute;
-	top: 50%;
+	top: 47%;
 	left: 50%;
 	margin: 0 0 0 -25%;
 	padding: 1px 0 1px 25%;
@@ -8366,7 +8375,7 @@ div.sold-out-overlay {
 	height: 0;
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	left: 44%;
 	margin: -40% 0 0;
 	padding: 40% 1px 0;
 	background: #999;
@@ -8380,7 +8389,7 @@ div.sold-out-overlay {
 	height: 0;
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	left: 45%;
 	margin: -40% 0 0 0;
 	padding: 40% 1px 0 0;
 	background: #999;
