@@ -1755,6 +1755,7 @@ width:100%;
         display:none;
     }
     
+/*
     #ProductDetails .ProductTinyImageList ul li {
         width:15px !important;
         height:18px !important;
@@ -1770,6 +1771,7 @@ width:100%;
         border:none !important;
         cursor:none !important;
     }
+*/
     #ProductDetails .ProductTinyImageList ul {
         text-align:center;
         width:100%;

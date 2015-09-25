@@ -1201,6 +1201,9 @@ margin-left:-11px;
 	border-top: 1px solid rgb(216, 216, 216);
 	border-bottom: 1px solid rgb(216, 216, 216);
 }
+.ProductList.ProductScroll .ProductImage a {
+	height: auto !important;
+}
 .page .main .ProductScroll {
 	Height:280px !important;
 	margin-bottom: 19px;
@@ -2308,7 +2311,7 @@ h6, .h6 {
 /*font-size: 26px;*/
 }
 .ProductDetailsGrid.ProductAddToCart .DetailRow.InventoryLevel {
-	display: none !important;	
+/* 	display: none !important;	 */
 }
 .footer-main, .footer-main a {
 }
@@ -2739,7 +2742,7 @@ textarea {
     position:relative;
     border-bottom:solid 1px #ededed;
     border-top:solid 1px #ededed;
-    height: auto !important;
+/*     height: auto !important; */
 }
 .ProductList .ProductImage img, .ProductThumbImage img {
     max-height: 100%;
