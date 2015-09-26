@@ -13,11 +13,15 @@ function prodImgSwipe() {
 		swipeRight();
 	});
 	function swipeLeft() {
-		var nextThumb = $('.ProductTinyImageList .mt-active-selector').closest('.mcs-item').next().find('.magictoolbox-li a')[0];	
+		var nextItem = $('.ProductTinyImageList .mt-active-selector').closest('.mcs-item').next();
+		var nextMCLink = nextItem.find('.magictoolbox-li a')[0];
+		var nextThumb = nextMCLink ? nextMCLink : nextItem.find('#videoDemoThumb')[0];	
 		nextThumb.click();		
 	}
 	function swipeRight() {
-		var prevThumb = $('.ProductTinyImageList .mt-active-selector').closest('.mcs-item').prev().find('.magictoolbox-li a')[0];	
+		var prevItem = $('.ProductTinyImageList .mt-active-selector').closest('.mcs-item').prev();
+		var prevMCLink = prevItem.find('.magictoolbox-li a')[0];
+		var prevThumb = prevMCLink ? prevMCLink : prevItem.find('#videoDemoThumb')[0];	
 		$(prevThumb).on('click', function(click) {
 			click.preventDefault();
 		});
