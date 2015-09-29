@@ -4105,11 +4105,13 @@ table tr td h3 {
     border: none 0 !important;
 }
 #ProductDetails .ProductTinyImageList ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    text-align: left;
-    margin:6px auto 0;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: left;
+	margin:6px auto 0;
+	visibility: hidden;
+	height: 84px;
 }
 .carousel {
     position: relative;
