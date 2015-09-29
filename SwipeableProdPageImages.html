@@ -12,6 +12,7 @@ function prodImgSwipe() {
 	$(".MagicToolboxContainer").on("swiperight", function(){
 		swipeRight();
 	});
+	var swipeRightFirstTime = 1;
 	function swipeLeft() {
 		var activeSelector = $('.ProductTinyImageList .mt-active-selector');
 		if (activeSelector.hasClass('previous-thumb')) {
@@ -22,11 +23,10 @@ function prodImgSwipe() {
 		};
 		var nextMCLink = nextItem.find('.magictoolbox-li a')[0];
 		var nextThumb = nextMCLink ? nextMCLink : nextItem.find('#videoDemoThumb')[0];
-		console.log(nextThumb);
 		$('.MagicThumb-swap').removeClass('hovered');
 		nextThumb.click();		
+		swipeRightFirstTime = 0;
 	}
-	var swipeLeftFirstTime = 1;
 	function swipeRight() {
 		var activeSelector = $('.ProductTinyImageList .mt-active-selector');
 		if (activeSelector.hasClass('previous-thumb')) {
@@ -37,20 +37,9 @@ function prodImgSwipe() {
 		};
 		var prevMCLink = prevItem.find('.magictoolbox-li a')[0];
 		var prevThumb = prevMCLink ? prevMCLink : prevItem.find('#videoDemoThumb')[0];	
-		console.log(prevThumb);
 		$('.MagicThumb-swap').removeClass('hovered');
-		if (swipeLeftFirstTime) {
-				console.log(swipeLeftFirstTime);
-			swipeLeftFirstTime = 0;
-			$(prevThumb).on('click', function(click) {
-				console.log('is this firing?');
-				$('.mcs-button-arrow-prev').click();
-				click.preventDefault();
-			});
-				$('.mcs-button-arrow-prev').click();
-			//e.stopPropagation();
-			prevThumb.click();	
-			$(prevThumb).off('click');
+		if (swipeRightFirstTime) {
+			return;
 		} else {
 			prevThumb.click();	
 		}
