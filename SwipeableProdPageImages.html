@@ -13,18 +13,37 @@ function prodImgSwipe() {
 		swipeRight();
 	});
 	function swipeLeft() {
-		var nextItem = $('.ProductTinyImageList .mt-active-selector').closest('.mcs-item').next();
+		var activeSelector = $('.ProductTinyImageList .mt-active-selector');
+		if (activeSelector.hasClass('previous-thumb')) {
+			$(activeSelector).removeClass('previous-thumb');
+			var nextItem = $('.ProductTinyImageList #videoDemoThumb').closest('.mcs-item').next();
+		} else {
+			var nextItem = $('.ProductTinyImageList .mt-active-selector').closest('.mcs-item').next();
+		};
 		var nextMCLink = nextItem.find('.magictoolbox-li a')[0];
-		var nextThumb = nextMCLink ? nextMCLink : nextItem.find('#videoDemoThumb')[0];	
+		var nextThumb = nextMCLink ? nextMCLink : nextItem.find('#videoDemoThumb')[0];
+		console.log(nextThumb);
+		$('.MagicThumb-swap').removeClass('hovered');
 		nextThumb.click();		
 	}
 	function swipeRight() {
-		var prevItem = $('.ProductTinyImageList .mt-active-selector').closest('.mcs-item').prev();
+		var activeSelector = $('.ProductTinyImageList .mt-active-selector');
+		if (activeSelector.hasClass('previous-thumb')) {
+			$(activeSelector).removeClass('previous-thumb');
+			var prevItem = $('.ProductTinyImageList #videoDemoThumb').closest('.mcs-item').prev();
+		} else {
+			var prevItem = $('.ProductTinyImageList .mt-active-selector').closest('.mcs-item').prev();
+		};
 		var prevMCLink = prevItem.find('.magictoolbox-li a')[0];
 		var prevThumb = prevMCLink ? prevMCLink : prevItem.find('#videoDemoThumb')[0];	
+		console.log(prevThumb);
+/*
 		$(prevThumb).on('click', function(click) {
+			console.log('is this firing?');
 			click.preventDefault();
 		});
+*/
+		$('.MagicThumb-swap').removeClass('hovered');
 		prevThumb.click();	
 	}
 }
