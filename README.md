@@ -80,7 +80,7 @@ Please provide quotes and time frames to complete each project.
 
 
 ###General questions:  
-1. Is it possible there will be unforseen bugs in the code and how is this handled going forward?
+1. Is it possible there will be unforeseen bugs in the code and how is this handled going forward?
 2. How do you handle bugs that appear/popup in the future due to updates in template or something of that nature?   
 3. What guarantee/warranty do you give on your work and for hold long?  
 
@@ -96,6 +96,16 @@ Please provide quotes and time frames to complete each project.
 * [BigCommerce Category Page Videos](https://github.com/iamandrebulatov/BC-Category-Page-Demo-Videos)
 * [BigCommerce Category Page Out of Stock Ribbons](https://github.com/iamandrebulatov/BC-Category-Page-Out-of-Stock-Items)
 
-###Resources and Inspiration
+##Resources and Inspiration
 
 - [Killer BigCommerce Tips and Tricks](http://www.onlinestorecreation.com/bigcommerce-tips-tricks.html)
+
+### Swipeable Product Page Product Images
+- [How to remove all Click event handlers in Jquery](http://stackoverflow.com/questions/825112/how-to-remove-all-click-event-handlers-in-jquery)
+- [event.preventDefault() not canceling link direction in jQuery Mobile](http://stackoverflow.com/questions/11994833/event-preventdefault-not-canceling-link-direction-in-jquery-mobile)
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
