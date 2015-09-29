@@ -26,6 +26,7 @@ function prodImgSwipe() {
 		$('.MagicThumb-swap').removeClass('hovered');
 		nextThumb.click();		
 	}
+	var swipeLeftFirstTime = 1;
 	function swipeRight() {
 		var activeSelector = $('.ProductTinyImageList .mt-active-selector');
 		if (activeSelector.hasClass('previous-thumb')) {
@@ -37,14 +38,22 @@ function prodImgSwipe() {
 		var prevMCLink = prevItem.find('.magictoolbox-li a')[0];
 		var prevThumb = prevMCLink ? prevMCLink : prevItem.find('#videoDemoThumb')[0];	
 		console.log(prevThumb);
-/*
-		$(prevThumb).on('click', function(click) {
-			console.log('is this firing?');
-			click.preventDefault();
-		});
-*/
 		$('.MagicThumb-swap').removeClass('hovered');
-		prevThumb.click();	
+		if (swipeLeftFirstTime) {
+				console.log(swipeLeftFirstTime);
+			swipeLeftFirstTime = 0;
+			$(prevThumb).on('click', function(click) {
+				console.log('is this firing?');
+				$('.mcs-button-arrow-prev').click();
+				click.preventDefault();
+			});
+				$('.mcs-button-arrow-prev').click();
+			//e.stopPropagation();
+			prevThumb.click();	
+			$(prevThumb).off('click');
+		} else {
+			prevThumb.click();	
+		}
 	}
 }
 $(window).load(function() {
