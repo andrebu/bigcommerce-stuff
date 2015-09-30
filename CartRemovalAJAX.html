@@ -5,13 +5,14 @@
 	.confirm-removal-prompt {
 		display: inline-block;
 		width: 100%;
-		height: 100px;
+		height: 98px;
+		max-height: 100%;
 		position: absolute;
 		background-color: #fff;
 		left: 0;
 		top: 0;
 		z-index: 1;
-		padding: 10px 0;
+		padding: 6px 0;
 		box-sizing: border-box;
 	}
 	.confirm-removal-prompt span {
@@ -91,7 +92,8 @@
 		//Define confirmation button on-click behavior 
 		var removeBtn = $('.conf-btn.fa-check-circle');
 		var doNotRemoveBtn = $('.conf-btn.fa-times-circle');
-			//Confirm YES button action
+
+		//Confirm YES button action
 		removeBtn.on('click', function(e) {
 			e.stopPropagation();
 			
