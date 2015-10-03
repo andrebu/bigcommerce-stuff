@@ -208,7 +208,7 @@
 			var restoreItemUrl = 'https://dankstop.com/cart.php?action=add&product_id=' + thisProId + '&qty=' + itemQty + '' + attrPath;
 			function restoreItem() {
 			    $.post(restoreItemUrl);
-				thisAnch.parents().eq(1).fadeOut('slow');
+				thisAnch.parents().eq(1).fadeOut('slow').remove();
 				setCartTotals(itemQty, itemTotal, 'add');
 			}
 			restoreItem();
