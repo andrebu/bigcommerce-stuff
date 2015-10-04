@@ -200,50 +200,105 @@ var DankStopGlossary = {
   "brand": {
     "AMG GLASS": {
       "url": "/brands/AMG-GLASS.html",
-      "img": "http://cdn6.bigcommerce.com/s-ss4br/product_images/w/amglogo_1412039908__85126.jpg",
+      "logo": "http://cdn6.bigcommerce.com/s-ss4br/product_images/w/amglogo_1412039908__85126.jpg",
       "description": "AMG stands for American Made Glass, and they stay true to the name. Their &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass water pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;concentrate rigs&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E; are all made out of thick borosilicate glass right here in the USA. AMG also produces &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;hand pipes&#x3C;/a&#x3E;, glass jars, and &#x3C;a href=&#x22;http://dankstop.com/beakers-and-straight-tubes/&#x22; target=&#x22;_blank&#x22;&#x3E;beakers and straight tube tobacco bongs&#x3C;/a&#x3E;. Want an AMG product customized? Contact us by phone or email to order an AMG piece in a style or color you don&#x27;t see here. &#x3C;a href=&#x22;http://dankstop.com/brands/AMG-GLASS.html&#x22;&#x3E;See more products from AMG Glass.&#x3C;/a&#x3E;"
     },
-    "Brand2": {
+    "420 Stands": {
+      "url": "/brands/420-stands.html",
+      "logo": "http://cdn6.bigcommerce.com/s-ss4br/product_images/h/420standslogo_1412039891__12902.png",
+      "description": "420 Stands manufactures awesome little bowl/slide holders that prevent that awful feeling of dropping a freshly packed slide on the ground. We&#x27;ve all been there, and the guys at 420 Stands decided to do something about it. 420 Stands also manufactures a &#x22;Dab Station&#x22;, which includes two compartments for your concentrate jars as well as a nice resting place for your &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps&#x22; target=&#x22;_blank&#x22;&#x3E;dabber&#x3C;/a&#x3E; (to avoid lint and any type of surface materials that can get stuck to it). Made in a basement in California using a 3D Printer, these guys put their blood, sweat, and tears into individually printing each stand. All 420 Stands are handmade and are uniquely different with naturally occurring bubbles and imperfections. This type of craftsmanship really distinguishes these stands to let you know that each one is handcrafted and meticulously made with an acute attention to detail. &#x3C;a href=&#x22;http://dankstop.com/brands/420-stands&#x22;&#x3E;See more products from 420 Stands.&#x3C;/a&#x3E;"
+    },
+    "Purr Glass": {
+      "url": "/brands/PURR-GLASS.html",
+      "logo": "http://cdn6.bigcommerce.com/s-ss4br/product_images/o/purrlogo_1412041076__26309.png",
+      "description": "Purr Glass, since 2003, has provided practical, effective, and well-designed products to the glass community. The name Purr is short for perforations, or diffused percs, used in all of their &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;. Purr had continued to influence the glass industry with innovative designs such as the upright sherlock, the scientific pocket double chamber, and the micro size &#x3C;a href=&#x22;http://dankstop.com/glass-pendants&#x22; target=&#x22;_blank&#x22;&#x3E;pendant bubblers and rigs&#x3C;/a&#x3E;. From their humble, grassroots beginnings, the Purr family and product line have continued to grow past California and into the national market. Purr continues to be family owned and operated; innovating hand crafted, American made glass in Southern California. &#x3C;a href=&#x22;http://dankstop.com/brands/PURR-GLASS.html&#x22;&#x3E;Check out more from Purr Glass.&#x3C;/a&#x3E;"
+    },
+    "Boom Felazi": {
+      "url": "/brands/Boom-Felazi.html",
+      "logo": "https://cdn6.bigcommerce.com/s-ss4br/product_images/uploaded_images/boomlogo.jpeg",
+      "description": "Boom Felazi is one of our most popular glass blowers, quickly becoming famous for their consistent innovation and creative designs. Made in the USA, their &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;glass concentrate rigs&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/recycler-rigs/&#x22; target=&#x22;_blank&#x22;&#x3E;recycler dab rigs&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/accessories&#x22; target=&#x22;_blank&#x22;&#x3E;accessories&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E; are some of the most unique on the market. Our online headshop features a wide variety of Boom Felazi brand &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, dab rigs, and &#x3C;a href=&#x22;http://dankstop.com/heady-glass&#x22; target=&#x22;_blank&#x22;&#x3E;heady glass&#x3C;/a&#x3E;. &#x3C;a href=&#x22;http://dankstop.com/brands/Boom-Felazi.html&#x22;&#x3E;See more Boom Felazi glass.&#x3C;/a&#x3E;"
+    },
+    "Grav Labs": {
+      "url": "/brands/Grav-Labs.html",
+      "logo": "http://cdn6.bigcommerce.com/s-ss4br/product_images/y/gravlogo_1419242707__47173.png",
+      "description": "Grav Labs, founded in 2004, has been an industry leader in the design, innovation, and development of high quality, functional glass pipes and accessories ever since. Grav is easily one of the most respected names in the glass industry, and taking one look at their work is a clear indication why. DankStop is proud to be an authorized retailer, offering a large selection of Grav products including their &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;dab rigs&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-pipes/&#x22; target=&#x22;_blank&#x22;&#x3E;hand pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/recycler-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;recyclers&#x3C;/a&#x3E;, and more. Based in Austin, TX, Grav Labs operates several product lines of specialty &#x3C;a href=&#x22;http://dankstop.com/scientific-glass-pipes/&#x22; target=&#x22;_blank&#x22;&#x3E;scientific glassware&#x3C;/a&#x3E; such as Helix, Stax, Upline, Gravitron, Nano, Tasters, and the premium Grav Gold Series. Aside from scientific glass, Grav Labs also manufactures high end &#x3C;a href=&#x22;http://dankstop.com/vaporizers&#x22; target=&#x22;_blank&#x22;&#x3E;vaporizers&#x3C;/a&#x3E; and &#x3C;a href=&#x22;http://dankstop.com/accessories&#x22; target=&#x22;_blank&#x22;&#x3E;accessories&#x3C;/a&#x3E;. Grav Labs prides themselves on offering a diverse line up of stylish, functional, and affordable glass. &#x3C;a href=&#x22;http://dankstop.com/brands/Grav-Labs.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Grav Labs.&#x3C;/a&#x3E;"
+    },
+    "Chameleon Glass": {
+      "url": "/brands/Grav-Labs.html",
+      "logo": "http://dankstop.com/product_images/uploaded_images/chameleonglasslogo.png",
+      "description": "Chameleon Glass is one of our most popular manufacturers, and for good reason. They have consistently been putting out top quality work in their &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-pipes/&#x22; target=&#x22;_blank&#x22;&#x3E;hand pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;vapor rigs&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/accessories&#x22; target=&#x22;_blank&#x22;&#x3E;accessories&#x3C;/a&#x3E; since 1991. Based out of Arizona, they&#x27;re a 100% American operation. Chameleon Glass has American manufacturing, American employees, and good old fashioned high quality products. Chameleon makes our extremely popular lineup of character hand pipes as well as an assortment of beautiful replacement domes and other &#x3C;a href=&#x22;http://dankstop.com/glass-accessories-downstems-and-adapters&#x22; target=&#x22;_blank&#x22;&#x3E;glass parts and accessories&#x3C;/a&#x3E;.&#xA0;&#x3C;a href=&#x22;http://dankstop.com/brands/CHAMELEON-GLASS.html&#x22;&#x3E;Check out more Chameleon Glass products.&#x3C;/a&#x3E;"
+    },
+    "JM FLOW": {
+      "url": "/brands/JM-FLOW.html",
+      "logo": "http://cdn6.bigcommerce.com/s-ss4br/product_images/l/jmflowlogo_1419284351__57331.jpg",
+      "description": "JM FLOW SCI GLASS has been an industry leader in the design, innovation, and development of high quality, functional &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E; and &#x3C;a href=&#x22;http://dankstop.com/accessories/&#x22;target=&#x22;_blank&#x22;&#x3E;accessories&#x3C;/a&#x3E; for over 10 years. The company was founded as a family business by siblings Jose and Maggie. JM FLOW SCI creates beautiful, functional, innovative, and reliable &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E; out of Southern California. DankStop is proud to be an authorized retailer offering a large selection of JM FLOW SCI products including their &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;dab rigs&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/recycler-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;recyclers&#x3C;/a&#x3E;. JM FLOW specializes in unique and innovative percolation systems. They&#x27;re pioneered several perc designs such as the Cross perc, the Octopus Perc, and the Sprinkler Perc. All of their &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass water pipes&#x3C;/a&#x3E; are made from extremely high grade, German and American lab grade &#x3C;a href=&#x22;http://dankstop.com/scientific-glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;scientific glass&#x3C;/a&#x3E;."
+    },
+    "Pulse Glass": {
+      "url": "/brands/Pulse-Glass.html",
+      "logo": "http://cdn6.bigcommerce.com/s-ss4br/product_images/h/pulseglass_logo_1425605585__29723.jpg",
+      "description": "Pulse Glass is an up-and-coming glass company located in Los Angeles, California and founded in 2012. In just a few short years, Pulse Glass has proved themselves as experts in the glass industry, with their selection of &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;vapor rigs&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/recycler-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;recyclers&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;. Their hand-blown scientific glass pieces are made of &#x3C;span&#x3E;high quality German Schott Glass&#x3C;/span&#x3E; with an emphasis on functionality, efficiency, and artistic creativity. To add to their already unique design, Pulse Glass &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E; all come with a platinum label, giving them another noticeable and exclusive characteristic. &#xA0;&#x3C;a href=&#x22;http://dankstop.com/brands/pulse-glass.html&#x22;&#x3E;See more products from Pulse Glass.&#x3C;/a&#x3E;"
+    },
+    "Empire Glassworks": {
+      "url": "/brands/Empire-Glassworks.html",
+      "logo": "http://cdn6.bigcommerce.com/s-ss4br/product_images/y/empirelogo_1419284267__80199.png",
+      "description": "Empire Glassworks is a glass manufacturer created in 2013 and located just an hour south of Los Angeles in Placentia, California. Although a relatively new company, the owners and staff of Empire Glassworks have over 40 years of experience creating hand crafted glass. Not only do they have a wide selection of &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;oil rigs&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;hand pipes&#x3C;/a&#x3E;, but they also construct &#x3C;a href=&#x22;http://dankstop.com/glass-accessories-downstems-and-adapters&#x22; target=&#x22;_blank&#x22;&#x3E;glass accessories&#x3C;/a&#x3E; such as slides, &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps&#x22; target=&#x22;_blank&#x22;&#x3E;dabbers&#x3C;/a&#x3E;, and dab sets. When making these accessories, Empire Glassworks utilizes highly skilled glassblowers to implement a specific glassblowing process using a torch flame called &#x22;lampworking&#x22;. When it comes to most of their &#x3C;a href=&#x22;http://dankstop.com/glass-pipes/&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;vapor rigs&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;tobacco bongs&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, Empire Glassworks ensures their extreme durability and strength using dichroic glass. Dichroic glass was originally developed by NASA for use in the face shields of spacesuits. The experience, the attention to detail, and their unique and creative approach to constructing their glassware makes Empire Glassworks one of the highest rated glass companies around.&#xA0;&#x3C;a href=&#x22;http://dankstop.com/brands/empire-glassworks.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Empire Glassworks.&#x3C;/a&#x3E;"
+    },
+    "C2 Custom Creations": {
+      "url": "/brands/C2-Custom-Creations.html",
+      "logo": "http://cdn6.bigcommerce.com/s-ss4br/product_images/i/c2logo%20copy_1419283911__88366.png",
+      "description": "C2 Custom Creations is an American glass company based out of North Hollywood, California and founded in 1994. Bringing with them over 20 years in the glass industry, C2 Glass has made a name for themselves because of their experience and reliability. Their large array of &#x3C;a href=&#x22;http://dankstop.com/scientific-glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;scientific glass pipes&#x3C;/a&#x3E; including &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;concentrate pipes&#x3C;/a&#x3E; are made from only the most durable materials. The use of &#x3C;a href=&#x22;http://dankstop.com/scientific-glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;scientific glass&#x3C;/a&#x3E; gives C2 Glass &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;tobacco bongs&#x3C;/a&#x3E; a clean and sleek appearance. C2 Custom Creations glassware is known for diverse and unique percolators including mushroom percs, showerhead percs, barrel percs, inline percs, ratchet percs, and many more.&#xA0;&#x3C;a href=&#x22;http://dankstop.com/brands/c2-custom-creations.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from C2 Custom Creations.&#x3C;/a&#x3E;"
+    },
+    "Brand20": {
       "url": "value",
       "img": "value",
       "description": "value"
     },
-    "Brand3": {
+    "Brand11": {
       "url": "value",
       "img": "value",
       "description": "value"
     },
-    "Brand4": {
+    "Brand12": {
       "url": "value",
       "img": "value",
       "description": "value"
     },
-    "Brand5": {
+    "Brand13": {
       "url": "value",
       "img": "value",
       "description": "value"
     },
-    "Brand6": {
+    "Brand14": {
       "url": "value",
       "img": "value",
       "description": "value"
     },
-    "Brand7": {
+    "Brand15": {
       "url": "value",
       "img": "value",
       "description": "value"
     },
-    "Brand8": {
+    "Brand16": {
       "url": "value",
       "img": "value",
       "description": "value"
     },
-    "Brand9": {
+    "Brand17": {
       "url": "value",
       "img": "value",
       "description": "value"
     },
-    "Brand10": {
+    "Brand18": {
+      "url": "value",
+      "img": "value",
+      "description": "value"
+    },
+    "Brand19": {
+      "url": "value",
+      "img": "value",
+      "description": "value"
+    },
+    "Brand21": {
       "url": "value",
       "img": "value",
       "description": "value"
