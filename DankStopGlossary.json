@@ -1,204 +1,253 @@
 var DankStopGlossary = {
-    "type": {
-      "dab rig": {
-        "aka": "concentrate pipe",
-        "description": "Dab Rigs (also known as vapor rigs, concentrate rigs, concentrate pipes, or oil rigs) are a specific type of water pipe used for the consumption of essential oils, legal concentrates, and legal waxes. Vapor Rigs feature a joint (10mm, 14mm, or 18mm) and have a different process depending on the type of nail used. With a standard dome and nail, simply remove the dome and heat the nail with a butane torch. Place the dome back over the nail and use a dabber or dab tool to put the desired amount of concentrates on to the nail and inhale. A domeless nail requires the same process except with more convenience as there is no need to remove and replace the dome. The essential oils will vaporize due to the high temperature of the nail, and vapor will travel through the concentrate rig ready for smooth inhalation."
-      },
-      "water pipes": {
-        "aka": "tobacco bongs",
-        "description": "Water pipes are usually larger pipes that contain water that bubbles as you pull from them. The water, combined with the many different structured percolators, filters and diffuses your smoke for smooth hits. Glass water pipes can contain features such as bent necks, ice catchers, and flared mouthpieces that make your smoking experience even more enjoyable."
-      },
-      "glass hand pipe": {
-        "aka": "spoon",
-        "description": "Hand pipes (also known as pipes, glass pipes, spoons, or tobacco bowls) are hand held smoking devices that feature a mouthpiece, tubing, and a bowl for your dry herbs and tobacco. Spoons feature a carb on the side of the bowl to allow you to control the airflow that travels through the pipe. The carb allows the user to control the intensity of the hits as the smoke flows from the bowl to the mouthpiece."
-      },
-      "recycler rig": {
-        "aka": "recycler rig",
-        "description": "Recyclers are a type of dab rig that features a unique dual chamber design. The main chamber houses the perc, or in some cases multiple percolators, that begin the diffusion process. After the vapor and water travel through the main chamber, it moves through separation tubes to the recycling chamber. Because of these concentrate rigs’ functional design, the water and vapor loop between the two chambers. The vapor passes through the percs multiple times before leaving out of the mouthpiece, ensuring that it is completely filtered and smooth."
-      },
-      "vaporizer": {
-        "aka": "vaporizer",
-        "description": "Vaporizers are generally considered a healthier alternative to traditional smoking methods. Depending on the model, vapes can be used for dry herbs or tobacco, legal concentrates or essential oils, or both. Vaporizing does just what it sounds like; creates vapor for inhalation rather than smoke due to combustion. This happens through a process that uses convection technology."
-      },
-      "concentrate vaporizer": {
-        "aka": "concentrate vaporizer",
-        "description": "Concentrate vaporizers are vapes specifically designed for use with legal concentrates, essential oils, and legal waxes. Concentrate vaporizers contain a metal coil that heats up to vaporize your substances and turn them into tasty vapor ready for inhalation."
-      },
-      "dry herb vaporizer": {
-        "aka": "dry herb vaporizer",
-        "description": "Dry herb vaporizers are vapes manufactured specifically for use with dry herbs and tobacco. These vaporizers contain a heating chamber that uses convection technology. Vaporizing does just what it sounds like; creates vapor for inhalation rather than smoke due to combustion."
-      },
-      "pendant rig": {
-        "aka": "pendant rig",
-        "description": "Pendant dab rigs contain a small circle that you can put a string through. These tiny concentrate pipes can be worn around your neck for easy transportation and portability."
-      },
-      "puck rig": {
-        "aka": "puck rig",
-        "description": "A puck concentrate rig features a unique chamber that resembles a hockey puck. The flat circular chamber of the puck rig provides an awesome aesthetic as well as making sure the dab rig always has a flat sturdy base."
-      },
-      "snorkel rig": {
-        "aka": "snorkel rig",
-        "description": "Snorkel Rigs are a unique type of oil rig that uses a standard nail but no dome. Instead, there is a curved glass piece that resides above the nail. As your concentrates vaporize on the nail and you inhale, the vapor is sucked upwards into the above glass tube and then flows into the concentrate pipe."
-      },
-      "glass pendant": {
-        "aka": "glass pendant",
-        "description": "Glass pendants are intricately crafted necklaces that feature awesome designs and stunning glass artwork. Some glass pendants contain a dabber at the end so no matter where you go, you can always have this concentrate tool at your disposal."
-      },
-      "grinder": {
-        "aka": "grinder",
-        "description": "Grinders are a convenient smoking accessory that shreds and breaks down your dry herbs, spices, or tobacco. The intent of grinders is to take your various substances and transform them into a more practical form. Grinders come in varying sizes from small to large and can contain two, three, or four sections depending on how functionable you want this smoking accessory to be. Grinders allow for a quick process and you never lose any of your dry herbs or tobacco, both of which can save you time and money."
-      },
-      "bubbler": {
-        "aka": "bubbler",
-        "description": "Bubblers are the perfect hybrid of a water pipe and a hand pipe. Bubblers are hand held and portable like hand pipes, but contain water and percolators to give you all the benefits that water pipes provide. Glass bubblers give you the smooth and filtered hits that water pipes provide, while still being not too cumbersome to transport."
-      },
-      "bowl": {
-        "aka": "slide",
-        "description": "Bowls (also commonly called slides) are an integral part of any water pipe or pipe for dry herbs and tobacco that contains a joint. Depending on the joint type, these bowls fit in or over the joint with the sole purpose of holding your dry herbs and tobacco. Some bowls include glass screens to ensure your tobacco doesn’t fall into the glass pipe."
-      },
-      "ashcatcher": {
-        "aka": "ashcatcher",
-        "description": "Ashcatchers are a glass accessory that function exactly as the name would suggest, catching your ash or debris to keep your water pipe clean. Ashcatchers attach to the joint of a water pipe and contain a percolator or numerous percs. These percs start the diffusion process before smoke even reaches the water pipe, increasing the overall filtration for optimal inhalation."
-      },
-      "titanium nail": {
-        "aka": "titanium nail",
-        "description": "Titanium nails are an accessory used with concentrate rigs to consume legal waxes, concentrates, or essential oils. TI nails are known for their longevity and durability, as they are constructed from strong materials. To add to their numerous benefits, titanium nails have superb heat retention and are very easy to use. Just heat them with a butane torch, then use a dabber or dab tool to place your concentrates on the nail. Rather than combust like dry herbs or tobacco, the essential oils vaporize and the vapor travels through the dab rig as you inhale."
-      },
-      "quartz nail": {
-        "aka": "quartz nail",
-        "description": "Quartz nails are an accessory used with vapor rigs to consume legal concentrates, waxes, or essential oils. Quartz nails are a great replacement option over a standard glass nail as they are more durable and have a very simple cleaning process. Many people say they prefer quartz nails to titanium nails because of the clean taste that comes with using a quartz nail. To use a quartz nail, just heat it with a butane torch then place your legal concentrates on it and inhale the vapor that is produced."
-      },
-      "ceramic nail": {
-        "aka": "ceramic nail",
-        "description": "Ceramic nails are a replacement to standard glass nails for use with legal concentrates and essential oils. Ceramic nails are preferred by some because of their longer heat retention than titanium and quartz nails. To use a ceramic nail, just place it in the appropriate joint of a dab rig and heat it with a torch. Using a dabber, place your concentrates or waxes on the nail and inhale the vapor created."
-      },
-      "dabber": {
-        "aka": "dabber",
-        "description": "Dabbers are a tool used to make your dabbing experience simpler and more convenient. Dabbers come in different sizes and styles, but their function is to easily and safely transport your concentrates on to the heated nail of your concentrate rig."
-      },
-      "dropdown": {
-        "aka": "dropdown",
-        "description": "Dropdowns are a glass accessory that features two joints connected by a glass tube. Dropdowns have two extremely beneficial functions. The first is that it allows you to heat your nail away from the joint of your vapor rig, avoiding heat stress, fractures, or heat cracking that can occur when a nail is heated too close to the joint. The second is that, depending on the joints, dropdowns can turn your female jointed water pipe into a dab rig or your male jointed concentrate rig into a water pipe."
-      },
-      "reclaim catcher": {
-        "aka": "reclaim catcher",
-        "description": "Reclaim catchers are a glass accessory for use with vapor rigs that can save you money and legal concentrates. Reclaimers branch off of the appropriate sized joint, and contain a dish that connects to the bottom of the joint. When using a dab rig, oils will naturally trickle down into the joint causing dirty residue. In addition to making sure your joint doesn’t get dirty, the dish of the reclaim catcher will collect the excess concentrates so you can reuse them later."
-      },
-      "glass on glass adapter": {
-        "aka": "glass on glass adapter",
-        "description": "Glass on glass adapters are an accessory that allows the user to optimize their jointed water pipe or dab rig to their specific preference. Depending on the adapter, they can either change the joint size or whether the joint is male or female. Glass adapters can change a female jointed water pipe into a male jointed concentrate pipe or a male jointed vapor rig into a female jointed water pipe."
-      },
-      "chillum": {
-        "aka": "one hitter",
-        "description": "Chillums are miniature glass hand pipes that have the benefit of being discreet and easily portable. Also referred to as one hitters, these pipes offer a convenient smoking experience. Simply pack your dry herbs or tobacco in the bowl, light it up, and inhale."
-      },
-      "carb cap": {
-        "aka": "carb cap",
-        "description": "Carb caps are an extremely functional accessory for dab rigs that allow you to take low temperature dabs while not losing any valuable vapor. After the standard process of heating up your domeless nail and adding the concentrates to it, immediately place your carb cap on top of it. Carb caps have a hole that provides ventilation and airflow while acting as a cover to ensure no vapor escapes. The added airflow gives great heat retention while also providing a low temperature dab hit. \r Glass Domes → Glass domes come with standard glass, quartz, ceramic, and titanium nails. While the nail goes inside the joint, the glass dome goes over the joint and the nail. The purpose of glass domes is to confine vapor once concentrates are added to the heated nail. The design of domes ensures vapor doesn’t escape into the air and is instead all inhaled into the concentrate pipe."
-      },
-      "stash jar": {
-        "aka": "stash jar",
-        "description": "Stash jars are glass jars intended to hold your dry herbs or tobacco. They come with a sealable lid or cork to be smell-proof, sturdy, and portable."
-      },
-      "concentrate jar": {
-        "aka": "concentrate jar",
-        "description": "Concentrate jars are silicon jars intended to hold your legal concentrates or essential oils. Coming in a variety of shapes, these jars contain a sealable lid to guarantee your concentrates are safe and still portable."
-      },
-      "rolling tray": {
-        "aka": "rolling tray",
-        "description": "Rolling trays contain a flat surface and depending on the product, are made from stainless steel or aluminum. Rolling trays give you a nice flat surface to give you enough space for all of your rolling needs."
-      },
-      "rolling papers": {
-        "aka": "rolling papers",
-        "description": "Rolling papers are leafed tobacco papers made from various materials depending on the product. These papers are intended to allow you to roll your own cigarettes with as much tobacco as you prefer."
-      },
-      "downstem": {
-        "aka": "downstem",
-        "description": "Glass downstems are an addition to water pipes that increase filtration of your smoke. Removable downstems go into your jointed water pipe and add extra percolation. Downstems contain holes or slits to diffuse your smoke for cleaner and smoother hits."
-      }
+  "type": {
+    "dab rig": {
+      "aka": "concentrate pipe",
+      "description": "Dab Rigs (also known as vapor rigs, concentrate rigs, concentrate pipes, or oil rigs) are a specific type of water pipe used for the consumption of essential oils, legal concentrates, and legal waxes. Vapor Rigs feature a joint (10mm, 14mm, or 18mm) and have a different process depending on the type of nail used. With a standard dome and nail, simply remove the dome and heat the nail with a butane torch. Place the dome back over the nail and use a dabber or dab tool to put the desired amount of concentrates on to the nail and inhale. A domeless nail requires the same process except with more convenience as there is no need to remove and replace the dome. The essential oils will vaporize due to the high temperature of the nail, and vapor will travel through the concentrate rig ready for smooth inhalation."
     },
+    "water pipes": {
+      "aka": "tobacco bongs",
+      "description": "Water pipes are usually larger pipes that contain water that bubbles as you pull from them. The water, combined with the many different structured percolators, filters and diffuses your smoke for smooth hits. Glass water pipes can contain features such as bent necks, ice catchers, and flared mouthpieces that make your smoking experience even more enjoyable."
+    },
+    "glass hand pipe": {
+      "aka": "spoon",
+      "description": "Hand pipes (also known as pipes, glass pipes, spoons, or tobacco bowls) are hand held smoking devices that feature a mouthpiece, tubing, and a bowl for your dry herbs and tobacco. Spoons feature a carb on the side of the bowl to allow you to control the airflow that travels through the pipe. The carb allows the user to control the intensity of the hits as the smoke flows from the bowl to the mouthpiece."
+    },
+    "recycler rig": {
+      "aka": "recycler rig",
+      "description": "Recyclers are a type of dab rig that features a unique dual chamber design. The main chamber houses the perc, or in some cases multiple percolators, that begin the diffusion process. After the vapor and water travel through the main chamber, it moves through separation tubes to the recycling chamber. Because of these concentrate rigs’ functional design, the water and vapor loop between the two chambers. The vapor passes through the percs multiple times before leaving out of the mouthpiece, ensuring that it is completely filtered and smooth."
+    },
+    "vaporizer": {
+      "aka": "vaporizer",
+      "description": "Vaporizers are generally considered a healthier alternative to traditional smoking methods. Depending on the model, vapes can be used for dry herbs or tobacco, legal concentrates or essential oils, or both. Vaporizing does just what it sounds like; creates vapor for inhalation rather than smoke due to combustion. This happens through a process that uses convection technology."
+    },
+    "concentrate vaporizer": {
+      "aka": "concentrate vaporizer",
+      "description": "Concentrate vaporizers are vapes specifically designed for use with legal concentrates, essential oils, and legal waxes. Concentrate vaporizers contain a metal coil that heats up to vaporize your substances and turn them into tasty vapor ready for inhalation."
+    },
+    "dry herb vaporizer": {
+      "aka": "dry herb vaporizer",
+      "description": "Dry herb vaporizers are vapes manufactured specifically for use with dry herbs and tobacco. These vaporizers contain a heating chamber that uses convection technology. Vaporizing does just what it sounds like; creates vapor for inhalation rather than smoke due to combustion."
+    },
+    "pendant rig": {
+      "aka": "pendant rig",
+      "description": "Pendant dab rigs contain a small circle that you can put a string through. These tiny concentrate pipes can be worn around your neck for easy transportation and portability."
+    },
+    "puck rig": {
+      "aka": "puck rig",
+      "description": "A puck concentrate rig features a unique chamber that resembles a hockey puck. The flat circular chamber of the puck rig provides an awesome aesthetic as well as making sure the dab rig always has a flat sturdy base."
+    },
+    "snorkel rig": {
+      "aka": "snorkel rig",
+      "description": "Snorkel Rigs are a unique type of oil rig that uses a standard nail but no dome. Instead, there is a curved glass piece that resides above the nail. As your concentrates vaporize on the nail and you inhale, the vapor is sucked upwards into the above glass tube and then flows into the concentrate pipe."
+    },
+    "glass pendant": {
+      "aka": "glass pendant",
+      "description": "Glass pendants are intricately crafted necklaces that feature awesome designs and stunning glass artwork. Some glass pendants contain a dabber at the end so no matter where you go, you can always have this concentrate tool at your disposal."
+    },
+    "grinder": {
+      "aka": "grinder",
+      "description": "Grinders are a convenient smoking accessory that shreds and breaks down your dry herbs, spices, or tobacco. The intent of grinders is to take your various substances and transform them into a more practical form. Grinders come in varying sizes from small to large and can contain two, three, or four sections depending on how functionable you want this smoking accessory to be. Grinders allow for a quick process and you never lose any of your dry herbs or tobacco, both of which can save you time and money."
+    },
+    "bubbler": {
+      "aka": "bubbler",
+      "description": "Bubblers are the perfect hybrid of a water pipe and a hand pipe. Bubblers are hand held and portable like hand pipes, but contain water and percolators to give you all the benefits that water pipes provide. Glass bubblers give you the smooth and filtered hits that water pipes provide, while still being not too cumbersome to transport."
+    },
+    "bowl": {
+      "aka": "slide",
+      "description": "Bowls (also commonly called slides) are an integral part of any water pipe or pipe for dry herbs and tobacco that contains a joint. Depending on the joint type, these bowls fit in or over the joint with the sole purpose of holding your dry herbs and tobacco. Some bowls include glass screens to ensure your tobacco doesn’t fall into the glass pipe."
+    },
+    "ashcatcher": {
+      "aka": "ashcatcher",
+      "description": "Ashcatchers are a glass accessory that function exactly as the name would suggest, catching your ash or debris to keep your water pipe clean. Ashcatchers attach to the joint of a water pipe and contain a percolator or numerous percs. These percs start the diffusion process before smoke even reaches the water pipe, increasing the overall filtration for optimal inhalation."
+    },
+    "titanium nail": {
+      "aka": "titanium nail",
+      "description": "Titanium nails are an accessory used with concentrate rigs to consume legal waxes, concentrates, or essential oils. TI nails are known for their longevity and durability, as they are constructed from strong materials. To add to their numerous benefits, titanium nails have superb heat retention and are very easy to use. Just heat them with a butane torch, then use a dabber or dab tool to place your concentrates on the nail. Rather than combust like dry herbs or tobacco, the essential oils vaporize and the vapor travels through the dab rig as you inhale."
+    },
+    "quartz nail": {
+      "aka": "quartz nail",
+      "description": "Quartz nails are an accessory used with vapor rigs to consume legal concentrates, waxes, or essential oils. Quartz nails are a great replacement option over a standard glass nail as they are more durable and have a very simple cleaning process. Many people say they prefer quartz nails to titanium nails because of the clean taste that comes with using a quartz nail. To use a quartz nail, just heat it with a butane torch then place your legal concentrates on it and inhale the vapor that is produced."
+    },
+    "ceramic nail": {
+      "aka": "ceramic nail",
+      "description": "Ceramic nails are a replacement to standard glass nails for use with legal concentrates and essential oils. Ceramic nails are preferred by some because of their longer heat retention than titanium and quartz nails. To use a ceramic nail, just place it in the appropriate joint of a dab rig and heat it with a torch. Using a dabber, place your concentrates or waxes on the nail and inhale the vapor created."
+    },
+    "dabber": {
+      "aka": "dabber",
+      "description": "Dabbers are a tool used to make your dabbing experience simpler and more convenient. Dabbers come in different sizes and styles, but their function is to easily and safely transport your concentrates on to the heated nail of your concentrate rig."
+    },
+    "dropdown": {
+      "aka": "dropdown",
+      "description": "Dropdowns are a glass accessory that features two joints connected by a glass tube. Dropdowns have two extremely beneficial functions. The first is that it allows you to heat your nail away from the joint of your vapor rig, avoiding heat stress, fractures, or heat cracking that can occur when a nail is heated too close to the joint. The second is that, depending on the joints, dropdowns can turn your female jointed water pipe into a dab rig or your male jointed concentrate rig into a water pipe."
+    },
+    "reclaim catcher": {
+      "aka": "reclaim catcher",
+      "description": "Reclaim catchers are a glass accessory for use with vapor rigs that can save you money and legal concentrates. Reclaimers branch off of the appropriate sized joint, and contain a dish that connects to the bottom of the joint. When using a dab rig, oils will naturally trickle down into the joint causing dirty residue. In addition to making sure your joint doesn’t get dirty, the dish of the reclaim catcher will collect the excess concentrates so you can reuse them later."
+    },
+    "glass on glass adapter": {
+      "aka": "glass on glass adapter",
+      "description": "Glass on glass adapters are an accessory that allows the user to optimize their jointed water pipe or dab rig to their specific preference. Depending on the adapter, they can either change the joint size or whether the joint is male or female. Glass adapters can change a female jointed water pipe into a male jointed concentrate pipe or a male jointed vapor rig into a female jointed water pipe."
+    },
+    "chillum": {
+      "aka": "one hitter",
+      "description": "Chillums are miniature glass hand pipes that have the benefit of being discreet and easily portable. Also referred to as one hitters, these pipes offer a convenient smoking experience. Simply pack your dry herbs or tobacco in the bowl, light it up, and inhale."
+    },
+    "carb cap": {
+      "aka": "carb cap",
+      "description": "Carb caps are an extremely functional accessory for dab rigs that allow you to take low temperature dabs while not losing any valuable vapor. After the standard process of heating up your domeless nail and adding the concentrates to it, immediately place your carb cap on top of it. Carb caps have a hole that provides ventilation and airflow while acting as a cover to ensure no vapor escapes. The added airflow gives great heat retention while also providing a low temperature dab hit. \r Glass Domes → Glass domes come with standard glass, quartz, ceramic, and titanium nails. While the nail goes inside the joint, the glass dome goes over the joint and the nail. The purpose of glass domes is to confine vapor once concentrates are added to the heated nail. The design of domes ensures vapor doesn’t escape into the air and is instead all inhaled into the concentrate pipe."
+    },
+    "stash jar": {
+      "aka": "stash jar",
+      "description": "Stash jars are glass jars intended to hold your dry herbs or tobacco. They come with a sealable lid or cork to be smell-proof, sturdy, and portable."
+    },
+    "concentrate jar": {
+      "aka": "concentrate jar",
+      "description": "Concentrate jars are silicon jars intended to hold your legal concentrates or essential oils. Coming in a variety of shapes, these jars contain a sealable lid to guarantee your concentrates are safe and still portable."
+    },
+    "rolling tray": {
+      "aka": "rolling tray",
+      "description": "Rolling trays contain a flat surface and depending on the product, are made from stainless steel or aluminum. Rolling trays give you a nice flat surface to give you enough space for all of your rolling needs."
+    },
+    "rolling papers": {
+      "aka": "rolling papers",
+      "description": "Rolling papers are leafed tobacco papers made from various materials depending on the product. These papers are intended to allow you to roll your own cigarettes with as much tobacco as you prefer."
+    },
+    "downstem": {
+      "aka": "downstem",
+      "description": "Glass downstems are an addition to water pipes that increase filtration of your smoke. Removable downstems go into your jointed water pipe and add extra percolation. Downstems contain holes or slits to diffuse your smoke for cleaner and smoother hits."
+    }
+  },
   "feature": {
-    "perc":{
-    "diffused downstem": "This is the most simple design for a percolator. The glass straight tube has slits or holes at its base under the water which allows the smoke to cool down as it travels through it.",
-    "tree": "When it comes to tree percs, the more arms it has the more diffusion that can happen, creating a larger separation of the smoke. The arms of the tree usually have slits on the side, and constructed with either a closed or open bottom. Smaller slits lead to smaller bubbles which results in more diffusion, filtration, and percolation.",
-    "disc": "Disc percolators are circular percs which resemble a disc. Disc percs have slits or holes for filtration and diffusion. They usually come in specific types such as turbine disc percs, honeycomb percs, or ratchet disc percs.",
-    "turbine disc": "Turbine disc percs are a type of diffusion system consisting of a solid disc of angled slits placed inside the water chamber. The angled slits create a spinning effect which both cools and diffuses the smoke while creating a unique visual effect.",
-    "crystal ball": "Crystal ball percs are a circular perc with angled slits intertwining across it. Its shape and the intertwining slits make the perc appear like a crystal ball.",
-    "dome": "Dome percolators are called this because of their shape. They have slits and holes where the dome touches the bottom. Diffusion happens when the smoke passes through the dome, and separates when going through the holes or slits.",
-    "barrel": "Barrel percolators are a specific type of dome perc. They have more slits than a traditional dome perc, while the inner chamber isn 't as large which creates less drag.",
-    "showerhead": "Showerhead percolators have a thin vertical tube that widens into a round chamber. They have slits or holes for increased filtration and diffusion. Their name comes from their resemblance to a showerhead.",
-    "honeycomb": "Honeycomb percs are a type of disc perc, but they have more diffusion because they usually have at least 30 small holes through which the smoke must pass. The holes must be the correct size because large holes won't filter the smoke efficiently and small holes will create too much drag.",
-    "ratchet": "atchet percs are a type of disc perc with holes lining the perimeter of the disc to increase filtration and the flow of smoke.",
-    "waffle": "Waffle percs are similar to disc percs except they have holes rather than slits. Their appearance is similar to that of a waffle fry.",
-    "matrix": "Matrix percs are a cylindrical chamber with vertical and horizontal slits or grooves.",
-    "stereo matrix": "Stereo matrix percs consist of two smaller matrix percolators stacked on top of each other. This usually occurs in larger water pipes with two chambers, where one matrix perc is housed in each chamber.",
-    "reti": "Reti percolators consist of two cylinders, with a smaller one inside a larger one. Diffusion occurs when smoke passes through the slits of the cylinders.",
-    "ufo": "UFO percs feature a rounded top with a glass circle base. They have a series of slits around the circumference of the glass circle. Smoke passes through these slits to create serious diffusion and filtration. UFO percs are often sought after because of their efficiency and ease of cleaning.",
-    "swiss": "Swiss percs are a vertical diffusion system with holes on a large disc. The name derives from the percolators resemblance to swiss cheese.",
-    "inline": "Inline percolators are a straight perc composed of a slit or gridded tube inside a perpendicular chamber.",
-    "stemline": "Stemline percs are a type of inline percolator that branches straight off of the joint.",
-    "donut": "Donut percs are a circular perc that has a hole in the middle to provide extra filtering of the smoke and also stops water from splashing up towards the mouthpiece. This type of percolator gets its name because of it looks like a donut.",
-    "cross": "Cross percs are one of the latest inventions from one of the leading percolator innovators out there, JM Flow. This percolator has an intricate design with a circular center with multiple circle pieces branching out from it. Each of these circles has slits in the form of a cross that leads to the most smoke filtration and a smoother hit for the smoker.",
-    "inset": "Inset percs are contained inside the chamber of the water pipe and are an indented perc that creates a pocket. Inset percolators have slits around their circumference to filter and diffuse the smoke.",
-    "circ": "A circ perc is a circular percolator that usually contains numerous rings with spacing between them. This spacing and the holes/slits of the perc allow for intense filtration.",
-    "sprinkler": "A sprinkler perc is a circular perc featuring multiple tubes branching out in all directions. Similar to a tree perc, the smoke goes through the circular part and leaves out through the many different arms. The separation of the smoke/vapor causes filtration and diffusion for optimal pulls.",
-    "j-hook": "A J-Hook perc gets its name because it has the shape of an upside-down J. It usually connects to a different type of perc and is generally houses in the upper chamber of a water pipe or concentrate rig.",
-    "tongue": "A tongue perc resembles a tongue and its unique design has slits and holes to rigorously diffuse and filter vapor and smoke."
+    "perc": {
+      "diffused downstem": "This is the most simple design for a percolator. The glass straight tube has slits or holes at its base under the water which allows the smoke to cool down as it travels through it.",
+      "tree": "When it comes to tree percs, the more arms it has the more diffusion that can happen, creating a larger separation of the smoke. The arms of the tree usually have slits on the side, and constructed with either a closed or open bottom. Smaller slits lead to smaller bubbles which results in more diffusion, filtration, and percolation.",
+      "disc": "Disc percolators are circular percs which resemble a disc. Disc percs have slits or holes for filtration and diffusion. They usually come in specific types such as turbine disc percs, honeycomb percs, or ratchet disc percs.",
+      "turbine disc": "Turbine disc percs are a type of diffusion system consisting of a solid disc of angled slits placed inside the water chamber. The angled slits create a spinning effect which both cools and diffuses the smoke while creating a unique visual effect.",
+      "crystal ball": "Crystal ball percs are a circular perc with angled slits intertwining across it. Its shape and the intertwining slits make the perc appear like a crystal ball.",
+      "dome": "Dome percolators are called this because of their shape. They have slits and holes where the dome touches the bottom. Diffusion happens when the smoke passes through the dome, and separates when going through the holes or slits.",
+      "barrel": "Barrel percolators are a specific type of dome perc. They have more slits than a traditional dome perc, while the inner chamber isn 't as large which creates less drag.",
+      "showerhead": "Showerhead percolators have a thin vertical tube that widens into a round chamber. They have slits or holes for increased filtration and diffusion. Their name comes from their resemblance to a showerhead.",
+      "honeycomb": "Honeycomb percs are a type of disc perc, but they have more diffusion because they usually have at least 30 small holes through which the smoke must pass. The holes must be the correct size because large holes won't filter the smoke efficiently and small holes will create too much drag.",
+      "ratchet": "atchet percs are a type of disc perc with holes lining the perimeter of the disc to increase filtration and the flow of smoke.",
+      "waffle": "Waffle percs are similar to disc percs except they have holes rather than slits. Their appearance is similar to that of a waffle fry.",
+      "matrix": "Matrix percs are a cylindrical chamber with vertical and horizontal slits or grooves.",
+      "stereo matrix": "Stereo matrix percs consist of two smaller matrix percolators stacked on top of each other. This usually occurs in larger water pipes with two chambers, where one matrix perc is housed in each chamber.",
+      "reti": "Reti percolators consist of two cylinders, with a smaller one inside a larger one. Diffusion occurs when smoke passes through the slits of the cylinders.",
+      "ufo": "UFO percs feature a rounded top with a glass circle base. They have a series of slits around the circumference of the glass circle. Smoke passes through these slits to create serious diffusion and filtration. UFO percs are often sought after because of their efficiency and ease of cleaning.",
+      "swiss": "Swiss percs are a vertical diffusion system with holes on a large disc. The name derives from the percolators resemblance to swiss cheese.",
+      "inline": "Inline percolators are a straight perc composed of a slit or gridded tube inside a perpendicular chamber.",
+      "stemline": "Stemline percs are a type of inline percolator that branches straight off of the joint.",
+      "donut": "Donut percs are a circular perc that has a hole in the middle to provide extra filtering of the smoke and also stops water from splashing up towards the mouthpiece. This type of percolator gets its name because of it looks like a donut.",
+      "cross": "Cross percs are one of the latest inventions from one of the leading percolator innovators out there, JM Flow. This percolator has an intricate design with a circular center with multiple circle pieces branching out from it. Each of these circles has slits in the form of a cross that leads to the most smoke filtration and a smoother hit for the smoker.",
+      "inset": "Inset percs are contained inside the chamber of the water pipe and are an indented perc that creates a pocket. Inset percolators have slits around their circumference to filter and diffuse the smoke.",
+      "circ": "A circ perc is a circular percolator that usually contains numerous rings with spacing between them. This spacing and the holes/slits of the perc allow for intense filtration.",
+      "sprinkler": "A sprinkler perc is a circular perc featuring multiple tubes branching out in all directions. Similar to a tree perc, the smoke goes through the circular part and leaves out through the many different arms. The separation of the smoke/vapor causes filtration and diffusion for optimal pulls.",
+      "j-hook": "A J-Hook perc gets its name because it has the shape of an upside-down J. It usually connects to a different type of perc and is generally houses in the upper chamber of a water pipe or concentrate rig.",
+      "tongue": "A tongue perc resembles a tongue and its unique design has slits and holes to rigorously diffuse and filter vapor and smoke."
     },
-    "thick glass":"This glass pipe contains thick glass which increases its durability and longevity. Thick glass pieces are less likely to break due to their heavy glass construction.",
-    "american glass":"This glass piece is certified to be hand blown right here in the USA. American glass has earned the reputation of being more reliable and of higher quality.",
-    "bent neck":"Bent neck designs offer aesthetic and functional qualities. Aesthetically, bent necks give a unique look to your glass water pipe. Functionally, bent necks act as a splashguard, keeping all of the water inside the pipe and outside of your mouth. They also extend the mouthpiece away from the heat source horizontally, giving a more comfortable experience.",
-    "straight neck":"Straight neck designs involve a neck branching vertically up into the mouthpiece from the chamber. They allow smoke or vapor to travel directly up to the mouthpiece.",
-    "flared mouthpiece":"Flared mouthpieces have elevated glass around the mouthpiece which make it conform perfectly to your mouth for superior comfort while smoking.",
-    "fab egg":"This piece has a faberge egg design. The fab egg chamber has a circular egg shape with a hollow center and holes that provide a distinguished design. The holes also function as a perfect holder for your dabber.",
-    "straight tube":"This water pipe is a straight tube, meaning it has a straight and vertical design from the base to the mouthpiece. Many people prefer this style because of the seamless transition of your smoke/vapor from the joint to the mouthpiece.",
-    "beaker":"This glass pipe has a beaker base chamber. Beaker style water pipes generally have a wide circular main chamber to house a large amount of smoke. Many people prefer this style because of its attractive visual appearance.",
-    "sidecar":"This piece contains a sidecar design. This means it has a neck that branches off the side of the chamber and leads to the mouthpiece. Sidecars eliminate splashback and ensure all of the water stays inside the pipe and out of your mouth.",
-    "polished joint":"A polished joint is a joint made from clear glass instead of the standard frosted glass you find on most joints. A polished joint gives a sleek and refined appearance to any water pipe.",
-    "90° joint":"A 90° joint gives a water pipe or concentrate pipe a uniform and clean look as it creates a 90° angle from the top to the chamber.",
-    "10mm male joint":"This dab rig or water pipe features a 10mm male joint. It requires a 10mm female dome or bowl for proper use.",
-    "14mm male joint":"This glass piece features a 14mm male joint. It requires a 14mm female dome or bowl for proper use.",
-    "18mm male joint":"This glass pipe features an 18mm male joint. It requires an 18mm female dome or bowl for proper use.",
-    "10mm female joint":"This water pipe or dab rig features a 10mm female joint. It requires a 10mm male bowl or domeless nail for proper consumption.",
-    "14mm female joint":"This vapor rig or glass water pipe features a 14mm female joint. It requires a 14mm male bowl or domeless nail for proper consumption.",
-    "18mm female joint":"This water pipe or concentrate pipe features an 18mm female joint. It requires an 18mm male bowl or domeless nail for proper use.",
-    "colored glass":"This piece features beautiful colored glass accents that give it a unique and aesthetically appealing appearance. Colored glass is one of the many features that can make this water pipe stand out in your glass collection.",
-    "heady glass":"Heady glass means that this dab rig or water pipe is a limited edition collector’s item. It features an intricate and unique design that mixes form with function. This is a piece of functional glass art.",
-    "scientific glass":"Scientific glass means this concentrate pipe or water pipe is made from a specific type of borosilicate glass. It features clear glass (sometimes with very minor color accents), a “laboratory” design, and usually an overall design that resembles scientific equipment (glass beaker chambers, straight tubes, etc.).",
-    "clear glass":"This piece features sleek and clean clear glass that allows you to watch this concentrate rig or water pipe function. Clear glass allows you to watch the bubbles stack as your smoke/vapor percolates.",
-    "branded glass":"This glass pipe features branded glass, with logos or decals that verify it as an official product of this specific brand.",
-    "green slime glass":"Green slime glass is a specific type of colored glass that is highly sought after due to its unique and vibrant appearance.",
-    "purple slime glass":"Purple slyme glass is a specific type of colored glass that is highly sought after due to its unique and vibrant appearance.",
-    "recycler":"This dab rig features a two chamber recycler design that cause your vapor and water to loop in between the two chambers before leaving the mouthpiece. This process causes your vapor to pass through the perc, or percs, multiple times for optimally filtered and diffused hits.",
-    "dewar’s joint":"A dewar’s joint is the small straight glass tube that connects the joint to the chamber. Its purpose is to reinforce the strength of the joint and to create additional support for the glass pipe.",
-    "ice catcher":"An ice catcher is a pinched place in the neck of the water pipe that allows the user to put ice cubes into the pipe. The smoke passes through the ice and is cooled for smoother hits.",
-    "unmarked glass":"This pipe features unmarked glass. Some people prefer a completely clean look that has no logos or decals. Unmarked glass pieces allow you an uninhibited view of the function of your glass pipe’s many features.",
-    "removable mouthpiece":"A removable mouthpiece allows you to customize your rig with another detachable mouthpiece or to attach this glass piece to a larger one and use this water pipe as an ashcatcher.",
-    "reclaim catcher":"Reclaim catchers branch off of the appropriate sized joint, and contain a dish that connects to the bottom of the joint. When using a dab rig, oils will naturally trickle down into the joint causing dirty residue. In addition to making sure your joint doesn’t get dirty, the dish of the reclaim catcher will collect the excess concentrates so you can reuse them later.",
-    "themed glass":"This vapor rig or water pipe contains a themed glass design. Carrying themed glass pieces is one way we cater to the varying interests of our consumer base.",
-    "maria rings":"Maria rings are circular protruding glass rings usually found on the neck or below the mouthpiece of a water pipe or dab rig.",
-    "puck chamber":"This concentrate pipe features a unique chamber that resembles a hockey puck. The flat circular chamber of the puck rig provides an awesome aesthetic as well as making sure the dab rig always has a flat sturdy base.",
-    "pendant rig":"Pendants contain a small circle that you can put a string through. These tiny concentrate pipes can be worn around your neck for easy transportation and portability.",
-    "dome splashguard":"A domed splashguard is a domed piece of glass at the bottom of a straight neck that prevents water from splashing up into your mouth no matter how hard you pull.",
-    "deep bowl":"This water pipe features a deep bowl to allow for a large amount of dry herbs or tobacco to be packed at one time.",
-    "vapor stone":"This concentrate pipe features a vapor stone. A vapor stone takes the place of a standard joint and sucks all of the vapor into the metal stone. This causes you to lose none of your valuable vapor as a vapor stone ensures all of it goes into the rig and none is emitted into the air.",
-    "snorkel":"This oil rig features a snorkel design that uses a standard nail but no dome. Instead, there is a curved glass piece that resides above the nail. As your concentrates vaporize on the nail and you inhale, the vapor is sucked upwards into the above glass tube and then flows into the concentrate pipe.",
-    "hourglass chamber":"This water pipe or vapor rig features an hourglass chamber. The chamber indents in giving it a distinguishable hourglass shape that adds an impressive aesthetic quality.",
-    "glass opals":"This dab rig features beautiful heady glass opals. Glass opals are raised circles on the pipe that hold a detailed colored glass design.",
-    "angle-cut dome":"An angle-cut dome is a specific type of dome that features an angled design rather than the stand circular dome.",
-    "direct inject":"A direct inject design does exactly what the name would suggest; it directly injects vapor from the joint to the chamber rather than have the vapor immediately go through a perc when it leaves the joint.",
-    "can chamber":"This water pipe or dab rig features a can shaped chamber. The cylindrical chamber has a cool design that resembles a can.",
-    "glow in the dark":"Glow in the Dark → This glass piece glows in the dark. Turn the lights off and watch the amazing visual effect that comes from glow in the dark glass.",
-    "donut splashguard":"A donut splashguard is a circular glass piece with a hole in the center that is usually located between the chamber and the neck. The circle design with the hole in the middle makes sure water stays in the chamber but still allows all of your vapor to flow upwards through to the neck.",
-    "dichroic glass":"This glass piece features stunning dichroic glass. Dichro glass is worked colored glass with sparkles inside of it that changes color in certain lighting conditions.",
-    "nano":"This water pipe, bubbler, or concentrate rig is a small and portable size that gives it a discreet appearance as well as makes it easily transportable.",
-    "mini":"This water pipe, bubbler, or concentrate rig is a small and portable size that gives it a discreet appearance as well as makes it easily transportable.",
-    "micro":"This water pipe, bubbler, or concentrate rig is a small and portable size that gives it a discreet appearance as well as makes it easily transportable.",
-    "wigwag":"This water pipe or concentrate pipe features a detailed wigwag glass design. Wigwag glass is a beautiful swirl of multiple colors of glass that adds an incredible aesthetic touch to any glass piece.",
-    "sandblasted glass":"Sandblasted glass is raised frosted glass visual feature that causes any glass piece to immediately stand out in your glass collection. Sandblasted glass generally is located on the chamber or the neck and showcases a themed design."
+    "thick glass": "This glass pipe contains thick glass which increases its durability and longevity. Thick glass pieces are less likely to break due to their heavy glass construction.",
+    "american glass": "This glass piece is certified to be hand blown right here in the USA. American glass has earned the reputation of being more reliable and of higher quality.",
+    "bent neck": "Bent neck designs offer aesthetic and functional qualities. Aesthetically, bent necks give a unique look to your glass water pipe. Functionally, bent necks act as a splashguard, keeping all of the water inside the pipe and outside of your mouth. They also extend the mouthpiece away from the heat source horizontally, giving a more comfortable experience.",
+    "straight neck": "Straight neck designs involve a neck branching vertically up into the mouthpiece from the chamber. They allow smoke or vapor to travel directly up to the mouthpiece.",
+    "flared mouthpiece": "Flared mouthpieces have elevated glass around the mouthpiece which make it conform perfectly to your mouth for superior comfort while smoking.",
+    "fab egg": "This piece has a faberge egg design. The fab egg chamber has a circular egg shape with a hollow center and holes that provide a distinguished design. The holes also function as a perfect holder for your dabber.",
+    "straight tube": "This water pipe is a straight tube, meaning it has a straight and vertical design from the base to the mouthpiece. Many people prefer this style because of the seamless transition of your smoke/vapor from the joint to the mouthpiece.",
+    "beaker": "This glass pipe has a beaker base chamber. Beaker style water pipes generally have a wide circular main chamber to house a large amount of smoke. Many people prefer this style because of its attractive visual appearance.",
+    "sidecar": "This piece contains a sidecar design. This means it has a neck that branches off the side of the chamber and leads to the mouthpiece. Sidecars eliminate splashback and ensure all of the water stays inside the pipe and out of your mouth.",
+    "polished joint": "A polished joint is a joint made from clear glass instead of the standard frosted glass you find on most joints. A polished joint gives a sleek and refined appearance to any water pipe.",
+    "90° joint": "A 90° joint gives a water pipe or concentrate pipe a uniform and clean look as it creates a 90° angle from the top to the chamber.",
+    "10mm male joint": "This dab rig or water pipe features a 10mm male joint. It requires a 10mm female dome or bowl for proper use.",
+    "14mm male joint": "This glass piece features a 14mm male joint. It requires a 14mm female dome or bowl for proper use.",
+    "18mm male joint": "This glass pipe features an 18mm male joint. It requires an 18mm female dome or bowl for proper use.",
+    "10mm female joint": "This water pipe or dab rig features a 10mm female joint. It requires a 10mm male bowl or domeless nail for proper consumption.",
+    "14mm female joint": "This vapor rig or glass water pipe features a 14mm female joint. It requires a 14mm male bowl or domeless nail for proper consumption.",
+    "18mm female joint": "This water pipe or concentrate pipe features an 18mm female joint. It requires an 18mm male bowl or domeless nail for proper use.",
+    "colored glass": "This piece features beautiful colored glass accents that give it a unique and aesthetically appealing appearance. Colored glass is one of the many features that can make this water pipe stand out in your glass collection.",
+    "heady glass": "Heady glass means that this dab rig or water pipe is a limited edition collector’s item. It features an intricate and unique design that mixes form with function. This is a piece of functional glass art.",
+    "scientific glass": "Scientific glass means this concentrate pipe or water pipe is made from a specific type of borosilicate glass. It features clear glass (sometimes with very minor color accents), a “laboratory” design, and usually an overall design that resembles scientific equipment (glass beaker chambers, straight tubes, etc.).",
+    "clear glass": "This piece features sleek and clean clear glass that allows you to watch this concentrate rig or water pipe function. Clear glass allows you to watch the bubbles stack as your smoke/vapor percolates.",
+    "branded glass": "This glass pipe features branded glass, with logos or decals that verify it as an official product of this specific brand.",
+    "green slime glass": "Green slime glass is a specific type of colored glass that is highly sought after due to its unique and vibrant appearance.",
+    "purple slime glass": "Purple slyme glass is a specific type of colored glass that is highly sought after due to its unique and vibrant appearance.",
+    "recycler": "This dab rig features a two chamber recycler design that cause your vapor and water to loop in between the two chambers before leaving the mouthpiece. This process causes your vapor to pass through the perc, or percs, multiple times for optimally filtered and diffused hits.",
+    "dewar’s joint": "A dewar’s joint is the small straight glass tube that connects the joint to the chamber. Its purpose is to reinforce the strength of the joint and to create additional support for the glass pipe.",
+    "ice catcher": "An ice catcher is a pinched place in the neck of the water pipe that allows the user to put ice cubes into the pipe. The smoke passes through the ice and is cooled for smoother hits.",
+    "unmarked glass": "This pipe features unmarked glass. Some people prefer a completely clean look that has no logos or decals. Unmarked glass pieces allow you an uninhibited view of the function of your glass pipe’s many features.",
+    "removable mouthpiece": "A removable mouthpiece allows you to customize your rig with another detachable mouthpiece or to attach this glass piece to a larger one and use this water pipe as an ashcatcher.",
+    "reclaim catcher": "Reclaim catchers branch off of the appropriate sized joint, and contain a dish that connects to the bottom of the joint. When using a dab rig, oils will naturally trickle down into the joint causing dirty residue. In addition to making sure your joint doesn’t get dirty, the dish of the reclaim catcher will collect the excess concentrates so you can reuse them later.",
+    "themed glass": "This vapor rig or water pipe contains a themed glass design. Carrying themed glass pieces is one way we cater to the varying interests of our consumer base.",
+    "maria rings": "Maria rings are circular protruding glass rings usually found on the neck or below the mouthpiece of a water pipe or dab rig.",
+    "puck chamber": "This concentrate pipe features a unique chamber that resembles a hockey puck. The flat circular chamber of the puck rig provides an awesome aesthetic as well as making sure the dab rig always has a flat sturdy base.",
+    "pendant rig": "Pendants contain a small circle that you can put a string through. These tiny concentrate pipes can be worn around your neck for easy transportation and portability.",
+    "dome splashguard": "A domed splashguard is a domed piece of glass at the bottom of a straight neck that prevents water from splashing up into your mouth no matter how hard you pull.",
+    "deep bowl": "This water pipe features a deep bowl to allow for a large amount of dry herbs or tobacco to be packed at one time.",
+    "vapor stone": "This concentrate pipe features a vapor stone. A vapor stone takes the place of a standard joint and sucks all of the vapor into the metal stone. This causes you to lose none of your valuable vapor as a vapor stone ensures all of it goes into the rig and none is emitted into the air.",
+    "snorkel": "This oil rig features a snorkel design that uses a standard nail but no dome. Instead, there is a curved glass piece that resides above the nail. As your concentrates vaporize on the nail and you inhale, the vapor is sucked upwards into the above glass tube and then flows into the concentrate pipe.",
+    "hourglass chamber": "This water pipe or vapor rig features an hourglass chamber. The chamber indents in giving it a distinguishable hourglass shape that adds an impressive aesthetic quality.",
+    "glass opals": "This dab rig features beautiful heady glass opals. Glass opals are raised circles on the pipe that hold a detailed colored glass design.",
+    "angle-cut dome": "An angle-cut dome is a specific type of dome that features an angled design rather than the stand circular dome.",
+    "direct inject": "A direct inject design does exactly what the name would suggest; it directly injects vapor from the joint to the chamber rather than have the vapor immediately go through a perc when it leaves the joint.",
+    "can chamber": "This water pipe or dab rig features a can shaped chamber. The cylindrical chamber has a cool design that resembles a can.",
+    "glow in the dark": "Glow in the Dark → This glass piece glows in the dark. Turn the lights off and watch the amazing visual effect that comes from glow in the dark glass.",
+    "donut splashguard": "A donut splashguard is a circular glass piece with a hole in the center that is usually located between the chamber and the neck. The circle design with the hole in the middle makes sure water stays in the chamber but still allows all of your vapor to flow upwards through to the neck.",
+    "dichroic glass": "This glass piece features stunning dichroic glass. Dichro glass is worked colored glass with sparkles inside of it that changes color in certain lighting conditions.",
+    "nano": "This water pipe, bubbler, or concentrate rig is a small and portable size that gives it a discreet appearance as well as makes it easily transportable.",
+    "mini": "This water pipe, bubbler, or concentrate rig is a small and portable size that gives it a discreet appearance as well as makes it easily transportable.",
+    "micro": "This water pipe, bubbler, or concentrate rig is a small and portable size that gives it a discreet appearance as well as makes it easily transportable.",
+    "wigwag": "This water pipe or concentrate pipe features a detailed wigwag glass design. Wigwag glass is a beautiful swirl of multiple colors of glass that adds an incredible aesthetic touch to any glass piece.",
+    "sandblasted glass": "Sandblasted glass is raised frosted glass visual feature that causes any glass piece to immediately stand out in your glass collection. Sandblasted glass generally is located on the chamber or the neck and showcases a themed design."
   },
   "brand": {
-    "Brand1": "Placeholder"
+    "AMG GLASS": {
+      "url": "/brands/AMG-GLASS.html",
+      "img": "http://cdn6.bigcommerce.com/s-ss4br/product_images/w/amglogo_1412039908__85126.jpg",
+      "description": "AMG stands for American Made Glass, and they stay true to the name. Their &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass water pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;concentrate rigs&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E; are all made out of thick borosilicate glass right here in the USA. AMG also produces &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;hand pipes&#x3C;/a&#x3E;, glass jars, and &#x3C;a href=&#x22;http://dankstop.com/beakers-and-straight-tubes/&#x22; target=&#x22;_blank&#x22;&#x3E;beakers and straight tube tobacco bongs&#x3C;/a&#x3E;. Want an AMG product customized? Contact us by phone or email to order an AMG piece in a style or color you don&#x27;t see here. &#x3C;a href=&#x22;http://dankstop.com/brands/AMG-GLASS.html&#x22;&#x3E;See more products from AMG Glass.&#x3C;/a&#x3E;"
+    },
+    "Brand2": {
+      "url": "value",
+      "img": "value",
+      "description": "value"
+    },
+    "Brand3": {
+      "url": "value",
+      "img": "value",
+      "description": "value"
+    },
+    "Brand4": {
+      "url": "value",
+      "img": "value",
+      "description": "value"
+    },
+    "Brand5": {
+      "url": "value",
+      "img": "value",
+      "description": "value"
+    },
+    "Brand6": {
+      "url": "value",
+      "img": "value",
+      "description": "value"
+    },
+    "Brand7": {
+      "url": "value",
+      "img": "value",
+      "description": "value"
+    },
+    "Brand8": {
+      "url": "value",
+      "img": "value",
+      "description": "value"
+    },
+    "Brand9": {
+      "url": "value",
+      "img": "value",
+      "description": "value"
+    },
+    "Brand10": {
+      "url": "value",
+      "img": "value",
+      "description": "value"
+    }
   },
   "placeholder": "placeholder"
 };
