@@ -252,5 +252,12 @@ var DankStopGlossary = {
   "placeholder": "placeholder"
 };
 
-//console.log(DankStopData);
-//console.log(DankStopData.product.type["dab rig"].description);
+console.log(DankStopGlossary);
+console.log(DankStopGlossary.brand["AMG GLASS"].description);
+function decodeHtml(html) {
+    var txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
+}
+var testJSON = decodeHtml(DankStopGlossary.brand["AMG GLASS"].description);
+$('#LayoutColumn1').append(testJSON);
