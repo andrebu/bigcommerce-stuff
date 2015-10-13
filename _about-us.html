@@ -163,6 +163,7 @@
 		text-transform: inherit;
 		font-family: cursive;
 		font-size: 50px;
+		line-height: 50px;
 		margin-bottom: 110px;
 	}
 	#about-us-page .section.sec-4 .inner-sec > div {
@@ -174,6 +175,9 @@
 		-webkit-column-gap: 100px;
 		-moz-column-gap: 100px;
 		column-gap: 100px;
+	}
+	#about-us-page .section.sec-4 .inner-sec > div > div {
+		margin-bottom: 50px;
 	}
 	#about-us-page .section.sec-4 .inner-sec > div > div div {
 		text-align: center;
@@ -206,6 +210,35 @@
 	#about-us-page .section.sec-6 {
 		display: none;
 	}
+@media screen and (max-width: 768px) {
+	#about-us-page .section.sec-1 .inner-sec,
+	#about-us-page .section.sec-3 .inner-sec > div,
+	#about-us-page .section.sec-4 .inner-sec > div {
+		font-size: 12px;
+		-webkit-columns: 1;
+		-moz-columns: 1;
+		columns: 1;
+		-moz-column-fill: auto;
+		column-fill: auto;
+/*
+		-webkit-column-gap: 50px;
+		-moz-column-gap: 50px;
+		column-gap: 50px;
+*/
+/* 		padding: 0 0 130px 0; */
+	}
+	#about-us-page .section.sec-2 .inner-sec > div:first-of-type {
+		width: 100%;
+	}
+	#about-us-page .section.sec-2 .inner-sec > div:nth-of-type(2) {
+		position: relative;
+		display: inline-block;
+		float: right;
+	}
+	#about-us-page .section.sec-2 .inner-sec > div:nth-of-type(2) img {
+		position: static;
+	}
+}
 </style>
 <!-- <link href="%%ASSET_/Styles/why-shop-responsive.css%%" type="text/css" rel="stylesheet"> -->
 
