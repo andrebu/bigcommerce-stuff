@@ -83,26 +83,21 @@
 	#about-us-page .section.sec-2 .inner-sec > div {
 		position: relative;
 		display: inline-block;
-		width: 50%;
 		vertical-align: middle;
 	}
 	#about-us-page .section.sec-2 .inner-sec > div h2 {
 		text-transform: inherit;
 		padding-bottom: 25px;
 	}
-	#about-us-page .section.sec-2 .inner-sec > div:first-of-type {
-		font-size: 12px;
-	}
-	#about-us-page .section.sec-2 .inner-sec > div:nth-of-type(2) div {
-		width: 60%;
+	#about-us-page .section.sec-2 .inner-sec > div img {
 		display: block;
-		margin: 0 auto;
-		height: 200px;
-		position: relative;
-	}
-	#about-us-page .section.sec-2 .inner-sec > div:nth-of-type(2) img {
 		position: absolute;
-		top: -50%;
+		width: 25%;
+		right: 0;
+		top: -89px;
+	}
+	#about-us-page .section.sec-2 .inner-sec > div p {
+		width: 73%;
 	}
 	/* 	Section 3 -- the team */
 	#about-us-page .section.sec-3 .inner-sec {
@@ -211,6 +206,13 @@
 		display: none;
 	}
 @media screen and (max-width: 768px) {
+	#about-us-page .section .inner-sec {
+		width: 70%;
+/* 		padding: 40px 0; */
+	}
+	#about-us-page .section h2 {
+		text-align: left;
+	}
 	#about-us-page .section.sec-1 .inner-sec,
 	#about-us-page .section.sec-3 .inner-sec > div,
 	#about-us-page .section.sec-4 .inner-sec > div {
@@ -227,16 +229,17 @@
 */
 /* 		padding: 0 0 130px 0; */
 	}
-	#about-us-page .section.sec-2 .inner-sec > div:first-of-type {
+	#about-us-page .section.sec-2 .inner-sec > div img {
+		position: relative;
+		float: right;
+		top: 0;
+		width: 40%;
+	}
+	#about-us-page .section.sec-2 .inner-sec > div p {
 		width: 100%;
 	}
-	#about-us-page .section.sec-2 .inner-sec > div:nth-of-type(2) {
-		position: relative;
-		display: inline-block;
-		float: right;
-	}
-	#about-us-page .section.sec-2 .inner-sec > div:nth-of-type(2) img {
-		position: static;
+	#about-us-page .section.sec-5 .inner-sec > div > div:first-of-type {
+		width: 100%;
 	}
 }
 </style>
@@ -259,9 +262,9 @@
 		<div class="inner-sec">
 			<div>
 				<h2>based in Edison, New Jersey</h2>
+				<img src="/content/images/about-us/jersey.png" alt="based in New Jersey" />
 				<p>We carry American made products, employ American workers, and support the US economy. Almost all of our glass products are made here in the USA, and any imported glass goes through a rigorous inspection to ensure it's of the highest quality before being stocked on our shelves. Our products are all carefully hand picked to offer a constantly expanding selection of high quality glass, and we stand behind all of them. If you're not 100% satisfied with your order, send it back!</p>
 			</div>
-			<div><div><img src="/content/images/about-us/jersey.png" alt="based in New Jersey" /></div></div>
 		</div>
 	</div>
 
