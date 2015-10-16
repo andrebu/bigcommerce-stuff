@@ -1,0 +1,241 @@
+<link rel="stylesheet" type="text/css" href="%%GLOBAL_CdnAppPath%%/javascript/jquery/themes/cupertino/ui.all.css?%%GLOBAL_JSCacheToken%%" />
+<link rel="stylesheet" type="text/css" media="screen" href="%%GLOBAL_productAttributesCssPath%%?%%GLOBAL_JSCacheToken%%" />
+<script type="text/javascript" src="%%GLOBAL_jQueryUIPath%%"></script>
+<script src="//code.jquery.com/ui/1.11.0/jquery-ui.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/jquery/plugins/jquery.form.js?%%GLOBAL_JSCacheToken%%"></script>
+<script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/product.attributes.js?%%GLOBAL_JSCacheToken%%"></script>
+<script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/jquery/plugins/jCarousel/jCarousel.js?%%GLOBAL_JSCacheToken%%"></script>
+%%SNIPPET_ProductImageZoomer%%
+
+<script type="text/javascript">//<![CDATA[
+var ThumbURLs = new Array();
+var ProductImageDescriptions = new Array();
+var CurrentProdThumbImage = %%GLOBAL_CurrentProdThumbImage%%;
+var ShowVariationThumb =false;
+var ProductThumbWidth = %%GLOBAL_ProductThumbWidth%%;
+var ProductThumbHeight =  %%GLOBAL_ProductThumbHeight%%;
+var ProductMaxZoomWidth = %%GLOBAL_ProductMaxZoomWidth%%;
+var ProductMaxZoomHeight =  %%GLOBAL_ProductMaxZoomHeight%%;
+var ProductTinyWidth = %%GLOBAL_ProductMaxTinyWidth%%;
+var ProductTinyHeight =  %%GLOBAL_ProductMaxTinyHeight%%;
+
+%%GLOBAL_ProdImageJavascript%%
+
+//Don't enable Zoomie (product image zoom) if on touch device
+//Mouseenter/Mouseover events are not ideal for touch devices
+//for more info search for this code in /script/main.js
+if (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0)){   
+    var ShowImageZoomer = 0;
+} else {
+    var ShowImageZoomer = %%GLOBAL_ShowImageZoomer%%;
+}
+
+var productId = %%GLOBAL_ProductId%%;
+//]]></script>
+%%Discount.FreeShippingEligibility%%
+<div class="Block Moveable Panel PrimaryProductDetails no-ptop" id="ProductDetails">
+    <div class="BlockContent">
+        %%GLOBAL_ProductDetailFlashMessages%%    
+        <!-- left-content -->
+        <div class="left-content">
+            <div class="ProductDetailsGrid mobile">
+                <div class="DetailRow">
+                   
+
+                    <div class="Value" style="display: %%GLOBAL_HideBrandLink%%">
+                        <h4 class="BrandName"><a  href="%%GLOBAL_BrandLink%%">%%GLOBAL_BrandName%%</a></h4>
+                    </div>
+                    %%GLOBAL_ProductNameOptimizerScriptTag%%
+         
+                    <h1>%%GLOBAL_ProductName%%</h1>
+                        
+                    %%GLOBAL_ProductNameOptimizerNoScriptTag%%
+                    
+                </div>
+   
+                <div class="DetailRow PriceRow p-price" style="%%GLOBAL_HidePrice%%">
+                    <div class="Value">
+                        <span class="ProductPrice retail-product-price">%%GLOBAL_RetailPrice%%</span>
+                        <span class="ProductPrice VariationProductPrice">%%GLOBAL_ProductPrice%% + Free Shipping</span>
+                    </div>
+                    %%GLOBAL_IncludingExcludingTax%% %%GLOBAL_YouSave%%
+                </div>
+
+            </div>
+            <div class="ProductThumb" style="%%GLOBAL_HideProductThumb%%">
+                %%GLOBAL_LightBoxImageJavascript%%
+                %%SNIPPET_ProductThumbImage%%
+                <div class="Loader" style="display:none;"><img src="%%GLOBAL_IMG_PATH%%/loader.png" /></div>
+                
+                <div class="ProductTinyImageList">
+                    <!--<ul> [[200,2],[300,3],[600,6]]-->
+                    <ul class="MagicScroll" data-options="arrows:outside;scrollOnWheel:false;items:fit;">
+                        %%SNIPPET_ProductTinyImages%%
+                        <li id="videoDemoThumb" class="magictoolbox-li"><div class="ProdVideoPlayBtn"><div class="triangle"></div></div></li>
+                    </ul>
+                </div>
+                
+                <div style="%%GLOBAL_HideMorePicturesLink%%" class="SeeMorePicturesLink">
+                    <a href="#" onclick="%%GLOBAL_TinyImageClickJavascript%% return false;" class="ViewLarger">%%GLOBAL_SeeMorePictures%%</a>
+                </div>
+            </div>
+        </div>
+        <!-- Product Details Content -->
+        
+        <div class="ProductMain">
+            <div class="ProductDetailsGrid desktop PriceBorderBottom">
+                <div class="DetailRow">
+                    <div class="Value" style="display: %%GLOBAL_HideBrandLink%%">
+                        <h4 class="BrandName"><a  href="%%GLOBAL_BrandLink%%">%%GLOBAL_BrandName%%</a></h4>
+                    </div>
+                    %%GLOBAL_ProductNameOptimizerScriptTag%%
+                    <h1 id="desktopProductHeading">%%GLOBAL_ProductName%%</h1>
+                    %%GLOBAL_ProductNameOptimizerNoScriptTag%%
+<script type="text/javascript">
+(function e(){ if(typeof yotpo==='undefined') { var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/slO4cjcGIOnMsb78Mu313loqvxAp3HCWDc7KauBH/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t) } else { yotpo.initialized=false;yotpo.init(); } })();
+</script>
+
+
+          <!-- Feliks Put Linkcious comment here -->
+
+           <!-- <linkcious accept='true' /> -->
+<meta property="og:type" content="product" />
+<meta property="og:title" content="Sample Product" /> 
+<meta property="og:image" content="http://dankstop.com/product.jpg" />
+<meta property="product:price:amount" content="12.90" />
+<meta property="product:price:currency" content="USD" />
+
+
+
+                    <!-- Andre put .PriceRow here -->
+                    <div class="DetailRow PriceRow p-price" style="%%GLOBAL_HidePrice%%">
+                        <div class="Value">
+                            <span class="ProductPrice retail-product-price">%%GLOBAL_RetailPrice%%</span>
+                            <span class="ProductPrice VariationProductPrice">%%GLOBAL_ProductPrice%%</span> + Free Shipping
+                        </div>
+                        %%GLOBAL_IncludingExcludingTax%% %%GLOBAL_YouSave%%
+                        <div class="yotpo bottomLine" data-product-id="%%GLOBAL_ProductId%%" data-url="%%GLOBAL_ProductLink%%"></div>
+                    </div>
+                    <!-- Andre put .PriceRow here -->
+                </div>
+   
+                <!-- .PriceRow use to be here -->
+            </div>
+                        
+
+            %%GLOBAL_FacebookLikeButtonAbove%%
+            
+            <div class="clear"></div> 
+
+            <div class="Content">
+                %%Panel.ProductWarranty%%
+            </div>
+
+            
+            %%SNIPPET_ProductAddToCartRight%%
+            %%SNIPPET_ProductExpectedReleaseDate%%
+            
+            <div class="clear"></div>
+            <!-- Add to Wishlist & Share Links-->
+            %%Panel.SideProductAddToWishList%%
+            
+           <div class="DetailRow ProductDetailReviewRow" style="display: %%GLOBAL_HideRating%%">
+                    <div class="Value">
+                        <span>
+                            <a href="javascript:void(0)" class="reviewFormLink">
+                                <img  src="%%GLOBAL_IMG_PATH%%/IcoRating%%GLOBAL_Rating%%.png" alt="" />
+                            </a>
+                            <span style="display:%%GLOBAL_HideReviewLink%%" >
+                                <a href="javascript:void(0)" class="ReviewListLink">
+                                    %%GLOBAL_ReviewLinkText%%
+                                </a>
+                            </span>
+                        </span>
+                    </div>
+            </div>
+            %%GLOBAL_FacebookLikeButtonBelow%%
+        </div>
+
+        %%SNIPPET_ProductAddToCartBelow%%
+
+        <div class="clear"></div>
+
+        <div class="Content" id="prodAccordion">
+            %%Panel.ProductTabs%%
+            %%Panel.ProductDescription%%
+            %%Panel.ProductOtherDetails%% 
+            %%Panel.ProductVideos%%        
+            %%Panel.SimilarProductsByTag%%
+            %%Panel.ProductReviews%%
+         
+            %%Panel.SimilarProductsByCustomerViews%%
+        </div> 
+<!--            percentpercentPanel.ProductWarrantypercentpercent -->
+
+    </div>
+</div>
+<!--
+<script language="javascript" type="text/javascript">//<![CDATA[
+$(document).ready(function() {
+    $('#share_txt').click(function() {
+        
+        $('#share_txt').fadeOut();
+        var $marginLefty = $('#share_btns');
+        $marginLefty.stop(false, true).animate({
+            marginLeft: 0
+        });
+    });
+    
+    $('.ReviewListLink').click(function(){
+                                        
+        $('#ProductReviews_Tab').addClass('Active');
+        $('#ProductReviews_Tab a').click();
+        
+        $('#ProductReviews .prodAccordionContent').show();
+        $('#ProductReviews').addClass('current');
+        
+        
+        if($('#ProductReviews_Tab a').length)
+        {
+            $('html, body').animate({
+                  scrollTop: $('.ReviewListLink').offset().top
+            }, 1000);
+        }
+else //if($('#ProductReviews .prodAccordionContent').length)
+        {
+            $('html, body').animate({
+                  scrollTop: $('#ProductReviews .subtitle').offset().top
+            }, 1000);
+        }
+
+    });
+    
+    $('.ProductTinyImageList li').removeClass('selected');
+    $('.ProductTinyImageList ul li:first').addClass('selected');
+    if($('.ProductTinyImageList ul li').length>1) {
+        $('.ProductTinyImageList').show();
+    }
+});
+//]]></script>
+-->
+
+<script type="text/javascript">//<![CDATA[
+ var div = document.createElement("div");
+ div.setAttribute('class', 'yotpo yotpo-main-widget');
+ div.setAttribute('data-product-id',"%%GLOBAL_ProductId%%");
+ div.setAttribute('data-name',"%%GLOBAL_ProductName%%");
+ div.setAttribute('data-url', document.URL);
+ div.setAttribute('data-description',"");
+ div.setAttribute('data-image-url', "%%GLOBAL_ThumbImageURL%%");
+ if ($(".yotpo.placeholder").length) {
+ $(".yotpo.placeholder").append(div);
+ } else {
+ $("#ProductDescription").append(div);
+ }
+ //]]></script>
+
+<script type="text/javascript">
+    $(window).load(function() {
+        $('.promoted-products-box').appendTo('.yotpo-nav-content');
+    });
+</script>            
