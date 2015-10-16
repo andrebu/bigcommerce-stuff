@@ -1,0 +1,19 @@
+<div class="Block Moveable Panel ProductDescription" id="ProductDescription">
+    <h2 class="subtitle">%%LNG_ProductDescription%%</h2>
+    <div class="ProductDescriptionContainer prodAccordionContent">
+        %%GLOBAL_ProductDescriptionOptimizerScriptTag%%
+        %%GLOBAL_ProductDesc%%
+        %%GLOBAL_ProductDescriptionOptimizerNoScriptTag%%
+    </div>
+    <!--<hr style="%%GLOBAL_HideSectionSeparator%%" class="ProductSectionSeparator" />-->
+</div>
+
+<div itemscope itemtype="http://schema.org/Product" style="display: none;"> 
+     <span itemprop="name">%%GLOBAL_ProductName%%</span> 
+     <span itemprop="description">%%GLOBAL_ProductDesc%%</span> 
+     <img itemprop="image" src="%%GLOBAL_InitialZoomImage%%"/> 
+
+     <div itemprop="offers" itemscope itemtype="http://schema.org/Offer"> 
+          <span itemprop="price">%%GLOBAL_ProductPrice%%</span> 
+     </div> 
+</div>  
