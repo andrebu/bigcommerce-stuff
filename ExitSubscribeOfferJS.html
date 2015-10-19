@@ -1,0 +1,25 @@
+$(document).ready(function(){
+	
+	$('#mc-embedded-subscribe').click(function() {
+		if($('#mce-EMAIL').val()) {
+			var email = $('#mce-EMAIL').val();
+			
+			$.post( "//api.smokecartel.com/mailchimp-signup.php", { email: email }, function( data ) {
+				if(data == 'success') {
+					$('#exitoffer .container').html('<div class="sixteen columns centertext" style="height: 66px;"><h2 style="line-height: 54px;">Awesome!  Use the code: <span class="darken">574SUB</span> at checkout for 5% off.</h2></div>');
+				}
+				else if(data == 'invalidemail') {
+					alert('Oh no, that seems to be an invalid email!  Do you mind double checking?');
+				}
+				else if(data == 'error') {
+					alert('Crap, we got an error.  Perhaps you are already subscribed or that is a fake email!');
+				}
+			
+			});
+		}
+		else {
+			alert('You forgot to enter in an email!');
+		}
+	});
+
+});

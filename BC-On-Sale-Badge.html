@@ -1,0 +1,31 @@
+<script type="text/javascript">
+/*Sale badge*/
+function updateOnSaleBadge() {
+	var imagelink = $('.ProductList .SalePrice').parents('li').find('.ProductImage a');
+	var badge_diameter = imagelink.width() * .42;
+	var badge_radius = badge_diameter/2;
+	var font_size = badge_radius/2.5;
+	
+	// get badge
+	var onsalebadge = $('.on-sale-badge');
+	var created_badge = false;
+	if(onsalebadge.length == 0) {
+		created_badge = true;
+		onsalebadge = $('<span class="on-sale-badge">On Sale</span>');
+	}
+	// adjust onsale badge dimensions
+	onsalebadge.each(function(){
+		$(this).width(badge_diameter).height(badge_diameter).css({
+			'line-height' : badge_diameter+'px',
+			'font-size' : font_size + 'px'
+		});
+	});
+	
+	// add badge to page
+	if(created_badge)
+	{
+		imagelink.append(onsalebadge);
+		onsalebadge.fadeIn();
+	}
+};
+</script>
