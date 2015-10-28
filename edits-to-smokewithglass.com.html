@@ -1,0 +1,107 @@
+Added to default.html
+    %%Panel.HTMLHead%%
+    <body class="Homepage">
+        <script type="text/javascript">
+            if(document.cookie.indexOf("VISITED_BEFORE")==-1){
+                document.cookie = "VISITED_BEFORE = 1";
+                if(document.cookie.indexOf("VISITED_BEFORE")!=-1)
+                    window.location.replace("%%GLOBAL_ShopPath%%/age-legal-requirements/");
+            }
+        </script>
+        <div id="Container">
+            %%Panel.Header%%
+
+
+
+Added to ProductDetails.html
+                        %%GLOBAL_GiftWrappingAvailable%%
+                    </div>
+                </div>
+            </div>
+            <!-- product warranty is now here -->
+            <div class="Content">
+                %%Panel.ProductWarranty%%
+            </div>
+
+            %%SNIPPET_ProductAddToCartRight%%
+            
+            %%GLOBAL_PinterestButton%%
+            %%GLOBAL_AddThisLink%%
+
+            %%GLOBAL_FacebookLikeButtonBelow%%
+            
+            
+            %%SNIPPET_ProductExpectedReleaseDate%%
+            
+            <p class="Clear">&nbsp;</p>
+        </div>
+        %%SNIPPET_ProductAddToCartBelow%%
+        <div class="clear"></div>
+    </div>
+    
+    %%Panel.ProductTabs%%
+    
+    <div id="prodAccordion">
+        %%Panel.ProductDescription%%
+        %%Panel.ProductVideos%%
+        <!-- product warranty use to be here -->
+        <!-- Panel.ProductWarranty%% -->
+        <!-- Panel.ProductOtherDetails%% -->
+        %%Panel.SimilarProductsByTag%%
+        %%Panel.ProductByCategory%%
+        %%Panel.ProductVendorsOtherProducts%%
+        %%Panel.ProductReviews%%
+    </div>
+</div>
+
+
+
+
+Added to productWarranty.html
+<!-- old code commented out by Andre -->
+<!--
+<div class="Block Panel" id="ProductWarranty">
+    <h2>%%LNG_ProductWarranty%%</h2>
+    <div class="ProductWarrantyContainer prodAccordionContent">
+        <p>%%GLOBAL_ProductWarranty%%</p>
+    </div>
+</div>
+-->
+
+<div class="Block Moveable Panel" id="ProductWarranty">
+    <div class="JointSizeHeightContainer">
+        %%Panel.ProductOtherDetails%%
+        <div class="ProductWarrantyContainer prodAccordionContent">
+            %%GLOBAL_ProductWarranty%% 
+        </div>
+    </div> <!-- END JointSizeHeightContainer --> 
+</div>
+​
+
+
+Added to styles.css
+/* Andre Added Code Here */
+/* Andre Added Code Here */
+/* Andre Added Code Here */
+.prodAccordionContent {
+    padding: 5px 10px;
+/*display: none;*/
+    font-size:13px;
+    line-heigtht: 150%;
+    color: #666666;
+}
+#ProductDetails #ProductOtherDetails h2 {
+    margin-right: 0px;
+}
+.JointSizeHeightContainer > div:first-of-type {
+    width: 35%;
+    display: inline-block;
+}
+.JointSizeHeightContainer > div:nth-of-type(2) {
+    width: 46%;
+    display: inline-block;
+}
+/* Andre Added Code Here */
+/* Andre Added Code Here */
+/* Andre Added Code Here */
+
