@@ -1222,13 +1222,14 @@ margin-left:-11px;
 	max-width: 75%;
 }
 .page .main .ProductScroll .mcs-item li .ProductDetails .pname {
-	white-space: pre-wrap;  
-	white-space: -moz-pre-wrap; 
-	white-space: -pre-wrap;   
-	white-space: -o-pre-wrap;   
+	white-space: normal;  
+	white-space: -moz-normal; 
+	white-space: -normal;   
+	white-space: -o-normal;   
 	word-wrap: break-word; 
 	font-size: 11px;
 	min-height: 45px;
+	line-height: 15px;
 }
 /* Home front page magic scroll styling */
 .page .main .ProductScroll .mcs-item {
@@ -2719,13 +2720,30 @@ textarea {
     width: 20%;
     padding: 0 0 10px 10px;
 }
+#ProductDetails .ProductMain .DetailRow.PriceRow.p-price {
+	font-family: futura;
+}
+.ProductDetailsGrid.mobile .DetailRow .ProductPrice.VariationProductPrice {
+	color: #000;
+	font-weight: 300;
+	font-family: futura;
+	font-size: initial;
+}
+.ProductDetailsGrid.mobile .DetailRow .ProductPrice.VariationProductPrice > span {
+	color: #FFCC33;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 21px;
+	font-weight: bold;
+}
 .ProductDetailsGrid .DetailRow .ProductPrice.retail-product-price {
 	color: gray;
-	font-family: futura;
+	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 16px;
 	font-weight: bolder;
 	text-decoration: line-through;
-	vertical-align: middle;
+	margin-right: 5px;
+	position: relative;
+	top: 1px;
 }
 .ProductDetailsGrid .DetailRow .ProductPrice.retail-product-price strike {
 	color: #F47D77;
@@ -2734,10 +2752,23 @@ textarea {
 .ProductDetailsGrid .DetailRow .ProductPrice.VariationProductPrice {
 	color: gold;
 	color: #6ADA78;
-	font-family: futura;
+	color: #C5AB21;
+	color: #FFCC33;
+	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 19px;
+	font-size: 21px;
 	font-weight: bolder;
 	vertical-align: middle;
+	position: relative;
+	top: -3px;
+}
+.ProductDetailsGrid .DetailRow .ProductPrice.VariationProductPrice .price-dollars {
+    vertical-align: top;
+    font-size: 13px;
+}
+.ProductDetailsGrid .DetailRow .ProductPrice.VariationProductPrice .price-cents {
+    vertical-align: top;
+    font-size: 13px;
 }
 .ProductList .ProductPriceRating {
     padding-bottom: 5px;
