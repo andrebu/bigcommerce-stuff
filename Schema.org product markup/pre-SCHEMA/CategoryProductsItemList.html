@@ -1,0 +1,26 @@
+<li class="Odd ListView">
+    <div class="ProductImage QuickView" data-product="%%GLOBAL_ProductId%%">
+        %%GLOBAL_ProductThumb%%
+    </div>
+    <div class="ProductDetails">
+        <div class="ProductRightCol">
+            <div class="ProductPriceRating">
+                <span class="Rating Rating%%GLOBAL_ProductRating%%"><img src="%%GLOBAL_IMG_PATH%%/IcoRating%%GLOBAL_ProductRating%%.png" alt="" style="%%GLOBAL_HideProductRating%%" /></span>
+            </div>
+        </div>
+
+        <p class="p-name">
+            <a href="%%GLOBAL_ProductLink%%" class="alt">%%GLOBAL_ProductName%%</a>
+            <span class="CurrentPrice">%%GLOBAL_ProductPrice%%</span>
+        </p>
+        <p class="ProductDescription">%%GLOBAL_ProductDescription%%</p>
+        
+        <div class="ProductActionAdd" style="display:%%GLOBAL_HideActionAdd%%;">
+            <a href="%%GLOBAL_ProductURL%%" class="btn Small icon-%%GLOBAL_ProductAddText%%" title="%%GLOBAL_ProductAddText%%">%%GLOBAL_ProductAddText%%</a>
+        </div>
+        
+        <div class="ProductCompareButton" style="display:%%GLOBAL_HideCompareItems%%">
+             <input type="checkbox" class="CheckBox" name="compare_product_ids" id="compare_%%GLOBAL_ProductId%%" value="%%GLOBAL_ProductId%%" onclick="product_comparison_box_changed(this.checked)" /> <label for="compare_%%GLOBAL_ProductId%%">%%LNG_Compare%%</label>
+        </div>
+    </div>
+</li>                            
