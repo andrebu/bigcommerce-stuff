@@ -958,7 +958,7 @@ body table#QuickSearch.QuickSearch {
 	top: 146px;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	height: 10000%;
 	display: none;
 	background-color: #000;
 	-ms-filter: opacity(.6);
@@ -2719,6 +2719,26 @@ textarea {
     width: 20%;
     padding: 0 0 10px 10px;
 }
+.ProductDetailsGrid .DetailRow .ProductPrice.retail-product-price {
+	color: gray;
+	font-family: futura;
+	font-size: 16px;
+	font-weight: bolder;
+	text-decoration: line-through;
+	vertical-align: middle;
+}
+.ProductDetailsGrid .DetailRow .ProductPrice.retail-product-price strike {
+	color: #F47D77;
+	text-decoration: none;
+}
+.ProductDetailsGrid .DetailRow .ProductPrice.VariationProductPrice {
+	color: gold;
+	color: #6ADA78;
+	font-family: futura;
+	font-size: 19px;
+	font-weight: bolder;
+	vertical-align: middle;
+}
 .ProductList .ProductPriceRating {
     padding-bottom: 5px;
 }
@@ -2727,12 +2747,14 @@ textarea {
     clear:both;
 }
 .ProductList .ProductImage, .brand-img, #ProductDetails .ProductThumbImage {
-    overflow: hidden;
-    text-align: center;
-    display: table;
-    table-layout: auto;
-    width: 100%;
-    position: relative;
+	overflow: hidden;
+	text-align: center;
+	display: table;
+	table-layout: auto;
+	width: 100%;
+	position: relative;
+	border-top: 1px solid #ededed;
+	border-bottom: 1px solid #ededed;
 }
 .ProductList .ProductImage a, .ProductThumbImage a {
     display: table-cell;
@@ -2740,9 +2762,6 @@ textarea {
     vertical-align: middle;
     line-height: 0;
     position:relative;
-    border-bottom:solid 1px #ededed;
-    border-top:solid 1px #ededed;
-/*     height: auto !important; */
 }
 .ProductList .ProductImage img, .ProductThumbImage img {
     max-height: 100%;
@@ -3030,25 +3049,6 @@ display: none;
     margin-left: 20px;
 }
 
-/* Product page DankStop byline description */
-div#DankStopTheBest {
-  display: table;
-  text-align: center;
-}
-i.fa.fa-trophy {
-  display: inline-block;
-  font-size: 120px;
-  vertical-align: middle;
-  color: #6ADA78;
-  margin-right: 10px;
-  display: table-cell;
-}
-div#DStext {
-  display: inline-block;
-  width: 80%;
-  vertical-align: middle;
-  display: table-cell;
-}
 
 
 /* Product Comparisons */
@@ -4056,9 +4056,16 @@ table tr td h3 {
 .fa-spinner:before {
   content: "\f110";
 }
+.fa-gear:before, .fa-cog:before {
+    content: "\f013";
+}
 .fa-pulse {
   -webkit-animation: fa-spin 1s infinite steps(8);
   animation: fa-spin 1s infinite steps(8);
+}
+.fa-spin {
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
 }
 .fa-fw {
   width: 1.28571429em;
@@ -4069,6 +4076,12 @@ table tr td h3 {
 }
 .fa-3x {
   font-size: 3em;
+}
+.fa-4x {
+  font-size: 4em;
+}
+.fa-5x {
+  font-size: 5em;
 }
 @-webkit-keyframes fa-spin {
   0% {
@@ -6607,10 +6620,12 @@ html.javascript .productOptionViewRectangle label {
 #TabContentAddressMultiple {
     padding-top: 20px;
 }
+/*
 .SearchContainer .ProductList li {
     margin-bottom: 20px;
     position: relative;
 }
+*/
 .main .SearchContainer .ProductList li {
 	width: 32.5%;
 }
@@ -7961,6 +7976,9 @@ height: 100px;
 	list-style-position: inside;
 	list-style-type: none;
 	padding-left: 13px;
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid-column;
 }
 .ProductWarrantyContainer li:before {
 	content: "•";     
@@ -7968,6 +7986,18 @@ height: 100px;
 	margin-left: -10px; 
 	margin-right: 3px;
 	font-size: 16px;
+/*
+	display: inline-block;
+	top: 0;
+	bottom: 0;
+	position: absolute;
+    line-height: normal;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+*/
 }
 
 /* ShopByPriceCustom */
@@ -8532,3 +8562,76 @@ div.sold-out-overlay {
 	display: block;
 	margin-top: 10px;
 }
+
+/* Brand Logos for nav navigation left menu */
+.sprite { background: url('%%ASSET_images/brands-sprite.png%%') no-repeat top left; width: 20px; height: 20px; } 
+.sprite.420stands { background-position: 0 0; } 
+.sprite.amg { background-position: -30px 0; } 
+.sprite.atmostech { background-position: -60px 0; } 
+.sprite.bern { background-position: -90px 0; } 
+.sprite.blackmarket { background-position: -120px 0; } 
+.sprite.boom { background-position: -150px 0; } 
+.sprite.boroballers { background-position: -180px 0; } 
+.sprite.brandondunn { background-position: -210px 0; } 
+.sprite.c2customcreations { background-position: -240px 0; } 
+.sprite.cannatoolz { background-position: -270px 0; } 
+.sprite.chameleonglass { background-position: -300px 0; } 
+.sprite.cloudv { background-position: -330px 0; } 
+.sprite.crush { background-position: -360px 0; } 
+.sprite.dankdabber { background-position: -390px 0; } 
+.sprite.dankstop { background-position: -420px 0; } 
+.sprite.danrushin { background-position: -450px 0; } 
+.sprite.debowler { background-position: -480px 0; } 
+.sprite.delta9 { background-position: -510px 0; } 
+.sprite.diamond { background-position: -540px 0; } 
+.sprite.dreampipes { background-position: -570px 0; } 
+.sprite.dyno { background-position: -600px 0; } 
+.sprite.eagleeye { background-position: -630px 0; } 
+.sprite.elements { background-position: -660px 0; } 
+.sprite.empireglassworks { background-position: -690px 0; } 
+.sprite.errlybirdsmall { background-position: -720px 0; } 
+.sprite.formula420 { background-position: -750px 0; } 
+.sprite.geosglass { background-position: -780px 0; height: 12px; } 
+.sprite.glasslab { background-position: -810px 0; } 
+.sprite.goldengooseglassworks { background-position: -840px 0; } 
+.sprite.gravlabs { background-position: -870px 0; } 
+.sprite.hemplights { background-position: -900px 0; } 
+.sprite.hightechglassworks { background-position: -930px 0; } 
+.sprite.hiveceramics { background-position: -960px 0; } 
+.sprite.honeysupply { background-position: -990px 0; } 
+.sprite.humboldthemp { background-position: -1020px 0; } 
+.sprite.hvyglass { background-position: -1050px 0; } 
+.sprite.incredibowl { background-position: -1080px 0; } 
+.sprite.jmflow { background-position: -1110px 0; } 
+.sprite.kevinmurrayglass { background-position: -1140px 0; } 
+.sprite.krave { background-position: -1170px 0; } 
+.sprite.lollipipe { background-position: -1200px 0; } 
+.sprite.mathematix { background-position: -1230px 0; } 
+.sprite.themedtainer { background-position: -1260px 0; } 
+.sprite.microglass { background-position: -1290px 0; } 
+.sprite.mioglass { background-position: -1320px 0; } 
+.sprite.myster { background-position: -1350px 0; height: 9px; } 
+.sprite.newportbutane { background-position: -1380px 0; } 
+.sprite.nexusglass { background-position: -1410px 0; } 
+.sprite.ocb { background-position: -1440px 0; } 
+.sprite.one12glass { background-position: -1470px 0; } 
+.sprite.ploom { background-position: -1500px 0; } 
+.sprite.puffco { background-position: -1530px 0; } 
+.sprite.pulseglass { background-position: -1560px 0; } 
+.sprite.purehemp { background-position: -1590px 0; } 
+.sprite.purrglass { background-position: -1620px 0; } 
+.sprite.raw { background-position: -1650px 0; } 
+.sprite.redeyeglass { background-position: -1680px 0; height: 16px; } 
+.sprite.scorchtorch { background-position: -1710px 0; } 
+.sprite.santacruzshredder { background-position: -1740px 0; } 
+.sprite.sharpstone { background-position: -1770px 0; } 
+.sprite.shellz { background-position: -1800px 0; } 
+.sprite.sherbetglass { background-position: -1830px 0; } 
+.sprite.shinepapers { background-position: -1860px 0; } 
+.sprite.signatureglassworks { background-position: -1890px 0; } 
+.sprite.silikaglass { background-position: -1920px 0; } 
+.sprite.skilletools { background-position: -1950px 0; } 
+.sprite.smokebuddy { background-position: -1980px 0; } 
+.sprite.solopipe { background-position: -2010px 0; } 
+.sprite.tophatcustoms { background-position: -2040px 0; } 
+.sprite.zob { background-position: -2070px 0; } 
