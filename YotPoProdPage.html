@@ -1,0 +1,21 @@
+<!-- %%GLOBAL_ProductId%% -->
+<script type="text/javascript">//<![CDATA[
+	var prodIdY = document.getElementsByClassName('yotpo')[0].getAttribute('data-product-id');
+	var div = document.createElement("div");
+	div.setAttribute('class', 'yotpo yotpo-main-widget');
+	//div.setAttribute('data-product-id',"%%GLOBAL_ProductId%%");
+	div.setAttribute('data-product-id',prodIdY);
+	div.setAttribute('data-name',"%%GLOBAL_ProductName%%");
+	div.setAttribute('data-url', document.URL);
+	div.setAttribute('data-description',"");
+	div.setAttribute('data-image-url', "%%GLOBAL_ThumbImageURL%%");
+	if ($(".yotpo.placeholder").length) {
+		$(".yotpo.placeholder").append(div);
+	} else {
+		$("#ProductDescription").append(div);
+	}
+
+    $(window).load(function() {
+        $('.promoted-products-box').appendTo('.yotpo-nav-content');
+    });
+//]]></script>
