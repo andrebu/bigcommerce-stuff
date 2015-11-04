@@ -975,7 +975,8 @@ body table#QuickSearch.QuickSearch {
 	z-index: 4;
 }
 
-
+.ProductList.MagicScroll li { min-height:auto !important; height:auto !important; }
+.ProductList.MagicScroll li .ProductPriceRating { display:none; }
 
 @media screen and (max-width: 480px) {
 /* Top Header - top section of three section header */
@@ -1205,7 +1206,7 @@ margin-left:-11px;
 	height: auto !important;
 }
 .page .main .ProductScroll {
-	Height:280px !important;
+	Height:270px !important;
 	margin-bottom: 19px;
 }
 .page .main .ProductScroll .mcs-item {
@@ -1233,7 +1234,7 @@ margin-left:-11px;
 }
 /* Home front page magic scroll styling */
 .page .main .ProductScroll .mcs-item {
-	border: 4px solid #eaeaea;
+	border: 3px solid #eaeaea;
 	border-radius: 4px;
 	margin-right: 2.4px;
 	-webkit-transition: border-color 0.5s ease 0s;
@@ -1251,6 +1252,7 @@ margin-left:-11px;
 .page .main .ProductScroll .mcs-item li .ProductDetails {
 	width: 90%;
 	margin: 0 auto;
+/* 	padding: 10px 0 5px; */
 }
 .page .main .ProductScroll .mcs-button-arrow:before {
 	color: #6ADA78;
@@ -3516,11 +3518,11 @@ html.javascript .productOptionPickListSwatch li {
     display: none;
 }
 .PrimaryProductDetails .YouSave {
-    margin-top: 3px;
-    display: none;
+	margin-top: 3px;
+	display: none !important
 }
-/* Shipping Estimation on Cart Contents Page */
 
+/* Shipping Estimation on Cart Contents Page */
 .EstimateShipping {
     padding: 20px 0 !important;
 }
@@ -4377,6 +4379,10 @@ ul.tabs li {
     clear:both;
      vertical-align: middle;
 }
+
+.JointSizeHeightContainer .DetailRow:nth-child(3) {
+	display: none;
+}
 /* Accordion for product page
 ....................................................................... */
 
@@ -4387,6 +4393,9 @@ ul.tabs li {
 }
 .current .prodAccordionContent {
     display: block;
+}
+.productPage .page .main .ProductScroll {
+    Height: 260px !important;
 }
 /* Account Menu (horizontal)
 ....................................................................... */
@@ -5258,8 +5267,109 @@ a.ChangeLink {
 #ProductDetails #ImageScrollPrev, #ProductDetails #ImageScrollNext {
     margin-top: 15px;
 }
-.ProductDetailsGrid .DetailRow, .ProductDetailsGrid .s-price {
-    margin-bottom: 16px;
+.ProductDetailsGrid .DetailRow, 
+.ProductDetailsGrid .s-price {
+	margin-bottom: 6px;
+}
+#ProductDetails .ProductMain #desktopProductHeading,
+#ProductDetails .ProductMain .DetailRow.PriceRow.p-price {
+	margin-bottom: 23px;
+	display: inline-block;
+}
+
+#ProductDetails .ProductMain .yotpo.bottomLine {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    transition: opacity 1s;
+}
+#ProductDetails .ProductMain .yotpo.bottomLine .star-clickable {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    transition: opacity 1s;
+}
+#ProductDetails .ProductMain .yotpo.bottomLine .yotpo-stars {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    transition: opacity 1s;
+}
+#ProductDetails .ProductMain .yotpo.bottomLine .yotpo-icon-star {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    transition: opacity 1s;
+}
+#ProductDetails .ProductMain .yotpo.bottomLine .yotpo-icon-star:before {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    transition: opacity 1s;
+}
+#ProductDetails .ProductMain .yotpo.bottomLine.yotpo-small {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+#ProductDetails .ProductMain .yotpo.bottomLine.yotpo-small .star-clickable {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+#ProductDetails .ProductMain .yotpo.bottomLine.yotpo-small .yotpo-stars {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+#ProductDetails .ProductMain .yotpo.bottomLine.yotpo-small .yotpo-icon-star {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+#ProductDetails .ProductMain .yotpo.bottomLine.yotpo-small .yotpo-icon-star:before {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 .ProductDetailsGrid .DetailRow .BrandName {
     padding: 0;
@@ -5745,7 +5855,7 @@ select.JSHidden {
 .SubBrandListGrid ul li {
 	padding: 0;
 	box-sizing: border-box;
-	border: solid 4px #eaeaea;
+	border: solid 2px #eaeaea;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
@@ -7955,14 +8065,6 @@ height: 100px;
 	background-position: -10px -317px;
 }
 
-
-/* Product Box Other Deatails and Features list */
-/*
-.ProductBoxProductOtherDetails {
-    margin-top: 20px;
-}
-*/
-
 .ProductMain #ProductOtherDetails .ProductDetailsGrid {
 	display: -webkit-box !important; 
 	display: -moz-box !important; 
@@ -7976,6 +8078,8 @@ height: 100px;
 	-webkit-flex-direction: row;  
 	-ms-flex-direction: row;  
 	flex-direction: row;
+	height: 38px;
+	padding: 5px 0;
 }
 
 .ProductMain #ProductWarranty .ProductWarrantyContainer {
@@ -8088,6 +8192,7 @@ height: 100px;
 .JointSizeHeightContainer .ProductOtherDetails .ProductDetailsGrid .DetailRow:first-child {  
 }
 .JointSizeHeightContainer .ProductOtherDetails .ProductDetailsGrid .DetailRow:nth-child(2) {
+    padding-left: 10%;
 }
 .JointSizeHeightContainer .ProductOtherDetails .ProductDetailsGrid .DetailRow .Label {
     font-weight: bold;
@@ -8195,20 +8300,18 @@ div.sold-out-overlay {
 	font-size: 21px;
 }
 
+.yotpo {
+    min-height: 18px;
+}
 .yotpo.testimonials .yotpo-testimonials {
 	height: 32px; 
 	width: 129px; 
 }
 .yotpo.testimonials span {
-/*
-	line-height: 1px !important; 
-	font-size: 13px;
-*/
 	position: relative; 
 	top: -8px; 
 	display: block; 
 }
-
 .yotpo.testimonials .yotpo-testimonials:hover span::first-letter {
 	color: gold; 
 }
