@@ -1722,7 +1722,35 @@ float:left;
 }
 
 
+/* Product Sold out */
+#ProductDetails .ProductMain .qty .DetailRow.InventoryLevel {
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-radius: 3px;
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	width: 76%;
+	float: right;
+	-webkit-flex-grow: 1;
+	-ms-flex-grow: 1;
+	flex-grow: 1;
+	background-color: #ededed;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	color: rgba(0, 0, 0, 0.2);
+	font-weight: 900;
+}
+
+
 /* In stock notify quantum paper style instocknotify */
+#ProductDetails .ProductMain .CurrentlySoldOut {
+	visibility: hidden;
+	opacity: 0;
+	min-height: 75px;
+	max-height: 75px;
+}
 #ProductDetails .ProductMain .OutOfStockMessage {
 	display: table;
 	width: 100%;
@@ -1745,46 +1773,39 @@ float:left;
 	top: 3px;
 	background: url(../images/icon-outofstock.png) no-repeat 0 0;
 }
-#ProductDetails .ProductMain #InStockNotifyEmailAddress {
-	color: #000000 !important;
-	width: 100% !important;
-	background: rgba(128, 128, 128, 0.23);
-	border: #39b54a 1px solid;
-}
-#ProductDetails .ProductMain #InStockNotifyButton {
-	width: 100% !important;
-}
-#ProductDetails .ProductMain #InStockNotifyClick {
-	width: 100% !important;
-}
-#InStockNotifyInline #InStockNotifyLabel,
-#InStockNotifyInline .inputUnderline,
-#InStockNotifyInline .animatedUnderline {
-/* 	display: none; */
-}
-	#ProductDetails .ProductMain .OutOfStockMessage #InStockNotifyInline #InStockNotifyClick {
-		text-shadow: none;
-		box-shadow: none;
-		font-family: Questrial;
-		font-weight: normal;
-		position: relative;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		border: 2px solid #39b54a;
-		-webkit-transition: all 0.3s;
-		-moz-transition: all 0.3s;
-		transition: all 0.3s;
-		margin: 0;
-	}
-	#ProductDetails .ProductMain .OutOfStockMessage #InStockNotifyInline #InStockNotifyClick:hover {
-		background-color: #fff;
-		color: #39b54a;
-	}
 #ProductDetails .ProductMain #InStockNotifyOutOfStock {
 	display: none;
 }
-#ProductDetails .ProductMain #InStockNotifyEmailAddress {
+#ProductDetails .ProductMain #InStockNotifyInline {
+	position: relative;
+}
+#InStockNotifyLabel {
+	color: rgba(0,0,0,0.54);
+	font: 300 16px/24px Roboto,arial,sans-serif;
+	-webkit-transform-origin: top left;
+	transform-origin: top left;
+	-webkit-transition: all .3s cubic-bezier(0.4,0,0.2,1);
+	transition: all .3s cubic-bezier(0.4,0,0.2,1);
+	-webkit-transition-property: color,top,transform,width;
+	transition-property: color,top,transform,width;
+	color: rgba(0,0,0,0.38);
+	font: 400 16px Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+	font-size: 12px;
+	pointer-events: none;
+	position: absolute;
+	top: 19px;
+	width: 65%;
+}
+#ProductDetails .ProductMain #InStockNotifyEmail {
+	position: relative;
+	width: 80%;
+	display: table-cell;
+	margin-bottom: 0;
+	height: 75px;
+	vertical-align: middle;
+}
+#ProductDetails .ProductMain #InStockNotifyEmail #InStockNotifyEmailAddress {
+	width: 100% !important;
 	color: rgba(0,0,0,0.54) !important;
 	background: transparent;
 	text-align: left;
@@ -1792,7 +1813,7 @@ float:left;
 	padding: 0;
 	height: 26px;
 	position: relative;
-	top: 7px;
+	top: 1px;
 }
 #ProductDetails .ProductMain #InStockNotifyEmailAddress::-webkit-input-placeholder {
 	display: none !important;
@@ -1806,52 +1827,27 @@ float:left;
 #ProductDetails .ProductMain #InStockNotifyEmailAddress:-ms-input-placeholder {  
 	display: none !important;
 }
-
-#ProductDetails .ProductMain #InStockNotifyInline {
-	position: relative;
-}
-#ProductDetails .ProductMain #InStockNotifyEmail {
-	position: relative;
-	height: 36px;
-}
-#InStockNotifyLabel {
-	color: rgba(0,0,0,0.54);
-	font: 300 16px/24px Roboto,arial,sans-serif;
-	-webkit-transform-origin: top left;
-	transform-origin: top left;
-	-webkit-transition: all .3s cubic-bezier(0.4,0,0.2,1);
-	transition: all .3s cubic-bezier(0.4,0,0.2,1);
-	-webkit-transition-property: color,top,transform;
-	transition-property: color,top,transform;
-	color: rgba(0,0,0,0.38);
-	font: 400 16px Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-	font-size: 12px;
-	pointer-events: none;
-	position: absolute;
-	top: 19px;
-	width: 100%;
-}
-#ProductDetails .ProductMain .inputUnderline {
-	bottom: 0;
+#ProductDetails .ProductMain #InStockNotifyEmail .inputUnderline {
+	bottom: 21px;
 	height: 1px;
 	left: 0;
 	margin: 0;
 	padding: 0;
 	position: absolute;
-	width: 100%;
+	width: 99%;
 	background-color: rgba(0,0,0,0.38);
 }
-#ProductDetails .ProductMain .animatedUnderline {
+#ProductDetails .ProductMain #InStockNotifyEmail .animatedUnderline {
 	background-color: #6ADA78;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
-	bottom: 0;
+	bottom: 21px;
 	height: 2px;
 	left: 0;
 	margin: 0;
 	padding: 0;
 	position: absolute;
-	width: 100%;
+	width: 99%;
 	-webkit-animation: quantumWizPaperInputRemoveUnderline .3s cubic-bezier(0.4,0,0.2,1);
 	animation: quantumWizPaperInputRemoveUnderline .3s cubic-bezier(0.4,0,0.2,1);
 	transform-origin: 232px 50% 0px;
@@ -1859,14 +1855,16 @@ float:left;
 #ProductDetails .ProductMain .hasValue #InStockNotifyLabel {
 	-webkit-transform: scale(.75);
 	transform: scale(.75);
-	top: 0px;
+	top: 21px;
 	color: rgba(0,0,0,0.54);
+	width: 137%;
 }
 #ProductDetails .ProductMain .isFocused #InStockNotifyLabel {
 	-webkit-transform: scale(.75);
 	transform: scale(.75);
     color: #6ADA78;
-	top: 0px;
+	top: 18px;
+	width: 137%;
 }
 #ProductDetails .ProductMain .isFocused #InStockNotifyInline .animatedUnderline {
 	-webkit-animation: quantumWizPaperInputAddUnderline .3s cubic-bezier(0.4,0,0.2,1);
@@ -1892,6 +1890,7 @@ float:left;
 	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+#ProductDetails .ProductMain #InStockNotifyInvalidEmail:before, 
 #ProductDetails .ProductMain #InStockNotifyInvalidEmail:after {
 	background-color: #fff;
 	width: 0;
@@ -1904,12 +1903,50 @@ float:left;
 	position: absolute;
 	left: 86px;
 	top: 24px;
-	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	/* -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+	/* -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+	/* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
 	-webkit-background-clip: padding-box;
 	-moz-background-clip: padding;
 	background-clip: padding-box;
+}
+#ProductDetails .ProductMain #InStockNotifyInvalidEmail:before {
+	border-left: 10px solid transparent;
+	border-right: 9px solid transparent;
+	border-top: 9px solid;
+	border-top-color: inherit;
+	top: 26px;
+	left: 86px;
+}
+#ProductDetails .ProductMain #InStockNotifyButton {
+	width: 20%;
+	display: table-cell;
+	margin: 0;
+	vertical-align: middle;
+}
+#ProductDetails .ProductMain #InStockNotifyClick {
+	width: 100% !important;
+}
+#ProductDetails .ProductMain .OutOfStockMessage #InStockNotifyInline #InStockNotifyClick {
+	text-shadow: none;
+	box-shadow: none;
+	font-family: Questrial;
+	font-weight: normal;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 2px solid #39b54a;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	margin: 0;
+	font-size: 9px;
+	height: 33px;
+}
+#ProductDetails .ProductMain .OutOfStockMessage #InStockNotifyInline #InStockNotifyClick:hover {
+	background-color: #fff;
+	color: #39b54a;
 }
 #ProductDetails .ProductMain #InStockNotifyComplete {
 	color: rgba(0,0,0,0.54);
@@ -1985,19 +2022,6 @@ float:left;
 
 .yotpo-small-box {
 display:none;
-}
-
-.DetailRow.InventoryLevel {
-height: 46px;
-line-height: 42px;
-background: rgba(255, 0, 0, 0);
-color: red;
-text-align: center;
-text-transform: uppercase;
-letter-spacing: 1px;
-border-radius: 3px;
-border: 1px solid red;
-font-size: 14px;
 }
 
 .abtn {
