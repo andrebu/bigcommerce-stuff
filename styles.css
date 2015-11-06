@@ -1723,7 +1723,7 @@ float:left;
 
 
 /* Product Sold out */
-#ProductDetails .ProductMain .qty .DetailRow.InventoryLevel {
+#ProductDetails .ProductMain .DetailRow.InventoryLevel {
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -1732,8 +1732,7 @@ float:left;
 	display: inline-block;
 	vertical-align: middle;
 	margin: 0;
-	width: 76%;
-	float: right;
+	width: 100%;
 	-webkit-flex-grow: 1;
 	-ms-flex-grow: 1;
 	flex-grow: 1;
@@ -1814,6 +1813,7 @@ float:left;
 	height: 26px;
 	position: relative;
 	top: 1px;
+	margin-bottom: 0;
 }
 #ProductDetails .ProductMain #InStockNotifyEmailAddress::-webkit-input-placeholder {
 	display: none !important;
@@ -2577,16 +2577,6 @@ h6, .h6 {
     font-weight: 500;
     padding: 0 0 10px 0;
 }
-.footer-main h4 {
-}
-.productPage .p-price {
-/*font-size: 26px;*/
-}
-.ProductDetailsGrid.ProductAddToCart .DetailRow.InventoryLevel {
-/* 	display: none !important;	 */
-}
-.footer-main, .footer-main a {
-}
 .TitleHeading {
     margin-bottom: 20px;
 }
@@ -2961,6 +2951,7 @@ textarea {
     margin: 0 0 0 -14px;
     padding: 0;
     overflow: hidden;
+	font-size: 0;
 }
 .ProductList li {
     display: inline-block;
@@ -3107,6 +3098,7 @@ textarea {
 .ProductList .ProductDetails {
     padding: 10px 10px 0 0;
     word-wrap: break-word;
+	font-size: 12px;
 }
 .ProductList em {
     display: block;
@@ -5538,7 +5530,7 @@ a.ChangeLink {
 }
 .ProductDetailsGrid .DetailRow, 
 .ProductDetailsGrid .s-price {
-	margin-bottom: 6px;
+	margin-bottom: 13px;
 }
 #ProductDetails .ProductMain #desktopProductHeading,
 #ProductDetails .ProductMain .DetailRow.PriceRow.p-price {
