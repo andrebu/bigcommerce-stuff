@@ -1777,6 +1777,7 @@ float:left;
 }
 #ProductDetails .ProductMain #InStockNotifyInline {
 	position: relative;
+	display: table-row;
 }
 #InStockNotifyLabel {
 	color: rgba(0,0,0,0.54);
