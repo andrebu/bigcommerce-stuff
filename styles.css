@@ -1276,7 +1276,7 @@ margin-left:-11px;
 @media screen and (max-device-width: 768px) and (orientation: portrait) {
 /* 	Front page */
 	.page .main .ProductScroll {
-		Height: 260px !important;
+		Height: 280px !important;
 	}
 	.page .main .ProductScroll .mcs-item {
 		width: 49.25% !important;
