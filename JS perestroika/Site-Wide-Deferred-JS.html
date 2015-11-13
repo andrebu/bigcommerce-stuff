@@ -1,12 +1,110 @@
 
+<!-- From Panels/Header.html -->
+<script type="text/javascript">
+//<![CDATA[
+    // Login and Logout features
+    function loginFeatures() {        
+        var $loginGreetingSalutation = $('#loginGreetingSalutation');
+        var $accountMenuTriggerLink = $('#myAccountTriggerLink');
+        var $accountMenuTriggerText = $('#myAccountLoginLogout');
+        var globalFirstName="%%GLOBAL_CurrentCustomerFirstName%%";
+        if (globalFirstName!="" && globalFirstName!="Guest")
+        {
+            //Customer is Logged On
+            $loginGreetingSalutation.text('Hello, ');
+            $accountMenuTriggerText.attr('href', '/account.php');
+            $accountMenuTriggerText.text(globalFirstName);
+        } else {
+            //Customer is not Logged On
+            return;
+        };
+    }
+
+    // show the HelmMenu when the Help link is hovered on
+    function showDDMenu() {
+        var $helpMenuTrigger = $('#helpMenuTrigger');
+        var $helpMenuContainer = $('#helpMenu');
+        var $navCover = $('#nav-cover');
+        var $header = $('.header');
+        function setNavCover() {
+            var headerHeight = $header.height();
+            $navCover.css('top', headerHeight);
+        }
+        setNavCover();
+        $(window).on('resize', function(){
+            setNavCover();
+        });
+        $('#helpMenuTrigger').on({
+            mouseenter: function(event) {
+                $helpMenuTrigger.addClass('open');
+                $helpMenuContainer.show();
+                $navCover.stop().fadeTo(150, 0.5);
+            },
+            mouseleave: function(event) {
+                $helpMenuTrigger.removeClass('open');
+                $helpMenuContainer.hide();
+                $navCover.stop().fadeTo(150, 0, function() {$(this).hide();});
+            }
+        });
+        var $accountMenuTrigger = $('#myAccountTrigger');
+        var $accountMenuContainer = $('#myAccountDDMenu');
+        $('#myAccountTrigger').on({
+            mouseenter: function(event) {
+                $accountMenuTrigger.addClass('open');
+                $accountMenuContainer.show();
+                $navCover.stop().fadeTo(150, 0.5);
+            },
+            mouseleave: function(event) {
+                $accountMenuTrigger.removeClass('open');
+                $accountMenuContainer.hide();
+                $navCover.stop().fadeTo(150, 0, function() {$(this).hide();});
+            }
+        });
+    }
+
+    $(document).ready( function() {
+        loginFeatures();    
+        showDDMenu();
+    });
+//]]>
+</script>
 
 
+<!-- From Panels/HeaderSearch.html -->
+<script type="text/javascript">
+    var QuickSearchAlignment = 'right';
+    var QuickSearchWidth = '390px';
+    lang.EmptySmallSearch = "%%LNG_EmptySmallSearch%%";
+    $(document).ajaxComplete(function() {
+        $('input[type=checkbox], select').not('.UniApplied').uniform();
+    });
+</script>
+
+<!-- From bottom of Panels/DrawerMenu.html -->
+%%Panel.DrawerMenuJavascript%%​
 
 <script type="text/javascript">
 // Site Wide JS	
+$(window).load(function() {
+	// resize MagicScroll
+	function resizeMS() {
+		if ('.ProductScroll.MagicScroll.MagicScroll-horizontal .mcs-item li') {
+			var iH = $('.ProductScroll.MagicScroll.MagicScroll-horizontal .mcs-item li')[0];
+			iH = $(iH).height();
+			if (!iH) setTimeout(function(){ resizeMS(); }, 370 );
+			$('.ProductScroll.MagicScroll .mcs-item').height(iH+20);
+			$('.ProductScroll.MagicScroll').css('max-height',iH+20);
+		} else {
+			setTimeout(function(){ resizeMS(); }, 370 );
+		}
+	}
+	resizeMS();
+});
 function initJSAtOnload() {
 
-    $('.SideCategoryListClassic ul, .SideCategoryListFlyout li').remove(":contains('Glass Pipes for Dry Herbs and Tobacco')");
+	// Hide category dry herbs and tobacco glass pipes
+    //$('.SideCategoryListClassic ul, .SideCategoryListFlyout li').remove(":contains('Glass Pipes for Dry Herbs and Tobacco')");
+    $('#SideCategoryList li a[href*=glass-pipes-for-dry-herbs-and-tobacco]').parent().remove();
 
 
 /*
