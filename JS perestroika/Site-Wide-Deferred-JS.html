@@ -1,0 +1,27 @@
+
+
+
+
+<script type="text/javascript">
+// Site Wide JS	
+function initJSAtOnload() {
+
+    $('.SideCategoryListClassic ul, .SideCategoryListFlyout li').remove(":contains('Glass Pipes for Dry Herbs and Tobacco')");
+
+
+/*
+	var element = document.createElement("script");
+	element.src = "defer.js";
+	document.body.appendChild(element);
+*/
+}
+
+
+// Initialize site wide javascript
+if (window.addEventListener)
+	window.addEventListener("load", initJSAtOnload, false);
+else if (window.attachEvent)
+	window.attachEvent("onload", initJSAtOnload);
+else window.onload = initJSAtOnload;
+
+</script>

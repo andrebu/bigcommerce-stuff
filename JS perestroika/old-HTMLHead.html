@@ -1,0 +1,205 @@
+%%Panel.DOCTYPE%%
+
+<html>
+
+<head>
+
+    %%GLOBAL_OptimizerControlScript%%
+
+    <title>%%Page.WindowTitle%%</title>
+
+    <meta charset="%%GLOBAL_CharacterSet%%">
+    <meta name="description" content="%%Page.MetaDescription%%" />
+    <meta name="keywords" content="%%Page.MetaKeywords%%" />
+    %%GLOBAL_AdditionalMetaTags%%
+    %%Page.CanonicalLink%%
+    %%Page.Robots%%
+    <link href='//fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="%%GLOBAL_Favicon%%" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#39B54A">    
+
+    
+    <script>
+    //<![CDATA[
+        (function(){
+            // this happens before external dependencies (and dom ready) to reduce page flicker
+            var node, i;
+            for (i = window.document.childNodes.length; i--;) {
+                node = window.document.childNodes[i];
+                if (node.nodeName == 'HTML') {
+                    node.className += ' javascript';
+                }
+            }
+        })();
+    //]]>
+    </script>
+
+    %%GLOBAL_Stylesheets%%
+
+    
+
+    <!-- Tell the browsers about our RSS feeds -->
+    %%GLOBAL_HeadRSSLinks%%
+
+    <!-- Include visitor tracking code (if any) -->
+    %%GLOBAL_TrackingCode%%
+
+    %%GLOBAL_DesignModeStyleSheet%%
+
+    %%GLOBAL_HeaderImageStyle%%
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="%%GLOBAL_CdnAppPath%%/javascript/menudrop.js?%%GLOBAL_JSCacheToken%%"></script>
+    <script src="%%GLOBAL_CdnAppPath%%/javascript/iselector.js?%%GLOBAL_JSCacheToken%%"></script>
+    <script src="%%GLOBAL_CdnAppPath%%/javascript/jquery/plugins/jquery.flexslider.js"></script>
+    <script src="%%GLOBAL_CdnAppPath%%/javascript/viewport.js??%%GLOBAL_JSCacheToken%%"></script>
+
+    <!-- Theme bespoke js -->
+    <script src="%%GLOBAL_TPL_PATH%%/js/matchMedia.js"></script>
+    <script src="%%GLOBAL_TPL_PATH%%/js/common.js"></script>
+    <script src="%%GLOBAL_TPL_PATH%%/js/jquery.autobox.js"></script>
+    <script src="%%GLOBAL_TPL_PATH%%/js/init.js"></script>
+    <script src="%%GLOBAL_TPL_PATH%%/js/jquery.uniform.min.js"></script>
+    <script src="%%GLOBAL_TPL_PATH%%/js/main.js?%%GLOBAL_JSCacheToken%%"></script>
+    <!-- <script src="%%GLOBAL_TPL_PATH%%/js/site.js"></script>   --> 
+    <script src="%%ASSET_/js/site.js%%"></script>    
+    
+    
+    %%Panel.MagicZoomPlusHeaders%%
+    <link rel="stylesheet" href="%%GLOBAL_CdnStorePath%%/content/magicscroll/magicscroll.css">
+    <script type="text/javascript" src="%%GLOBAL_CdnStorePath%%/content/magicscroll/magicscroll.js"></script>
+    
+    <script>
+    //<![CDATA[
+    config.ShopPath = '%%GLOBAL_ShopPath%%';
+    config.AppPath = ''; // BIG-8939: Deprecated, do not use.
+    config.FastCart = %%GLOBAL_FastCart%%;
+    var ThumbImageWidth = %%GLOBAL_ProductThumbImageWidth%%;
+    var ThumbImageHeight = %%GLOBAL_ProductThumbImageHeight%%;
+    //]]>
+    </script>
+    %%Panel.HeadScripts%%
+    <!-- Additional script tags START here -->
+    %%GLOBAL_AdditionalScriptTags%%
+    <!-- Additional script tags END here -->
+    %%GLOBAL_QuickSearchJS%%
+    %%GLOBAL_RTLStyles%%
+
+    <!--[if lt IE 9]>
+    <script src="%%GLOBAL_TPL_PATH%%/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Begin Inspectlet Embed Code -->
+    <script type="text/javascript" id="inspectletjs">
+        window.__insp = window.__insp || [];
+        __insp.push(['wid', 42523624]);
+        (function() {
+            function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+            if (window.attachEvent){
+                window.attachEvent('onload', __ldinsp);
+            }else{
+                window.addEventListener('load', __ldinsp, false);
+            }
+        })();
+    </script>
+    <!-- End Inspectlet Embed Code -->
+    
+    <!--ADROLL PIXEL-->
+    <script type="text/javascript">
+        adroll_adv_id = "5RPIKMXURBC6BNEZWPOROL";
+        adroll_pix_id = "S5V2PA5O4JG3FIQNXXAT2L";
+        (function () {
+        var oldonload = window.onload;
+        window.onload = function(){
+           __adroll_loaded=true;
+           var scr = document.createElement("script");
+           var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+           scr.setAttribute('async', 'true');
+           scr.type = "text/javascript";
+           scr.src = host + "/j/roundtrip.js";
+           ((document.getElementsByTagName('head') || [null])[0] ||
+            document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+           if(oldonload){oldonload()}};
+        }());
+    </script>
+    <!--End Adroll PIxel-->
+    
+    <!-- Google Webmaster Verification meta tag -->
+    <!-- dankstop.com -->
+    <meta name="google-site-verification" content="BWZqQmR4-nsoRJe2Nb8gNRSDKYOcUQEuG-_RgSXHFQo" />
+    <meta name="google-site-verification" content="ocKowI2cC67C0QDR1HBuBmo6pUleIC35vIPrIadOeuc" />
+    <!-- End of Google Webmaster Verification meta tag -->
+        
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+        window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+        d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+        _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+        $.src='//v2.zopim.com/?2T4w06SgFmNJg25xZfAyv8iG5FcGf9qU';z.t=+new Date;$.
+        type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+    </script> 
+    <!--End of Zopim Live Chat Script-->
+    
+    <!-- Facebook Conversion Code for Checkouts -->
+    <script>
+        (function() {
+            var _fbq = window._fbq || (window._fbq = []);
+            if (!_fbq.loaded) {
+                var fbds = document.createElement('script');
+                fbds.async = true;
+                fbds.src = '//connect.facebook.net/en_US/fbds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(fbds, s);
+                _fbq.loaded = true;
+            }
+        })();
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', '6014328069573', {'value':'0.01','currency':'USD'}]);
+    </script>
+    
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6014328069573&amp;cd[value]=0.01&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+    
+    <meta name="google-site-verification" content="pDq54UWeSNPmpj8GB2NY7V_vaf7CJJVYUrEo7el5Ios" />
+    
+    <link href="https://plus.google.com/+Dankstopheadshop" rel="publisher" />
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://dankstop.com",
+        "name" : "DankStop",
+        "alternateName" : "DankStop Glass",
+        "description": "Our dab rig selection is HUGE. We stock a variety of glass concentrate pipes, vapor rigs, and oil rigs by only the best brands in the industry.",
+        "brand" : "DankStop",
+        "logo": "http://cdn6.bigcommerce.com/s-ss4br/product_images/sitelogo1_1412246202__88788.png",
+        "sameAs": [
+            "http://facebook.com/dankstop",
+            "http://twitter.com/dankstop",
+            "http://plus.google.com/+Dankstopheadshop/",
+            "http://instagram.com/dankstop"
+        ],
+        "contactPoint": {
+            "@type": "contactPoint",
+            "email": "support@dankstop.com",
+            "telephone": "+1-844-326-5786",
+            "contactType": "customer service",
+            "contactOption" : "TollFree"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "http://dankstop.com/search.php?Search=&search_query={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>  
+        
+    <!--Start of YotPo Review tab script-->
+    <script type="text/javascript">
+        (function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/slO4cjcGIOnMsb78Mu313loqvxAp3HCWDc7KauBH/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+    </script> 
+    <!--END of YotPo Review tab script-->
+    
+</head>
+​

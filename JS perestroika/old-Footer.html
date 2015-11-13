@@ -1,0 +1,115 @@
+<div class="footer">
+    
+    
+    
+    
+    <div class="inner">
+       <div id="bottomAd">
+           <img class="bottomAdImg" src="http://cdn6.bigcommerce.com/s-ss4br/product_images/sitelogo1_1412246202__88788.png">
+           <span class="bottomAdText">More<span class="bottomAdGreen">Options.</span></span>
+          
+           <span class="bottomAdText">Bigger<span class="bottomAdGreen">Savings.</span></span>
+           
+           <span class="bottomAdText">Better<span class="bottomAdGreen">Service.</span></span>
+           
+       </div>
+
+        
+        %%Panel.SideNewsletterBox%%
+        %%Panel.TobaccoWarning%%
+
+        <div class="footer-main">
+            <div class="inner">
+                <div class="footer-columns grid">
+                    <div class="grid__item one-quarter"><h4>Further info</h4>%%Panel.FooterNav%%</div>
+                    <div class="grid__item one-quarter">%%Panel.FooterCategoryList%%</div>
+                    <div class="grid__item one-quarter">%%Panel.FooterShopByBrand%%</div>
+                    <div class="grid__item one-quarter">%%Panel.PaymentMethods%%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div class="inner">
+                <p>
+                    <span class="footer-left">
+                        <span id="currencyPrices">%%GLOBAL_AllPricesAreInCurrency%%.</span> <span class="copyRight">&copy; %%GLOBAL_Year%% %%GLOBAL_StoreName%%</span> <span class="pie">|</span> %%SNIPPET_SitemapLink%% | <a href="http://dankstop.com/xmlsitemap.php">XML Sitemap </a><!--<span class="developedBy"> | Built by <a href="#Header">DankStop</a></span>-->
+                    </span>
+                  <!--  <span class="powered-by">%%GLOBAL_PoweredBy%%</span>-->
+                </p>
+                %%GLOBAL_DebugDetails%%
+            </div>
+        </div>
+
+    </div>
+ 
+                
+</div>
+<script>
+  //<![CDATA[
+   $(document).ready(function(){
+        $('.footer-columns div.one-quarter').each(function(){
+         if($(this).find('ul.sf-menu>li>a').length > 10) {
+            var obj = $(this).find('ul.sf-menu');
+            $('<strong><a href="javascript:void(0);" class="ToggleList">Show all</a></strong>').insertAfter(obj);
+         }
+         var i = 0;
+         $(this).find('ul.sf-menu>li>a,ul.treeview>li>a').each(function(){
+            if(i >= 10) {
+                $(this).closest('li').css('display','none');
+            }
+            i++;
+         });
+        });
+
+        $('.footer-columns .ToggleList').on('click',function() {
+            $(this).parent().siblings('ul').children('li:gt(9)').slideToggle('fast');
+            $(this).text($(this).text() == 'Show all' ? 'Show less' : 'Show all');
+        });
+
+   });
+  //]]>
+</script>
+
+    
+
+
+
+<script type="text/javascript" charset="utf-8">var ju_num="CF4D608F-7DB3-47DF-A3C2-BF0764A98EA2";var asset_host=(("https:"==document.location.protocol)?"https":"http")+'://d2j3qa5nc37287.cloudfront.net/';(function() {var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=asset_host+'coupon_code1.js';var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);})();</script>
+
+
+%%GLOBAL_DesignModeHTML%%
+%%GLOBAL_QueryList%%
+%%GLOBAL_DesignModeScriptTag%%
+%%GLOBAL_LiveChatFooterCode%%
+%%GLOBAL_OptimizerTrackingScript%%
+%%GLOBAL_OptimizerConversionScript%%
+%%GLOBAL_OptimizerSetCookieScript%%
+%%GLOBAL_FooterScripts%%
+%%SNIPPET_FastCartThickBoxJs%%
+
+
+<script type="text/javascript">
+var js = document.createElement('script'); js.type = 'text/javascript'; js.async = true; js.id = 'AddShoppers';
+js.src = ('https:' == document.location.protocol ? 'https://shop.pe/widget/' : 'http://cdn.shop.pe/widget/') + 'widget_async.js#5421e0b7a387647c9670f613';
+document.getElementsByTagName("head")[0].appendChild(js);
+</script>
+
+
+<script type="text/javascript" src="//pixel.meteora.us/serve/1592" async="true"></script>
+
+
+
+<script type="text/javascript" src="https://www.affiliatly.com/bigcommerce/bigcommerce.js?affiliatly_code=AF-10339"></script>
+
+%%Panel.Site-Wide-Deferred-JS%%      
+
+
+%%Panel.InStockNotifyPanel%%      
+%%Panel.BrandNavListingImages%%
+%%Panel.WholeSaleFunctions%%
+%%Panel.HoverTooltips%%
+
+
+
+   ​
