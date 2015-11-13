@@ -1,0 +1,223 @@
+Snippets/ProductAddToCart.html
+
+%%GLOBAL_AddToCartButtonControlScript%%
+ 
+<form method="post" action="%%GLOBAL_CartLink%%" onsubmit="return check_add_to_cart(this, %%GLOBAL_ProductOptionRequired%%) %%GLOBAL_FastCartButtonJs%%"  enctype="multipart/form-data" id="productDetailsAddToCartForm">
+    <input type="hidden" name="action" value="add" />
+    <input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%" />
+    <input type="hidden" name="variation_id" class="CartVariationId" value="" />
+    <input type="hidden" name="currency_id" value="" />
+    <div class="ProductDetailsGrid ProductAddToCart">
+        
+        <!-- details grid -->
+        
+        
+    
+        
+
+        <div class="DetailRow ProductSKU" style="display: %%GLOBAL_HideSKU%%">
+                    <div class="Label">%%LNG_SKU%%:</div>
+                    <div class="Value">
+                        <span class="VariationProductSKU">
+                            %%GLOBAL_SKU%%
+                        </span>
+                    </div>
+                </div>
+     
+        <div class="DetailRow" style="%%GLOBAL_HideVendorDetails%%">
+            <div class="Label">%%LNG_Vendor%%:</div>
+            <div class="Value">
+                %%GLOBAL_VendorName%%
+            </div>
+        </div>
+
+        <div class="DetailRow" style="display: %%GLOBAL_HideCondition%%">
+            <div class="Label">%%LNG_Condition%%:</div>
+            <div class="Value">
+                %%GLOBAL_ProductCondition%%
+            </div>
+        </div>
+
+      <div class="DetailRow" style="display: %%GLOBAL_HideWeight%%">
+            <div class="Label">%%LNG_Weight%%:</div>
+            <div class="Value">
+                <span class="VariationProductWeight">
+                    %%GLOBAL_ProductWeight%%
+                </span>
+            </div>
+        </div>
+        
+
+        <div class="DetailRow" style="display: %%GLOBAL_HideAvailability%%">
+            <div class="Label" style="">%%LNG_Availability%%:</div>
+            <div class="Value">
+                %%GLOBAL_Availability%%
+            </div>
+        </div>
+
+        <div class="DetailRow FreeShippingContainer" style="display: %%GLOBAL_HideShipping%%">
+           <!-- <div class="Label">%%LNG_Shipping%%:</div>-->
+            <div class="Value">
+                <!--%%GLOBAL_ShippingPrice%%--> 
+                <H4 class="FreeShippingHeading" data-tooltip="<ul class='free-shipping-list'><li><i class='fa fa-check-circle-o green'></i> <b class='green'>FREE</b> USA Shipping</li><li><i class='fa fa-check-circle-o green'></i> <em>Discreet</em> Packaging and Shipping</li><li><i class='fa fa-check-circle-o green'></i> Ordered Before 2PM? Ships Same Day</li><li><i class='fa fa-check-circle-o green'></i> All Orders Shipped Within 24 hours</li><li><i class='fa fa-check-circle-o green'></i> Worldwide Shipping Available</li><li><i class='fa fa-check-circle-o green'></i> No tax, except for NJ</li></ul>" data-tooltip-my="bottom center" data-tooltip-at="top center"><i class="fa fa-truck"></i> Free shipping &amp; no tax! </H4>
+                <div class="user-info">
+                    <div class="user-time">Current Time: <br> <span></span></div>
+                    <div class="clock-circle">
+                        <div class="clock-face">
+                            <div id="hour" class="clock-hour" style="transform: rotate(438.8deg);"></div>
+                            <div id="minute" class="clock-minute" style="transform: rotate(225.6deg);"></div>
+                            <div id="second" class="clock-second" style="transform: rotate(216deg);"></div>
+                        </div>
+                    </div>
+                    <div class="user-location">Current Location: <br> <span></span></div>
+                </div>
+                <div id="shipping-time" data-tooltip="<span class=&quot;muted&quot;><i>Our estimated delivery dates are only estimates.  Delays may occur via the shipping carrier such as weather conditions, disasters, etc.</i></span>" data-tooltip-my="top center" data-tooltip-at="bottom center"></div>
+            </div>
+            <i class="muted sooner" data-tooltip="<strong>We also offer a variety of faster shipping options at low cost.</strong><br />Choose your expediated shipping option at checkout!" data-tooltip-my="top center" data-tooltip-at="bottom center">Need it delivered sooner?</i>
+        </div>
+
+        <div class="DetailRow" style="%%GLOBAL_HideMinQty%%">
+            <div class="Label">%%LNG_ProductMinQty%%:</div>
+            <div class="Value">
+                %%GLOBAL_MinQty%% %%LNG_units%%
+            </div>
+        </div>
+
+        <div class="DetailRow" style="%%GLOBAL_HideMaxQty%%">
+            <div class="Label">%%LNG_ProductMaxQty%%:</div>
+            <div class="Value">
+                %%GLOBAL_MaxQty%% %%LNG_units%%
+            </div>
+        </div>
+
+        <!--WHERE iT GOES -->
+        
+
+
+        <div class="DetailRow" style="%%GLOBAL_HideGiftWrapMessage%%; display: none;">
+            <div class="Label">%%LNG_GiftWrapping%%:</div>
+            <div class="Value">
+                %%GLOBAL_GiftWrappingAvailable%%
+            </div>
+        </div>
+        
+        
+        <!-- details grid -->
+        
+        %%SNIPPET_ProductFieldsList%%
+        
+        <div class="ProductOptionList">
+            %%SNIPPET_VariationList%%
+        </div>
+
+        <div class="productAttributeList" style="%%GLOBAL_HideProductAttributeList%%">
+            %%GLOBAL_ProductAttributeList%%
+        </div>
+
+        %%SNIPPET_EventDate%%
+
+        <div class="DetailRow qty" style="display:">            
+            <!-- addto -->
+            <div class="addto">
+                <div class="quantitySelectorContainer">
+                    <div class="Label QuantityInput">Quantity:</div>
+                    <div class="Value AddCartButton">
+                        <span style="display: %%GLOBAL_DisplayAddQty%%;">
+                            %%GLOBAL_AddToCartQty%%
+                        </span>
+                        <div class="clear"></div>
+                    </div>
+                </div> <!-- END .quantitySelectorContainer -->
+                <div class="BulkDiscount" style="display: %%GLOBAL_DisplayAdd%%">
+                    %%GLOBAL_AddToCartButtonOptimizerScriptTag%%
+                    <input type="submit" class="btn add-to-cart cta" value="Add To Cart" data-tooltip="<span class='shiptext'><i class='fa fa-check-circle-o green'></i> <i>Free Shipping.</i><br /><i class='fa fa-check-circle-o green'></i> <i>Pay the Price you see.</i><br /><i class='fa fa-check-circle-o green'></i> <i>Satisfaction Guaranteed.</i></span>" data-tooltip-my="bottom center" data-tooltip-at="top center" />
+                    %%GLOBAL_AddToCartButtonOptimizerNoScriptTag%%
+                </div>
+                <div class="BulkDiscountLink" style="display: %%GLOBAL_HideBulkDiscountLink%%;">
+                    <a href="#" class="alt" onclick="$.iModal({data: $('#ProductDetailsBulkDiscountThickBox').html(), width: 600}); return false;">
+                        %%LNG_BulkDiscountLink%%
+                    </a>
+                </div>
+                <!-- //Custom Add to Wishlist -->
+            </div>
+        </div>
+        
+        
+<div class="DetailRow InventoryLevel" style="%%GLOBAL_HideCurrentStock%%">
+            <div class="Label">%%GLOBAL_CurrentStockLabel%%:</div>
+            <div class="Value">
+                <span class="VariationProductInventory">
+                    %%GLOBAL_InventoryList%%
+                </span>
+            </div>
+    </div>
+        
+        
+        <div class="OutOfStockMessage InfoMessage ErrorMessage">
+            %%SNIPPET_SideAddItemSoldOut%%
+        </div>
+    </div>
+    
+   
+</form>
+            
+<!-- Add to Wishlist -->
+
+<div class="Block Moveable Panel AddToWishlistLink" id="SideProductAddToWishList" style="display: none">
+    <div class="BlockContent">
+        <form name="frmWishList" id="frmWishList" action="%%GLOBAL_ShopPath%%/wishlist.php" method="get">
+            <input type="hidden" name="action" value="add" />
+            <input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%" />
+            <input type="hidden" name="variation_id" value="" class="WishListVariationId"/>
+            <input type="submit" class="wishlist-button" value="Add to wishlist" alt="%%LNG_AddToWishList%%" />
+        </form>
+    </div>
+</div>
+
+<!-- //Custom Add to Wishlist -->
+
+
+
+%%GLOBAL_ProductBulkDiscountThickBox%%
+
+<script language="javascript" type="text/javascript">//<![CDATA[
+lang.OptionMessage = "%%GLOBAL_OptionMessage%%";
+lang.VariationSoldOutMessage = "%%LNG_VariationSoldOutMessage%%";
+lang.InvalidQuantity = "%%LNG_InvalidQuantity%%";
+lang.EnterRequiredField = "%%LNG_EnterRequiredField%%";
+lang.InvalidFileTypeJS = "%%LNG_InvalidFileTypeJS%%";
+var ShowAddToCartQtyBox = "%%GLOBAL_ShowAddToCartQtyBox%%";
+%%GLOBAL_ProductMinMaxQtyJavascript%%
+//]]></script>
+
+%%GLOBAL_EventDateJavascript%%
+
+
+%%Panel.ProductAccessoryOptionsUpsellChoice%%
+
+​
+
+
+
+Snippets/CartItem.html
+
+<tr>
+  <td class="CartThumb" style="%%GLOBAL_HideThumbColumn%%"> %%GLOBAL_ProductImage%%&nbsp; </td>
+  <td class="ProductName" colspan="%%GLOBAL_ProductNameSpan%%"><a href="%%GLOBAL_ProductLink%%">%%GLOBAL_ProductName%%</a>%%GLOBAL_ProductOptions%% <br />
+    %%GLOBAL_ProductAvailability%%
+    <div class="CartExpectedReleaseDate" style="%%GLOBAL_HideExpectedReleaseDate%%">(%%GLOBAL_ProductExpectedReleaseDate%%)</div>
+    %%GLOBAL_EventDate%%
+    <div style="%%GLOBAL_HideWrappingOptions%%; display:none;" class="WrappingOptions"><i class="fa fa-tag"></i>
+ %%LNG_GiftWrapping%%:%%GLOBAL_GiftWrappingName%% <a href="#" class="alt" onclick="Cart.ManageGiftWrapping('%%GLOBAL_CartItemId%%');" style="%%GLOBAL_HideGiftWrappingAdd%%">%%LNG_Add%%</a> <span style="%%GLOBAL_HideGiftWrappingEdit%%"> (<a href="#" class="alt" onclick="Cart.ManageGiftWrapping('%%GLOBAL_CartItemId%%');">%%LNG_Change%%</a> %%LNG_Or%% <a href="cart.php?action=remove_giftwrapping&amp;item_id=%%GLOBAL_CartItemId%%" class="alt" onclick="return Cart.RemoveGiftWrapping();">%%LNG_Remove%%</a>) </span> <br />
+      <span style="%%GLOBAL_HideGiftMessagePreview%%"> %%LNG_GiftMessage%%:
+      %%GLOBAL_GiftMessagePreview%% </span> </div></td>
+  <td align="center" class="CartItemQuantity"> %%GLOBAL_CartItemQty%%
+    <div style="%%GLOBAL_HideCartItemRemove%%"> <a href="cart.php?action=remove&amp;item=%%GLOBAL_CartItemId%%" onclick="Cart.RemoveItem('%%GLOBAL_CartItemId%%'); return false;" class="CartRemoveLink alt" title="%%LNG_Remove%%">&nbsp;<i class="fa fa-times-circle"></i> Remove</a> </div></td>
+  <td align="center" class="CartItemIndividualPrice"><h4>%%GLOBAL_ProductPrice%%</h4></td>
+  <td align="right" class="CartItemTotalPrice">
+  <h4 class="ProductPrice">
+    %%GLOBAL_ProductTotal%%
+  </h4></td>
+</tr>
+​
+
