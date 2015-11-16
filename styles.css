@@ -477,6 +477,89 @@ body#home {
 	border-bottom: 0;
 }
 
+.DankStopAdvantage {
+	font-family: "sofia_pro_lightregular";
+	margin-top: 20px;
+}
+.DankStopAdvantage > span {
+	font-size: 16px;
+	line-height: 1.5;
+	text-align: center;
+	text-transform: uppercase;
+	border-bottom: 3px solid gray;
+	margin-bottom: 10px;
+	color: #39b548;
+}
+.DankStopAdvantage ul {
+	text-align: center;
+}
+.DankStopAdvantage li {
+	margin: 0 0 15px 0;
+}
+.DankStopAdvantage .leftSidePoints,
+.DankStopAdvantage .rightSidePoints {
+	display: inline-block; 
+	vertical-align: middle; 
+}
+.DankStopAdvantage .leftSidePoints {
+	width: 20%;
+	border-radius: 50%;
+	height: 43px;
+	width: 43px;
+	vertical-align: middle;
+	text-align: center;
+	background: lightgray;
+	transition: all 0.13s ease-in-out;
+}
+.DankStopAdvantage li:hover .leftSidePoints {
+	-moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1),0 4px 8px 0 rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1),0 4px 8px 0 rgba(0,0,0,0.2);
+	-o-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1),0 4px 8px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1),0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.DankStopAdvantage .pointOne .leftSidePoints {
+/* 	background: #e9954a; */
+	background: #f4b277;
+}
+.DankStopAdvantage .pointTwo .leftSidePoints {
+/* 	background: #e9514a; */
+	background: #f47d77;
+}
+.DankStopAdvantage .pointThree .leftSidePoints {
+/* 	background: #2e868e; */
+	background: #62bec7;
+}
+.DankStopAdvantage .pointFour .leftSidePoints {
+	background: #6ada78;
+}
+.DankStopAdvantage .rightSidePoints {
+	text-align: center;
+	width: 70%;
+}
+.DankStopAdvantage i {
+	font-size: 25px;
+/* 	color: #24B9F1; */
+/* 	color: #39b54a; */
+	color: #fff;
+	line-height: 45px;
+}
+.DankStopAdvantage span {
+	display: block;
+}
+.DankStopAdvantage .DankPoint {
+	color: #39b54a;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.DankStopAdvantage .SubDankPoint {
+	font-size: 11px; 
+	text-transform: uppercase;
+}
+
+
+
+
+
 /* New Header */
 .header {
 }
@@ -1206,7 +1289,7 @@ margin-left:-11px;
 	height: auto !important;
 }
 .page .main .ProductScroll {
-	Height:270px !important;
+	height: 290px;
 	margin-bottom: 19px;
 }
 .page .main .ProductScroll .mcs-item {
@@ -1778,7 +1861,19 @@ float:left;
 }
 #ProductDetails .ProductMain #InStockNotifyInline {
 	position: relative;
-	display: table-row;
+	display: table;
+}
+.OutOfStockMessage.InfoMessage .instock-head {
+	text-align: center;
+	padding: 10px 20px 0;
+	margin-bottom: -9px;
+}
+.OutOfStockMessage.InfoMessage .instock-head span {
+	font-size: 17px;
+	font-family: futura;
+	font-style: italic;
+	color: #a7a7a7;
+	font-weight: 100;
 }
 #InStockNotifyLabel {
 	color: rgba(0,0,0,0.54);
@@ -1790,12 +1885,11 @@ float:left;
 	-webkit-transition-property: color,top,transform,width;
 	transition-property: color,top,transform,width;
 	color: rgba(0,0,0,0.38);
-	font: 400 16px Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-	font-size: 12px;
+	font-family: futura;
+	font-size: 17px;
 	pointer-events: none;
 	position: absolute;
-	top: 19px;
-	width: 65%;
+	top: 28px;
 }
 #ProductDetails .ProductMain #InStockNotifyEmail {
 	position: relative;
@@ -1812,10 +1906,12 @@ float:left;
 	text-align: left;
 	border: 0;
 	padding: 0;
-	height: 26px;
+	height: 31px;
 	position: relative;
-	top: 1px;
+	top: 0;
 	margin-bottom: 0;
+	font-size: 17px;
+	font-family: futura;
 }
 #ProductDetails .ProductMain #InStockNotifyEmailAddress::-webkit-input-placeholder {
 	display: none !important;
@@ -1855,17 +1951,17 @@ float:left;
 	transform-origin: 232px 50% 0px;
 }
 #ProductDetails .ProductMain .hasValue #InStockNotifyLabel {
-	-webkit-transform: scale(.75);
-	transform: scale(.75);
-	top: 21px;
+	-webkit-transform: scale(.57);
+	transform: scale(.57);
+	top: 18px;
 	color: rgba(0,0,0,0.54);
 	width: 137%;
 }
 #ProductDetails .ProductMain .isFocused #InStockNotifyLabel {
-	-webkit-transform: scale(.75);
-	transform: scale(.75);
+	-webkit-transform: scale(.57);
+	transform: scale(.57);
     color: #6ADA78;
-	top: 18px;
+	top: 15px;
 	width: 137%;
 }
 #ProductDetails .ProductMain .isFocused #InStockNotifyInline .animatedUnderline {
@@ -4478,7 +4574,7 @@ table tr td h3 {
 }
 .productAttributeList .productAttributeLabel label {
     display: block;
-    margin-bottom: 10px !important;
+    margin-bottom: 7px;
     position: relative;
 }
 /* Below is required to overwrite __Master defaults */
@@ -4658,7 +4754,7 @@ ul.tabs li {
     display: block;
 }
 .productPage .page .main .ProductScroll {
-    Height: 260px !important;
+    Height: 269px !important;
 }
 /* Account Menu (horizontal)
 ....................................................................... */
@@ -7707,12 +7803,10 @@ div#fancy_content {
     position:absolute;
     right:0;
     color:#202020;
+	top: 0;
 }
 .desktop_view1 {
     display:none;
-}
-#productDetailsAddToCartForm .productAttributeList .productAttributeLabel label {
-    margin-bottom:0 !important;
 }
 .slide-button .btn {
     font-size:13px;
