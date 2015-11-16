@@ -1876,17 +1876,19 @@ float:left;
 	font-weight: 100;
 }
 #InStockNotifyLabel {
-	color: rgba(0,0,0,0.54);
-	font: 300 16px/24px Roboto,arial,sans-serif;
+	color: rgba(0,0,0,0.38);
 	-webkit-transform-origin: top left;
 	transform-origin: top left;
 	-webkit-transition: all .3s cubic-bezier(0.4,0,0.2,1);
 	transition: all .3s cubic-bezier(0.4,0,0.2,1);
-	-webkit-transition-property: color,top,transform,width;
-	transition-property: color,top,transform,width;
+	-webkit-transition-property: color,top,transform;
+	transition-property: color,top,transform;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1)
 	color: rgba(0,0,0,0.38);
 	font-family: futura;
 	font-size: 17px;
+	font-weight: 100;
 	pointer-events: none;
 	position: absolute;
 	top: 28px;
@@ -1951,18 +1953,16 @@ float:left;
 	transform-origin: 232px 50% 0px;
 }
 #ProductDetails .ProductMain .hasValue #InStockNotifyLabel {
-	-webkit-transform: scale(.57);
-	transform: scale(.57);
+	-webkit-transform: scale(0.57);
+	transform: scale(0.57);
 	top: 18px;
 	color: rgba(0,0,0,0.54);
-	width: 137%;
 }
 #ProductDetails .ProductMain .isFocused #InStockNotifyLabel {
-	-webkit-transform: scale(.57);
-	transform: scale(.57);
+	-webkit-transform: scale(0.57);
+	transform: scale(0.57);
     color: #6ADA78;
 	top: 15px;
-	width: 137%;
 }
 #ProductDetails .ProductMain .isFocused #InStockNotifyInline .animatedUnderline {
 	-webkit-animation: quantumWizPaperInputAddUnderline .3s cubic-bezier(0.4,0,0.2,1);
@@ -2001,9 +2001,6 @@ float:left;
 	position: absolute;
 	left: 86px;
 	top: 24px;
-	/* -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
-	/* -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
-	/* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
 	-webkit-background-clip: padding-box;
 	-moz-background-clip: padding;
 	background-clip: padding-box;
