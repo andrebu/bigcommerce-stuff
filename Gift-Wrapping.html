@@ -93,13 +93,18 @@ Snippets/ProductAddToCart.html
         <!--WHERE iT GOES -->
         
 
-
-        <div class="DetailRow" style="%%GLOBAL_HideGiftWrapMessage%%; display: none;">
+        <!-- gift wrapping gift wrapping gift wrapping  -->
+        <!-- gift wrapping gift wrapping gift wrapping  -->
+        <!-- gift wrapping gift wrapping gift wrapping  -->
+        <div class="DetailRow" style="%%GLOBAL_HideGiftWrapMessage%%;">
             <div class="Label">%%LNG_GiftWrapping%%:</div>
             <div class="Value">
                 %%GLOBAL_GiftWrappingAvailable%%
             </div>
         </div>
+        <!-- gift wrapping gift wrapping gift wrapping  -->
+        <!-- gift wrapping gift wrapping gift wrapping  -->
+        <!-- gift wrapping gift wrapping gift wrapping  -->
         
         
         <!-- details grid -->
@@ -199,6 +204,9 @@ var ShowAddToCartQtyBox = "%%GLOBAL_ShowAddToCartQtyBox%%";
 
 
 
+
+
+
 Snippets/CartItem.html
 
 <tr>
@@ -207,8 +215,21 @@ Snippets/CartItem.html
     %%GLOBAL_ProductAvailability%%
     <div class="CartExpectedReleaseDate" style="%%GLOBAL_HideExpectedReleaseDate%%">(%%GLOBAL_ProductExpectedReleaseDate%%)</div>
     %%GLOBAL_EventDate%%
+    
+    
+    
+    
+        <!-- gift wrapping gift wrapping gift wrapping  -->
+        <!-- gift wrapping gift wrapping gift wrapping  -->
+        <!-- gift wrapping gift wrapping gift wrapping  -->
     <div style="%%GLOBAL_HideWrappingOptions%%; display:none;" class="WrappingOptions"><i class="fa fa-tag"></i>
  %%LNG_GiftWrapping%%:%%GLOBAL_GiftWrappingName%% <a href="#" class="alt" onclick="Cart.ManageGiftWrapping('%%GLOBAL_CartItemId%%');" style="%%GLOBAL_HideGiftWrappingAdd%%">%%LNG_Add%%</a> <span style="%%GLOBAL_HideGiftWrappingEdit%%"> (<a href="#" class="alt" onclick="Cart.ManageGiftWrapping('%%GLOBAL_CartItemId%%');">%%LNG_Change%%</a> %%LNG_Or%% <a href="cart.php?action=remove_giftwrapping&amp;item_id=%%GLOBAL_CartItemId%%" class="alt" onclick="return Cart.RemoveGiftWrapping();">%%LNG_Remove%%</a>) </span> <br />
+        <!-- gift wrapping gift wrapping gift wrapping  -->
+        <!-- gift wrapping gift wrapping gift wrapping  -->
+        <!-- gift wrapping gift wrapping gift wrapping  -->
+
+ 
+ 
       <span style="%%GLOBAL_HideGiftMessagePreview%%"> %%LNG_GiftMessage%%:
       %%GLOBAL_GiftMessagePreview%% </span> </div></td>
   <td align="center" class="CartItemQuantity"> %%GLOBAL_CartItemQty%%
