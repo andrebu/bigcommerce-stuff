@@ -175,6 +175,10 @@ $(window).load(function() {
 		}
 	}
 	resizeMS();
+	$(window).resize(function() {
+		console.log('hello');
+		resizeMS();
+	});
 });
 function initJSAtOnload() {
 
@@ -283,7 +287,6 @@ function initJSAtOnload() {
 
 
 
-<script type="text/javascript" src="https://www.affiliatly.com/bigcommerce/bigcommerce.js?affiliatly_code=AF-10339"></script>
 
 
 
@@ -292,6 +295,10 @@ function initJSAtOnload() {
 %%Panel.BrandNavListingImages%%
 %%Panel.WholeSaleFunctions%%
 %%Panel.HoverTooltips%%
+
+
+
+<!-- <script type="text/javascript" src="https://www.affiliatly.com/bigcommerce/bigcommerce.js?affiliatly_code=AF-10339"></script> -->
 
 
 
