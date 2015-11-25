@@ -567,7 +567,7 @@ width: 82%;
         padding:0 !important;
     }
     .treeview li a, .BlockContent .pages-menu li a {
-        border-bottom: 1px solid #3F3F3F;
+/*         border-bottom: 1px solid #3F3F3F; */
     }
     .treeview .hitarea {
         background:none !important;
@@ -822,7 +822,8 @@ width: 82%;
     #CategoryBreadcrumbMobile {
         margin-top:12px;
         margin-bottom:0px;
-    }
+		min-height: 26px;
+	}
     .full-width #LayoutColumn1 {
         margin-top:20px;
     }
@@ -1513,11 +1514,9 @@ width: 82%;
 /*---------Makes bottom ad logo not off center-----------*/
 
 
-img.bottomAdImg {
-  BOTTOM: -18PX;
-  margin-bottom: 50px;
-  margin-right: 0px;
-
+#bottomAd .bottomAdImg {
+    display: block;
+    margin: 0 auto 50px;
 }
 
 
@@ -1719,7 +1718,7 @@ width:100%;
     /*----------Poduct Display----------*/
     /*---- two product 2-product 2 product wide 2-wide category mobile display  ---*/
     #home .ProductList li, .productPage .ProductList li, #SimilarMultiProductsByCustomerViews .ProductList li, .WishlistProductList.ProductList li, .CategoryContent .ProductList li {
-        width:49.99999%;
+        width:49%;
     }
 	.on-sale-badge {
 		left: -28%;
@@ -1848,7 +1847,12 @@ width:100%;
         display:block;
         position:relative;
         margin:0;
+		box-sizing: border-box;
     }
+	form#cartForm table.CartContents tr td.CartThumb {
+		width: 100% !important;
+		box-sizing: border-box;
+	}
     .BlockContent .CartThumb img {
         max-width:inherit;
     }

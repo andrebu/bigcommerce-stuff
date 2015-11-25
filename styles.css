@@ -218,7 +218,7 @@ h1.smallh {
 	display: block;
 	text-align: center;
 	font-family: Questrial;
-	font-family: futura;
+	font-family: futura, Tahoma, Geneva, sans-serif;
 	-webkit-box-shadow: -1px 0 0 0 #d2d2d2,-1px 0 0 0 #e6e6e6,1px 0 0 0 #d2d2d2,2px 0 0 0 #e6e6e6,0 -1px 0 0 #e8e8e8,0 2px 0 0 rgba(241,241,241,0.3),0 1px 0 0 #b1b1b1;
 	-moz-box-shadow: -1px 0 0 0 #d2d2d2,-1px 0 0 0 #e6e6e6,1px 0 0 0 #d2d2d2,2px 0 0 0 #e6e6e6,0 -1px 0 0 #e8e8e8,0 2px 0 0 rgba(241,241,241,0.3),0 1px 0 0 #b1b1b1;
 	box-shadow: -1px 0 0 0 #d2d2d2,-1px 0 0 0 #e6e6e6,1px 0 0 0 #d2d2d2,2px 0 0 0 #e6e6e6,0 -1px 0 0 #e8e8e8,0 2px 0 0 rgba(241,241,241,0.3),0 1px 0 0 #b1b1b1;
@@ -1133,7 +1133,7 @@ body table#QuickSearch.QuickSearch {
 	}
 /* 	Front page */
 	#home .MagicScroll-horizontal .mcs-item {
-		width: 49% !important;
+/* 		width: 49% !important; */
 	}
 }
 @media screen and (device-aspect-ratio: 2/3) {
@@ -1208,14 +1208,11 @@ body table#QuickSearch.QuickSearch {
 
 /*----------Bottom Ad Styles--------------*/
 #bottomAd {
-  
-  /*width: 68%;*/
-  DISPLAY: BLOCK !IMPORTANT;
-  MARGIN: 0 AUTO;
-  BORDER: SOLID 1PX #DDD;
-  MARGIN-TOP: 4PX;
-  margin-bottom: 20px;
-  TEXT-ALIGN: CENTER;
+	DISPLAY: BLOCK !IMPORTANT;
+	margin: 4px auto 0;
+	BORDER: SOLID 1px #DDD;
+	border-bottom: 0;
+	TEXT-ALIGN: CENTER;
 }
 
 
@@ -1231,7 +1228,7 @@ span.bottomAdText {
   font-size: 34px;
   margin: 26PX 0;
   text-transform: uppercase;
-  font-family: futura;
+  font-family: futura, Tahoma, Geneva, sans-serif;
   color: black;
   DISPLAY: INLINE-BLOCK;
   TOP: -18PX;
@@ -1436,6 +1433,21 @@ body .newsletter-subscription > .inner {
 .bx-wrapper .bxslider img {
 	margin: 0 auto;
 }
+#bx-slider-wrapper {
+    visibility: hidden; 
+    height: 420px;
+}
+.bx-wrapper {
+    margin-bottom: 20px !important;
+}
+.bx-wrapper .bx-viewport {
+    border-bottom: 0;
+}
+.bx-wrapper .bx-controls-direction a {
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+}
 
 /* MacBook 13" - make so 3 products can fit width wise on category pages */
 @media only screen and (device-width : 1280px) and (orientation: landscape) {
@@ -1476,8 +1488,16 @@ body .newsletter-subscription > .inner {
 	-moz-osx-font-smoothing: grayscale;
 	transform: translate(0, 0);
 }
+.hidden {
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+}
 /* Font Awesome icons
  -------------------------- */
+.fa-gift:before {
+	content: "\f06b";
+}
 .fa-instagram:before {
 	content: "\f16d";
 }
@@ -1870,7 +1890,7 @@ float:left;
 }
 .OutOfStockMessage.InfoMessage .instock-head span {
 	font-size: 17px;
-	font-family: futura;
+	font-family: futura, Tahoma, Geneva, sans-serif;
 	font-style: italic;
 	color: #a7a7a7;
 	font-weight: 100;
@@ -1881,12 +1901,12 @@ float:left;
 	transform-origin: top left;
 	-webkit-transition: all .3s cubic-bezier(0.4,0,0.2,1);
 	transition: all .3s cubic-bezier(0.4,0,0.2,1);
-	-webkit-transition-property: color,top,transform;
-	transition-property: color,top,transform;
+	-webkit-transition-property: all;
+	transition-property: all;
 	-webkit-transform: scaleX(1);
 	transform: scaleX(1)
 	color: rgba(0,0,0,0.38);
-	font-family: futura;
+	font-family: futura, Tahoma, Geneva, sans-serif;
 	font-size: 17px;
 	font-weight: 100;
 	pointer-events: none;
@@ -1913,7 +1933,7 @@ float:left;
 	top: 0;
 	margin-bottom: 0;
 	font-size: 17px;
-	font-family: futura;
+	font-family: futura, Tahoma, Geneva, sans-serif;
 }
 #ProductDetails .ProductMain #InStockNotifyEmailAddress::-webkit-input-placeholder {
 	display: none !important;
@@ -2220,7 +2240,7 @@ vertical-align: middle;
 body {
     background-color: #fff;
     font-size: 13px;
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: futura, Tahoma, Geneva, sans-serif;
     font-weight: normal;
     -webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
 	-webkit-font-smoothing: antialiased;
@@ -3078,12 +3098,12 @@ textarea {
     padding: 0 0 10px 10px;
 }
 #ProductDetails .ProductMain .DetailRow.PriceRow.p-price {
-	font-family: futura;
+	font-family: futura, Tahoma, Geneva, sans-serif;
 }
 .ProductDetailsGrid.mobile .DetailRow .ProductPrice.VariationProductPrice {
 	color: #000;
 	font-weight: 300;
-	font-family: futura;
+	font-family: futura, Tahoma, Geneva, sans-serif;
 	font-size: initial;
 }
 .ProductDetailsGrid.mobile .DetailRow .ProductPrice.VariationProductPrice > span {
@@ -7060,6 +7080,7 @@ html.javascript .productOptionViewRectangle label {
 */
 .main .SearchContainer .ProductList li {
 	width: 32.5%;
+	position: relative;
 }
 .SearchContainer .ProductList .ProductImage {
     margin-right: 20px;
@@ -8259,7 +8280,7 @@ height: 100px;
 .footer-tobacco-warning span {
 	text-transform: none;
 	color: #666F74;
-	font-family: FUTURA;
+	font-family: futura, Tahoma, Geneva, sans-serif;
 	letter-spacing: normal;
 	font-size: 13px;
 	padding: 0;
@@ -8772,7 +8793,7 @@ div.sold-out-overlay {
 .user-info .user-time, 
 .user-info .user-location {
     display: inline-block;
-    font-size: 11px;
+    font-size: 10px;
     width: 44%;
     color: #999;
     font-weight: bold;
@@ -8786,7 +8807,7 @@ div.sold-out-overlay {
 }
 .user-info div span {
     font-weight: normal;
-    font-size: 10px;
+    font-size: 9px;
 }
 .user-info .clock-circle {
 	width: 24px;
