@@ -1,5 +1,5 @@
 %%Panel.HTMLHead%%
-    <body>
+    <body itemscope itemtype="http://schema.org/WebPage">
         %%Panel.DrawerMenu%%
         <div class="page">
             %%Panel.Header%%
@@ -128,6 +128,31 @@
 #nail-glossary-container .which-to-get p {
 	font-size: 17px;
 	line-height: 27px;
+}
+/* iPad   Portrait */
+@media only screen 
+  and (max-device-width: 768px) 
+  and (orientation: portrait) {
+
+}
+/* iPad    Landscape */
+@media only screen 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) {
+
+}
+/* iPhone 6+ Plus and below Portrait */
+@media only screen and (max-device-width: 414px) and (orientation: portrait) { 
+	#nail-glossary-container .nails-inner {
+		padding: 0;
+	}
+}
+@media only screen 
+  and (max-device-width: 736px) 
+  and (orientation: landscape) { 
+	#nail-glossary-container .nails-inner {
+		padding: 0;
+	}
 }
 </style>
 
