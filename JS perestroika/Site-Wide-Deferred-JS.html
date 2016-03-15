@@ -87,6 +87,7 @@ GLOBAL_RTLStyles%%
         var $helpMenuContainer = $('#helpMenu');
         var $navCover = $('#nav-cover');
         var $header = $('.header');
+        var $body = $('body');
         function setNavCover() {
             var headerHeight = $header.height();
             $navCover.css('top', headerHeight);
@@ -99,12 +100,12 @@ GLOBAL_RTLStyles%%
             mouseenter: function(event) {
                 $helpMenuTrigger.addClass('open');
                 $helpMenuContainer.show();
-                $navCover.stop().fadeTo(150, 0.5);
+                $body.addClass('modal-open');
             },
             mouseleave: function(event) {
                 $helpMenuTrigger.removeClass('open');
                 $helpMenuContainer.hide();
-                $navCover.stop().fadeTo(150, 0, function() {$(this).hide();});
+                $body.removeClass('modal-open');
             }
         });
         var $accountMenuTrigger = $('#myAccountTrigger');
@@ -113,12 +114,12 @@ GLOBAL_RTLStyles%%
             mouseenter: function(event) {
                 $accountMenuTrigger.addClass('open');
                 $accountMenuContainer.show();
-                $navCover.stop().fadeTo(150, 0.5);
+                $body.addClass('modal-open');
             },
             mouseleave: function(event) {
                 $accountMenuTrigger.removeClass('open');
                 $accountMenuContainer.hide();
-                $navCover.stop().fadeTo(150, 0, function() {$(this).hide();});
+                $body.removeClass('modal-open');
             }
         });
     }
