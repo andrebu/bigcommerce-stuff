@@ -1,0 +1,146 @@
+<header class="header" role="banner" itemprop="hasPart" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="inner">
+        <div id="AjaxLoading">
+            <div class="ajax-loader"> 
+                <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>&nbsp;&nbsp;%%LNG_LoadingPleaseWait%% 
+            </div>
+        </div>
+        %%GLOBAL_MaintenanceNotice%%
+        %%Panel.TopMenu%%
+        <div id="Header">
+            <div class="inner">
+                <div id="ToggleMenu" class="normal fa fa-bars"></div>
+                <div class="Left fleft">
+                    <div class="header-logo"> %%GLOBAL_HeaderLogo%% </div>
+                    <div class="header-logo-text">
+                        <a href="/">
+                            <span itemprop="headline">DANKSTOP.COM</span><br>
+                            <span itemprop="description">THE <span class="green">ONLINE</span> HEADSHOP!</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="Content Widest" id="LayoutColumn1">
+                    <div class="headerSearchContainer">%%Panel.HeaderSearch%%</div>
+                    <div class="search-mobile mobile">%%Panel.HeaderSearch%%</div>
+                    <div id="myAccountMenuTrigger">
+                        <span id="myAccountMenuLink">
+                            <span class="myAccountHi">Hi, <a id="myAccountLoginLogout" href="/login.php">Sign in</a></span>
+                            <br>
+                            <span class="myAccountMyDS">My DankStop <i class="fa fa-caret-down"></i></span>
+                        </span>
+                        <nav id="myAccountMenuDropDown" role="navigation" 
+                            itemprop="hasPart" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                            <meta itemprop="name" content="Account Menu Navigation" />
+                            <ul>
+                                <li>
+                                    <a href="/account.php">
+                                        <span>My DankStop</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/account.php?action=account_details">
+                                        <span>My Account</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/account.php?action=inbox">
+                                        <span>My Messages</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/account.php?action=order_status">
+                                        <span>My Order Status</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/account.php?action=view_orders">
+                                        <span>My Completed Orders</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/wishlist.php">
+                                        <span>My Wishlist</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header-secondary">
+                        <a href="%%GLOBAL_ShopPathNormal%%/cart.php" title="%%LNG_ViewCart%%">
+                            <div class="CartLink" style="display:%%GLOBAL_HideCartOptions%%"> 
+                                <i class="icon fa fa-shopping-cart" title="View Cart">&nbsp;</i>
+                                <span>%%GLOBAL_CartItems%%</span>
+                            </div>
+                        </a>
+                    </div>  
+                    <div id="cart-amount"> 
+                        <a href="%%GLOBAL_ShopPathNormal%%/cart.php" class="Cart">
+                            <span class="bag-handle"></span><span class="total">&nbsp;</span>
+                        </a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-logo-mobile"> 
+            <!--GLOBAL_HeaderLogo%%-->
+            <div class="mobile-logo"> 
+                <a href="//dankstop.com/">
+                    <img src="%%ASSET_images/DankStop-Online-Headshop-logo.png%%" id="LogoImage" alt="DankStop Online Headshop Logo" title="DankStop Online Headshop" width="70" height="70">
+                </a>
+            </div>
+            <div class="mobile-logo-text">
+                <a href="/">
+                    <span>DANKSTOP.COM <br>
+                        THE <span class="green">ONLINE</span> HEADSHOP!</span>
+                </a>
+            </div>
+       </div>
+        <div id="subHeader">
+            <div class="inner">
+                <nav class="PageMenu" role="navigation" id="PageMenu"
+                    itemprop="hasPart" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <meta itemprop="name" content="Page Menu Navigation" />
+                    <ul>
+                        <li>
+                            <a class="shopByText" href="/">
+                                <span><i class="fa fa-home"></i> HOME</span>
+                            </a>
+                        </li>
+                        <li id="headerNewItemsLink">
+                            <a href="/categories/?sort=newest">
+                                <span>New Items</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/brands/">
+                                <span>Shop Brands</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/on-sale-now/">
+                                <span>On Sale Now</span>
+                            </a>
+                        </li>
+                        <li class="wholesaleSHLink">
+                            <a href="/wholesale/">
+                                <span>Wholesale</span>
+                            </a>
+                        </li>
+                        <li id="headerShippingReturnsLink">
+                            <a href="/shipping-returns/">
+                                <span>Shipping &amp; Returns</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/blog/">
+                                <span>Blog</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="freeShippingContainer lightgreen"><a href="/shipping-returns/"><span class="freeShippingTruck"></span><span class="shippingLines"><span></span></span><span class="freeShippingText"> FREE Shipping in the USA</span></a></div>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="nav-cover"></div>
