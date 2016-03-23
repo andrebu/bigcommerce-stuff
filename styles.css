@@ -661,11 +661,14 @@ body#home {
 #wikiMenuDropDown ul.wiki-item-menu li.wiki-item {
     display: block;
     text-align: left;
-    padding: 2% 1%;
+    padding: 0;
     font-size: 15px;
     border-radius: 3px;
     display: inline-block;
-    width: 31%;
+    width: 33%;
+}
+#wikiMenuDropDown ul.wiki-item-menu li.wiki-item a {
+	padding: 13px;
 }
 #wikiMenuDropDown ul.wiki-item-menu li.wiki-item:hover {
     border-left-color: #39B54A;
