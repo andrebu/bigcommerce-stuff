@@ -26,7 +26,7 @@
 
 
 .Block.banner_home_page_bottom .tallpanel .floatercontainer .vertcentercentered {
-     padding: 11vw 30px;
+     padding-top: 11vw;
      }
 }
 
@@ -50,7 +50,7 @@
      }
 
 .Block.banner_home_page_bottom .tallpanel .floatercontainer .vertcentercentered {
-     padding: 13.5vw 30px;
+     padding-top: 13.5vw;
      }
 
 }
@@ -65,9 +65,9 @@
      float: none;
      }
 
-.Block.banner_home_page_bottom .tallpanel .floatercontainer .vertcentercentered {
-     padding: 12.5vw 0px;
-     }
+	.Block.banner_home_page_bottom .tallpanel .floatercontainer .vertcentercentered {
+		padding-top: 12.5vw;
+	}
 
 }
 
@@ -91,7 +91,7 @@
      }
 
 .Block.banner_home_page_bottom .tallpanel .floatercontainer   .vertcentercentered {
-     padding: 9.5vw 0px;
+     padding-top: 9.5vw;
      }
 
 
@@ -1397,11 +1397,6 @@ width: 82%;
 	font-size: 17px;
 	font-family: futura;
 }
-    #saleinfo {
-		margin: 53px auto 0;
-		width: 100% !important;
-		flex-direction: column;
-	}
     /*---------- Cart Table ----------*/
     .CartContents td:nth-of-type(5) {
         padding-right:3%;
