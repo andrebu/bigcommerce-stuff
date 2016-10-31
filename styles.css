@@ -2794,6 +2794,21 @@ strong, b {
     padding:0 20px;
 }
 
+.btn.disabled {
+    background: lightgray !important;
+    background-color: lightgray !important;
+    border-color: lightgray !important;
+    cursor: default !important;
+    pointer-events:none !important;
+}
+.btn.disabled:hover {
+    background: lightgray !important;
+    background-color: lightgray !important;
+    border-color: lightgray !important;
+    cursor: default !important;
+    pointer-events:none !important;
+}
+
 /* Headings */
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
