@@ -1,0 +1,242 @@
+<!-- http://www.oxhow.com/optimize-defer-javascript-wordpress/ -->
+
+<!-- Following ~37 line block of scripts is from below-HTML Panels/HTMLHead.html -->
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="%%GLOBAL_CdnAppPath%%/javascript/menudrop.js?%%GLOBAL_JSCacheToken%%"></script>
+<script src="%%GLOBAL_CdnAppPath%%/javascript/iselector.js?%%GLOBAL_JSCacheToken%%"></script>
+<script src="%%GLOBAL_CdnAppPath%%/javascript/jquery/plugins/jquery.flexslider.js"></script>
+<script src="%%GLOBAL_CdnAppPath%%/javascript/viewport.js??%%GLOBAL_JSCacheToken%%"></script>
+-->
+
+<!-- Theme bespoke js -->
+<!--
+<script src="%%GLOBAL_TPL_PATH%%/js/matchMedia.js"></script>
+<script src="%%GLOBAL_TPL_PATH%%/js/common.js"></script>
+<script src="%%GLOBAL_TPL_PATH%%/js/jquery.autobox.js"></script>
+<script src="%%GLOBAL_TPL_PATH%%/js/init.js"></script>
+<script src="%%GLOBAL_TPL_PATH%%/js/jquery.uniform.min.js"></script>
+<script src="%%GLOBAL_TPL_PATH%%/js/main.js?%%GLOBAL_JSCacheToken%%"></script>
+<script src="%%ASSET_/js/site.js%%"></script>    
+-->
+<!-- <script src="%%GLOBAL_TPL_PATH%%/js/site.js"></script>   --> 
+
+
+<!--
+Panel.MagicZoomPlusHeaders%%
+<link rel="stylesheet" href="%%GLOBAL_CdnStorePath%%/content/magicscroll/magicscroll.css">
+<script type="text/javascript" src="%%GLOBAL_CdnStorePath%%/content/magicscroll/magicscroll.js"></script>
+-->
+
+<!--
+<script>
+//<![CDATA[
+    config.ShopPath = '%%GLOBAL_ShopPath%%';
+    config.AppPath = ''; // BIG-8939: Deprecated, do not use.
+    config.FastCart = %%GLOBAL_FastCart%%;
+    var ThumbImageWidth = %%GLOBAL_ProductThumbImageWidth%%;
+    var ThumbImageHeight = %%GLOBAL_ProductThumbImageHeight%%;
+//]]>
+</script>
+-->
+<!-- Panel.HeadScripts%% -->
+<!-- Additional script tags START here -->
+<!-- GLOBAL_AdditionalScriptTags%% -->
+<!--
+<script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/jquery/plugins/jquery.form.js"></script>
+<script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/jquery/plugins/imodal/imodal.js"></script>
+-->
+<!-- Additional script tags END here -->
+<!--
+GLOBAL_QuickSearchJS%%
+GLOBAL_RTLStyles%%
+-->
+
+
+
+
+
+
+
+%%Panel.HeaderJS%%      
+
+
+
+
+
+
+
+<!-- From bottom of Panels/HeaderSearch.html -->
+<script type="text/javascript">
+    var QuickSearchAlignment = 'right';
+    var QuickSearchWidth = '390px';
+    lang.EmptySmallSearch = "%%LNG_EmptySmallSearch%%";
+    $(document).ajaxComplete(function() {
+        $('input[type=checkbox], select').not('.UniApplied').uniform();
+    });
+</script>
+
+
+<!-- From default.html, right below Panel.Header%% -->
+%%Panel.HomeSlideShowBXJS%%
+
+
+<!-- From bottom of Panels/DrawerMenu.html -->
+%%Panel.DrawerMenuJavascript%%​
+
+
+
+<!-- From bottom of Panels/SideNewsletterBox.html -->
+%%Panel.NewsletterJavaScript%%​
+
+
+
+
+
+
+
+<script type="text/javascript">
+// Site Wide JS	
+$(window).load(function() {
+	// resize MagicScroll
+	function resizeMS() {
+		if ('#home .ProductScroll.MagicScroll.MagicScroll-horizontal .mcs-item li') {
+			var iH = $('.ProductScroll.MagicScroll.MagicScroll-horizontal .mcs-item li')[0];
+			iH = $(iH).height();
+			if (!iH) setTimeout(function(){ resizeMS(); }, 370 );
+			$('.ProductScroll.MagicScroll .mcs-item').height(iH+10);
+			$('.ProductScroll.MagicScroll').css('max-height',iH+20);
+		} else {
+			setTimeout(function(){ resizeMS(); }, 370 );
+		}
+	}
+	resizeMS();
+	$(window).resize(function() {
+		resizeMS();
+	});
+});
+function initJSAtOnload() {
+
+	// Hide category dry herbs and tobacco glass pipes
+    //$('.SideCategoryListClassic ul, .SideCategoryListFlyout li').remove(":contains('Glass Pipes for Dry Herbs and Tobacco')");
+    $('#SideCategoryList li a[href*=glass-pipes-for-dry-herbs-and-tobacco]').parent().remove();
+
+
+/*
+		var element = document.createElement("script");
+		element.src = "defer.js";
+		document.body.appendChild(element);
+*/
+	}
+
+
+	// Initialize site wide javascript
+	if (window.addEventListener)
+		window.addEventListener("load", initJSAtOnload, false);
+	else if (window.attachEvent)
+		window.attachEvent("onload", initJSAtOnload);
+	else window.onload = initJSAtOnload;
+
+</script>
+
+
+
+
+
+
+
+<!-- Following ~55 line block of scripts is from below-HTML Footer.html -->
+<script>
+  //<![CDATA[
+   $(document).ready(function(){
+        $('.footer-columns div.one-quarter').each(function(){
+         if($(this).find('ul.sf-menu>li>a').length > 10) {
+            var obj = $(this).find('ul.sf-menu');
+            $('<strong><a href="javascript:void(0);" class="ToggleList">Show all</a></strong>').insertAfter(obj);
+         }
+         var i = 0;
+         $(this).find('ul.sf-menu>li>a,ul.treeview>li>a').each(function(){
+            if(i >= 10) {
+                $(this).closest('li').css('display','none');
+            }
+            i++;
+         });
+        });
+
+        $('.footer-columns .ToggleList').on('click',function() {
+            $(this).parent().siblings('ul').children('li:gt(9)').slideToggle('fast');
+            $(this).text($(this).text() == 'Show all' ? 'Show less' : 'Show all');
+        });
+
+   });
+  //]]>
+</script>
+
+    
+
+
+
+<script type="text/javascript" charset="utf-8">var ju_num="CF4D608F-7DB3-47DF-A3C2-BF0764A98EA2";var asset_host=(("https:"==document.location.protocol)?"https":"http")+'://d2j3qa5nc37287.cloudfront.net/';(function() {var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=asset_host+'coupon_code1.js';var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);})();</script>
+
+
+
+
+%%GLOBAL_DesignModeHTML%%
+%%GLOBAL_QueryList%%
+%%GLOBAL_DesignModeScriptTag%%
+%%GLOBAL_LiveChatFooterCode%%
+%%GLOBAL_OptimizerTrackingScript%%
+%%GLOBAL_OptimizerConversionScript%%
+%%GLOBAL_OptimizerSetCookieScript%%
+%%GLOBAL_FooterScripts%%
+%%SNIPPET_FastCartThickBoxJs%%
+
+
+
+
+
+<script type="text/javascript">
+	MANTIS = {
+		advertiser: '546a3d6e997c220b001f9291'
+	};
+</script>
+
+<script type="text/javascript">
+	var z = document.createElement("script");
+	z.type = "text/javascript";
+	z.async = true;
+	z.src = "//assets.mantisadnetwork.com/analytics.min.js";
+	var s = document.getElementsByTagName('head')[0];
+	s.parentNode.insertBefore(z, s);
+</script>
+
+<noscript>
+	<img src="//mantodea.mantisadnetwork.com/analytics/pixel?advertiser=546a3d6e997c220b001f9291" />
+</noscript>
+
+
+
+
+
+<script type="text/javascript" src="//pixel.meteora.us/serve/1592" async="true"></script>
+
+
+
+
+
+
+
+%%Panel.InStockNotifyPanel%%      
+%%Panel.BrandNavListingImages%%
+%%Panel.WholeSaleFunctions%%
+%%Panel.HoverTooltips%%
+
+
+
+<!-- <script type="text/javascript" src="https://www.affiliatly.com/bigcommerce/bigcommerce.js?affiliatly_code=AF-10339"></script> -->
+
+
+
+
+
+

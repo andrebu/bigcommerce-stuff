@@ -1,0 +1,116 @@
+<style>
+	#hot-item {
+		margin-top: 30px;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+	#hot-item span {
+		font-size: 10px;
+		line-height: 21px;
+	}
+	#hot-item .hot-fire {
+		color: red;
+	}
+	#hot-item .view-count {
+		color: #000;
+		font-weight: 700;
+/*
+		font-family: futura;
+		font-size: 16px;
+		vertical-align: middle;
+*/
+	}
+/*
+	#hot-item .fa-users, #hot-item .fa-eye, #hot-item .fa-clock-o, #hot-item .view-count, #hot-item .hot-fire {
+		
+	}
+	#hot-item .fa-users {
+		color: inherit;
+	}
+	#hot-item .fa-eye {
+		color: inherit;
+	}
+	#hot-item .fa-clock-o {
+		color: inherit;
+	}
+	#hot-item .fa-clock-o:hover {
+		-webkit-transition: all 1300ms ease;
+		-moz-transition: all 1300ms ease;
+		transition: all 1300ms ease;
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+*/
+</style>
+<script type="text/javascript">
+	//Product View Counter Function 
+	function prodViewCount() {
+
+		// Timestamp shim for browsers <IE8
+		if (!Date.now) {
+			Date.now = function() { return new Date().getTime(); }
+		}
+		
+		// Timestamp
+		var timestamp = Math.floor(Date.now());
+		// 24 hour old timestamp
+		var dayAgo = timestamp - 86400000;
+
+		// Record a hit to the count.io DB under DankStopProduct# group, as a timestmped hit of 1
+        var productNumber = $('#productDetailsAddToCartForm').find('input[name=product_id]').attr('value');
+		$.ajax({
+			url:'http://count.io/vb/DankStopProduct' + productNumber + '/' + timestamp + '+',
+			type: 'POST'
+		});
+		
+		// Make dynamic HTTP prefix that depends on the prefi of the site's current page protocol
+		var httpPrefix = (window.location.protocol === 'http:' ? 'http:' : 'https:');
+
+		// Retrieve current product array
+		$.post(
+			httpPrefix + '//cors-anywhere.herokuapp.com/' + 'http://count.io/vb/DankStopProduct' + productNumber,
+			function (data) {
+				//console.log(data);
+				var timedViewCounter = 50;
+				var myStringArray = data.counts;
+				var arrayLength = myStringArray.length;
+				// Check each "timestamped hit" in the current product's array to see if it's older than 24 hours
+				for (var i = 0; i < arrayLength; i++) {
+					var itemTimestamp = data.counts[i].item;
+					// Count up all the product hits that are 24 hours old or newer
+					if (itemTimestamp >= dayAgo) {
+						timedViewCounter++;
+					}
+				}
+				//console.log(timedViewCounter);
+				// If total count is greater than 100, then output HTML onto page
+				var hotItem = '<div id="hot-item"><span><strong class="hot-fire"><i class="fa fa-fire"></i> Hot Like Fire!</strong> - ' + 
+								'<span class="view-count">' + timedViewCounter + '</span> people have viewed this product in the last 24 hours</span></div>';
+/*
+				var hotItem = '<div id="hot-item"><span><strong class="hot-fire"><i class="fa fa-fire"></i> Hot Like Fire!</strong> - ' + 
+								'<span class="view-count">' + timedViewCounter + '</span> <i class="fa fa-users"></i> have <i class="fa fa-eye"></i> ' +
+								'this product in the last 24 <i class="fa fa-clock-o"></i></span></div>';
+*/
+				if (timedViewCounter >= 85) {
+					$(".FreeShippingContainer").before(hotItem);
+				}
+		});
+	}
+	prodViewCount();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

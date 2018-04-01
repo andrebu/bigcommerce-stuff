@@ -1,0 +1,478 @@
+<style>
+	.DetailRow.gift-wrapping {
+		text-align: center;
+		margin: 0 0 30px;
+		cursor: default;
+	}
+	.DetailRow.gift-wrapping .Label {
+		font-family: tahoma;
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: rgb(57, 181, 74);
+	}
+	.DetailRow.gift-wrapping .Value {
+		font-family: futura;
+		font-size: 15px;
+	}
+	.DetailRow.gift-wrapping .Value:before {
+		content: "\f06b";
+		display: inline-block;
+		font: normal normal normal 22px/1 FontAwesome;
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		transform: translate(0, 0);
+		vertical-align: bottom;
+		margin: 0 4px 0 0;
+		color: #F47D77;
+	}
+	.productAttributeConfigurablePickListSet .productAttributeLabel,
+	.productAttributeConfigurablePickListSwatch .productAttributeLabel {
+		text-align: center;
+		padding: 0;
+	}
+	.productAttributeConfigurablePickListSet .productAttributeLabel .name,
+	.productAttributeConfigurablePickListSwatch .productAttributeLabel .name {
+		font-family: tahoma;
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #6ADA78;
+	}
+	.productAttributeRow .productAttributeLabel label {
+		text-align: center;
+		padding: 0px;
+	}
+	.productAttributeRow .productAttributeLabel .required {
+		display: none;
+	}
+	.productAttributeRow .productAttributeLabel .name {
+		font-family: tahoma;
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: rgb(57, 181, 74);
+	}
+	.accessoryOptionsSelection .productOptionPickListSwatch .swatchTexture {
+		vertical-align: middle;
+		box-sizing: border-box;
+		border: 5px solid #eee;
+		border-radius: 7px;
+		width: 28%;
+		width: calc(98% / 3);
+		margin-left: 0;
+	}
+	.productAttributeRow .productOptionPickListSwatch .swatchTexture.selectedValue {
+		border-color: #6ADA78;
+	}
+	.accessoryOptionsSelection.productAttributeRow .productOptionPickListSwatch .swatchTexture label {
+		max-width: 100%;
+		padding: 3px;
+	}
+	.accessoryOptionsSelection .productOptionPickListSwatch .swatchTexture:nth-of-type(1) {
+		margin-right:1% !important;
+	}
+	.accessoryOptionsSelection .productOptionPickListSwatch .swatchTexture:nth-of-type(2) {
+		margin-right:1% !important;
+	}
+	.accessoryOptionsSelection .productOptionPickListSwatch .swatchTexture .textureContainer {
+		max-width: 100%;
+		width: 100% !important;
+		border: 0 !important;
+		padding: 0 !important;
+	}
+	.accessoryOptionsSelection .productOptionPickListSwatch .swatchTexture .textureContainer .thumbnail {
+		max-width: 100%;
+		margin: 0 auto;
+		display: block;
+		width: 98% !important;
+	}
+	.productAttributeRow .productOptionViewRectangle ul,
+	.productAttributeRow .productOptionPickListSwatch ul {
+		width: auto;
+		margin: 0 auto;
+		font-size: 0;
+		text-align: center;
+	}
+	.productAttributeRow .productOptionPickListSwatch li + li,
+	.productAttributeRow .productOptionViewRectangle li + li {
+		margin-left: 3px;
+	}
+	.productAttributeRow.accessoryOptionsSelection .productOptionPickListSwatch .swatchTexture .name {
+		display: block !important;
+		max-width: 120px;
+		font-size: 11px;
+		line-height: 1.3;
+		text-align: center;
+		margin: 3px auto !important;
+		min-height: 28px;
+	}
+	.productPage .productOptionPreviewDisplay,
+	.productAttributeRow .productOptionPickListSwatch .swatchTexture .preview {
+		display: none !important;
+	}
+	.productAttributeRow .productOptionViewRectangle li.option,
+	.productAttributeRow .productOptionPickListSwatch li.swatch.swatchOneColour,
+	.productAttributeRow .productOptionPickListSwatch li.swatch.swatchTexture,
+	.productAttributeRow .productOptionPickListSwatch li.swatchNone {
+		-webkit-transition: border-color 137ms ease;
+		-moz-transition: border-color 137ms ease;
+		-o-transition: border-color 137ms ease;
+		transition: border-color 137ms ease;
+		vertical-align: middle;
+		box-sizing: border-box;
+		margin-bottom: 5px;
+		border: 3px solid #eee;
+		border-radius: 3px;
+	}
+	.productAttributeRow .productOptionPickListSwatch li.swatch.swatchOneColour, 
+	.productColorSelection .productOptionPickListSwatch li.swatch.swatchTexture, 
+	.productAttributeRow .productOptionPickListSwatch li.swatchNone {
+		border: 3px solid transparent;
+		border-radius: 50%;
+		padding: 2px;
+	}
+	.productAttributeRow .productOptionViewRectangle li.option label,
+	.productAttributeRow .productOptionViewRectangle .list-horizontal li.option label {
+		padding: 5px 10px !important;
+	}
+	.productAttributeRow .productOptionPickListSwatch li.swatch label {
+		line-height: 27px;
+		margin-bottom: 0px;
+	}
+	.productAttributeRow .productOptionPickListSwatch li.swatch .swatchColours,
+	.productAttributeRow .productOptionPickListSwatch li.swatch .textureContainer,
+	.productAttributeRow .productOptionViewRectangle .list-horizontal li.option label,
+	.productAttributeRow .productOptionViewRectangle li.option label {
+		border: 0 !important;
+		margin: 0 !important;
+		width: auto;
+	}
+	.productAttributeRow .productOptionViewRectangle li.option:hover,
+	.productAttributeRow .productOptionPickListSwatch li.swatch:hover,
+	.productAttributeRow .productOptionPickListSwatch li.swatchNone:hover,
+	.productAttributeRow .productOptionViewRectangle .list-horizontal li.option:hover {
+		border: 3px solid #ddd;
+	}
+	.productAttributeRow .productOptionViewRectangle li.option.selectedValue,
+	.productAttributeRow .productOptionPickListSwatch li.swatch.selectedValue,
+	.productAttributeRow .productOptionPickListSwatch li.swatchNone.selectedValue,
+	.productAttributeRow .productOptionViewRectangle .list-horizontal li.option.selectedValue {
+		border: 3px solid #6ADA78;
+	}
+	.productOptionPickListSwatch .swatchOneColour .thumbnail, 
+	.productColorSelection .swatchTexture .thumbnail, 
+	.productOptionPickListSwatch .swatchOneColour .swatchColour {
+		width: 27px !important;
+		height: 27px !important;
+		border-radius: 50%;
+		box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+	}
+	/* HTML changes were made on Panels/ProductDetails.html */\
+	#ProductDetails .ProductMain .DetailRow.qty {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -webkit-flexbox;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+	    -webkit-flex-direction: row;
+	    -webkit-justify-content: flex-start;
+	    -ms-flex-direction: row;
+	    -ms-justify-content: flex-start;
+	    flex-direction: row;
+	    justify-content: flex-start;
+	}
+	#ProductDetails .ProductMain .DetailRow.qty .addto {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -webkit-flexbox;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		vertical-align: middle;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		-webkit-flex-grow: 1;
+		-ms-flex-grow: 1;
+		flex-grow: 1;
+	}
+	#ProductDetails .ProductMain .DetailRow.qty .addto .quantitySelectorContainer {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -webkit-flexbox;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+	    -webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+		flex-direction: column;
+	}
+	#ProductDetails .ProductMain .DetailRow.qty .addto .quantitySelectorContainer .Value.AddCartButton {
+		-webkit-flex-grow: 1;
+		-ms-flex-grow: 1;
+		flex-grow: 1;
+	}
+	#ProductDetails .ProductMain .DetailRow.qty .addto .quantitySelectorContainer .qtyInput.quantityInput {
+		width: 100%;
+		margin-bottom:0px;
+	}
+	#ProductDetails .ProductMain .DetailRow.qty .addto .BulkDiscount {
+		display: inline-block;
+		vertical-align: middle;
+		width: 100%;
+		float: right;
+		-webkit-flex-grow: 1;
+		-ms-flex-grow: 1;
+		flex-grow: 1;
+	}
+	#ProductDetails .ProductMain .DetailRow.qty .addto .BulkDiscount input {
+		margin: 0;
+	}
+	#ProductDetails .ProductMain .DetailRow.InventoryLevel .Label {
+		display: none;
+	}
+	#ProductDetails .ProductMain .DetailRow.InventoryLevel .Value {
+		line-height: 46px;
+	}
+	#ProductDetails .ProductMain #SideProductAddToWishList {
+		margin-bottom: 10px;
+	}
+	#ProductDetails .ProductMain #SideProductAddToWishList .wishbtn,
+	#ProductDetails .ProductMain #SideProductAddToWishList .wishTrigger {
+		background-color: #62BEC7;
+		border-color: #62BEC7;
+	}
+	#ProductDetails .ProductMain #SideProductAddToWishList .wishbtn:hover,
+	#ProductDetails .ProductMain #SideProductAddToWishList .wishTrigger:hover {
+		background-color: #fff;
+		color: #62BEC7;
+	}
+	@media screen and (max-width: 767px) {
+		.accessoryOptionsSelection .productOptionPickListSwatch .swatchTexture:nth-of-type(1) .textureContainer {
+			margin-right:4% !important;
+		}
+		.accessoryOptionsSelection .productOptionPickListSwatch .swatchTexture:nth-of-type(2) .textureContainer {
+			margin-right:4% !important;
+		}
+	}
+</style>
+<script type="text/javascript">
+
+	//jQuery Styles function
+	(function($) {    
+	  if ($.fn.style) {
+	    return;
+	  }
+	
+	  // Escape regex chars with \
+	  var escape = function(text) {
+	    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+	  };
+	
+	  // For those who need them (< IE 9), add support for CSS functions
+	  var isStyleFuncSupported = !!CSSStyleDeclaration.prototype.getPropertyValue;
+	  if (!isStyleFuncSupported) {
+	    CSSStyleDeclaration.prototype.getPropertyValue = function(a) {
+	      return this.getAttribute(a);
+	    };
+	    CSSStyleDeclaration.prototype.setProperty = function(styleName, value, priority) {
+	      this.setAttribute(styleName, value);
+	      var priority = typeof priority != 'undefined' ? priority : '';
+	      if (priority != '') {
+	        // Add priority manually
+	        var rule = new RegExp(escape(styleName) + '\\s*:\\s*' + escape(value) +
+	            '(\\s*;)?', 'gmi');
+	        this.cssText =
+	            this.cssText.replace(rule, styleName + ': ' + value + ' !' + priority + ';');
+	      }
+	    };
+	    CSSStyleDeclaration.prototype.removeProperty = function(a) {
+	      return this.removeAttribute(a);
+	    };
+	    CSSStyleDeclaration.prototype.getPropertyPriority = function(styleName) {
+	      var rule = new RegExp(escape(styleName) + '\\s*:\\s*[^\\s]*\\s*!important(\\s*;)?',
+	          'gmi');
+	      return rule.test(this.cssText) ? 'important' : '';
+	    }
+	  }
+	
+	  // The style function
+	  $.fn.style = function(styleName, value, priority) {
+	    // DOM node
+	    var node = this.get(0);
+	    // Ensure we have a DOM node
+	    if (typeof node == 'undefined') {
+	      return this;
+	    }
+	    // CSSStyleDeclaration
+	    var style = this.get(0).style;
+	    // Getter/Setter
+	    if (typeof styleName != 'undefined') {
+	      if (typeof value != 'undefined') {
+	        // Set style property
+	        priority = typeof priority != 'undefined' ? priority : '';
+	        style.setProperty(styleName, value, priority);
+	        return this;
+	      } else {
+	        // Get style property
+	        return style.getPropertyValue(styleName);
+	      }
+	    } else {
+	      // Get CSSStyleDeclaration
+	      return style;
+	    }
+	  };
+	})(jQuery);
+
+	function producPageImprovements() {
+		
+//This function improves the Color or Size Style selection on Product Pages
+		function productPageChooseStyle() {
+			var chooseStylenName = $('.productAttributeConfigurablePickListSet .productAttributeLabel .name:contains("Choose Style")');
+			var mainChooseStyleContainer = chooseStylenName.parents().eq(2);
+			mainChooseStyleContainer.addClass('productChooseStyle');
+		};
+		productPageChooseStyle();
+
+//This function improves the Color or Size Options selection on Product Pages
+		function productPageChooseOptions() {
+			var chooseOptionsnName = $('.productAttributeConfigurablePickListSet .productAttributeLabel .name:contains("Choose Options")');
+			var mainChooseOptionsContainer = chooseOptionsnName.parents().eq(2);
+			mainChooseOptionsContainer.addClass('productChooseOptions');
+		};
+		productPageChooseOptions();
+		
+//This function improves the Color Options selection on Product Pages
+		function productPageColorSwatchImprovements() {
+			var productColorChoiceName = $('.productAttributeConfigurablePickListSwatch .productAttributeLabel .name:contains("Color:")');
+			var mainColorChoiceContainer = productColorChoiceName.parents().eq(2);
+			mainColorChoiceContainer.addClass('productColorSelection');
+		};
+		productPageColorSwatchImprovements();
+			
+//This function improves the Size Options selection on Product Pages
+		function productPageSizeSelectionImprovements() {
+			var productSizeSelectionName = $('.productAttributeConfigurablePickListSet .productAttributeLabel .name:contains("Joint Size")');
+			var mainSizeContainer = productSizeSelectionName.parents().eq(2);
+			mainSizeContainer.addClass('productSizeSelection');
+		};
+		productPageSizeSelectionImprovements();
+		
+//This function improves the Accessory Choice Selection on Product Pages
+		function productAccessoryChoice() {
+			//productAccessoryChoiceExistance
+			var prodACE = $('.productAttributeConfigurablePickListSwatch .productAttributeLabel .name:contains("Choose one:")');
+			prodACE.parents().eq(2).addClass('accessoryOptionsSelection');
+			if (prodACE.length) {
+				// Create the thumbnails object with URLs as values and corresponding option names as index
+				var optThumbs = prodACE.parents().eq(2).find('.swatchTexture .textureContainer .thumbnail');
+				optThumbObj = {};				
+				optThumbs.each(function() {
+					var oN = $(this).parent().parent().find('.name').text();
+					var oI = $(this).parents().eq(1).find('.previewContent .preview');
+					var oIU = oI.attr('src');
+					var tW = $(this).width();
+					var tH = tW * 1.25;
+					$(this).attr({style: 'background-image: url("' + oIU + '"); height: ' + tH + 'px !important;'});
+					optThumbObj[oN] = oIU;
+				});
+				// Dynamically set the thumbnail height as width*1.25
+				function tHSetter() {
+					optThumbs.each(function() {
+						var oN = $(this).parent().parent().find('.name').text();
+						var tW = $(this).width();
+						var tH = tW * 1.25;
+						$(this).attr({style: 'background-image: url("' + optThumbObj[oN] + '"); height: ' + tH + 'px !important;'});
+					});
+				};
+				tHSetter();
+				// Remove preview popup boxes from product accessory choice after the image URL are retrieved and stored
+				var optionPreview = $('.accessoryOptionsSelection .previewContent');
+				//optionPreview.remove();
+				// Define the mouse  hover behavior for the accessory option choice list items
+				var optionListItem = prodACE.parents().eq(2).find('li.swatchTexture');
+	            optionListItem.on({
+	                mouseenter: function(event) {
+	                    if (!$(this).hasClass('selectedValue')) {
+		                    $(this).addClass('hovered');
+	                    }
+	                },
+	                mouseleave: function(event) {
+		                    $(this).removeClass('hovered');
+	                }
+	            });
+				// Find the width of all list items and set their ul to this width
+				// Find the tallest .name span and set the others to same height
+				function oNSpanHeightSetter() {
+		            var highestoNSpan = null;
+					var highestSpan = 0;
+					var oNSpan = optionListItem.find('.name');
+					oNSpan.each(function() {
+						if (highestoNSpan == null) {
+								highestoNSpan = $(this);
+								highestSpan = $(this).height();
+							}
+						else if ($(this).height() > highestSpan) {
+							highestoNSpan = $(this);
+							highestSpan = $(this).height();
+						}
+					});
+					oNSpan.css('height', highestSpan);
+				};
+				oNSpanHeightSetter();
+				// Sold Out Products edits
+				// Call all the resizing functions upon window resize
+				$( window ).bind("resize", function(){
+					oNSpanHeightSetter();
+					tHSetter();
+				});
+			}
+		};
+		productAccessoryChoice();
+		function soldOutProducts() {
+			var soldOutButton = $('.VariationProductInventory:contains("Sold out!")').parents('.InventoryLevel');
+			var quantitySelectorBox = $('.addto');
+			soldOutButton.insertAfter(quantitySelectorBox);
+			function hideLowInvAndShare() {
+				if (($('.VariationProductInventory').text().trim() != 'Sold out!') && ($('.VariationProductInventory').text().trim() != '')) {
+					$('.VariationProductInventory').parents('.InventoryLevel').hide();
+					quantitySelectorBox.fadeIn('slow');
+					$('.shareSlide').fadeIn('slow');
+				} else if ($('.VariationProductInventory:contains("Sold out!")').is(':visible')) {
+					quantitySelectorBox.hide();
+					$('.shareSlide').hide();
+				} else if (!$('.VariationProductInventory:contains("Sold out!")').is(':visible')) {
+					quantitySelectorBox.fadeIn('slow');
+					$('.shareSlide').fadeIn('slow');
+				}
+			}
+			hideLowInvAndShare();
+			$('.productAttributeList li input').on('click', function() {
+				hideLowInvAndShare();
+			});
+			function invLevelObserver() {
+				// select the target node
+				var target = document.querySelector('.DetailRow.InventoryLevel');
+				// create an observer instance
+				var observer = new MutationObserver(function(mutations) {
+				    mutations.forEach(function(mutation) {
+				        hideLowInvAndShare();
+				    });
+				});
+				// configuration of the observer:
+				var config = { attributes: true, childList: true, characterData: true, subtree: true }
+				// pass in the target node, as well as the observer options
+				observer.observe(target, config);
+			}
+			invLevelObserver();	
+		};
+		soldOutProducts();
+	};
+
+	$(document).ready(function() {
+		producPageImprovements();
+	});
+</script>

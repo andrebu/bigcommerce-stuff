@@ -1,0 +1,183 @@
+<!--Panel.HoverTooltips%%-->
+<link type="text/css" rel="stylesheet" href="%%ASSET_js/jquery.qtip.min.css%%" />
+<script type="text/javascript" src="%%ASSET_js/jquery.qtip.min.js%%"></script>
+<script type="text/javascript" src="%%ASSET_js/imagesloaded.pkg.min.js%%"></script>
+<style>
+	.qtip {
+		position: absolute;
+		left: -28000px;
+		top: -28000px;
+		display: none;
+		max-width: 280px;
+		min-width: 50px;
+		font-size: 12px;
+		line-height: 16px;
+		direction: ltr;
+		box-shadow: none;
+		padding: 0
+	}
+	.qtip-content {
+		position: relative;
+		padding: 6px 10px;
+		overflow: hidden;
+		text-align: center;
+		word-wrap: break-word
+	}
+	.qtip-content hr {
+		margin-bottom: 10px
+	}
+	.qtip-titlebar {
+		position: relative;
+		padding: 5px 35px 5px 10px;
+		overflow: hidden;
+		border-width: 0 0 1px;
+		font-weight: bold
+	}
+	.qtip-titlebar+.qtip-content {
+		border-top-width: 0 !important
+	}
+	.qtip-close {
+		position: absolute;
+		right: -9px;
+		top: -9px;
+		z-index: 11;
+		cursor: pointer;
+		outline: medium none;
+		border: 1px solid transparent
+	}
+	.qtip-titlebar .qtip-close {
+		right: 4px;
+		top: 50%;
+		margin-top: -9px
+	}
+	* html .qtip-titlebar .qtip-close {
+		top: 16px
+	}
+	.qtip-titlebar .ui-icon,.qtip-icon .ui-icon {
+		display: block;
+		text-indent: -1000em;
+		direction: ltr
+	}
+	.qtip-icon,.qtip-icon .ui-icon {
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		text-decoration: none
+	}
+	.qtip-icon .ui-icon {
+		width: 18px;
+		height: 14px;
+		line-height: 14px;
+		text-align: center;
+		text-indent: 0;
+		font: normal bold 10px/13px Tahoma,sans-serif;
+		color: inherit;
+		background: transparent none no-repeat -100em -100em
+	}
+	.qtip-default {
+		color: #555;
+		border: 1px solid #39B54A;
+		background-color: #FFF;
+		-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	}
+	.qtip-default .qtip-titlebar {
+		background-color: #FFEF93
+	}
+	.qtip-default .qtip-icon {
+		border-color: #CCC;
+		background: #F1F1F1;
+		color: #777
+	}
+	.qtip-default .qtip-titlebar .qtip-close {
+		border-color: #AAA;
+		color: #111
+	}
+	.qtip .qtip-tip {
+		margin: 0 auto;
+		overflow: hidden;
+		z-index: 10
+	}
+	.qtip-content ul {
+		margin: 10px 0 0 0
+	}
+	.qtip-content ul li {
+		margin: 0 0 2px 0
+	}
+	.qtip-content ul li del {
+		color: #AAA
+	}
+	x:-o-prefocus,.qtip .qtip-tip {
+		visibility: hidden
+	}
+	.qtip .qtip-tip,.qtip .qtip-tip .qtip-vml,.qtip .qtip-tip canvas {
+		position: absolute;
+		color: #123456;
+		background: transparent;
+		border: 0 dashed transparent
+	}
+	.qtip .qtip-tip canvas {
+		top: 0;
+		left: 0
+	}
+	.qtip .qtip-tip .qtip-vml {
+		behavior: url(#default#VML);
+		display: inline-block;
+		visibility: visible
+	}
+	.qtip-clean {
+		padding: 1px;
+		background-color: #ffffff;
+		-webkit-background-clip: padding-box;
+		-moz-background-clip: padding;
+		background-clip: padding-box;
+		border: 1px solid #ccc;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		border-radius: 6px;
+		-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	}
+</style>
+<script>
+	function initTooltips() {
+		$('.main [data-tooltip!=""]').each(function() {
+			$(this).qtip({
+				content: {
+					attr: "data-tooltip"
+				},
+				position: {
+					my: $(this).data("tooltip-my"),
+					at: $(this).data("tooltip-at")
+				},
+				show: {
+					effect: function() {
+						$(this).fadeIn(150)
+					}
+				},
+				hide: {
+					delay: 100,
+					fixed: !0,
+					effect: function() {
+						$(this).fadeOut(150)
+					}
+				},
+				style: {
+					classes: 'qtip-clean'
+				}
+			})
+		})/*
+, $("body").hasClass("template-collection") && $('#products [data-optiontip!=""]').each(function() {
+			$(this).qtip({content: {attr: "data-optiontip"},position: {target: "mouse",adjust: {x: 10,y: 10}},show: {effect: function() {
+					$(this).fadeIn(150)
+				}},hide: {delay: 100,fixed: !0,effect: function() {
+					$(this).fadeOut(150)
+				}}})
+		})
+*/
+	}
+	initTooltips();
+</script>

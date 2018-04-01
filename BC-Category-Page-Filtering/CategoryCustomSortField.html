@@ -1,0 +1,238 @@
+<div id="CustomSortingField" class="desktop">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<style>
+		/* custom sort field for sliders and selectors in category section */
+		/* category sorting */
+		.CategoryContent .ProductList li {
+			-webkit-transition: all 400ms ease;
+			-moz-transition   : all 400ms ease;
+			-ms-transition    : all 400ms ease;
+			-o-transition     : all 400ms ease;
+			transition        : all 400ms ease;
+			-webkit-transform : scale(1);
+			-moz-transform    : scale(1);
+			-ms-transform     : scale(1);
+			-o-transform      : scale(1);
+			transform         : scale(1);
+			opacity: 1;
+		}
+		.CategoryContent .ProductList li.hidden-product {
+			-webkit-transform : scale(0.001);
+			-moz-transform    : scale(0.001);
+			-ms-transform     : scale(0.001);
+			-o-transform      : scale(0.001);
+			transform         : scale(0.001);
+			opacity: 0;
+			width: 0;
+		}
+		#CustomSortingField {
+/* 			display: none;  */
+		    margin-bottom: 15px; 
+		}
+		#category-sort-content { 
+			border-bottom: 1px solid #e8e8e8; 
+			padding-bottom: 4px; 
+			display: none;
+		}
+		#category-sort h4 {
+		    border-bottom: 1px solid #e8e8e8;
+		    border-top: 1px solid #e8e8e8;
+		    padding: 10px 6px !important;
+		    margin-bottom: 15px !important; 
+		    display: block !important;
+		    clear: both; 
+		    cursor: pointer; 
+		}
+		#category-sort h4 i {
+			padding-left: 10px;
+		}
+		#category-sort label, 
+		#category-sort legend {
+		    display: block;
+		    font-weight: bold;
+		    font-size: 13px;
+		}
+		#category-sort label span, 
+		#category-sort legend span {
+		    font-weight: normal;
+		}
+		#category-sort .columns {
+		    margin-left: 10px;
+		    margin-right: 10px;
+		}
+		#category-sort .six.columns {
+		    width: 400px;
+		    float: left; 
+/* 		    text-align: center; */
+		}
+		#category-sort .ui-slider {
+			margin: 40px 0px 20px;
+		}
+		#category-sort .ui-slider-horizontal {
+		    height: 8px;
+		}
+		#category-sort .ui-slider .ui-slider-range {
+		    height: 4px;
+		    margin: 2px 0;
+		    background: #39b54a;
+		}
+		#category-sort .ui-slider-handle,
+		#category-sort .ui-slider-handle:hover {
+			border-radius: 50%; 
+			width: 15px; 
+			height: 15px; 
+			top: -6px; 
+			border: #39b54a 3px solid; 
+			cursor: ew-resize;
+			cursor: grab;
+			cursor: -moz-grab;
+			cursor: -webkit-grab;
+			background: #fff;
+			color: transparent;
+			font-size: 10px;
+/*
+			border-radius: 0;
+			width: 33px;
+			height: 12px;
+			text-align: center;
+*/
+		}
+		#category-sort .ui-slider-handle:active {
+			cursor: -moz-grabbing;
+		    cursor: -webkit-grabbing;
+		}
+		#category-sort .ui-slider-handle:before {
+			display: block;
+			content: "$" attr(data-content);
+			position: relative;
+			border: 1px solid #39b54a;
+			border-radius: 3px;
+			top: -22px;
+			left: -8px;
+			box-shadow: 0px 0 5px 0 rgba(0,0,0,0.3);
+			color: #333;
+			font-size: 10px;
+			width: 30px;
+			text-align: center;
+		}
+/*
+		#category-sort .ui-slider-handle:nth-of-type(1):before {
+			content: "$80";
+		}
+		#category-sort .ui-slider-handle:nth-of-type(2):before {
+			content: "$500";
+		}
+*/
+		#category-sort .ui-slider-handle:after {
+			content: "";
+			position: absolute;
+			bottom: 19px;
+			left: 3px;
+			border-width: 5px 5px 0px;
+			border-style: solid;
+			border-color: #39b54a transparent;
+			display: block;
+			width: 0;
+		}
+		#category-sort .slider-label {
+			top: -17px;
+			position: relative;
+			font-size: 10px;
+			display: none;
+		}
+	</style>
+
+    <div id="category-sort">
+        <h4>Filter these products by price <i id="collapse-status" class="fa fa-chevron-down"></i></h4>
+        <div id="category-sort-content">
+            <form id="category-sort-form">
+                <input name="id" type="hidden" value="" />
+                <input name="budget_start" type="hidden" value="80" />
+                <input name="budget_end" type="hidden" value="500" />
+                
+                <div class="six columns">
+                    <p><label>Budget: <span id="budget-span"></span></label></p>
+                    <div id="budget-range"></div>
+                    <spap class="slider-label">You can use this slider to select your budget range.</spap>
+                </div>
+            </form>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    $(function() {
+        
+        function filterByPrice() {
+	        var $productItems = $('ul.ProductList > li');
+	        $productItems.each(function() {
+		        var $this = $(this);
+				var $productPrice = parseInt($this.find('.p-price:not("strike")').text().replace(/[^\d\.]/g, ''));
+		        var $lowPrice = parseInt($("#category-sort-form input[name='budget_start']").val());
+		        var $highPrice = parseInt($("#category-sort-form input[name='budget_end']").val());
+		        if ($productPrice < $lowPrice || $productPrice > $highPrice) {
+			        $this.addClass('hidden-product');
+			        function hideOutOfBudget(){
+				        $this.hide();
+			        }
+					setTimeout(hideOutOfBudget, 400)
+		        } else {
+					$this.show();
+			        function showInBudget(){
+				        $this.removeClass('hidden-product');
+			        }
+					setTimeout(showInBudget, 1)
+		        }
+	        });
+        }
+
+		var budgetslider = $( "#budget-range" ).slider({
+			range: true,
+			min: 0,
+			max: 900,
+			values: [ 80, 500 ],
+			slide: function( event, ui ) {
+				$('#budget-span').text( 'Between $' + ui.values[ 0 ] + ' - $' + ui.values[ 1 ] );
+				$('#budget-range .ui-slider-handle:nth-of-type(1)').text('$' + ui.values[ 0 ]).attr('data-content', ui.values[ 0 ]);
+				$('#budget-range .ui-slider-handle:nth-of-type(2)').text('$' + ui.values[ 1 ]).attr('data-content', ui.values[ 1 ]);
+			},
+			stop: function( event, ui ) {
+				$("#category-sort-form input[name='budget_start']").val(ui.values[ 0 ]);
+				$("#category-sort-form input[name='budget_end']").val(ui.values[ 1 ]);
+				filterByPrice();
+			}
+		});
+		$('#budget-range .ui-slider-handle:nth-of-type(1)').text('$80').attr('data-content', '80');
+		$('#budget-range .ui-slider-handle:nth-of-type(2)').text('$500').attr('data-content', '500');
+		$( "#budget-span" ).text( "Between $" + $( "#budget-range" ).slider( "values", 0 ) + " - $" + $( "#budget-range" ).slider( "values", 1 ) );
+
+        $('#category-sort h4').click(function() {
+	        var $catFilterHeader = $('#category-sort h4'); 
+            $('#category-sort-content').slideToggle( function() {
+	            if($('#category-sort-content').is(":visible")) {
+	                $catFilterHeader.find('i').attr('class', 'fa fa-chevron-up');
+	                //$.cookie('show_sort', 'yes');
+	            }
+	            else {
+	                $catFilterHeader.find('i').attr('class', 'fa fa-chevron-down');
+	                //$.cookie('show_sort', 'no');
+	            }
+			}); 
+        });
+                
+        $('#hidesoldout').change(function() {
+            if($(this).is(":checked")) {
+                //$.cookie('show_soldout', 'no');
+                hidesoldout();
+            }
+            else {
+                //$.cookie('show_soldout', 'yes');
+                showsoldout();
+            }
+        });
+        
+    });
+    </script>
+    
+</div>

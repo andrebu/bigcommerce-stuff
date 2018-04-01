@@ -1,0 +1,57 @@
+<!--
+<link rel="stylesheet" href="%%ASSET_Nivoslider/themes/default/default.css%%" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nivoslider/3.2/nivo-slider.min.css" type="text/css" />
+<link rel="stylesheet" href="/content/NivoSlider/themes/default/default.css" type="text/css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nivoslider/3.2/jquery.nivo.slider.pack.min.js" type="text/javascript"></script>
+-->
+<link rel="stylesheet" href="/content/NivoSlider/nivo-slider.min.css" type="text/css" />
+<link rel="stylesheet" href="/content/NivoSlider/themes/default/default.css" type="text/css" />
+<script src="/content/NivoSlider/jquery.nivo.slider.pack.min.js" type="text/javascript"></script>
+<script src="/content/NivoSlider/hammer.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(window).load(function() {
+
+//    $('#sliderDesktop').nivoSlider();
+//    $('#sliderMobile').nivoSlider();
+ 
+	if ("ontouchstart" in document.documentElement) {
+ 
+		$('#sliderMobile').nivoSlider({
+		    effect: 'slideInLeft',
+			animSpeed: 700,
+			pauseTime: 4000
+		});
+ 
+		$('a.nivo-nextNav').css('visibility', 'hidden');
+		$('a.nivo-prevNav').css('visibility', 'hidden');
+		
+			var element = document.getElementById('sliderMobile');
+			
+			var hammertime = Hammer(element).on("panleft", function(event) {
+				$('#sliderMobile img').attr("data-transition","slideInLeft");
+				$('a.nivo-nextNav').trigger('click');
+				return false; 
+							
+			});
+				
+			var hammertime = Hammer(element).on("panright", function(event) {
+				$('#sliderMobile img').attr("data-transition","slideInRight");
+                $('a.nivo-prevNav').trigger('click');
+                $('#sliderMobile img').attr("data-transition","slideInLeft");
+                return false;
+							  		
+			});
+ 
+	}
+ 
+	else {
+  
+        $('#sliderDesktop').nivoSlider({
+        	controlNavThumbs: true 
+        });
+
+    }
+ 
+});
+</script>

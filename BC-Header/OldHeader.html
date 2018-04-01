@@ -1,0 +1,58 @@
+<!-- Panels/Header.html -->
+<div class="header">
+  <div class="inner">
+    <div id="AjaxLoading">
+      <div class="ajax-loader"> <img src="%%GLOBAL_IMG_PATH%%/loader.png" alt="" />&nbsp;%%LNG_LoadingPleaseWait%% </div>
+    </div>
+    %%GLOBAL_MaintenanceNotice%%
+    %%Panel.TopMenu%%
+    <div id="Header">
+      <div class="inner">
+        <div id="ToggleMenu" class="normal fa fa-bars"></div>
+        <div class="Left fleft">
+          <div class="header-logo"> %%GLOBAL_HeaderLogo%% </div>
+          </div>
+          
+        
+        <div class="Content Widest" id="LayoutColumn1">
+          <div class="PageMenu">%%Panel.PagesMenu%%</div>
+          <div class="search-mobile mobile">%%Panel.HeaderSearch%%</div>
+          <div class="header-secondary">
+            <a href="%%GLOBAL_ShopPathNormal%%/cart.php" title="%%LNG_ViewCart%%"><div class="CartLink" style="display:%%GLOBAL_HideCartOptions%%"> <i class="icon fa fa-shopping-cart" title="View Cart">&nbsp;</i><span>%%GLOBAL_CartItems%%</span></div></a>
+          </div>
+          <div id="cart-amount"> <a href="%%GLOBAL_ShopPathNormal%%/cart.php" class="Cart"><span class="bag-handle"></span><span class="total">&nbsp;</span></a> </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-logo-mobile"> %%GLOBAL_HeaderLogo%% </div>
+  </div>
+
+
+</div>
+%%Panel.sloyalty_statusbar%%​
+
+<!-- Panels/TopMenu.html -->
+%%GLOBAL_OptimizerLinkScript%%    
+<div class="TopMenu">
+    <div class="inner">
+        %%Panel.SideCurrencySelector%%
+        <ul style="display:%%GLOBAL_HidePurchasingOptions%%">
+            <li %%GLOBAL_ShowStorePhoneNumber%% id="StorePhoneNumber">
+                <div class="phoneIcon">Call us at <span>%%GLOBAL_StorePhoneNumber%%</span></div>
+            </li>
+            <li style="%%GLOBAL_LiveChatCodeEnabled%%" class="HeaderLiveChat">
+                %%GLOBAL_LiveChatCode%%
+            </li>
+            <li style="display:%%GLOBAL_HideAccountOptions%%" class="First">
+                <a href="%%GLOBAL_ShopPath%%/account.php">%%LNG_YourAccount%%</a>
+            </li>
+            %%SNIPPET_TopMenuGiftCertificates%%
+            <li class="last" style="display:%%GLOBAL_HideAccountOptions%%" id="LoginOrLogoutText">
+                <div>%%GLOBAL_LoginOrLogoutText%%</div>
+            </li>
+        </ul>
+        %%Panel.HeaderSearch%%
+    </div>
+</div>​
+
+<!-- Old header CSS -->

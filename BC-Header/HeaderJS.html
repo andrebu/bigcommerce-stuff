@@ -1,0 +1,57 @@
+<!-- From Panels/Header.html -->
+<script type="text/javascript">
+//<![CDATA[
+    // Login and Logout features
+    function loginFeatures() {        
+        var $loginGreetingSalutation = $('#loginGreetingSalutation');
+        var $accountMenuTriggerLink = $('#myAccountTriggerLink');
+        var $accountMenuTriggerText = $('#myAccountLoginLogout');
+        var globalFirstName="%%GLOBAL_CurrentCustomerFirstName%%";
+        if (globalFirstName!="" && globalFirstName!="Guest")
+        {
+            //Customer is Logged On
+            $loginGreetingSalutation.text('Hello, ');
+            $accountMenuTriggerText.attr('href', '/account.php');
+            $accountMenuTriggerText.text(globalFirstName);
+        } else {
+            //Customer is not Logged On
+            return;
+        };
+    }
+
+    // show the HelmMenu when the Help link is hovered on
+    function showDDMenu() {
+        var $navCover = $('#nav-cover');
+        var $header = $('.header');
+        var $body = $('body');
+        function setNavCover() {
+            var headerHeight = $header.height();
+            $navCover.css('top', headerHeight);
+        }
+        setNavCover();
+        $(window).on('resize', function(){
+            setNavCover();
+        });
+		$("div[id$='Trigger'], li[id$='Trigger']").each(function () {
+			var dDMenuSelector = $('#' + $(this).attr('id').replace('Trigger','DropDown') + '');
+			$(this).on({
+				mouseenter: function(event) {
+	                $(this).addClass('open');
+	                dDMenuSelector.show();
+	                $body.addClass('modal-open');
+				},
+				mouseleave: function(event) {
+	                $(this).removeClass('open');
+	                dDMenuSelector.hide();
+	                $body.removeClass('modal-open');
+				}
+			});
+		});
+	}
+
+    $(document).ready( function() {
+        loginFeatures();    
+        showDDMenu();
+    });
+//]]>
+</script>

@@ -1,0 +1,200 @@
+<style>
+.best-value {
+	margin: 0;
+	padding: 5px 0;
+	background-color: #fafafa;
+	border-radius: 4px;
+}
+.best-value:before {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content: "\f164";
+	position: absolute;
+	left: -20px;
+	font-size: 19px;
+	color: #39b54a;
+}
+.ShippingProviderList label {
+	margin: 0 0 0 20px;
+}
+.ShippingProviderList label div.radio {
+	margin-left: -20px;
+}
+.best-value-text {
+	color:#39b54a;
+	text-transform: uppercase;
+}
+.ShippingProviderList span.lightgray {
+	font-size: 12px;
+	position: relative;
+	left: 21px;
+	display: inline-block;
+	width: 93%;
+}
+.disabled {
+	pointer-events: none;
+	color: gray !important;
+}
+.disabled .green {
+	color: gray !important;
+}
+.shipping-addons .insurance-total,
+.shipping-addons .purch-total-span {
+	display: none;
+}
+.shipping-addons .disabled .fa.green {
+	margin: 3px 7px 0;
+	color: #39b54a !important;
+	vertical-align: top;
+}
+.shipping-addons .option-text {
+	display: inline-block;
+	max-width: 90%;
+}
+.confirm-loader {
+	position: absolute;
+	background-color: #fff;
+	z-index: 1;
+	display: none;
+}
+.confirm-loader span {
+	display: block;
+	text-align: center;
+	position: relative;
+	top: 50%;
+	font-size: 27px;
+	font-style: italic;
+	vertical-align: middle;
+}
+.confirm-loader span i {
+	vertical-align: middle;
+}
+#CheckoutStepShippingProvider .ExpressCheckoutContent form {
+	position: relative;
+}
+</style>
+<script type="text/javascript">
+//<![CDATA[
+	function enableShippingAddons() {
+		if ($('.shipping-addons').attr('data-disabled') == 'true') {
+			$('.shipping-addons').attr('data-disabled', 'false');
+		    $('<div />').load('/cart.php .CartContents', function(data){
+			    var CartContents = $(data);
+				$('#purch-total').html(CartContents.find('.CartContents tfoot > tr.gtotal .ProductPrice').text());
+			    var delSigInCart = CartContents.find('tbody > tr > .ProductName:contains(Delivery Signature Required)').length;
+			    var addInsInCart = CartContents.find('tbody > tr > .ProductName:contains(Shipping Insurance)').length;
+				var chooseShipperForm = $('#CheckoutStepShippingProvider .ExpressCheckoutContent form'),
+					newFormSub = 'newChooseShippingProvider(); return false;';
+			    if (!delSigInCart) {
+	    			$('.shipping-addons .del-sig').removeClass('disabled');
+					chooseShipperForm.attr('onsubmit', newFormSub);
+			    } else {
+				    $('.del-sig .checker').replaceWith('<i class="green fa fa-check-circle"></i>');
+				    $('.del-sig-text').html(' -- Delivery Signature is already in your cart!');
+			    }
+
+				//Check if insurance is in cart, and if yes, see if it matches, and if no, re-calculate, else proceed
+			    var insDesc = $('.ins-text'),
+			    	clickCalc = $('.ins-add-calc'),
+			    	insTotal,
+					insId;
+				var insIdArr = ['1281','1282','1283','1284','1285','1286','1287','1288','1289','1290'];
+				insIdArr.push('1291','1292','1293','1294','1295','1296','1297','1298','1299','1300');
+				insIdArr.push('1376','1377','1378','1379','1380','1381','1382','1383','1384','1385');
+				insIdArr.push('1386','1387','1388','1389','1390','1391','1392','1393','1394','1395');
+				insIdArr.push('1396','1397');
+				var orderTotal = parseFloat($('#purch-total').text().replace(/\$|,/g,'')),
+					insIdSelector = Math.floor(orderTotal * 0.01),
+					insId = insIdArr[insIdSelector],
+					insCost = insIdSelector + 1,
+					insTotalText = $('#ins-total');
+					console.log(orderTotal);
+					console.log(insIdSelector);
+					console.log(insId);
+					console.log(insCost);
+				$('#addInsCheck').attr('data-ins-id', insId);
+				insTotalText.html(insCost);
+				var insItemNameField = CartContents.find('.CartContents tbody > tr > .ProductName:contains(Shipping Insurance)');
+				var insInCartCost = parseInt(insItemNameField.parents('tr').find('.ProductPrice').text().replace('$',''));
+			    if (!addInsInCart) {
+				    $('.insurance-total').css('display', 'inline');
+	    			$('.shipping-addons .ins-cost').removeClass('disabled');
+				    chooseShipperForm.attr('onsubmit', newFormSub);
+			    } else {
+				    if (insCost !== insInCartCost) {
+						var insToRemoveID = insItemNameField.parents('tr').find('.CartRemoveLink').attr('onclick').split('Item(\'');
+						var insToRemoveID = insToRemoveID[1].split('\'\)\;');
+						var insToRemoveID = insToRemoveID[0];
+						$.post('https://dankstop.com/cart.php?action=remove&item=' + insToRemoveID).then( function (data) {
+							$.post('https://dankstop.com/cart.php?action=add&product_id=' + insId, function(data5) {
+								$('.ins-cost .checker').replaceWith('<i class="green fa fa-check-circle"></i>');
+								$('.ins-text').html(' -- Shipping Insurance is already in your cart!');
+							});
+						});
+					    $('.ins-cost .checker').replaceWith('<i class="green fa fa-check-circle"></i>');
+					    $('.ins-text').html(' -- Shipping Insurance is already in your cart!');
+				    } else {
+					    $('.ins-cost .checker').replaceWith('<i class="green fa fa-check-circle"></i>');
+					    $('.ins-text').html(' -- Shipping Insurance is already in your cart!');
+				    }
+			    }
+			});
+		}
+	}
+    //Add Shipping Addon buttons and click actions
+	function addDelSigToCart() {
+	    $('#delSigCheck').toggleClass('checked');
+	}
+	function addInsToCart() {
+	    $('#addInsCheck').toggleClass('checked');
+	}
+	function newChooseShippingProvider() {
+		if ($('.ShippingProviderList .radio span').hasClass('checked')) {
+			var delSigCheck = $('#delSigCheck').hasClass('checked');
+			var addInsCheck = $('#addInsCheck').hasClass('checked');
+			var insId = $('#addInsCheck').attr('data-ins-id');
+			var addDelSigUrl = 'https://dankstop.com/cart.php?action=add&product_id=1280';
+			var addInsUrl = 'https://dankstop.com/cart.php?action=add&product_id=' + insId;
+			//Create and append loader
+			var fullForm = $('#CheckoutStepShippingProvider form');
+			var fullFormHeight = fullForm.height();
+			var fullFormWidth = fullForm.width();
+			var loadText = ' Loading Order Confirmation...'
+			var loadConfirm = '<div class="confirm-loader"><span><i class="fa fa-cog fa-spin fa-2x green"></i>';
+				loadConfirm += '' + loadText+'</span></div>';
+				loadConfirm = $(loadConfirm);
+			loadConfirm.css({top: '0', left: '0', width: fullFormWidth, height: fullFormHeight});
+			loadConfirm.appendTo(fullForm).fadeIn('slow');
+			if (delSigCheck && addInsCheck) {
+				$.post(addDelSigUrl).then(function(data1) {
+					return $.post(addInsUrl);
+				}).then(function(data2) {
+					return setTimeout(function () {
+						ExpressCheckout.ChooseShippingProvider();
+					}, 137);
+				});
+			} else if (!delSigCheck && !addInsCheck) {
+			    ExpressCheckout.ChooseShippingProvider();
+			} else if (delSigCheck && !addInsCheck) {
+				$.post(addDelSigUrl).then(function(data1) {
+					return  setTimeout(function () {
+						ExpressCheckout.ChooseShippingProvider();
+					}, 137);
+				});
+			} else if (!delSigCheck && addInsCheck) {
+				$.post(addInsUrl).then(function(data1) {
+					return  setTimeout(function () {
+						ExpressCheckout.ChooseShippingProvider();
+					}, 1370);
+				});
+			}
+	    } else {
+		    ExpressCheckout.ChooseShippingProvider();
+	    }
+	}
+//]]>
+</script>

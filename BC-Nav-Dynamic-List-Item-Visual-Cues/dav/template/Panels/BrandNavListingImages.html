@@ -1,0 +1,225 @@
+<style>
+.Left #SideShopByBrand .treeview.grayscale a {
+	-webkit-filter: grayscale(0.75);
+	-moz-filter: grayscale(0.75); 
+	filter: grayscale(0.75);
+}
+.Left #SideShopByBrand .treeview.grayscale a.hovered {
+	-webkit-filter: none;
+	-moz-filter: none; 
+	filter: none;
+}
+</style>
+<script language="javascript" type="text/javascript">
+//Side Navigation Brands Logos
+    $('<style type="text/css">\
+			/* Side Navigation Brands Logos */\
+			.Left #SideShopByBrand .treeview li, \
+			#DrawerMenu #SideShopByBrand .treeview li {\
+				margin-bottom: 0;\
+			}\
+			.Left #SideShopByBrand .treeview li a, \
+			.Left #SideShopByPrice .treeview li a {\
+				display: block;\
+				vertical-align: middle;\
+				padding: 7px 7px 7px 10px;\
+				margin: 6px 0 6px 0;\
+				border-left: 4px solid #eee;\
+				border-bottom: 0;\
+			}\
+			.Left #SideShopByBrand .treeview li a:hover, \
+			.Left #SideShopByPrice .treeview li a:hover {\
+				border-left-color: #39B54A;\
+				background: #F3F4F4;\
+			}\
+			.Left #SideShopByBrand .treeview li a .navBrandListingImage, \
+			#DrawerMenu #SideShopByBrand .treeview li a .navBrandListingImage {\
+				display: inline-block;\
+				width: 20px;\
+				margin: 0 16px 0 6px;\
+				vertical-align: middle;\
+				text-align: center;\
+			}\
+			.Left #SideShopByBrand .treeview li a .navBrandLiName, \
+			#DrawerMenu #SideShopByBrand .treeview li a .navBrandLiName {\
+				vertical-align: middle;\
+			}\
+			/* Dollar USD */\
+			.fa-dollar:before, .fa-usd:before {\
+				content: "\\f155";\
+			}\
+			#SideShopByPrice .treeview li a .fa-usd {\
+				display: block;\
+				vertical-align: middle;\
+				padding: 0 3px 0 0;\
+				float: right;\
+				font-size: 18px;\
+				color: #ffd200;\
+				transition: all .13s ease-in-out;\
+			}\
+			#SideShopByPrice .treeview li:hover a .fa-usd {\
+				-webkit-transform: rotate(-10deg);\
+				-moz-transform: rotate(-10deg);\
+				-o-transform: rotate(-10deg);\
+				transform: rotate(-10deg);\
+				color: #39b54a;\
+				padding: 0 5px 0 0;\
+			}\
+			.navVisualCue {\
+				transition: all .13s ease-in-out;\
+				display:inline-block;\
+				float:right;\
+				padding: 0 25px;\
+				position: relative;\
+			}\
+			.page .Left #SideCategoryList .category-list li {\
+				border-bottom: 1px solid #E4E4E4;\
+			}\
+			.page .Left #SideCategoryList .category-list li a {\
+				padding: 7px 7px 7px 10px;\
+				margin: 6px 0 6px 0;\
+				border-left: 4px solid #eee;\
+				border-bottom: 0;\
+			}\
+			.page .Left #SideCategoryList .category-list li a:hover {\
+				border-left-color: #39B54A;\
+				background: #F3F4F4;\
+			}\
+			.page .Left #SideCategoryList .category-list.treeview .hitarea.expandable-hitarea,\
+			.page .Left #SideCategoryList .category-list.treeview .collapsable-hitarea {\
+				top: 6px;\
+			}\
+			.page .Left #SideCategoryList .category-list ul {\
+				border-top: 1px solid #eee;\
+			}\
+			.page .Left #SideCategoryList .category-list li li a {\
+				padding-left: 20px;\
+			}\
+			.page .Left #SideCategoryList .category-list li li a:hover {\
+				border-left-color: #62BEC7;\
+				color: #62BEC7;\
+			}\
+			.page .Left #SideCategoryList .category-list li li li a {\
+				padding-left: 30px;\
+			}\
+			.page .Left #SideCategoryList .category-list li li li a:hover {\
+				border-left-color: #F4B277;\
+				color: #F4B277;\
+			}\
+			.burst-12 {\
+			    background: #39b54a;\
+			    width: 26px;\
+			    height: 26px;\
+			    text-align: center;\
+			    position: relative;\
+			    /*top: -7px;*/\
+			}\
+			.burst-12:before, .burst-12:after {\
+			    content: "";\
+			    position: absolute;\
+			    top: 0;\
+			    left: 0;\
+			    height: 26px;\
+			    width: 26px;\
+			    background: #39b54a;\
+			}\
+			.burst-12:before {\
+			    -webkit-transform: rotate(30deg);\
+			       -moz-transform: rotate(30deg);\
+			        -ms-transform: rotate(30deg);\
+			         -o-transform: rotate(30deg);\
+			            transform: rotate(30deg);\
+			}\
+			.burst-12:after {\
+			    -webkit-transform: rotate(60deg);\
+			       -moz-transform: rotate(60deg);\
+			        -ms-transform: rotate(60deg);\
+			         -o-transform: rotate(60deg);\
+			            transform: rotate(60deg);\
+			}\
+			.navVisualCue.newItems {\
+				top: -24px;\
+			}\
+			.navVisualCue.newItems .newItemSpan {\
+				font-size: 9px;\
+				z-index: 99;\
+				color: gold;\
+				position: relative;\
+				top: 19px;\
+				left: 1px;\
+			}\
+			.navVisualCue.onSale .onSaleSpan {\
+				transition: all .13s ease-in-out;\
+				font-size: 9px;\
+				color: #fff;\
+				position: absolute;\
+				background: #39b54a;\
+				text-align: center;\
+				line-height: 19px;\
+				width: 50px;\
+				height: 20px;\
+				right: 10px;\
+				top: -5px;\
+			    -webkit-transform: rotate(-40deg);\
+			       -moz-transform: rotate(-40deg);\
+			        -ms-transform: rotate(-40deg);\
+			         -o-transform: rotate(-40deg);\
+					 	transform: rotate(-40deg);\
+			}\
+			#SideCategoryList .treeview li:hover .navVisualCue.onSale .onSaleSpan {\
+			    -webkit-transform: rotate(-15deg);\
+			       -moz-transform: rotate(-15deg);\
+			        -ms-transform: rotate(-15deg);\
+			         -o-transform: rotate(-15deg);\
+					 	transform: rotate(-15deg);\
+			}\
+			</style>')
+        .appendTo('head');
+	$(document).ready(function () {
+		$('.hitarea.expandable-hitarea').click();
+		var mainPage = $(this);
+		//Add visual cues to Category list items
+		var categoryListItems = mainPage.find('.Left #SideCategoryList').first().find('.BlockContent .treeview li');
+		var newItemsCue = '<div class="navVisualCue newItems"><span class="newItemSpan">NEW!</span><div class="burst-12"></div></div>';
+		var onSaleCue = '<div class="navVisualCue onSale"><span class="onSaleSpan">On Sale</span></div>';
+		
+		//Add Dollar signs to #SideShopByPrice
+		var shopByPriceNavListings = mainPage.find('.Left #SideShopByPrice').first().find('.BlockContent .treeview li a');
+		var shopByPriceListingCounter = 0;
+		shopByPriceNavListings.each(function() {
+			var currentShopByPriceNavListingText = $(this).text();
+			var currentShopByPriceNavListingAnchor = $(this);
+			var dollarSignInsert = '<span class="fa fa-usd"></span>';
+			shopByPriceListingCounter++;
+			for(var i = 0; i < shopByPriceListingCounter; i++) {
+				currentShopByPriceNavListingAnchor.prepend(dollarSignInsert);
+			}
+		});
+		//Use the data passed earlier via AJAX to attach brand images to respective nav brand list items
+		var navBrandListings = mainPage.find('.Left .BrandList').first().find('.BlockContent .treeview li:not(.last)');
+		var mobileNavBrandListings = mainPage.find('.BrandList').first().find('.BlockContent .treeview li:not(.last)');
+		function brandImagesListings(){
+			navBrandListings.each(function() {
+				var navBrandText = $(this).text();
+				var brandClass = navBrandText.toLowerCase().replace(/\.|\-|\ /ig, '');
+				$(this).find('.navBrandListingImage').addClass('sprite').addClass(brandClass);
+			});
+			mobileNavBrandListings.each(function() {
+				var navBrandText = $(this).text();
+				var brandClass = navBrandText.toLowerCase().replace(/\.|\-|\ /ig, '');
+				$(this).find('.navBrandListingImage').addClass('sprite').addClass(brandClass);
+			});
+
+			navBrandListings.parent().addClass('withBrandImages');
+			mobileNavBrandListings.parent().addClass('withBrandImages');
+			$('.main #SideShopByBrand .treeview').hover(function(){ $(this).toggleClass('grayscale'); });
+			var navBraLiAnc = mainPage.find('.Left .BrandList').first().find('.BlockContent .treeview li:not(.last) a');
+			var navBrandListingImage = $('.navBrandListingImage');
+			navBraLiAnc.hover(function(){ $(this).toggleClass('hovered'); });
+			var allBrandsLink = mainPage.find('.Left .BrandList').first().find('.BlockContent .treeview li.last a');
+
+			allBrandsLink.prepend('<icon class="navBrandListingImage fa fa-th"></icon>');
+		}
+		brandImagesListings();
+	});
+</script>

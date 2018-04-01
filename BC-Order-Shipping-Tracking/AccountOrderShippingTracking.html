@@ -1,0 +1,594 @@
+<style>
+	/* Tracker Line CSS */
+	#AccountOrder .tracker-container {
+		position: relative;
+		padding: 0 0 26px 0;
+	}
+	#AccountOrder .tracker-container .tracker-line {
+		position: relative;
+		display: block;
+		height: 24px;
+		width: 100%;
+		background: #f2f2f2;
+		margin: 8.5px 0;
+		min-height: 1em;
+		border-radius: 12px;
+	}
+	#AccountOrder .tracker-container .latest-event-status {
+		position: absolute;
+		top: -35px;
+		left: -50px;
+		width: 200px;
+		font-size: 17px;
+		font-weight: bold;
+		font-style: initial;
+		text-align: center;
+		display: none;
+	}
+	#AccountOrder .tracker-container .latest-event-status i {
+		font-size: 10px;
+		display: block;
+	}
+	#AccountOrder .tracker-container .tracker-line .package-status {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 24px;
+		max-width: 100%;
+		background: #008a00;
+		box-sizing: border-box;
+		border-radius: 12px;
+    }
+	#AccountOrder .tracker-container .tracker-line .dot {
+		border-radius: 12px;
+		height: 24px;
+		width: 24px;
+		position: absolute;
+		top: 0;
+		box-sizing: border-box;
+	}
+	#AccountOrder .tracker-container .tracker-line .delivery-dot {
+		background: 0 0;
+		border: 2px solid #008a00;
+		right: 0;
+	}
+	#AccountOrder .tracker-container .tracker-line .latest-event-dot {
+		z-index: 10;
+		background: #003700;
+		visibility: visible;
+		opacity: 1;
+		display: inline;
+		transform: translateX(0px) translateZ(0px);
+		left: auto;
+		right: 96.3%;
+	}
+	#AccountOrder .tracker-container .bottom { 
+		position: relative;
+		width: 100%;
+		display: block;
+		min-height: 3em;
+		font-size: 13px;
+		font-weight: 700;
+	}
+	#AccountOrder .tracker-container .bottom .delivery-status, 
+	#AccountOrder .tracker-container .bottom .ordered-status, 
+	#AccountOrder .tracker-container .bottom .shipped-status, 
+	#AccountOrder .tracker-container .bottom .will-ship-status {
+		display: block;
+		position: absolute;
+		top: 0;
+		background: #fff;
+	}
+	#AccountOrder .tracker-container .bottom .ordered-date, 
+	#AccountOrder .tracker-container .bottom .shipped-date, 
+	#AccountOrder .tracker-container .bottom .summary-text {
+		font-weight: 400;
+		display: block;
+	}
+	#AccountOrder .tracker-container .bottom .shipped-status {
+		width: 51px;
+		left: 25%;
+		display: none;
+    }
+	#AccountOrder .tracker-container .bottom .shipped-status .marker {
+		position: absolute;
+		top: -14px;
+		left: 50%;
+		margin-left: -10px;
+		border: 10px solid transparent;
+		border-top-color: #008a00;
+	}
+	#AccountOrder .tracker-container .bottom .delivery-status {
+		max-width: 400px;
+		right: 0;
+		text-align: right;
+		color: #008a00;
+		text-transform: uppercase;
+	}
+	/* Tracking Table CSS */
+	#AccountOrder .tracking-table {
+		border: solid 3px #ececec;
+	}
+	#AccountOrder .tracking-table thead {
+		background: #39b54a;
+		color: #fff;
+	}
+	#AccountOrder .tracking-table tr th {
+		text-transform: uppercase; 
+		width: 33%;
+	}
+	#AccountOrder .tracking-table .pre-sum-row td {
+		padding: 0; 
+	}
+	#AccountOrder .tracking-table .summary-triangle {
+		width: 0px;
+		height: 0px;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid #42CC66;
+		display: block;
+		position: relative;
+		top: 3px;
+		margin: 0 auto;
+	}
+	#AccountOrder .tracking-table .summary-row {
+		color: #fff;
+		text-align: center;
+		font-size: 13px;
+		height: 80px;
+    }
+	#AccountOrder .tracking-table .summary-row td {
+		padding-top: 0;
+	}
+	#AccountOrder .tracking-table .summary-row td div {
+		background-color: #42CC66;
+		height: 40px;
+		padding: 20px;
+		border-radius: 4px;
+	}
+	#AccountOrder .tracking-table tbody {
+		font-size: 12px;
+	}
+	#AccountOrder .tracking-table tr.odd {
+		background: #f5f5f5;
+	}
+	#AccountOrder .tracking-table td {
+		border: 0;
+		padding: 10px 20px;
+	}
+</style>
+<script type="text/javascript">
+	var pageEnd = $('#AccountOrder .BlockContent');
+	var trackingNumber = $('.CartContents.OrderShipments tbody .TrackingNumber').text();
+	if ($('.ShippingDetails .address-country').text().toUpperCase().trim() == 'UNITED STATES') {
+		var shippingAddress = $('.ShippingDetails .address-city').text() + ', ' + abbrevState($('.ShippingDetails .address-state').text());
+	} else {
+		var shippingAddress = $('.ShippingDetails .address-city').text() + ', ' + $('.ShippingDetails .address-country').text();
+	}
+	var orderShipped = false;
+	var orderDelivered = false;
+	$(document).ready(function(){
+		runTrackingWidget(trackingNumber);
+	});
+	function runTrackingWidget(shippingTrackingNumber) {
+		if (shippingTrackingNumber.length == 22) {
+			makeTrackingLink("USPS", shippingTrackingNumber);
+			USPSTracking(shippingTrackingNumber, animateTrackerLine);
+		} else if (shippingTrackingNumber.length == 18) {
+			makeTrackingLink("FedEx", shippingTrackingNumber);
+		} else if ((shippingTrackingNumber.length == 12) && (shippingTrackingNumber.length == 14)) {
+			makeTrackingLink("UPS", shippingTrackingNumber);
+		}
+	}
+	
+	//Create a clickable anchor link for the correct tracking number and shipping carrier combo
+	function makeTrackingLink(carrierCompany, shippingTrackingNumber) {
+		var anchorLink = {'USPS':'https://tools.usps.com/go/TrackConfirmAction.action?tLabels=',
+						  'FedEx':'http://fedex.com/Tracking?action=track&language=english&cntry_code=us&tracknumbers=',
+						  'UPS':'http://wwwapps.ups.com/WebTracking/track?loc=en_US&track.x=Track&trackNums='};
+		var trackingAnchorLink = '<a href="' + anchorLink[carrierCompany]; 
+		trackingAnchorLink += '' + shippingTrackingNumber + '" target="_blank" class="green">' + shippingTrackingNumber + '</a>';
+		$('.CartContents.OrderShipments tbody .TrackingNumber').html(trackingAnchorLink);
+	}
+	
+	//Create tracker line, which will be animated later, after status and data is retrieved and parsed
+	function createTrackerLine(currentLocation) {
+		//Tracker line Bottom
+		var orderMonthDay = formatDate('%%GLOBAL_OrderDate%%');
+		var shippedDate = '<span class="shipped-date"></span>';
+		var shippedStatus = '<span class="shipped-status"><i class="marker"></i>Shipped'+shippedDate+'</span>';
+		var deliveryDate = '<span class="delivery-date"></span>';
+		var shipTrackerAddress = '<span class="delivery-address">'+shippingAddress+'</span>';
+		var deliveryStatus = '<span class="delivery-status">'+ deliveryDate + shipTrackerAddress + '</span></div>';
+		var orderedStatus = '<span class="ordered-status">Ordered<span class="ordered-date">'+orderMonthDay+'</span>';
+		var trackerBottom = '<div class="bottom">' + orderedStatus + '</span>'+shippedStatus+deliveryStatus;
+		var trackerLatest = '<span class="latest-event-status"><span></span><i>(Last scan: ' + currentLocation + ')</i></span>';
+		var trackerDots = '<i class="dot latest-event-dot">'+trackerLatest+'</i><i class="dot delivery-dot"></i>';
+		var trackerLine = '<div class="tracker-line"><div class="package-status"></div>'+trackerDots+'</div>'
+		var trackerLineHTML = '<div class="tracker-container">'+trackerLine+trackerBottom+'</div>';
+		pageEnd.append(trackerLineHTML);
+	}
+
+	function USPSTracking(shippingTrackingNumber, callback) {
+		var httpPrefix = (window.location.protocol === 'http:' ? 'http:' : 'https:');
+		var corsAnyUrl = '//cors-anywhere.herokuapp.com/';
+		var BCTrackingID = '%%GLOBAL_TrackingLink%%';
+		if (isNumeric(BCTrackingID.charAt(0))) {
+			var trackingLinkID = BCTrackingID;
+		} else {
+			var trackingLinkID = BCTrackingID.split('rackNum=')[1].split('" target=')[0];
+		}
+
+		var USPSId = '689DSSHI5238';
+		var USPSUrl1 = '//production.shippingapis.com/ShippingApi.dll?API=TrackV2&XML=<TrackFieldRequest USERID="';
+		var USPSUrl2 = '"><TrackID ID="'+trackingLinkID+'"></TrackID></TrackFieldRequest>'
+		var USPSUrl = httpPrefix + corsAnyUrl + USPSUrl1 + USPSId + USPSUrl2;
+		function getUSPSData(trackUrl, callback) {	
+			$.ajax({
+				url: trackUrl,
+				type: "post",
+				success: function(xml){
+					callback(xml);
+				},
+				error: function(xhr, textStatus, errorThrown){
+			        console.log("Error? --- ", xhr);
+			        console.log("Error? --- ", xhr.responseText);
+			        console.log("textStatus? --- ", textStatus);
+			        console.log("ErrorThrown --- ", errorThrown);
+				}
+			});
+		}
+		
+		function createUSPSTable(xml) {
+	        var trackingJSON = xmlToJson(xml);
+	        var trackingString = JSON.stringify(xmlToJson(xml));
+	        var trackingResponse = trackingJSON.TrackResponse;
+	        console.log( trackingResponse );
+	        var trackingInfo = trackingResponse.TrackInfo;
+	        var trackingID = trackingInfo["@attributes"].ID;
+	        if (!trackingInfo.TrackSummary) return;
+	        var trackingSummary = trackingInfo.TrackSummary;
+	        var trackingSumEventTime = trackingSummary.EventTime["#text"] ? ', ' + trackingSummary.EventTime["#text"] : '';
+	        var trackingSumEventDate = trackingSummary.EventDate["#text"];
+	        var trackingSumEvent = trackingSummary.Event["#text"];
+	        var trackingSumEventCity = trackingSummary.EventCity["#text"] ? trackingSummary.EventCity["#text"] : '';
+	        var trackingSumEventState = trackingSummary.EventState["#text"] ? ', ' + trackingSummary.EventState["#text"] : '';
+	        var trackingSumEventEventZIPCode = trackingSummary.EventZIPCode["#text"] ? trackingSummary.EventZIPCode["#text"] : '';
+	        var trackingSumEventEventCountry = trackingSummary.EventCountry["#text"] ? trackingSummary.EventCountry["#text"] : '';
+	        var sumDateTimeCol = '<td>' + trackingSumEventDate + trackingSumEventTime + '</td>';
+	        var sumStatusCol = '<td>' + trackingSumEvent + '</td>';
+	        var sumLocCol = '<td>' + trackingSumEventCity + trackingSumEventState + '  ' + trackingSumEventEventZIPCode + '</td>';
+			var tableRows = '<tr class="even">'+sumDateTimeCol+sumStatusCol+sumLocCol+'</tr>';
+/*
+	        var trackingSumEventEventFirstName = trackingSummary.FirstName["#text"];
+	        var trackingSumEventEventName = trackingSummary.Name["#text"];
+	        console.log("Tracking Event First Name:" + trackingSumEventEventFirstName);
+	        console.log("Tracking Event Name:" + trackingSumEventEventName);
+*/
+
+			if (!trackingSummary.EventCountry) {
+				var currentLoc = trackingSummary.EventCountry;
+			} else {
+				var currentLoc = trackingSumEventCity + trackingSumEventState;
+			}
+			createTrackerLine(currentLoc);
+
+			// IF already delivered, add green bubble with 
+			var alreadyDelivered = trackingSumEvent.indexOf("Delivered") != -1;
+			if (alreadyDelivered) {
+				var delAttText = {
+					"01": "In/At your Mailbox",
+					"02": "and left at your Front Door/Porch",
+					"03": "to your Parcel Locker",
+					"04": "and left with an Individual (at Address)",
+					"05": "and left at Front Desk/Reception",
+					"06": "to Other at Address (Garage/Side or Back Door/Porch)",
+					"07": "and left with Neighbor (by Request)"
+				};
+				if ( trackingSummary.DeliveryAttributeCode ) {
+					var delAttCode = trackingSummary.DeliveryAttributeCode["#text"];
+					var summaryRowText = 'Your item was delivered '+delAttText[delAttCode]+' at '+trackingSumEventTime+' ';
+				} else {
+					var summaryRowText = 'Your item was delivered at '+trackingSumEventTime+' ';					
+				}
+				summaryRowText += 'on '+trackingSumEventDate+' in '+trackingSumEventCity+', '+trackingSumEventState+'  ';
+				summaryRowText += ''+trackingSumEventEventZIPCode+'';
+				tableRows += '<tr class="pre-sum-row"><td colspan="3"><div class="summary-triangle"></div></td></tr>';
+				tableRows += '<tr class="summary-row"><td colspan="3"><div>'+summaryRowText+'</div></td>';
+			}
+/*
+			if(trackingInfo.hasOwnProperty('GuaranteedDeliveryDate')){
+				var guarDelDate = trackingJSON.TrackResponse.TrackInfo.GuaranteedDeliveryDate["#text"];
+				console.log("Guaranteed Delivery Date:" + guarDelDate);
+			}
+*/
+			//Populate the rest of the <tr> table rows with tracking steps from TrackingDetails
+	        var trackingDetails = trackingJSON.TrackResponse.TrackInfo.TrackDetail ? trackingJSON.TrackResponse.TrackInfo.TrackDetail : false;
+			function popTableDetails() {
+				var odd_even = true;
+				$.each(trackingDetails, function( trackingStepID, TrackingStepDetails ) {
+			        var detailEventDate = TrackingStepDetails.EventDate["#text"];
+			        var detailEventTime = TrackingStepDetails.EventTime["#text"];
+			        var detailEvent = TrackingStepDetails.Event["#text"];
+			        var detailEventCity = TrackingStepDetails.EventCity["#text"];
+			        var detailEventState = TrackingStepDetails.EventState["#text"];
+			        var detailEventEventZIPCode = TrackingStepDetails.EventZIPCode["#text"];
+					if (typeof detailEventTime !== 'undefined') {
+						var dateTimeCol = '<td>' + detailEventDate + ', ' + detailEventTime + '</td>';
+					} else {
+						var dateTimeCol = '<td>' + detailEventDate + '</td>';
+					}
+					var statusCol = '<td>' + detailEvent + '</td>';
+					if (typeof detailEventCity !== 'undefined') {
+						var locCol = '<td>' + detailEventCity + ', ' + detailEventState + '  ' + detailEventEventZIPCode + '</td>';
+					} else {
+						var locCol = '<td></td>';
+					}
+			        tableRows += '<tr class="'+( odd_even ? 'odd' : 'even')+'">'+dateTimeCol+statusCol+locCol+'</tr>';
+			        odd_even = !odd_even;               
+				});
+			}
+			if (trackingDetails) popTableDetails();
+			var tableHead = '<thead><tr class="tbl-head">' +
+							'<th scope="col" class="tbl-date-time">' +
+								'<div class="thpad">Date &amp; Time</div></th>' +
+							'<th scope="col" class="tbl-status">' +
+								'<div class="thpad">Status of Item</div></th>' +
+							'<th scope="col" class="tbl-location">' +
+							'<div class="thpad">Location</div></th>' +
+						'</tr></thead>';
+			var tableBody = '<tbody>' + tableRows + '</tbody>';
+			var trackingTable = '<table class="USPS-table tracking-table">' +  tableHead + tableBody + '</table>';
+			pageEnd.append(trackingTable);
+
+			// Retrieve USPS data and parse for status and details
+			function USPSStatus (){
+			    var historyDates = {
+			        "Pre-Shipment Info Sent to USPS": "",
+			        "Accepted at USPS Origin Sort Facility": "",
+			        "Arrived at USPS Origin Facility": "",
+			        "Arrived at USPS Destination Facility": "",
+			        "Departed USPS Facility": "",
+			        "Arrived at Post Office": "",
+			        "Departed USPS Facility": "",
+			        "Arrived at USPS Facility": "",
+			        "Sorting Complete": "",
+			        "Out for Delivery": ""
+			    };
+			    function ContainsKeyValue(obj, key, value) {
+			        if (obj[key] === value) return true;
+			        for (all in obj) {
+			            if (obj[all] != null && obj[all][key] === value) {
+			                return true;
+			            }
+			            if (typeof obj[all] == "object" && obj[all] != null) {
+			                var found = ContainsKeyValue(obj[all], key, value);
+			                if (found == true) return true;
+			            }
+			        }
+			        return false;
+			    }
+			    for (var eventType in historyDates) {
+			        for (var i = 0; i < trackingDetails.length; i++) {
+			            var detail = trackingDetails[i];
+			            if (ContainsKeyValue(detail, "#text", eventType)) {
+			                historyDates[eventType] = detail.EventDate["#text"];
+			            }
+			        }
+			    }
+				var alreadyAccepted = historyDates["Accepted at USPS Origin Sort Facility"] != '' ? true : false;
+				var acceptedDate = alreadyAccepted ? formatDate(historyDates["Accepted at USPS Origin Sort Facility"]) : '';
+				var afterAcceptance = trackingDetails.length > 1 ? true : false;
+				
+				if (alreadyDelivered) {
+					shipStatusIndex = 3;
+					var deliveredDate = formatDate(trackingSummary.EventDate["#text"]);
+					var deliveredAddress = '' + trackingSummary.EventCity["#text"] + ', ' + trackingSummary.EventState["#text"];
+				} else if (afterAcceptance) {
+					shipStatusIndex = 2;
+				} else if (alreadyAccepted) {
+					shipStatusIndex = 1;
+				} else {
+					shipStatusIndex = 0;
+				}
+				return {
+					index: shipStatusIndex,
+					acceptedDate: acceptedDate,
+					afterAccept: trackingDetails.length - 2,
+					deliveredDate: deliveredDate,
+					deliveredAddress: deliveredAddress
+				};
+			}
+			$.when(USPSStatus(trackingSumEvent)).then(function(shipStatusData){animateTrackerLine(shipStatusData);});
+		}
+		var ajaxCallback = function (xml) {createUSPSTable(xml);}
+		getUSPSData(USPSUrl, ajaxCallback);
+	}
+	
+	function animateTrackerLine(shipStatusData) {
+		var configIndex = shipStatusData.index;
+		//Tracking Dot and Status Position -- ordered, shipped, delivered
+		var shippingConfig = [{"dotPos":{"side":"left","cord":"12"},"text":"We\'ve got your order"},
+							  {"dotPos":{"side":"left","cord":"28"},"text":"The carrier now has the package"},
+							  {"dotPos":{"side":"left","cord":"33"},"text":"It\’s on the way"},
+							  {"dotPos":{"side":"right","cord":"0"},"text":"Delivered on"}];
+		var domTrackerLine = $('.tracker-line');
+		var progressStatus = $('.package-status');
+		var progressStatusSpan = $('.latest-event-status');
+		var progressStatusSpanText = $('.latest-event-status span');
+		var progressStatusScan = $('.latest-event-status i');
+		var progressStatusDot = $('.latest-event-dot');
+		var progressStatusSide = shippingConfig[configIndex].dotPos.side;
+		var progressStatusCord = shippingConfig[configIndex].dotPos.cord;
+		var progressStatusText = shippingConfig[configIndex].text;
+		var shippedMultiplier = shipStatusData.afterAccept * 5;
+		var shippEDDateField = $('.shipped-date');
+		progressStatusSpanText.html(progressStatusText);
+
+		if (shipStatusData.index == 0) {
+			progressStatusScan.hide();
+			var thisWidth = ((domTrackerLine.width() * (progressStatusCord*0.01) + 24) / domTrackerLine.width()) * 100;
+			$(window).load(function(){
+				setTimeout(function(){
+					progressStatus.animate({'width':''+thisWidth+'%'}, 1300);
+					progressStatusDot.animate({'left':''+progressStatusCord+'%'}, 1300, function() {
+						progressStatusSpan.css({'width':'180px','top':'-30px'}).fadeIn('1300');
+					});
+				}, 1370);
+			})
+		} else if (shipStatusData.index == 1) {
+			var thisWidth = ((domTrackerLine.width() * (progressStatusCord*0.01) + 24) / domTrackerLine.width()) * 100;
+			shippEDDateField.html(shipStatusData.acceptedDate);
+			$(window).load(function(){
+				setTimeout(function(){
+					progressStatus.animate({'width':''+thisWidth+'%'}, 3700);
+					setTimeout(function(){$('.shipped-status').fadeIn()}, 2800);
+					progressStatusDot.animate({'left':''+progressStatusCord+'%'}, 3700, function() {
+						progressStatusSpan.css({'width':'284px','left':'-119px'}).fadeIn('1300');
+					});
+				}, 1370);
+			})
+		} else if (shipStatusData.index == 2) {
+			var aAWidth = (((domTrackerLine.width() * (progressStatusCord*0.01) + 24) / domTrackerLine.width()) * 100) + shippedMultiplier;
+			var aACord = parseInt(progressStatusCord) + shippedMultiplier;
+			shippEDDateField.html(shipStatusData.acceptedDate);
+			$(window).load(function(){
+				setTimeout(function(){
+					progressStatus.animate({'width':''+aAWidth+'%'}, 3700);
+					setTimeout(function(){$('.shipped-status').fadeIn()}, 2800);
+					progressStatusDot.animate({'left':''+aACord+'%'}, 3700, function() {
+						progressStatusSpan.css({'width':'134px'}).fadeIn('1300');
+					});
+				}, 1370);
+			})
+		} else if (shipStatusData.index == 3) {
+			progressStatusSpan.html(progressStatusText + ' ' + shipStatusData.deliveredDate);
+			shippEDDateField.html(shipStatusData.acceptedDate);
+			$(window).load(function(){
+				progressStatus.animate({'width':'100%'}, 3700);
+				setTimeout(function(){$('.shipped-status').fadeIn()}, 1300);
+				progressStatusDot.animate({'right':''+progressStatusCord+''}, 3700, function() {
+					progressStatusSpan.css({'left':'auto','right':'0','text-align':'right','top':'-30px'}).fadeIn('1300');
+				});
+			})
+		}
+	}
+
+	// Date format function
+	function formatDate( fullDate ) {
+		if (isNumeric(fullDate.charAt(0))) {
+			var splitDate = $(fullDate.split(" ").slice(0,2));
+			return '' + splitDate[1] + ' ' + splitDate[0].replace(/\D/g,'') + '';
+		} else {
+			var splitDate = $(fullDate.split(" ").slice(0,2));
+			return splitDate[0].slice(0,3) + ' ' + splitDate[1].replace(/\D/g,'');
+		}
+	}
+
+	// Func to check if a char is numberic or not
+	function isNumeric(n) {
+		return !jQuery.isArray( n ) && (n - parseFloat( n ) + 1) >= 0;
+	}
+
+	// Changes XML to JSON
+	function xmlToJson(xml) {
+		// Create the return object
+		var obj = {};
+		if (xml.nodeType == 1) { // element
+			// do attributes
+			if (xml.attributes.length > 0) {
+			obj["@attributes"] = {};
+				for (var j = 0; j < xml.attributes.length; j++) {
+					var attribute = xml.attributes.item(j);
+					obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
+				}
+			}
+		} else if (xml.nodeType == 3) { // text
+			obj = xml.nodeValue;
+		}
+		// do children
+		if (xml.hasChildNodes()) {
+			for(var i = 0; i < xml.childNodes.length; i++) {
+				var item = xml.childNodes.item(i);
+				var nodeName = item.nodeName;
+				if (typeof(obj[nodeName]) == "undefined") {
+					obj[nodeName] = xmlToJson(item);
+				} else {
+					if (typeof(obj[nodeName].push) == "undefined") {
+						var old = obj[nodeName];
+						obj[nodeName] = [];
+						obj[nodeName].push(old);
+					}
+					obj[nodeName].push(xmlToJson(item));
+				}
+			}
+		}
+		return obj;
+	};
+	function capitalizeFirstLetter(someState) {
+		var splitState = someState.split(' ');
+		var capitalizedState = '';
+		for (i = 0; i < splitState.length; i++) { 
+			if ((i != splitState.length) && (i != 0)) capitalizedState += ' ';
+			capitalizedState += splitState[i].charAt(0).toUpperCase() + splitState[i].toLowerCase().slice(1);
+		}
+	    return capitalizedState;
+	}
+	//Convert long/full state names to abbreviations
+	function abbrevState(someState) {
+		var state = capitalizeFirstLetter(someState);
+		var states = {
+			'Alabama': 'AL',
+			'Alaska': 'AK',
+			'Arizona': 'AZ',
+			'Arkansas': 'AR',
+			'California': 'CA',
+			'Colorado': 'CO',
+			'Connecticut': 'CT',
+			'Delaware': 'DE',
+			'Florida': 'FL',
+			'Georgia': 'GA',
+			'Hawaii': 'HI',
+			'Idaho': 'ID',
+			'Illinois': 'IL',
+			'Indiana': 'IN',
+			'Iowa': 'IA',
+			'Kansas': 'KS',
+			'Kentucky': 'KY',
+			'Louisiana': 'LA',
+			'Maine': 'ME',
+			'Maryland': 'MD',
+			'Massachusetts': 'MA',
+			'Michigan': 'MI',
+			'Minnesota': 'MN',
+			'Mississippi': 'MS',
+			'Missouri': 'MO',
+			'Montana': 'MT',
+			'Nebraska': 'NE',
+			'Nevada': 'NV',
+			'New Hampshire': 'NH',
+			'New Jersey': 'NJ',
+			'New Mexico': 'NM',
+			'New York': 'NY',
+			'North Carolina': 'NC',
+			'North Dakota': 'ND',
+			'Ohio': 'OH',
+			'Oklahoma': 'OK',
+			'Oregon': 'OR',
+			'Pennsylvania': 'PA',
+			'Rhode Island': 'RI',
+			'South Carolina': 'SC',
+			'South Dakota': 'SD',
+			'Tennessee': 'TN',
+			'Texas': 'TX',
+			'Utah': 'UT',
+			'Vermont': 'VT',
+			'Virginia': 'VA',
+			'Washington': 'WA',
+			'West Virginia': 'WV',
+			'Wisconsin': 'WI',
+			'Wyoming': 'WY'
+		}
+		return states[state];
+	}
+</script>​​​​​​

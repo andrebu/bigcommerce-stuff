@@ -1,0 +1,20 @@
+<script type="text/javascript">
+	function sharingSavings() {
+		var productDollarPrice = $('.ProductMain .Value .ProductPrice.VariationProductPrice').text().replace("$", "");
+		var productParsedPrice = parseFloat(productDollarPrice);
+		var shareDiscountAmount = (Math.round((productParsedPrice*0.05)*100)/100).toFixed(2);
+		var shareDiscArr = shareDiscountAmount.split('.');
+		var savingsDollars = shareDiscArr[0];
+		var savingsCents = shareDiscArr[1];
+		var savingsText = '<span>Share for <strong class="green"><span class="savings-amount"><strong class="dollar-symb">$</strong>' +
+						'<span class="dollars">' + savingsDollars + 
+						'</span><span class="cents">.' + savingsCents + '</span></span>' +
+						' OFF</strong> this <span class="productTypeSpan">product</span></span>';
+		$('.shareSlide#slidemarginleft').prepend(savingsText);
+
+	};
+	
+	$(document).ready(function() {
+		sharingSavings();
+	});
+</script>

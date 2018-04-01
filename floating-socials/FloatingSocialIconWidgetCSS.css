@@ -1,0 +1,52 @@
+#FloatingSocialLinks {
+	position: fixed; 
+	left: 0; 
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;  
+	top: 30%;
+}
+#FloatingSocialLinks .floatingsociallink {
+	height: 32px; 
+	width: 32px; 
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s; 
+}
+#FloatingSocialLinks .floatingsociallink:hover {
+	width: 52px;
+}
+#FloatingSocialLinks .instagram {
+	background-color: #cd5959; 
+}
+#FloatingSocialLinks .facebook {
+	background-color: #3b5998; 
+}
+#FloatingSocialLinks .pinterest {
+	background-color: #cb211d; 
+}
+#FloatingSocialLinks .youtube {
+	background-color: #c02b29; 
+}
+#FloatingSocialLinks .googleplus {
+	background-color: #dd4b39; 
+}
+#FloatingSocialLinks .twitter {
+	background-color: #56a3d9; 
+}
+#FloatingSocialLinks .floatingsociallink a {
+	display: block;
+	height: 32px;
+}
+#FloatingSocialLinks .floatingsociallink a .inner-floatingsociallink {
+	width: 32px;
+	height: 100%;
+	float: right;
+}
+#FloatingSocialLinks .floatingsociallink .fa {
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	line-height: 34px;
+	font-size: 21px;
+}

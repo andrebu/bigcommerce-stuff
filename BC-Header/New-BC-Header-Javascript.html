@@ -1,0 +1,61 @@
+<script type="text/javascript">
+//<![CDATA[
+    // Login and Logout features
+    function addAccountName() {	    
+		var $loginGreetingSalutation = $('#loginGreetingSalutation');
+		var $accountMenuTriggerLink = $('#myAccountTriggerLink');
+		var $accountMenuTriggerText = $('#myAccountLoginLogout');
+	    var globalFirstName="%%GLOBAL_CurrentCustomerFirstName%%";
+        if (globalFirstName!="" && globalFirstName!="Guest")
+        {
+            //Customer is Logged On
+            $loginGreetingSalutation.text('Hello, ');
+            console.log($accountMenuTriggerLink );
+            console.log($accountMenuTriggerText );
+            $accountMenuTriggerLink.attr('href', '/account.php');
+            $accountMenuTriggerText.text(globalFirstName);
+        } else {
+            //Customer is not Logged On
+            return;
+        };
+    }
+
+    // show the HelmMenu when the Help link is hovered on
+    function showDDMenu() {
+		var $helpMenuTrigger = $('#helpMenuTrigger');
+		var $helpMenuContainer = $('#helpMenu');
+        $('#helpMenuTrigger, #helpMenu').on({
+            mouseenter: function(event) {
+                $helpMenuTrigger.addClass('open');
+                $helpMenuContainer.show();
+            },
+            mouseleave: function(event) {
+                $helpMenuTrigger.removeClass('open');
+                $helpMenuContainer.hide();
+            },
+            click: function(event) {
+            }
+        });
+		var $accountMenuTrigger = $('#myAccountTrigger');
+		var $accountMenuContainer = $('#myAccountDDMenu');
+        $('#myAccountTrigger, #myAccountDDMenu').on({
+            mouseenter: function(event) {
+                $accountMenuTrigger.addClass('open');
+                $accountMenuContainer.show();
+            },
+            mouseleave: function(event) {
+                $accountMenuTrigger.removeClass('open');
+                $accountMenuContainer.hide();
+            },
+            click: function(event) {
+            }
+        });
+    }
+
+    $(document).ready( function() {
+	    addAccountName();    
+        showDDMenu();
+    });
+//]]>
+</script>
+​

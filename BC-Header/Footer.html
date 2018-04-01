@@ -1,0 +1,265 @@
+<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+    
+    
+    
+    
+    <div class="inner">
+       <div id="bottomAd">
+           <img class="bottomAdImg" src="%%ASSET_images/DankStop-Online-Headshop-logo.png%%" alt="DankStop Online Headshop Logo" title="DankStop Online Headshop" width="100" height="100">
+           <span class="bottomAdText">More<span class="bottomAdGreen">Options.</span></span>
+          
+           <span class="bottomAdText">Bigger<span class="bottomAdGreen">Savings.</span></span>
+           
+           <span class="bottomAdText">Better<span class="bottomAdGreen">Service.</span></span>
+           
+       </div>
+
+        
+        %%Panel.SideNewsletterBox%%
+        %%Panel.TobaccoWarning%%
+
+        <div class="footer-main">
+            <div class="inner">
+                <div class="footer-columns grid">
+                    <div class="grid__item one-quarter"><h4>Further info</h4>%%Panel.FooterNav%%</div>
+                    <div class="grid__item one-quarter">%%Panel.FooterCategoryList%%</div>
+                    <div class="grid__item one-quarter">%%Panel.FooterShopByBrand%%</div>
+                    <div class="grid__item one-quarter">%%Panel.PaymentMethods%%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div class="inner">
+                <p>
+                    <span class="footer-left">
+                        <span id="currencyPrices">%%GLOBAL_AllPricesAreInCurrency%%.</span> 
+                        <span class="copyRight">&copy; 
+                            <span itemprop="copyrightYear">%%GLOBAL_Year%%</span>
+                            <span itemprop="copyrightHolder" itemtype="http://schema.org/Organization">
+                                %%GLOBAL_StoreName%%
+                            </span>
+                        </span> 
+                        <span class="pie">|</span> %%SNIPPET_SitemapLink%% | 
+                        <a href="https://dankstop.com/xmlsitemap.php">XML Sitemap </a>
+                        <span class="developedBy" itemprop="creator" itemscope="" 
+                            itemtype="http://schema.org/Person"> | Built by 
+                            <a itemprop="sameAs" href="https://andrebulatov.com">
+                                <span itemprop="name">Andre</span>
+                            </a>
+                        </span>
+                    </span>
+                </p>
+                %%GLOBAL_DebugDetails%%
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+<!-- From Panels/Header.html -->
+<script type="text/javascript">
+//<![CDATA[
+    // Login and Logout features
+    function loginFeatures() {        
+        var $loginGreetingSalutation = $('#loginGreetingSalutation');
+        var $accountMenuTriggerLink = $('#myAccountTriggerLink');
+        var $accountMenuTriggerText = $('#myAccountLoginLogout');
+        var globalFirstName="%%GLOBAL_CurrentCustomerFirstName%%";
+        if (globalFirstName!="" && globalFirstName!="Guest")
+        {
+            //Customer is Logged On
+            $loginGreetingSalutation.text('Hello, ');
+            $accountMenuTriggerText.attr('href', '/account.php');
+            $accountMenuTriggerText.text(globalFirstName);
+        } else {
+            //Customer is not Logged On
+            return;
+        };
+    }
+
+    // show the HelmMenu when the Help link is hovered on
+    function showDDMenu() {
+        var $helpMenuTrigger = $('#helpMenuTrigger');
+        var $helpMenuContainer = $('#helpMenu');
+        var $navCover = $('#nav-cover');
+        var $header = $('.header');
+        function setNavCover() {
+            var headerHeight = $header.height();
+            $navCover.css('top', headerHeight);
+        }
+        setNavCover();
+        $(window).on('resize', function(){
+            setNavCover();
+        });
+        $('#helpMenuTrigger').on({
+            mouseenter: function(event) {
+                $helpMenuTrigger.addClass('open');
+                $helpMenuContainer.show();
+                $navCover.stop().fadeTo(150, 0.5);
+            },
+            mouseleave: function(event) {
+                $helpMenuTrigger.removeClass('open');
+                $helpMenuContainer.hide();
+                $navCover.stop().fadeTo(150, 0, function() {$(this).hide();});
+            }
+        });
+        var $accountMenuTrigger = $('#myAccountTrigger');
+        var $accountMenuContainer = $('#myAccountDDMenu');
+        $('#myAccountTrigger').on({
+            mouseenter: function(event) {
+                $accountMenuTrigger.addClass('open');
+                $accountMenuContainer.show();
+                $navCover.stop().fadeTo(150, 0.5);
+            },
+            mouseleave: function(event) {
+                $accountMenuTrigger.removeClass('open');
+                $accountMenuContainer.hide();
+                $navCover.stop().fadeTo(150, 0, function() {$(this).hide();});
+            }
+        });
+    }
+
+    $(document).ready( function() {
+        loginFeatures();    
+        showDDMenu();
+    });
+//]]>
+</script>
+
+
+
+<!-- From bottom of Panels/HeaderSearch.html -->
+<script type="text/javascript">
+    var QuickSearchAlignment = 'right';
+    var QuickSearchWidth = '390px';
+    lang.EmptySmallSearch = "%%LNG_EmptySmallSearch%%";
+    $(document).ajaxComplete(function() {
+        $('input[type=checkbox], select').not('.UniApplied').uniform();
+    });
+</script>
+
+
+<!-- From default.html, right below Panel.Header -->
+%%Panel.HomeSlideShowBXJS%%
+
+
+<!-- From bottom of Panels/DrawerMenu.html -->
+%%Panel.DrawerMenuJavascript%%
+
+
+
+<!-- From bottom of Panels/SideNewsletterBox.html -->
+%%Panel.NewsletterJavaScript%%
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  //<![CDATA[
+   $(document).ready(function(){
+        $('.footer-columns div.one-quarter').each(function(){
+         if($(this).find('ul.sf-menu>li>a').length > 10) {
+            var obj = $(this).find('ul.sf-menu');
+            $('<strong><a href="javascript:void(0);" class="ToggleList">Show all</a></strong>').insertAfter(obj);
+         }
+         var i = 0;
+         $(this).find('ul.sf-menu>li>a,ul.treeview>li>a').each(function(){
+            if(i >= 10) {
+                $(this).closest('li').css('display','none');
+            }
+            i++;
+         });
+        });
+
+        $('.footer-columns .ToggleList').on('click',function() {
+            $(this).parent().siblings('ul').children('li:gt(9)').slideToggle('fast');
+            $(this).text($(this).text() == 'Show all' ? 'Show less' : 'Show all');
+        });
+
+   });
+$(window).load(function() {
+    // resize MagicScroll
+    function resizeMS() {
+        if ('#home .ProductScroll.MagicScroll.MagicScroll-horizontal .mcs-item li') {
+            var iH = $('.ProductScroll.MagicScroll.MagicScroll-horizontal .mcs-item li')[0];
+            iH = $(iH).height();
+            if (!iH) setTimeout(function(){ resizeMS(); }, 370 );
+            $('.ProductScroll.MagicScroll .mcs-item').height(iH+10);
+            $('.ProductScroll.MagicScroll').css('max-height',iH+20);
+        } else {
+            setTimeout(function(){ resizeMS(); }, 370 );
+        }
+    }
+    resizeMS();
+});
+  //]]>
+</script>
+
+    
+
+
+
+<script type="text/javascript" charset="utf-8">var ju_num="CF4D608F-7DB3-47DF-A3C2-BF0764A98EA2";var asset_host=(("https:"==document.location.protocol)?"https":"http")+'://d2j3qa5nc37287.cloudfront.net/';(function() {var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=asset_host+'coupon_code1.js';var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);})();</script>
+
+
+%%GLOBAL_DesignModeHTML%%
+%%GLOBAL_QueryList%%
+%%GLOBAL_DesignModeScriptTag%%
+%%GLOBAL_LiveChatFooterCode%%
+%%GLOBAL_OptimizerTrackingScript%%
+%%GLOBAL_OptimizerConversionScript%%
+%%GLOBAL_OptimizerSetCookieScript%%
+%%GLOBAL_FooterScripts%%
+%%SNIPPET_FastCartThickBoxJs%%
+
+
+<script type="text/javascript">
+    MANTIS = {
+        advertiser: '546a3d6e997c220b001f9291'
+    };
+</script>
+
+<script type="text/javascript">
+    var z = document.createElement("script");
+    z.type = "text/javascript";
+    z.async = true;
+    z.src = "//assets.mantisadnetwork.com/analytics.min.js";
+    var s = document.getElementsByTagName('head')[0];
+    s.parentNode.insertBefore(z, s);
+</script>
+
+<noscript>
+    <img src="//mantodea.mantisadnetwork.com/analytics/pixel?advertiser=546a3d6e997c220b001f9291" />
+</noscript>
+
+
+<script type="text/javascript" src="//pixel.meteora.us/serve/1592" async="true"></script>
+
+
+
+<script type="text/javascript" src="https://www.affiliatly.com/bigcommerce/bigcommerce.js?affiliatly_code=AF-10339"></script>
+
+
+%%Panel.InStockNotifyPanel%%      
+%%Panel.BrandNavListingImages%%
+%%Panel.WholeSaleFunctions%%
+%%Panel.HoverTooltips%%
+
+
+
+   ​

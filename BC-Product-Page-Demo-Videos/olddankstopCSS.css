@@ -1,0 +1,147 @@
+
+/* Product Page Video CSS */
+#videoDemoBtn {
+    width: 70px;
+    height: 73px;
+    border-radius: 60px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 13;
+    display: none;
+    clip: rect(auto, auto, auto, auto);
+/*     background-color: lightgray; */
+	background-color: #39B54A;
+}
+#videoDemoBtn.videoPlaying {
+	background-color: #e53b2c;
+}
+#videoDemoBtn .triangle {
+    width: 0px;
+    height: 0px;
+    left: 28px;
+	top: 12px;
+    position: absolute;
+    border-top: 8px solid transparent;
+    border-bottom: 10px solid transparent;
+	border-left: 16px solid #fff;
+    z-index: 1;
+    border-radius: 2px;
+/*     opacity: 0.5; */
+	color: #fff;
+}
+#videoDemoBtn .triangle:after {
+	content: "Show Video";
+	position: absolute;
+	left: -28px;
+	top: 12px;
+	text-transform: uppercase;
+}
+/*
+#videoDemoBtn:hover .triangle {
+    opacity: 1;
+}
+*/
+#videoDemoBtn.videoPlaying .triangle {
+	border: 8px solid #fff;
+	left: 26px;
+	top: 12px; 
+}
+#videoDemoBtn.videoPlaying .triangle:after {
+	content: "Hide Video";
+	left: -18px;
+}
+.ProductList li:hover #videoDemoBtn {
+    opacity: 1;
+}
+#productDemoVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* 	height: 100%;  */
+    /* 	display: none; */
+}
+#productDemoVideo video {
+    height: 100%;
+    width: 100%;
+}
+.ProductDetailsGrid .productAttributeList {
+    /* 	display: none; */
+}
+#videoDemoThumb {
+    cursor: pointer;
+    border: 1px solid #f0efee !important;
+    opacity: .75;
+}
+#videoDemoThumb .ProdVideoPlayBtn {
+    position: relative;
+    background-color: #39B54A;
+    width: 56px;
+    height: 73px;
+    display: block;
+    margin: 4px;
+}
+#videoDemoThumb .triangle {
+    width: 0px;
+    height: 0px;
+    left: 17px;
+    top: 8px;
+    position: absolute;
+    border-top: 10px solid transparent !important;
+    border-bottom: 12px solid transparent !important;
+    border-left: 23px solid white!important;
+    z-index: 1;
+    border-radius: 2px;
+}
+
+/* Play Video Button */
+#videoDemoThumb .triangle:after {
+    content:"Play Video";
+    position: absolute;
+    left: -31px;
+    top: 18px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Stop Video Button */
+#videoDemoThumb.videoPlaying .ProdVideoPlayBtn {
+    background-color: #DD4B39;
+}
+#videoDemoThumb.videoPlaying .triangle {
+    border: 10px solid #fff !important;
+}
+#videoDemoThumb.videoPlaying .triangle:after {
+    content:"Stop Video";
+    left: -19px;
+}
+@media screen and (max-width: 767px) {
+    #ProductDetails .ProductTinyImageList ul li#videoDemoThumb {
+        display: none;
+    }
+    /*
+	#videoDemoBtn {
+		display: block; 
+	}
+*/
+    #videoDemoBtn {
+        display: block;
+        right: 0px;
+        top: 0px;
+        opacity: 1;
+    }
+/*
+    #videoDemoBtn .triangle {
+        opacity: 1;
+    }
+*/
+/*
+	#videoDemoBtn .triangle {
+		border-left: 16px solid #fff;
+		color: #fff;
+		left: 29px;
+		top: 12px;
+	}
+*/
+
+}

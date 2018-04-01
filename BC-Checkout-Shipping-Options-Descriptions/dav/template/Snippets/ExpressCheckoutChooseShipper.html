@@ -1,0 +1,94 @@
+<form method="post" action="#" onsubmit="ExpressCheckout.ChooseShippingProvider(); return false;">
+    <p><span class="Required">*</span>%%LNG_ExpressCheckoutSelectShippingProvider%%</p>
+    %%GLOBAL_ShippingQuotes%%
+    <div class="shipping-addons" data-disabled="true" style="display:;">
+        <hr>
+        <script type="text/javascript">
+            //<![CDATA[
+                $('label[id^="shippingMethod"]').attr('onclick', 'enableShippingAddons();');
+            //]]>
+        </script>
+        <div class="del-sig disabled">
+            <label for="delSigCheck"><input id="delSigCheck" type="checkbox" onChange="addDelSigToCart();" title="Add Delivery Signature"><strong class="green">Add Delivery Signature</strong><i class="del-sig-text"> -- Add the extra security of a required signature upon delivery for just $3</i></label>
+        </div>
+        <hr>
+        <div class="ins-cost disabled">
+            <label for="addInsCheck" class="ins-add-calc"><input id="addInsCheck" type="checkbox" onChange="addInsToCart();" title="Add Delivery Signature"><strong class="green">Add Shipping Insurance</strong><i class="ins-text"> -- Insure your order <span class="purch-total-span">of <span id="purch-total"></span></span><span class="insurance-total"> for only $<span id="ins-total"><i class="green fa fa-spinner fa-pulse fa-fw"></i></span></span></i></label>        
+        </div>
+        <hr>
+    </div>
+    <input type="submit" value="%%LNG_Continue%%" class="btn Small" />
+    %%GLOBAL_DeliveryDisclaimer%%
+</form>
+
+<script type="text/javascript">
+//<![CDATA[
+    //Add shipper text
+    function shipperText() {
+        var shippingItem1 = $('.ShippingProviderList').find("span.ShipperName:contains('Free Shipping')");
+            shippingItem2 = $('.ShippingProviderList').find("span.ShipperName:contains('Ground Home Delivery')");
+            shippingItem3 = $('.ShippingProviderList').find("span.ShipperName:contains('Priority Mail')");
+            shippingItem4 = $('.ShippingProviderList').find("span.ShipperName:contains('FedEx 2 Day')");
+            shippingItem5 = $('.ShippingProviderList').find("span.ShipperName:contains('Express Mail')");
+            shippingItem6 = $('.ShippingProviderList').find("span.ShipperName:contains('Standard Overnight')");
+            bestValue = '<em class="best-value-text"><strong> - Best Value!</strong></em>';
+            
+        shippingItem1.text('Free Shipping \(3-6 business days\)');
+        shippingItem2.text('FedEx Ground \(3-6 business days\)');
+        shippingItem3.text('USPS Priority Mail \(1-3 business days\)');
+        shippingItem4.text('FedEx 2-Day \(1-2 business days\)');
+        shippingItem5.text('USPS Priority Express \(1-2 business days\)');
+        shippingItem6.text('FedEx Overnight \(1 business day\)');
+
+
+        function shippingEstimateCookies() {
+            //jquery.cookie.js
+            (function(factory){if(typeof define==='function'&&define.amd){define(['jquery'],factory);}else if(typeof exports==='object'){module.exports=factory(require('jquery'));}else{factory(jQuery);}}(function($){var pluses=/\+/g;function encode(s){return config.raw?s:encodeURIComponent(s);}
+            function decode(s){return config.raw?s:decodeURIComponent(s);}
+            function stringifyCookieValue(value){return encode(config.json?JSON.stringify(value):String(value));}
+            function parseCookieValue(s){if(s.indexOf('"')===0){s=s.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,'\\');}
+            try{s=decodeURIComponent(s.replace(pluses,' '));return config.json?JSON.parse(s):s;}catch(e){}}
+            function read(s,converter){var value=config.raw?s:parseCookieValue(s);return $.isFunction(converter)?converter(value):value;}
+            var config=$.cookie=function(key,value,options){if(arguments.length>1&&!$.isFunction(value)){options=$.extend({},config.defaults,options);if(typeof options.expires==='number'){var days=options.expires,t=options.expires=new Date();t.setMilliseconds(t.getMilliseconds()+days*864e+5);}
+            return(document.cookie=[encode(key),'=',stringifyCookieValue(value),options.expires?'; expires='+options.expires.toUTCString():'',options.path?'; path='+options.path:'',options.domain?'; domain='+options.domain:'',options.secure?'; secure':''].join(''));}
+            var result=key?undefined:{},cookies=document.cookie?document.cookie.split('; '):[],i=0,l=cookies.length;for(;i<l;i++){var parts=cookies[i].split('='),name=decode(parts.shift()),cookie=parts.join('=');if(key===name){result=read(cookie,value);break;}
+            if(!key&&(cookie=read(cookie))!==undefined){result[name]=cookie;}}
+            return result;};config.defaults={};$.removeCookie=function(key,options){$.cookie(key,'',$.extend({},options,{expires:-1}));return!$.cookie(key);};}));
+        
+            var oneDayText = $.cookie('oneDayShip'),
+                twoDayText = $.cookie('twoDayShip'),
+                threeDayText = $.cookie('threeDayShip'),
+                fourDayText = $.cookie('fourDayShip'),
+                fiveDayText = $.cookie('fiveDayShip'),
+                sixDayText = $.cookie('sixDayShip');
+            //console.log(oneDayText, twoDayText, threeDayText, fourDayText, fiveDayText, sixDayText);
+                
+            if (((oneDayText != '%5Bobject%20Object%5D') && (twoDayText != '%5Bobject%20Object%5D') && (threeDayText != '%5Bobject%20Object%5D') && (fourDayText != '%5Bobject%20Object%5D') && (fiveDayText != '%5Bobject%20Object%5D') && (sixDayText != '%5Bobject%20Object%5D')) && ((oneDayText != '[object Object]') && (twoDayText != '[object Object]') && (threeDayText != '[object Object]') && (fourDayText != '[object Object]') && (fiveDayText != '[object Object]') && (sixDayText != '[object Object]')) && ((oneDayText != '%5Bundefined%20Undefined%5D') && (twoDayText != '%5Bundefined%20Undefined%5D') && (threeDayText != '%5Bundefined%20Undefined%5D') && (fourDayText != '%5Bundefined%20Undefined%5D') && (fiveDayText != '%5Bundefined%20Undefined%5D') && (sixDayText != '%5Bundefined%20Undefined%5D')) && ((oneDayText != '[undefined Undefined]') && (twoDayText != '[undefined Undefined]') && (threeDayText != '[undefined Undefined]') && (fourDayText != '[undefined Undefined]') && (fiveDayText != '[undefined Undefined]') && (sixDayText != '[undefined Undefined]'))) {
+            shippingItem1.closest('li').append('<span class="lightgray">Get it between <strong>' + threeDayText + '</strong> and <strong>' + sixDayText + '</strong>');
+            shippingItem2.closest('li').append('<span class="lightgray">Get it between <strong>' + threeDayText + '</strong> and <strong>' + sixDayText + '</strong>');
+            shippingItem3.closest('li').append('<span class="lightgray">Get it between <strong>' + oneDayText + '</strong> and <strong>' + threeDayText + '</strong>');
+            shippingItem4.closest('li').append('<span class="lightgray">Get it between <strong>' + oneDayText + '</strong> and <strong>' + twoDayText + '</strong>');
+            shippingItem5.closest('li').append('<span class="lightgray">Get it between <strong>' + oneDayText + '</strong> and <strong>' + twoDayText + '</strong>');
+            shippingItem6.closest('li').append('<span class="lightgray">Get it <strong>' + oneDayText + '</strong>');
+            }
+        }
+        shippingEstimateCookies();
+        shippingItem3.parent().append(bestValue).parent().addClass('best-value');
+
+    }
+    //Hide "Free Shipping" from wholesale accounts
+    function wholesaleHide() {
+        var $wholesaleSpecials = $('.CategoryList ul li:contains("Wholesale Specials")');
+        if ($wholesaleSpecials.length) {
+            if ($('.main.CheckoutExpress')) {
+                $('.ShipperName:contains("Free Shipping")').parents('li').remove();
+            };
+        };
+    }
+    $(document).ready(function(){
+        shipperText();
+        //wholesaleHide();
+    });
+//]]>
+</script>
+​

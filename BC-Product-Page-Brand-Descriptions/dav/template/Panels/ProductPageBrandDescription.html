@@ -1,0 +1,1789 @@
+<style>
+	#ProductDescription .about-this-prod .about-link {
+		text-transform: uppercase;
+	}
+	#ProductDescription .prod-features {
+		display: none;
+	}
+	#ProductDescription .about-this-prod {
+		font-family: futura;
+	}
+	#ProductDescription .about-this-prod h3,
+	#ProductDescription .prod-features h3 {
+		float: none;
+		margin: 0;
+	}
+	#ProductDescription .prod-features h3 {
+		margin: 0 0 13px 0;
+	}
+	#ProductDescription .prod-features dt, 
+	#ProductDescription .prod-features dd {
+		display: inline-block;
+		margin: 0;
+		vertical-align: top;
+		margin-bottom: 23px;
+	}
+	#ProductDescription .prod-features dt:last-of-type, 
+	#ProductDescription .prod-features dd:last-child {
+		margin-bottom: 0;
+	}
+	#ProductDescription .prod-features dt {
+		text-transform: capitalize;
+		width: 27%;
+		margin-right: 3%;
+		position: relative;
+		z-index: 1;
+	}
+	#ProductDescription .prod-features dt span {
+		z-index: 1;
+		background-color: #fff;
+		padding-right: 9%;
+		display: inline-block;
+		font-family: futura;
+	}
+	#ProductDescription .prod-features dt:after {
+		content: ' ';
+		display: block;
+		position: absolute;
+		top: 10px;
+		left: 0;
+		right: 0;
+		height: 0.5em;
+		border-top: 1px dashed #ededed;
+		z-index: -1;
+	}
+	#ProductDescription .prod-features dd {
+		width: 70%;
+	}
+	#ProductDescription .prod-features dd span {
+		display: block;
+		padding-top: 3px;
+		font-family: futura;
+	}
+	/* Product page DankStop byline description */
+	#Dank-Stop-Best {
+		margin: 35px 0;
+	}
+	#Dank-Stop-Best div {
+		position: relative;	
+	}
+	#Dank-Stop-Best div div {
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+	}
+	#Dank-Stop-Best div div:first-of-type {
+		width: 75%
+	}
+	#Dank-Stop-Best div div:first-of-type h3 {
+		color: #333;
+		font-size: 23px;
+		line-height: 27px;
+		font-family: futura;
+		font-weight: 900;
+		width: 65%;
+		margin-bottom: 10px;
+	}
+	#Dank-Stop-Best div div:first-of-type p {
+		margin-bottom: 10px;
+		font-family: futura;
+	}
+	#Dank-Stop-Best div div:nth-of-type(2) {
+		width: 25%
+	}
+	#Dank-Stop-Best div div:nth-of-type(2) i {
+		font-size: 30px;
+		color: #39b54a;
+		position: absolute;
+		left: 90px;
+		top: 250px;
+		position: static;
+	    font-size: 200px;
+	}
+	#Dank-Stop-Best div div:nth-of-type(2) i:after {
+		display: block;
+		content: "#1";
+		color: #fff;
+	    font-family: fantasy;
+		font-weight: 900;
+		position: absolute;
+		font-size: 8px;
+		top: 5px;
+		left: 8px;
+	    font-size: 48px;
+	    top: 40px;
+	    left: 68px;
+	}
+	#Dank-Stop-Best img {
+		display: none;
+	}
+	#ProductDetails .ProductTinyImageList ul {
+		overflow: hidden !important;
+	}
+	#ProductDetails .ProductTinyImageList ul li {
+		border: 0 !important;
+		margin: 0 auto;
+		background: none;
+		display: inline-block;
+		vertical-align: middle;
+		height: 97%;
+	}
+	#ProductDetails .ProductTinyImageList .mcs-item { 
+		vertical-align: middle;
+	}
+	#ProductDetails .ProductTinyImageList .mcs-item::after, 
+	#ProductDetails .ProductTinyImageList .mcs-item > a::after {
+		vertical-align: baseline;
+		display: inline;
+	}
+	#ProductDetails .ProductTinyImageList .mcs-item a, 
+	#ProductDetails .ProductTinyImageList .mcs-item img {
+		max-width: inherit;
+	}
+	#ProductDetails .ProductTinyImageList ul li a,
+	#videoDemoThumb .ProdVideoPlayBtn {
+		box-sizing: border-box;
+		border: 3px solid #f0efee !important;
+		border-radius: 3px;
+		-webkit-transition: border-color 137ms ease;
+		-moz-transition: border-color 137ms ease;
+		-o-transition: border-color 137ms ease;
+		transition: border-color 137ms ease;
+	}
+	#ProductDetails .ProductTinyImageList ul li .hovered,
+	#videoDemoThumb .ProdVideoPlayBtn.hovered {
+		border-color: #999 !important;
+	}
+	#ProductDetails .ProductTinyImageList ul li .mt-active-selector,
+	#ProductDetails .ProductTinyImageList ul li.mt-active-selector .ProdVideoPlayBtn {
+		border-color: #6ada78 !important;
+	}
+	#ProductDetails .ProductTinyImageList ul li .mt-active-selector.previous-thumb {
+		border-color: #f0efee !important;
+	}
+	#ProductDetails .ProductTinyImageList .MagicScroll-horizontal button.mcs-button.mcs-disabled,
+	#ProductDetails .ProductTinyImageList .MagicScroll-horizontal button.mcs-button.mcs-button-arrow:disabled {
+		display: none !important;
+	}
+	.purr-msg {
+		text-align: center;
+		display: block;
+		font-size: 10px;
+		margin-bottom: 10px;
+		background-color: gray;
+		padding: 3px;
+		border-radius: 3px;
+		border: 1px solid gray;
+		position: relative;
+	}
+	.purr-msg:after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 0;
+		position: absolute;
+		border-top: 8px solid gray;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		left: 50%;
+		top: 44px;
+	}
+	.purr-msg span, .purr-msg i {
+		vertical-align: middle;
+		display: inline-block;
+	}
+	.purr-msg i {
+		color: orange;
+		width: 15%;
+	}
+	.purr-msg span {
+		width: 80%;
+		color: #fff;
+		padding: 2% 5% 2% 0;
+	}	
+	.fa-circle:before {
+		content: "\f111";
+	}
+	.fa-exclamation:before {
+		content: "\f12a";
+	}
+	.fa-exclamation-circle:before {
+		content: "\f06a";
+	}
+	.fa-warning:before, .fa-exclamation-triangle:before {
+		content: "\f071";
+	}
+	.MagicToolboxContainer {
+		position: relative;
+		overflow: hidden;
+	}
+	#videoDemoBtn {
+		display: none;
+	}
+	/* Brand Logo container */
+	.top-sep {
+		margin: 35px 0;
+		padding: 0;
+		height: 3px;
+		background: #ededed;
+		border-width: 0;
+	}
+	.brand-banner {
+		width: 91%;
+		padding: 10px;
+		border: 1px solid #ededed;
+		border-radius: 4px;
+		-webkit-transition: all .1s linear;
+		transition: all .1s linear;
+		margin: 0 auto 20px;
+	}
+	.brand-banner .brand-logo {
+		height: auto;
+		overflow: auto;
+		margin: 0 auto;
+		display: inline-block;
+		position: relative;
+		padding: 0 20px;
+		vertical-align: middle;
+	}
+	.brand-banner .brand-logo a {
+		display: block;
+		margin: 0 auto;
+	}
+	.brand-banner .brand-image {
+		margin: 0 auto;
+		display: block;
+		width: 100px;
+	}
+	.brand-banner .brand-info {
+		width: 77%;
+		margin: 0 auto;
+		position: relative;
+		text-align: center;
+		display: inline-block;
+		vertical-align: middle;
+		font-family: futura;
+	}
+	.brand-banner .brand-info .brand-name {
+		padding: 5px 0 5px;
+		clear: right;
+		display: inline-block;
+	}
+	.brand-banner .brand-info .brand-name a {
+		color: #39b54a;
+		font-size: 17px;
+	}
+	.brand-banner .brand-description {
+		display: block;
+		position: relative;
+		width: 89%;
+		margin: 0px auto 20px;
+	}
+	/* Product Page Video CSS */
+	#videoDemoBtn {
+		width: 70px;
+		height: 73px;
+		border-radius: 60px;
+		position: absolute;
+		cursor: pointer;
+		z-index: 13;
+		display: none;
+		clip: rect(auto, auto, auto, auto);
+		background-color: #39B54A;
+		right: 0;
+		top: 0;
+		display:none !important;
+	}
+	#videoDemoBtn.videoPlaying {
+		background-color: #e53b2c;
+	}
+	#videoDemoBtn .triangle {
+		width: 0px;
+		height: 0px;
+		left: 28px;
+		top: 12px;
+		position: absolute;
+		border-top: 8px solid transparent;
+		border-bottom: 10px solid transparent;
+		border-left: 16px solid #fff;
+		z-index: 1;
+		border-radius: 2px;
+		color: #fff;
+	}
+	#videoDemoBtn .triangle:after {
+		content: "Show Video";
+		position: absolute;
+		left: -28px;
+		top: 12px;
+		text-transform: uppercase;
+	}
+	#videoDemoBtn.videoPlaying .triangle {
+		border: 8px solid #fff;
+		left: 26px;
+		top: 12px;
+	}
+	#videoDemoBtn.videoPlaying .triangle:after {
+		content: "Hide Video";
+		left: -18px;
+	}
+	.ProductList li:hover #videoDemoBtn {
+		opacity: 1;
+	}
+	#prodVid {
+		position: absolute;
+		top: -1%;
+		bottom: -1%;
+		left: -1%;
+		right: -1%;
+		width: 102%;
+		height: 102%;
+		z-index: -1;
+		opacity: 0;
+	}
+	#prodVid.videoPlaying {
+		z-index: 1;
+		opacity: 1;
+	}
+	#prodVid video {
+		height: 100%;
+		width: 100%;
+	}
+	.ProductDetailsGrid .productAttributeList {
+	}
+	#videoDemoThumb {
+		cursor: pointer;
+		height:%%GLOBAL_ProductTinyBoxHeight%%px;
+		width:%%GLOBAL_ProductTinyBoxWidth%%px;
+	}
+	#videoDemoThumb .ProdVideoPlayBtn {
+		position: relative;
+		background-color: #39B54A;
+		height: 100%;
+		display: block;
+	}
+	#videoDemoThumb .triangle {
+		width: 0px;
+		height: 0px;
+		left: 18px;
+		top: 12px;
+		position: absolute;
+		border-top: 10px solid transparent !important;
+		border-bottom: 12px solid transparent !important;
+		border-left: 23px solid white!important;
+		z-index: 1;
+		border-radius: 2px;
+	}
+	/* Play Video Button */
+	#videoDemoThumb .triangle:after {
+		content:" Play \A Video";
+		position: absolute;
+		left: -29px;
+		top: 18px;
+		color: #fff;
+		text-transform: uppercase;
+		white-space: pre;
+	}
+	/* Stop Video Button */
+	#videoDemoThumb.videoPlaying .ProdVideoPlayBtn {
+		background-color: #DD4B39;
+	}
+	#videoDemoThumb.videoPlaying .triangle {
+		border: 10px solid #fff !important;
+	}
+	#videoDemoThumb.videoPlaying .triangle:after {
+		content:" Stop \A Video";
+		left: -17px;
+	}
+	
+	@media screen and (max-width: 767px) {
+		.brand-banner .brand-logo {
+			display: block;
+			padding: 20px;
+		}
+		.brand-banner .brand-info {
+			display: block;
+		}
+		#Dank-Stop-Best div div:first-of-type {
+			width: 100%;
+		}
+		#Dank-Stop-Best div div:first-of-type h3 {
+			width: 60%;
+		}
+		#Dank-Stop-Best div div:nth-of-type(2) {
+			position: absolute;
+			top: -7px;
+			right: 0;
+			width: auto;
+		}
+		#Dank-Stop-Best div div:nth-of-type(2) i {
+			font-size: 10em;
+		}
+		#Dank-Stop-Best div div:nth-of-type(2) i:after {
+			font-size: 0.25em;
+			top: 0.8em;
+			left: 1.4em;
+		}
+		#ProductDetails .ProductTinyImageList ul li {
+			margin: 0 auto;			
+			height: auto;
+		}
+		#ProductDetails .ProductTinyImageList ul li#videoDemoThumb {
+			height: 100%;
+	    }
+		#ProductDetails .ProductTinyImageList ul li a, 
+		#videoDemoThumb .ProdVideoPlayBtn {
+			height: 100%;
+		}
+		#videoDemoBtn {
+			display: none;
+			right: 0px;
+			top: 0px;
+			opacity: 1;
+		}
+	}
+</style>
+<script type="text/javascript">    
+
+	var DankStopGlossary = {
+  "DankStop": {
+    "title": "&lt;h3&gt;DankStop aims to be the world's best online headshop&lt;/h3&gt;",
+    "text": "&lt;p&gt;If you have any questions or concerns about this &lt;span class=&quot;productTypeSpan&quot;&gt;product&lt;/span&gt;, feel free to contact us via our &lt;a class=&quot;green&quot; href=&quot;http://dankstop.com/contact-us/&quot;&gt;contact form&lt;/a&gt;, call us at &lt;a class=&quot;green&quot; href=&quot;tel:18443265786&quot;&gt;1-844-326-5786&lt;/a&gt;, or email us at &lt;a class=&quot;green&quot; href=&quot;mailto:support@dankstop.com&quot; target=&quot;_blank&quot;&gt;support@dankstop.com&lt;/a&gt;. Our staff is highly knowledgeable about our products and always happy to help you make a decision.&lt;/p&gt;&lt;p&gt;We take pride in honoring a 100% customer satisfaction guarantee on all of our glass pipes and accessories. If for any reason you are unsatisfied with your purchase, send it back!&lt;/p&gt;",
+    "img": "/content/images/why-shop-at-an-online-smoke-shop/bong1.png"
+  },
+  //astro, mau, sdleepy, t. ras, cloudV
+  "brand": {
+    "420 Stands": {
+      "url": "/brands/420-stands.html",
+      "logo": "z/420standslogo_1412039891__12902_1437010736.png",
+      "description": "420 Stands manufactures awesome little bowl/slide holders that prevent that awful feeling of dropping a freshly packed slide on the ground. We&#x27;ve all been there, and the guys at 420 Stands decided to do something about it. 420 Stands also manufactures a &#x22;Dab Station&#x22;, which includes two compartments for your concentrate jars as well as a nice resting place for your &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps&#x22; target=&#x22;_blank&#x22;&#x3E;dabber&#x3C;/a&#x3E; (to avoid lint and any type of surface materials that can get stuck to it). Made in a basement in California using a 3D Printer, these guys put their blood, sweat, and tears into individually printing each stand. All 420 Stands are handmade and are uniquely different with naturally occurring bubbles and imperfections. This type of craftsmanship really distinguishes these stands to let you know that each one is handcrafted and meticulously made with an acute attention to detail. &#x3C;a href=&#x22;http://dankstop.com/brands/420-stands&#x22;&#x3E;See more products from 420 Stands.&#x3C;/a&#x3E;"
+    },
+    "AMG Glass": {
+      "url": "/brands/AMG-GLASS.html",
+      "logo": "y/amglogo_1412039908__85126_1437010749.jpg",
+      "description": "AMG stands for American Made Glass, and they stay true to the name. Their &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass water pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;concentrate rigs&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E; are all made out of thick borosilicate glass right here in the USA. AMG also produces &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;hand pipes&#x3C;/a&#x3E;, glass jars, and &#x3C;a href=&#x22;http://dankstop.com/beakers-and-straight-tubes/&#x22; target=&#x22;_blank&#x22;&#x3E;beakers and straight tube tobacco bongs&#x3C;/a&#x3E;. Want an AMG product customized? Contact us by phone or email to order an AMG piece in a style or color you don&#x27;t see here. &#x3C;a href=&#x22;http://dankstop.com/brands/AMG-GLASS.html&#x22;&#x3E;See more products from AMG Glass.&#x3C;/a&#x3E;"
+    },
+    "Black Market Glass": {
+      "url": "/brands/Black-Market-Glass.html",
+      "logo": "k/black%20market%20logo_1412039939__65487_1437010839.jpg",
+      "description": "Black Market Glass makes unique &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;glass bubblers&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;concentrate pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-accessories-downstems-and-adapters&#x22; target=&#x22;_blank&#x22;&#x3E;glass accessories&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/quartz&#x22; target=&#x22;_blank&#x22;&#x3E;quartz nails&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/accessories&#x22; target=&#x22;_blank&#x22;&#x3E;accessories&#x3C;/a&#x3E;. They&#x27;re an American brand based out of California, and always impress with their outstanding production glass. Black Market Glass specializes in making &#x3C;a href=&#x22;http://dankstop.com/scientific-glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;scientific glass pipes&#x3C;/a&#x3E;, with a clean look that is sure to turn heads. They make unique, distinct designs for their bases, chambers, and diffusion systems which often feature disc percolators and hexagonal bases. They offer thick, solid glass in all of their pieces. &#x3C;a href=&#x22;http://dankstop.com/brands/Black-Market-Glass.html&#x22; target=&#x22;_blank&#x22;&#x3E;Check out more products from Black Market Glass&#x3C;/a&#x3E;."
+    },
+    "Boom Felazi": {
+      "url": "/brands/Boom-Felazi.html",
+      "logo": "s/boomlogo_1412039957__83318_1437010851.jpeg",
+      "description": "Boom Felazi is one of our most popular glass blowers, quickly becoming famous for their consistent innovation and creative designs. Made in the USA, their &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;glass concentrate rigs&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/recycler-rigs/&#x22; target=&#x22;_blank&#x22;&#x3E;recycler dab rigs&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/accessories&#x22; target=&#x22;_blank&#x22;&#x3E;accessories&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E; are some of the most unique on the market. Our online headshop features a wide variety of Boom Felazi brand &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, dab rigs, and &#x3C;a href=&#x22;http://dankstop.com/heady-glass&#x22; target=&#x22;_blank&#x22;&#x3E;heady glass&#x3C;/a&#x3E;. &#x3C;a href=&#x22;http://dankstop.com/brands/Boom-Felazi.html&#x22;&#x3E;See more Boom Felazi glass.&#x3C;/a&#x3E;"
+    },
+    "C2 Custom Creations": {
+      "url": "/brands/C2-Custom-Creations.html",
+      "logo": "p/c2logo2_1425948087__20473_1437010887.png",
+      "description": "C2 Custom Creations is an American glass company based out of North Hollywood, California and founded in 1994. Bringing with them over 20 years in the glass industry, C2 Glass has made a name for themselves because of their experience and reliability. Their large array of &#x3C;a href=&#x22;http://dankstop.com/scientific-glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;scientific glass pipes&#x3C;/a&#x3E; including &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;concentrate pipes&#x3C;/a&#x3E; are made from only the most durable materials. The use of &#x3C;a href=&#x22;http://dankstop.com/scientific-glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;scientific glass&#x3C;/a&#x3E; gives C2 Glass &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;tobacco bongs&#x3C;/a&#x3E; a clean and sleek appearance. C2 Custom Creations glassware is known for diverse and unique percolators including mushroom percs, showerhead percs, barrel percs, inline percs, ratchet percs, and many more.&#xA0;&#x3C;a href=&#x22;http://dankstop.com/brands/c2-custom-creations.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from C2 Custom Creations.&#x3C;/a&#x3E;"
+    },
+    "Chameleon Glass": {
+      "url": "/brands/Grav-Labs.html",
+      "logo": "y/chameleonglasslogo_1412040077__69996_1437010925.png",
+      "description": "Chameleon Glass is one of our most popular manufacturers, and for good reason. They have consistently been putting out top quality work in their &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-pipes/&#x22; target=&#x22;_blank&#x22;&#x3E;hand pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;vapor rigs&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/accessories&#x22; target=&#x22;_blank&#x22;&#x3E;accessories&#x3C;/a&#x3E; since 1991. Based out of Arizona, they&#x27;re a 100% American operation. Chameleon Glass has American manufacturing, American employees, and good old fashioned high quality products. Chameleon makes our extremely popular lineup of character hand pipes as well as an assortment of beautiful replacement domes and other &#x3C;a href=&#x22;http://dankstop.com/glass-accessories-downstems-and-adapters&#x22; target=&#x22;_blank&#x22;&#x3E;glass parts and accessories&#x3C;/a&#x3E;.&#xA0;&#x3C;a href=&#x22;http://dankstop.com/brands/CHAMELEON-GLASS.html&#x22;&#x3E;Check out more Chameleon Glass products.&#x3C;/a&#x3E;"
+    },
+    "CloudV": {
+      "url": "/brands/CloudV.html",
+      "logo": "y/cloudvlogo_1412040106__98526.jpg",
+      "description": "CloudV creates high-end portable electronic vaporizers and are one of the leading companies in their field. They are located in southern California."
+    },
+    "Crush Glass": {
+      "url": "/brands/Crush-Glass.html",
+      "logo": "p/crushlogo%20copy_1419284061__91710_1437011026.png",
+      "description": "Crush Glass is an American glass company that was founded in 1996. They pride themselves on producing glass through a wide network of glassblowers in the USA. Crush Glass has become a name brand in the glass industry because of their themed glassware. Not only do they produce cleverly themed &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;concentrate pipes&#x3C;/a&#x3E; and &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;tobacco bowls&#x3C;/a&#x3E;, but they also manufacture &#x3C;a href=&#x22;http://dankstop.com/glass-accessories-downstems-and-adapters&#x22; target=&#x22;_blank&#x22;&#x3E;themed slides, domes, and other glass accessories&#x3C;/a&#x3E;. One of the many ways in which Crush Glass has stayed relevant within the glass industry is through their constantly evolving innovative designs for their &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;vapor rigs&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;. The creativity demonstrated through their themed pieces, memorable pipes, and &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;unique dab rigs&#x3C;/a&#x3E; makes it obvious why Crush Glass is still so popular. &#x3C;a href=&#x22;http://dankstop.com/brands/crush-glass.html&#x22; target=&#x22;_blank&#x22;&#x3E;View more products from Crush Glass&#x3C;/a&#x3E;."
+    },
+    "Dan Rushin": {
+      "url": "/brands/Dan-Rushin.html",
+      "logo": "w/danrushin_1412041187__27248_1437011053.jpg",
+      "description": "Dan Rushin is a glassblower from Ohio with over a decade of experience creating glass art. He makes &#x3C;a href=&#x22;http://dankstop.com/heady-glass/&#x22; target=&#x22;_blank&#x22;&#x3E;heady glass&#x3C;/a&#x3E; colorful and artistic &#x3C;a href=&#x22;http://dankstop.com/glass-pipes/&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps&#x22; target=&#x22;_blank&#x22;&#x3E;dabbers&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-pendants/&#x22; target=&#x22;_blank&#x22;&#x3E;glass pendants&#x3C;/a&#x3E; from high-grade borosilicate glass. Dan Rushin&#x2019;s glassware stands out with its creativity and aesthetic designs. DankStop is proud to not only supply top of the line companies, but also to support individual American glassmakers like Dan Rushin. &#x3C;a href=&#x22;http://dankstop.com/brands/Dan-Rushin.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Dan Rushin&#x3C;/a&#x3E;."
+    },
+    "Dank Dabber": {
+      "url": "/brands/Dank-Dabber.html",
+      "logo": "b/dankdabberlogo_1412141657__88778_1437011060.jpg",
+      "description": "Dank Dabber is a company based out of Seattle, Washington that manufactures a unique and durable &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps&#x22; target=&#x22;_blank&#x22;&#x3E;dabber&#x3C;/a&#x3E; design. Dank Dabber produces an innovative thimble-shaped &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps/&#x22; target=&#x22;_blank&#x22;&#x3E;dabber&#x3C;/a&#x3E; that is convenient in cleaning as well as when using (simply place on your finger). Dank Dabber is created from 100% Marine grade stainless steel. &#x3C;a href=&#x22;http://dankstop.com/brands/Dank-Dabber.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Dank Dabber&#x3C;/a&#x3E;."
+    },
+    "DankStop": {
+      "url": "/brands/DankStop.html",
+      "logo": "e/dankstoplogofinal_1412037692__89229_1437011065.png",
+      "description": "Here at DankStop, we understand that not everyone has the money to spend on a brand name &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipe&#x3C;/a&#x3E;, and we work hard to meet the demands of every customer. We believe that shopping on a budget doesn&#x2019;t have to mean a lower quality product, and spend countless hours sourcing high quality glass all over the world. These efforts result in a diverse selection of high quality glass at the lowest prices on the web. We&#x27;ve worked hard to build a network of glassblowers who create high quality &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;glass bubblers&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;oil rigs&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-accessories-downstems-and-adapters&#x22; target=&#x22;_blank&#x22;&#x3E;glass accessories&#x3C;/a&#x3E;. Thanks to our high volume and strict quality control, we&#x27;re able to provide our customers with high grade glass at low end prices. These unmarked &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E; are not just affordable, but sturdy and functional.  &#x3C;a href=&#x22;http://dankstop.com/brands/DankStop.html&#x22; target=&#x22;_blank&#x22;&#x3E;Scope out more DankStop products.&#x3C;/a&#x3E;"
+    },
+    "Debowler": {
+      "url": "/brands/DEBOWLER.html",
+      "logo": "u/debowerlogo_1412040136__61342_1437011087.jpg",
+      "description": "Debowler is a company based out of Reno, Nevada that specializes in making plastic and glass spike ashtrays. Their innovative design has made this &#x3C;a href=&#x22;http://dankstop.com/accessories/&#x22; target=&#x22;_blank&#x22;&#x3E;accessory&#x3C;/a&#x3E; stand out above the rest with two unique and helpful functions. These one-of-a-kind ashtrays allow you to empty a &#x3C;a href=&#x22;http://dankstop.com/glass-pipes/&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipe&#x3C;/a&#x3E; or bowl of a &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipe&#x3C;/a&#x3E; with ease, while leaving no mess to clean up after. These ashtrays come in a variety of colors to suit your preference.&#x3C;a href=&#x22;http://dankstop.com/brands/DEBOWLER.html&#x22; target=&#x22;_blank&#x22;&#x3E;Check out more products from Debowler&#x3C;/a&#x3E;."
+    },
+    "Dream Pipes": {
+      "url": "/brands/Dream-Pipes.html",
+      "logo": "v/dream-pipes-brand-logo_1425604730__86804_1437012649.png",
+      "description": "Dream Pipes is a glass manufacturer that creates freezable &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E; made right here in the USA. The company was founded in 1999, and their high-grade borosilicate &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E; are known for their glitter-filled appearance. With many colors to choose from, including a glow in the dark &#x3C;a href=&#x22;http://dankstop.com/glass-pipes/&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipe&#x3C;/a&#x3E;, Dream Pipes provides an array of choices when it comes to durable and strong freezable &#x3C;a href=&#x22;http://dankstop.com/glass-pipes/&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E;. &#x3C;a href=&#x22;http://dankstop.com/brands/Dream-Pipes.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Dream Pipes&#x3C;/a&#x3E;."
+    },
+    "Dynomite Glass": {
+      "url": "/brands/DYNOMITE-GLASS.html",
+      "logo": "u/dynologo_1412040161__86342_1437012663.jpg",
+      "description": "Dynomite Glass is a glass distribution company that manufacturers all of their glassware in the USA. This American glass supplier has credibility through experience, having been in the industry since they were established in 2003. Dynomite Glass&#x2019;s longevity of over a decade in the glass business is one of the reasons they offer such a diverse array of products. Dynomite Glass manufactures &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E;, spoons, &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, glow in the dark pieces, &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;steamrollers&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;oil rigs&#x3C;/a&#x3E;, one hitters, &#x3C;a href=&#x22;http://dankstop.com/concentrate-accessories&#x22; target=&#x22;_blank&#x22;&#x3E;concentrate accessories&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-accessories-downstems-and-adapters&#x22; target=&#x22;_blank&#x22;&#x3E;glass accessories&#x3C;/a&#x3E;. All of their glassware is made with thick lab-grade material of the highest quality. Offering everything from colorful and artistic glass pipes to clean and efficient &#x3C;a href=&#x22;http://dankstop.com/scientific-glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;scientific water pipes&#x3C;/a&#x3E;, Dynomite Glass can accommodate your smoking preference. &#x3C;a href=&#x22;http://dankstop.com/brands/Dynomite-Glass.html&#x22; target=&#x22;_blank&#x22;&#x3E;Check out more products from Dynomite Glass&#x3C;/a&#x3E;."
+    },
+    "Empire Glassworks": {
+      "url": "/brands/Empire-Glassworks.html",
+      "logo": "q/empirelogo_1419284267__80199_1437012710.png",
+      "description": "Empire Glassworks is a glass manufacturer created in 2013 and located just an hour south of Los Angeles in Placentia, California. Although a relatively new company, the owners and staff of Empire Glassworks have over 40 years of experience creating hand crafted glass. Not only do they have a wide selection of &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;oil rigs&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;hand pipes&#x3C;/a&#x3E;, but they also construct &#x3C;a href=&#x22;http://dankstop.com/glass-accessories-downstems-and-adapters&#x22; target=&#x22;_blank&#x22;&#x3E;glass accessories&#x3C;/a&#x3E; such as slides, &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps&#x22; target=&#x22;_blank&#x22;&#x3E;dabbers&#x3C;/a&#x3E;, and dab sets. When making these accessories, Empire Glassworks utilizes highly skilled glassblowers to implement a specific glassblowing process using a torch flame called &#x22;lampworking&#x22;. When it comes to most of their &#x3C;a href=&#x22;http://dankstop.com/glass-pipes/&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;vapor rigs&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;tobacco bongs&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, Empire Glassworks ensures their extreme durability and strength using dichroic glass. Dichroic glass was originally developed by NASA for use in the face shields of spacesuits. The experience, the attention to detail, and their unique and creative approach to constructing their glassware makes Empire Glassworks one of the highest rated glass companies around.&#xA0;&#x3C;a href=&#x22;http://dankstop.com/brands/empire-glassworks.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Empire Glassworks.&#x3C;/a&#x3E;"
+    },
+    "Geos Glass": {
+      "url": "/brands/Geos-Glass.html",
+      "logo": "b/geosglass_logo_compact_1442252425__02181.jpg",
+      "description": "Geos Glass is a glass manufacturer based out of Omaha, Nebraska. They produce &#x3C;a href=&#x22;http://dankstop.com/heady-glass&#x22; target=&#x22;_blank&#x22;&#x3E;heady glass&#x3C;/a&#x3E; &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;dab rigs&#x3C;/a&#x3E; and &#x3C;a href=&#x22;http://dankstop.com/recycler-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;recyclers&#x3C;/a&#x3E; of the highest quality. Their intricate designs and innovative &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;vapor rigs&#x3C;/a&#x3E; make them really stand out as a top of the line glass company. All Geos Glass &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;concentrate pipes&#x3C;/a&#x3E; and &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E; are handblown here in the USA from 5mm thick borosilicate glass.&#xA0;&#x3C;a href=&#x22;http://dankstop.com/brands/Geos-Glass.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Geos Glass&#x3C;/a&#x3E;."
+    },
+    "Golden Goose Glass Works": {
+      "url": "/brands/Golden-Goose-Glass-Works.html",
+      "logo": "f/goldengoose_1442252205__96900.png",
+      "description": "Golden Goose Glass Works is a glass company located in Orange County, California and founded in December of 2013. They create unique &#x3C;a href=&#x22;http://dankstop.com/heady-glass/&#x22; target=&#x22;_blank&#x22;&#x3E;heady glass&#x3C;/a&#x3E; &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;dab rigs&#x3C;/a&#x3E; and &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E; that feature beautiful aesthetics and functional designs. Golden Goose &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E; are known for their worked colored glass designs. Golden Goose Glass Works created their own signature vapor stone called the &#x201C;Goose Stone&#x201D;, which emits no vapor or smoke and instead pulls it all through the metal stone and into the rig. They manufacture all of their &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;vapor rigs&#x3C;/a&#x3E; and &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E; from thick borosilicate glass.&#xA0;&#x3C;a href=&#x22;http://dankstop.com/brands/Golden-Goose-Glass-Works.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Golden Goose Glass Works&#x3C;/a&#x3E;."
+    },
+    "Grav Labs": {
+      "url": "/brands/Grav-Labs.html",
+      "logo": "s/gravlogo_1419242707__47173_1437012797.png",
+      "description": "Grav Labs, founded in 2004, has been an industry leader in the design, innovation, and development of high quality, functional glass pipes and accessories ever since. Grav is easily one of the most respected names in the glass industry, and taking one look at their work is a clear indication why. DankStop is proud to be an authorized retailer, offering a large selection of Grav products including their &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;dab rigs&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-pipes/&#x22; target=&#x22;_blank&#x22;&#x3E;hand pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/recycler-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;recyclers&#x3C;/a&#x3E;, and more. Based in Austin, TX, Grav Labs operates several product lines of specialty &#x3C;a href=&#x22;http://dankstop.com/scientific-glass-pipes/&#x22; target=&#x22;_blank&#x22;&#x3E;scientific glassware&#x3C;/a&#x3E; such as Helix, Stax, Upline, Gravitron, Nano, Tasters, and the premium Grav Gold Series. Aside from scientific glass, Grav Labs also manufactures high end &#x3C;a href=&#x22;http://dankstop.com/vaporizers&#x22; target=&#x22;_blank&#x22;&#x3E;vaporizers&#x3C;/a&#x3E; and &#x3C;a href=&#x22;http://dankstop.com/accessories&#x22; target=&#x22;_blank&#x22;&#x3E;accessories&#x3C;/a&#x3E;. Grav Labs prides themselves on offering a diverse line up of stylish, functional, and affordable glass. &#x3C;a href=&#x22;http://dankstop.com/brands/Grav-Labs.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Grav Labs.&#x3C;/a&#x3E;"
+    },
+    "HVY Glass": {
+      "url": "/brands/HVY-Glass.html",
+      "logo": "q/hvy_1419819834__08214_1437012891.png",
+      "description": "HVY Glass is a glass manufacturer based in Los Angeles, California. HVY Glass constructs &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;concentrate rigs&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E; from German Schott glass and American borosilicate glass. Some HVY Glass products are &#x3C;a href=&#x22;http://dankstop.com/scientific-glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;scientific glass&#x3C;/a&#x3E;, coming in clean and clear &#x3C;a href=&#x22;http://dankstop.com/beakers-and-straight-tubes&#x22; target=&#x22;_blank&#x22;&#x3E;beakers or straight tube&#x3C;/a&#x3E; designs. Other HVY Glass products are &#x3C;a href=&#x22;http://dankstop.com/heady-glass&#x22; target=&#x22;_blank&#x22;&#x3E;heady glass&#x3C;/a&#x3E;, with an emphasis on artistic design and produced in smaller quantities. HVY Glass offers a wide selection of products with an emphasis on durability and functionality. &#x3C;a href=&#x22;http://dankstop.com/brands/HVY-Glass.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from HVY Glass&#x3C;/a&#x3E;."
+    },
+    "Hemplights": {
+      "url": "/brands/HEMPLIGHTS.html",
+      "logo": "p/hemplight_1412040214__69906_1437012844.jpg",
+      "description": "Hemplights is an American company that produces hemp products. Hemplights is known for creating the original hemp wick lighter case and offering the only hemp wick lighter cases on the market. These lighter cases hold a built in spool of hemp wick so you can have a healthy smoking experience by avoiding the chemicals from lighting straight with butane or with other unhealthy lighting methods. The hemp used is 100% organic, the case will lengthen the life of your lighter, and the hemp wick provides a more healthy and better tasting smoking experience. The process is simple as well. Just light the wick, and place it on to the bowl of your &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;hand pipe&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubbler&#x3C;/a&#x3E;, or &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;tobacco bong&#x3C;/a&#x3E;. You&#x27;ll see the benefits within minutes.&#x3C;a href=&#x22;http://dankstop.com/brands/Hemplights.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Hemplights...&#x3C;/a&#x3E;"
+    },
+    "High Tech Glassworks": {
+      "url": "/brands/High-Tech-Glassworks.html",
+      "logo": "o/hightechlogo_1412040230__62400_1437012855.png",
+      "description": "High Tech Glassworks is a quickly growing glass manufacturer based out of Los Angeles, California. High Tech Glassworks designs &#x3C;a href=&#x22;http://dankstop.com/scientific-glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;scientific glass&#x3C;/a&#x3E; &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;vapor rigs&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E; from high end German Schott glass. High Tech Glassworks are blurring the line between production and &#x3C;a href=&#x22;http://dankstop.com/heady-glass&#x22; target=&#x22;_blank&#x22;&#x3E;heady glass&#x3C;/a&#x3E; by collaborating with glass artists to create &#x3C;a href=&#x22;http://dankstop.com/heady-glass&#x22; target=&#x22;_blank&#x22;&#x3E;heady glass&#x3C;/a&#x3E; in larger quantities than normal. The large selection High Tech Glassworks offers includes everything from &#x3C;a href=&#x22;http://dankstop.com/scientific-glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;scientific glass&#x3C;/a&#x3E; to &#x3C;a href=&#x22;http://dankstop.com/heady-glass&#x22; target=&#x22;_blank&#x22;&#x3E;heady glass&#x3C;/a&#x3E;, all created with durability and functionality in mind. &#x3C;a href=&#x22;http://dankstop.com/brands/High-Tech-Glassworks.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from High Tech Glassworks&#x3C;/a&#x3E;."
+    },
+    "Hive Ceramics": {
+      "url": "/brands/Hive-Ceramics.html",
+      "logo": "l/hive-logo_1425771473__30636_1437012862.png",
+      "description": "Hive Ceramics is a relatively new company that specializes in &#x3C;a href=&#x22;http://dankstop.com/ceramic/&#x22; target=&#x22;_blank&#x22;&#x3E;ceramic accessories&#x3C;/a&#x3E; for &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;dab rigs&#x3C;/a&#x3E; and &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;tobacco bongs&#x3C;/a&#x3E;. Hive was first founded in the back of a head shop in Southern California in 2012, and Hive Ceramics made its official launch early in 2014. Hive uses the highest quality &#x3C;a href=&#x22;http://dankstop.com/ceramic&#x22; target=&#x22;_blank&#x22;&#x3E;ceramic&#x3C;/a&#x3E; in all of their &#x3C;a href=&#x22;http://dankstop.com/concentrate-nails-dabbers-and-carb-caps&#x22; target=&#x22;_blank&#x22;&#x3E;nails&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps&#x22; target=&#x22;_blank&#x22;&#x3E;carb caps&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps&#x22; target=&#x22;_blank&#x22;&#x3E;dabbers&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-accessories-downstems-and-adapters&#x22; target=&#x22;_blank&#x22;&#x3E;dry herb bowls&#x3C;/a&#x3E;. The &#x3C;a href=&#x22;http://dankstop.com/ceramic&#x22; target=&#x22;_blank&#x22;&#x3E;ceramic&#x3C;/a&#x3E; they use is medical grade, non-corrosive, all natural, clean tasting, and has amazing heat retention. If you&#x2019;re in need of new &#x3C;a href=&#x22;http://dankstop.com/accessories&#x22; target=&#x22;_blank&#x22;&#x3E;accessories&#x3C;/a&#x3E; for your &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;oil rig&#x3C;/a&#x3E; or &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipe&#x3C;/a&#x3E;, see for yourself the many benefits Hive Ceramics products provide! &#x3C;a href=&#x22;http://dankstop.com/brands/Hive-Ceramics.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Hive Ceramics&#x3C;/a&#x3E;."
+    },
+    "Honey Supply": {
+      "url": "/brands/Honey-Supply.html",
+      "logo": "p/honeysupplylogo%20copy_1428040782__60506_1437012869.png",
+      "description": "Honey Supply is a brand new subsidiary of &#x3C;a href=&#x22;http://dankstop.com/brands/Nexus-Glass.html&#x22; target=&#x22;_blank&#x22;&#x3E;Nexus Glass&#x3C;/a&#x3E; that manufactures an impressive lineup of &#x3C;a href=&#x22;http://dankstop.com/scientific-glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;scientific glass&#x3C;/a&#x3E; &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;dab rigs&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;. Manufacturing all of their products from thick borosilicate glass, Honey Supply has found the rare balance of affordable glassware that never sacrifices functionality or durability. Honey Supply crafts their &#x3C;a href=&#x22;http://dankstop.com/glass-pipes/&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E; and &#x3C;a href=&#x22;http://dankstop.com/accessories/&#x22; target=&#x22;_blank&#x22;&#x3E;accessories&#x3C;/a&#x3E; in Los Angeles, California.&#xA0;&#x3C;a href=&#x22;http://dankstop.com/brands/Honey-Supply.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Honey Supply&#x3C;/a&#x3E;."
+    },
+    "Humboldt Hemp": {
+      "url": "/brands/Humboldt-Hemp.html",
+      "logo": "g/humboldthemplogo_1412040247__72739_1437012883.jpg",
+      "description": "Humboldt Hemp is a company that specializes in manufacturing organic hemp wick that was established in the early 2000s. The quality and efficiency of Humboldt Hemp is precisely why it is now sold all over the world. &#x3C;a href=&#x22;http://dankstop.com/brands/Humboldt-Hemp.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Humboldt Hemp&#x3C;/a&#x3E;."
+    },
+    "Incredibowl": {
+      "url": "/brands/Incredibowl.html",
+      "logo": "y/incredibowllogo_1412040266__72953_1437012898.jpg",
+      "description": "Incredibowl Industries is an innovative company based in Boulder, CO that has used technology and sophistication to create their own type of &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipe&#x3C;/a&#x3E;. Incredibowl was founded in 2009, and has since gained recognition and even awards for their invention. The Incredibowl is a modular &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass smoking pipe&#x3C;/a&#x3E; system that gives you a clean, smooth, and cooled hit while getting the best taste from your flower. The Incredibowl is so durable that they are designed to last a lifetime. The expansion chambers are made of shatterproof polycarbonate (similar to bullet-proof glass) and aluminum. Inside the aluminum is the &#x3C;a href=&#x22;http://dankstop.com/glass-pipes/&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipe&#x3C;/a&#x3E;, hand-blown in Colorado and crafted from borosilicate glass. Incredibowl has won awards for their inventive products, including 18 High Times Cannabis Cups. Incredibowl Industries also sells &#x3C;a href=&#x22;http://dankstop.com/accessories&#x22; target=&#x22;_blank&#x22;&#x3E;accessories&#x3C;/a&#x3E; including longer tubes, concentrate attachments, triggers, and glass tubes. Incredibowl has revolutionized the glass industry with their advanced redesigning of the classic &#x3C;a href=&#x22;http://dankstop.com/glass-pipes/&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipe&#x3C;/a&#x3E;. &#x3C;a href=&#x22;http://dankstop.com/brands/Incredibowl.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Incredibowl&#x3C;/a&#x3E;."
+    },
+    "JM Flow": {
+      "url": "/brands/JM-FLOW.html",
+      "logo": "l/jmflowlogo_1419284351__57331.jpg",
+      "description": "JM FLOW SCI GLASS has been an industry leader in the design, innovation, and development of high quality, functional &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E; and &#x3C;a href=&#x22;http://dankstop.com/accessories/&#x22;target=&#x22;_blank&#x22;&#x3E;accessories&#x3C;/a&#x3E; for over 10 years. The company was founded as a family business by siblings Jose and Maggie. JM FLOW SCI creates beautiful, functional, innovative, and reliable &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E; out of Southern California. DankStop is proud to be an authorized retailer offering a large selection of JM FLOW SCI products including their &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;dab rigs&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/recycler-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;recyclers&#x3C;/a&#x3E;. JM FLOW specializes in unique and innovative percolation systems. They&#x27;re pioneered several perc designs such as the Cross perc, the Octopus Perc, and the Sprinkler Perc. All of their &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass water pipes&#x3C;/a&#x3E; are made from extremely high grade, German and American lab grade &#x3C;a href=&#x22;http://dankstop.com/scientific-glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;scientific glass&#x3C;/a&#x3E;."
+    },
+    "M.I.O. Glass": {
+      "url": "/brands/Mio-Glass.html",
+      "logo": "g/miologo_1419284863__85553_1437012963.png",
+      "description": "M.I.O. stands for Made In Oregon and this glass company is proud of its American roots. M.I.O. Glass designs &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;concentrate pipes&#x3C;/a&#x3E; from extremely thick lab-grade German Schott glass. The thick glass makes their &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E; extremely durable and reliable. M.I.O. Glass makes &#x3C;a href=&#x22;http://dankstop.com/scientific-glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;scientific water pipes&#x3C;/a&#x3E; that have a clean and distinct appearance. Sleek designs and reliable quality are what make M.I.O. Glass &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E; a prime example of sturdy American made glass. &#x3C;a href=&#x22;http://dankstop.com/brands/M.I.O.-Glass.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from M.I.O. Glass&#x3C;/a&#x3E;."
+    },
+    "Mathematix": {
+      "url": "/brands/Mathematix.html",
+      "logo": "v/mathematixlogo_1419284751__43887_1437012980.png",
+      "description": "Mathematix is a manufacturer of &#x3C;a href=&#x22;http://dankstop.com/glass-pipes/&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;vapor rigs&#x3C;/a&#x3E; located in Los Angeles, California. Mathematix Glass is an up-and-coming company in the glass industry that has set themselves apart through creativity. Some of their creative glassware includes a glow in the dark bent neck &#x3C;a href=&#x22;http://dankstop.com/beakers-and-straight-tubes/&#x22; target=&#x22;_blank&#x22;&#x3E;beaker&#x3C;/a&#x3E;, a Yo Yo shaped &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;dab rig&#x3C;/a&#x3E;, and imaginative percolators such as an anchor perc and a Tie Fighter perc. Mathematix Glass uses high-grade thick borosilicate glass to ensure the quality and durability of their &#x3C;a href=&#x22;http://dankstop.com/glass-pipes/&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E;. Between their original designs and high quality glass, Mathematix is a company on the rise that&#x2019;s only going to keep growing. &#x3C;a href=&#x22;http://dankstop.com/brands/Mathematix.html&#x22; target=&#x22;_blank&#x22;&#x3E;View more products from Mathematix&#x3C;/a&#x3E;."
+    },
+    "Myster": {
+      "url": "/brands/Myster.html",
+      "logo": "d/myster%20logo_1433343016__01342_1437012994.png",
+      "description": "Myster is a &#x3C;a href=&#x22;http://dankstop.com/vaporizers/&#x22; target=&#x22;_blank&#x22;&#x3E;vaporizer&#x3C;/a&#x3E; and &#x3C;a href=&#x22;http://dankstop.com/smoking-accessories&#x22; target=&#x22;_blank&#x22;&#x3E;smoking accessory&#x3C;/a&#x3E; company based out of Washington D.C. Myster got its start with a successful IndieGoGo campaign for what became its most popular product, the innovative &#x201C;Stashtray&#x201D;. From there, Myster expanded to producing both high quality &#x3C;a href=&#x22;http://dankstop.com/concentrate-vaporizers&#x22; target=&#x22;_blank&#x22;&#x3E;concentrate vaporizers&#x3C;/a&#x3E; and &#x3C;a href=&#x22;http://dankstop.com/dry-herb-vaporizers&#x22; target=&#x22;_blank&#x22;&#x3E;dry herb vaporizers&#x3C;/a&#x3E;, including the Fogpen and the Shotgun. All of Myster&#x2019;s &#x3C;a href=&#x22;http://dankstop.com/smoking-accessories&#x22; target=&#x22;_blank&#x22;&#x3E;smoking accessories&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/vaporizers/&#x22; target=&#x22;_blank&#x22;&#x3E;vaporizers&#x3C;/a&#x3E;, and vape pens are made from the highest grade materials and contain superb functionality.&#xA0;&#x3C;a href=&#x22;http://dankstop.com/brands/Myster.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Myster&#x3C;/a&#x3E;."
+    },
+    "Nexus Glass": {
+      "url": "/brands/Nexus-Glass.html",
+      "logo": "j/nexuslogo_edited_1428227042__65313_1437013007.png",
+      "description": "Nexus Glass has exploded onto the glass scene recently and for good reason. Just taking one look at their beautiful collection of &#x3C;a href=&#x22;http://dankstop.com/recycler-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;recyclers&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;dab rigs&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E; makes it apparent why Nexus is such an up-and-coming company in the glass industry. Whether you&#x2019;re looking for sleek &#x3C;a href=&#x22;http://dankstop.com/scientific-glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;scientific glass pipes&#x3C;/a&#x3E; or artistic colored glass, Nexus Glass has got you covered. Nexus Glass is an American glass company based out of southern California.&#xA0;&#x3C;a href=&#x22;http://dankstop.com/brands/Nexus-Glass.html&#x22; target=&#x22;_blank&#x22;&#x3E;View more products from Nexus Glass&#x3C;/a&#x3E;."
+    },
+    "One12 Glass": {
+      "url": "/brands/One12-Glass.html",
+      "logo": "h/one12logo_1412040630__27632_1437013193.jpg",
+      "description": "One12 Glass is an up-and-coming glass company founded in 2013 and based out of California. One12 Glass specializes in a diverse lineup of smaller size &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E; and &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;dab rigs&#x3C;/a&#x3E; of all styles and sizes. Each unique &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;vapor rig&#x3C;/a&#x3E; and &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubbler&#x3C;/a&#x3E; comes in a complete set in a One12 box. The set includes the &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass water pipe&#x3C;/a&#x3E; or One12 &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;dab rig&#x3C;/a&#x3E;, as well as specific &#x3C;a href=&#x22;http://dankstop.com/concentrate-accessories&#x22; target=&#x22;_blank&#x22;&#x3E;concentrate accessories&#x3C;/a&#x3E;. These accessories include a dome, nail, &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps&#x22; target=&#x22;_blank&#x22;&#x3E;dabber&#x3C;/a&#x3E;, and a &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps&#x22; target=&#x22;_blank&#x22;&#x3E;carb cap&#x3C;/a&#x3E;. One12 Glass uses high-end borosilicate glass in their &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E; to ensure durability and efficiency.&#xA0;&#x3C;a href=&#x22;http://dankstop.com/brands/One12-Glass.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from One12 Glass&#x3C;/a&#x3E;."
+    },
+    "Pulse Glass": {
+      "url": "/brands/Pulse-Glass.html",
+      "logo": "y/pulseglass_logo_1425605585__29723_1437013217.jpg",
+      "description": "Pulse Glass is an up-and-coming glass company located in Los Angeles, California and founded in 2012. In just a few short years, Pulse Glass has proved themselves as experts in the glass industry, with their selection of &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;vapor rigs&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/recycler-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;recyclers&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;. Their hand-blown scientific glass pieces are made of &#x3C;span&#x3E;high quality German Schott Glass&#x3C;/span&#x3E; with an emphasis on functionality, efficiency, and artistic creativity. To add to their already unique design, Pulse Glass &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E; all come with a platinum label, giving them another noticeable and exclusive characteristic. &#xA0;&#x3C;a href=&#x22;http://dankstop.com/brands/pulse-glass.html&#x22;&#x3E;See more products from Pulse Glass.&#x3C;/a&#x3E;"
+    },
+    "Purr Glass": {
+      "url": "/brands/PURR-GLASS.html",
+      "logo": "o/purrlogo_1412041076__26309_1437013232.png",
+      "description": "Purr Glass, since 2003, has provided practical, effective, and well-designed products to the glass community. The name Purr is short for perforations, or diffused percs, used in all of their &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;. Purr had continued to influence the glass industry with innovative designs such as the upright sherlock, the scientific pocket double chamber, and the micro size &#x3C;a href=&#x22;http://dankstop.com/glass-pendants&#x22; target=&#x22;_blank&#x22;&#x3E;pendant bubblers and rigs&#x3C;/a&#x3E;. From their humble, grassroots beginnings, the Purr family and product line have continued to grow past California and into the national market. Purr continues to be family owned and operated; innovating hand crafted, American made glass in Southern California. &#x3C;a href=&#x22;http://dankstop.com/brands/PURR-GLASS.html&#x22;&#x3E;Check out more from Purr Glass.&#x3C;/a&#x3E;"
+    },
+    "RAW": {
+      "url": "/brands/RAW.html",
+      "logo": "v/rawlogo%20copy_1412041644__17331_1437013238.png",
+      "description": "RAW is a company that specializes in &#x3C;a href=&#x22;http://dankstop.com/rolling-papers&#x22; target=&#x22;_blank&#x22;&#x3E;tobacco rolling papers&#x3C;/a&#x3E; and other tobacco &#x3C;a href=&#x22;http://dankstop.com/accessories&#x22; target=&#x22;_blank&#x22;&#x3E;accessories&#x3C;/a&#x3E; that are produced in Alcoy, Spain. RAW has become famous for the quality and numerous styles of their &#x3C;a href=&#x22;http://dankstop.com/rolling-papers&#x22; target=&#x22;_blank&#x22;&#x3E;rolling papers&#x3C;/a&#x3E;. RAW offers classic, creaseless, connoisseur, cones, and even an organic line featuring these same styles. RAW offers &#x3C;a href=&#x22;http://dankstop.com/accessories&#x22; target=&#x22;_blank&#x22;&#x3E;accessories&#x3C;/a&#x3E; such as trays, filters, shredders, and &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;pipes&#x3C;/a&#x3E;. For all of your rolling &#x3C;a href=&#x22;http://dankstop.com/accessories&#x22; target=&#x22;_blank&#x22;&#x3E;accessories&#x3C;/a&#x3E; you can&#x2019;t go wrong with RAW. &#x3C;a href=&#x22;http://dankstop.com/brands/RAW.html&#x22; target=&#x22;_blank&#x22;&#x3E;View more products from RAW&#x3C;/a&#x3E;."
+    },
+    "Santa Cruz Shredder": {
+      "url": "/brands/SANTA-CRUZ-SHREDDER.html",
+      "logo": "s/scslogo_1412041793__06345_1437013353.jpg",
+      "description": "Santa Cruz Shredder is an American company founded in 2011 that specializes in creating some of the industry&#x2019;s most efficient and durable &#x3C;a href=&#x22;http://dankstop.com/grinders/&#x22; target=&#x22;_blank&#x22;&#x3E;grinders&#x3C;/a&#x3E;. Santa Cruz Shredder also creates highly functional grade 2 &#x3C;a href=&#x22;http://dankstop.com/titanium-nails&#x22; target=&#x22;_blank&#x22;&#x3E;titanium accessories&#x3C;/a&#x3E;. These &#x3C;a href=&#x22;http://dankstop.com/titanium-nails&#x22; target=&#x22;_blank&#x22;&#x3E;domeless titanium nails&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps&#x22; target=&#x22;_blank&#x22;&#x3E;carb caps&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps&#x22; target=&#x22;_blank&#x22;&#x3E;dabbers&#x3C;/a&#x3E; are sturdy, durable, and make your dabbing experience infinitely more enjoyable.&#x3C;/p&#x3E;&#x3C;p&#x3E;Santa Cruz Shredder goes through vigorous procedures to create an extremely clean and effective product for their customers. Unlike most grinder companies that use sharp teeth, Santa Cruz Shredder uses square teeth. Sharp-edged teeth dull from metal fatigue and contain burr and tiny flakes of aluminum that can fall into your smoking blend. By using square teeth, Santa Cruz Shredder avoids this extremely unhealthy possibility. The grinders are &#x3C;span&#x3E;fabricated out of a single piece of high grade CNC aluminum to provide durability and a consistent grind. Santa Cruz Shredder &#x3C;a href=&#x22;http://dankstop.com/grinders/&#x22; target=&#x22;_blank&#x22;&#x3E;grinders&#x3C;/a&#x3E; are totally scratch resistant through a process called Anodizing, which&#xA0;&#x3C;span&#x3E;creates a protective coating for aluminum that prevents wear resistance, failing of threaded parts, and corrosion.&#xA0;&#x3C;/span&#x3E;&#x3C;/span&#x3E;They use top-of-the-line magnets and screens. The magnets they use are Neodymium Diametrically Magnetized Cylindrical Rare Earth Magnets which create a triple layer of Nickel and Copper to prevent against corrosion and abuse. Santa Cruz Shredder uses T304 Microbic Precision Woven Non-Fraying Stainless Steel Screens which has a high micron size that allows less impurities to pass through into the pollen chamber. The clean design and innovative technology of Santa Cruz Shredder &#x3C;a href=&#x22;http://dankstop.com/grinders&#x22; target=&#x22;_blank&#x22;&#x3E;grinders&#x3C;/a&#x3E; create a healthy, enjoyable, and efficient smoking experience. &#x3C;a href=&#x22;http://dankstop.com/brands/Santa-Cruz-Shredder.html&#x22; target=&#x22;_blank&#x22;&#x3E;Check out more products from Santa Cruz Shredder&#x3C;/a&#x3E;."
+    },
+    "SharpStone": {
+      "url": "/brands/SharpStone.html",
+      "logo": "b/sharpstone-77345209_1412042094__53574_1437013369.jpg",
+      "description": "SharpStone is a company that specializes in the manufacturing of high-grade &#x3C;a href=&#x22;http://dankstop.com/grinders/&#x22; target=&#x22;_blank&#x22;&#x3E;grinders&#x3C;/a&#x3E; out of Aircraft grade CNC aluminum. They offer two, four, and five piece classic &#x3C;a href=&#x22;http://dankstop.com/grinders/&#x22; target=&#x22;_blank&#x22;&#x3E;grinders&#x3C;/a&#x3E; as well as clear tops, hard tops, hand crank &#x3C;a href=&#x22;http://dankstop.com/grinders/&#x22; target=&#x22;_blank&#x22;&#x3E;grinders&#x3C;/a&#x3E;, and pollen presses. These durable and reliable &#x3C;a href=&#x22;http://dankstop.com/grinders/&#x22; target=&#x22;_blank&#x22;&#x3E;grinders&#x3C;/a&#x3E; come in a variety of sizes and colors, making finding the perfect &#x3C;a href=&#x22;http://dankstop.com/grinders/&#x22; target=&#x22;_blank&#x22;&#x3E;grinder&#x3C;/a&#x3E; for you as simple as possible. &#x3C;a href=&#x22;http://dankstop.com/brands/SharpStone.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from SharpStone&#x3C;/a&#x3E;."
+    },
+    "Sheldon Black Glass": {
+      "url": "/brands/Sheldon-Black-Glass.html",
+      "logo": "c/sheldonblack_1442252291__69281.jpg",
+      "description": "Sheldon Black Glass has been a mainstay brand in the smoking industry, and taking one look at their collection of &#x3C;a href=&#x22;http://dankstop.com/heady-glass&#x22; target=&#x22;_blank&#x22;&#x3E;heady glass&#x3C;/a&#x3E; &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;dab rigs&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E; makes it obvious why they have been such a successful company for so many years. Sheldon Black was founded in 1988 in Los Angeles, where they began hand blowing innovative glassware for commercial consumption. This gives them over 25 years perfecting their craft of original and functional glassware. Sheldon Black Glass even has a patent on the &#x201C;Combined Tobacco Smoking Pipe Bowl and Receiving Stem&#x201D; that was published and approved in 1999. Not only does this company mean business, but they have proven their proficiency in the business through their established track record.&#xA0;&#x3C;a href=&#x22;http://dankstop.com/brands/Sheldon-Black-Glass.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Sheldon Black Glass...&#x3C;/a&#x3E;"
+    },
+    "Shine Papers": {
+      "url": "/brands/Shine-Papers.html",
+      "logo": "f/shine_logo_1433341972__89584_1437013403.jpg",
+      "description": "Shine Papers is an innovative company that came up with the very first 24 karat gold &#x3C;a href=&#x22;http://dankstop.com/rolling-papers&#x22; target=&#x22;_blank&#x22;&#x3E;rolling papers&#x3C;/a&#x3E;. These exquisite &#x3C;a href=&#x22;http://dankstop.com/rolling-papers&#x22; target=&#x22;_blank&#x22;&#x3E;tobacco papers&#x3C;/a&#x3E; are slow burning and even leave gold flakes in your ashtray when you ash them. Shine also manufactures 24k cigars as well as tattooed cigar wraps. These &#x3C;a href=&#x22;http://dankstop.com/rolling-papers&#x22; target=&#x22;_blank&#x22;&#x3E;papers&#x3C;/a&#x3E; are such a revolution in the &#x3C;a href=&#x22;http://dankstop.com/rolling-papers&#x22; target=&#x22;_blank&#x22;&#x3E;rolling paper&#x3C;/a&#x3E; industry that multi-platinum recording artist Tyga invested $5 million into Shine in November of 2014. Why smoke regular &#x3C;a href=&#x22;http://dankstop.com/rolling-papers/&#x22; target=&#x22;_blank&#x22;&#x3E;rolling papers&#x3C;/a&#x3E; when you can smoke out of 24k gold?&#xA0;&#x3C;a href=&#x22;http://dankstop.com/brands/Shine-Papers.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Shine Papers&#x3C;/a&#x3E;."
+    },
+    "Silika Glass": {
+      "url": "/brands/Silika-Glass.html",
+      "logo": "y/silika-logo_1425606404__12998_1437013418.jpg",
+      "description": "Silika Glass is a manufacturer of &#x3C;a href=&#x22;http://dankstop.com/glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;glass pipes&#x3C;/a&#x3E; and &#x3C;a href=&#x22;http://dankstop.com/titanium-nails&#x22; target=&#x22;_blank&#x22;&#x3E;titanium accessories&#x3C;/a&#x3E; that was founded in 2009 by two longtime friends. The company was based on the idea of combining glass art with an urban lifestyle. After developing an intricate network of local glass artists, they were able to open their first studio in Pacoima, California. Silika has gained respect and recognition throughout the industry from their presence at festivals such as High Times, B.I.G., and many more. Silika has expanded over the years, opening two of their own gallery locations (West Hollywood, California and Tacoma, Washington). Silika creates high-grade &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;vapor rigs&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E; using the finest borosilicate glass. Silika also creates a vast selection of &#x3C;a href=&#x22;http://dankstop.com/titanium-nails&#x22; target=&#x22;_blank&#x22;&#x3E;titanium nails&#x3C;/a&#x3E; all from high grade 2 titanium, including domeless nails, banger nails, and standard adjustable nails. Their products are known for their reliability, functionality, and creative designs. DankStop is proud to be an authorized retailer of Silika Glass, offering a wide selection of their &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;dab rigs&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/accessories&#x22; target=&#x22;_blank&#x22;&#x3E;accessories&#x3C;/a&#x3E;. &#x3C;a href=&#x22;http://dankstop.com/brands/Silika-Glass.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Silika&#x3C;/a&#x3E;."
+    },
+    "Skilletools": {
+      "url": "/brands/Skilletools.html",
+      "logo": "d/skillettoolz_1412043648__95777_1437013424.jpg",
+      "description": "Skilletools produces some of the nicest and most affordable &#x3C;a href=&#x22;http://dankstop.com/concentrate-accessories/&#x22; target=&#x22;_blank&#x22;&#x3E;concentrate accessories&#x3C;/a&#x3E; out there. All Skilletools products are medical grade and manufactured right here in the USA. Skilletools crafts stainless steel &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps/&#x22; target=&#x22;_blank&#x22;&#x3E;dabbers&#x3C;/a&#x3E;, mini &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps/&#x22; target=&#x22;_blank&#x22;&#x3E;dabbers&#x3C;/a&#x3E;, gold &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps&#x22; target=&#x22;_blank&#x22;&#x3E;dabbers&#x3C;/a&#x3E;, and mini gold &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps&#x22; target=&#x22;_blank&#x22;&#x3E; dabbers&#x3C;/a&#x3E;. They create multiple different designs for whatever your preference or whatever works best with your favorite legal concentrates and essential oils. &#x3C;a href=&#x22;http://dankstop.com/brands/Skilletools.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Skilletools&#x3C;/a&#x3E;."
+    },
+    "The Medtainer": {
+      "url": "/brands/The-Medtainer.html",
+      "logo": "b/medtainer_logo_1433342322__34080_1437013457.jpg",
+      "description": "The Medtainer makes the world&#x2019;s first smell-proof, water resistant, and air-tight medical grade jar. This jar is constructed from FDA approved medical grade plastics and is environmentally safe. The Medtainer contains a built-in grinder at the bottom. Although this jar was first manufactured for dry herbs and tobacco, it&#x2019;s now being used for coffee, tea, culinary ingredients, pharmaceuticals, and veterinary medications. The Medtainer has superb function and multiple uses with its innovative jar and grinder combination design.&#xA0;&#x3C;a href=&#x22;http://dankstop.com/brands/The-Medtainer.html&#x22;&#x3E;See more products from The Medtainer...&#x3C;/a&#x3E;"
+    },
+    "Top Hat Customs": {
+      "url": "/brands/Top-Hat-Customs.html",
+      "logo": "m/tophatcustomslogo_1421832175__53538_1437013463.jpg",
+      "description": "Top Hat Customs is a brand new company started in California that makes &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps&#x22; target=&#x22;_blank&#x22;&#x3E;medical grade dabbers&#x3C;/a&#x3E; and &#x3C;a href=&#x22;http://dankstop.com/concentrate-accessories/&#x22; target=&#x22;_blank&#x22;&#x3E;concentrate accessories&#x3C;/a&#x3E;. Top Hat Customs is steadily innovating every product they release. Keep an eye on Top Hat Customs for incredible designs for their lineup of medical grade titanium &#x3C;a href=&#x22;http://dankstop.com/dabbers-carb-caps&#x22; target=&#x22;_blank&#x22;&#x3E;dab tools&#x3C;/a&#x3E;. &#x3C;a href=&#x22;http://dankstop.com/brands/Top-Hat-Customs.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Top Hat Customs&#x3C;/a&#x3E;."
+    },
+    "Zob": {
+      "url": "/brands/Zob.html",
+      "logo": "s/zoblogo_1419285433__78963_1437013469.png",
+      "description": "Zob Glass is a glass company based in California that designs extremely high grade &#x3C;a href=&#x22;http://dankstop.com/scientific-glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;scientific style glass pipes&#x3C;/a&#x3E;. Zob Glass offers a large variety of &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubblers&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/concentrate-pipes-and-dab-rigs&#x22; target=&#x22;_blank&#x22;&#x3E;vapor rigs&#x3C;/a&#x3E;, &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E;, and &#x3C;a href=&#x22;http://dankstop.com/accessories&#x22; target=&#x22;_blank&#x22;&#x3E;accessories&#x3C;/a&#x3E; made from German Schott glass. Zob Glass&#x2019;s innovation is easy to see with the &#x201C;Wubbler&#x201D; (a creative combination of a &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipe&#x3C;/a&#x3E; and a &#x3C;a href=&#x22;http://dankstop.com/glass-bubblers&#x22; target=&#x22;_blank&#x22;&#x3E;bubbler&#x3C;/a&#x3E;) and their own perc called &#x201C;Zobellos&#x201D;. They offer a variety of percolators in their &#x3C;a href=&#x22;http://dankstop.com/glass-water-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;water pipes&#x3C;/a&#x3E; including UFO percs, inline percs, 8-arm tree percs, and many others. The &#x3C;a href=&#x22;http://dankstop.com/scientific-glass-pipes&#x22; target=&#x22;_blank&#x22;&#x3E;scientific glass&#x3C;/a&#x3E; gives each piece a clean and sleek appearance, while the durable and high quality glass ensures their water pipes will last. &#x3C;a href=&#x22;http://dankstop.com/brands/Zob.html&#x22; target=&#x22;_blank&#x22;&#x3E;See more products from Zob Glass&#x3C;/a&#x3E;."
+    }
+  },
+  "feature": [
+    {
+      "name": "bent neck",
+      "def": "Bent neck designs offer aesthetic and functional qualities. Aesthetically, bent necks give a unique look to your glass water pipe. Functionally, bent necks act as a splashguard, keeping all of the water inside the pipe and outside of your mouth. They also extend the mouthpiece away from the heat source horizontally, giving a more comfortable experience."
+    },
+    {
+      "name": "straight neck",
+      "def": "Straight neck designs involve a neck branching vertically up into the mouthpiece from the chamber. They allow smoke or vapor to travel directly up to the mouthpiece."
+    },
+    {
+      "name": "flared mouthpiece",
+      "def": "Flared mouthpieces have elevated glass around the mouthpiece which make it conform perfectly to your mouth for superior comfort while smoking."
+    },
+    {
+      "name": "thick glass",
+      "def": "This glass pipe contains thick glass which increases its durability and longevity. Thick glass pieces are less likely to break due to their heavy glass construction."
+    },
+    {
+      "name": "fab egg",
+      "def": "This piece has a faberge egg design. The fab egg chamber has a circular egg shape with a hollow center and holes that provide a distinguished design. The holes also function as a perfect holder for your dabber."
+    },
+    {
+      "name": "straight tube",
+      "def": "This water pipe is a straight tube, meaning it has a straight and vertical design from the base to the mouthpiece. Many people prefer this style because of the seamless transition of your smoke/vapor from the joint to the mouthpiece."
+    },
+    {
+      "name": "beaker",
+      "def": "This glass pipe has a beaker base chamber. Beaker style water pipes generally have a wide circular main chamber to house a large amount of smoke. Many people prefer this style because of its attractive visual appearance."
+    },
+    {
+      "name": "sidecar",
+      "def": "This piece contains a sidecar design. This means it has a neck that branches off the side of the chamber and leads to the mouthpiece. Sidecars eliminate splashback and ensure all of the water stays inside the pipe and out of your mouth."
+    },
+    {
+      "name": "hourglass chamber",
+      "def": "This water pipe or vapor rig features an hourglass chamber. The chamber indents in giving it a distinguishable hourglass shape that adds an impressive aesthetic quality."
+    },
+    {
+      "name": "polished joint",
+      "def": "A polished joint is a joint made from clear glass instead of the standard frosted glass you find on most joints. A polished joint gives a sleek and refined appearance to any water pipe."
+    },
+    {
+      "name": "90° joint",
+      "def": "A 90° joint gives a water pipe or concentrate pipe a uniform and clean look as it creates a 90° angle from the top to the chamber."
+    },
+    {
+      "name": "10mm male joint",
+      "def": "This dab rig or water pipe features a 10mm male joint. It requires a 10mm female dome or bowl for proper use."
+    },
+    {
+      "name": "14mm male joint",
+      "def": "This glass piece features a 14mm male joint. It requires a 14mm female dome or bowl for proper use."
+    },
+    {
+      "name": "18mm male joint",
+      "def": "This glass pipe features an 18mm male joint. It requires an 18mm female dome or bowl for proper use."
+    },
+    {
+      "name": "10mm female joint",
+      "def": "This water pipe or dab rig features a 10mm female joint. It requires a 10mm male bowl or domeless nail for proper consumption."
+    },
+    {
+      "name": "14mm female joint",
+      "def": "This vapor rig or glass water pipe features a 14mm female joint. It requires a 14mm male bowl or domeless nail for proper consumption."
+    },
+    {
+      "name": "18mm female joint",
+      "def": "This water pipe or concentrate pipe features an 18mm female joint. It requires an 18mm male bowl or domeless nail for proper use."
+    },
+    {
+      "name": "colored glass",
+      "def": "This piece features beautiful colored glass accents that give it a unique and aesthetically appealing appearance. Colored glass is one of the many features that can make this water pipe stand out in your glass collection."
+    },
+    {
+      "name": "heady glass",
+      "def": "Heady glass means that this dab rig or water pipe is a limited edition collector’s item. It features an intricate and unique design that mixes form with function. This is a piece of functional glass art."
+    },
+    {
+      "name": "scientific glass",
+      "def": "Scientific glass means this concentrate pipe or water pipe is made from a specific type of borosilicate glass. It features clear glass (sometimes with very minor color accents), a “laboratory” design, and usually an overall design that resembles scientific equipment (glass beaker chambers, straight tubes, etc.)."
+    },
+    {
+      "name": "clear glass",
+      "def": "This piece features sleek and clean clear glass that allows you to watch this concentrate rig or water pipe function. Clear glass allows you to watch the bubbles stack as your smoke/vapor percolates."
+    },
+    {
+      "name": "branded glass",
+      "def": "This glass pipe features branded glass, with logos or decals that verify it as an official product of this specific brand."
+    },
+    {
+      "name": "green slime glass",
+      "def": "Green slime glass is a specific type of colored glass that is highly sought after due to its unique and vibrant appearance."
+    },
+    {
+      "name": "purple slime glass",
+      "def": "Purple slyme glass is a specific type of colored glass that is highly sought after due to its unique and vibrant appearance."
+    },
+    {
+      "name": "recycler",
+      "def": "This dab rig features a two chamber recycler design that cause your vapor and water to loop in between the two chambers before leaving the mouthpiece. This process causes your vapor to pass through the perc, or percs, multiple times for optimally filtered and diffused hits."
+    },
+    {
+      "name": "dewar’s joint",
+      "def": "A dewar’s joint is the small straight glass tube that connects the joint to the chamber. Its purpose is to reinforce the strength of the joint and to create additional support for the glass pipe."
+    },
+    {
+      "name": "ice catcher",
+      "def": "An ice catcher is a pinched place in the neck of the water pipe that allows the user to put ice cubes into the pipe. The smoke passes through the ice and is cooled for smoother hits."
+    },
+    {
+      "name": "unmarked glass",
+      "def": "This pipe features unmarked glass. Some people prefer a completely clean look that has no logos or decals. Unmarked glass pieces allow you an uninhibited view of the function of your glass pipe’s many features."
+    },
+    {
+      "name": "removable mouthpiece",
+      "def": "A removable mouthpiece allows you to customize your rig with another detachable mouthpiece or to attach this glass piece to a larger one and use this water pipe as an ashcatcher."
+    },
+    {
+      "name": "reclaim catcher",
+      "def": "Reclaim catchers branch off of the appropriate sized joint, and contain a dish that connects to the bottom of the joint. When using a dab rig, oils will naturally trickle down into the joint causing dirty residue. In addition to making sure your joint doesn’t get dirty, the dish of the reclaim catcher will collect the excess concentrates so you can reuse them later."
+    },
+    {
+      "name": "themed glass",
+      "def": "This vapor rig or water pipe contains a themed glass design. Carrying themed glass pieces is one way we cater to the varying interests of our consumer base."
+    },
+    {
+      "name": "maria rings",
+      "def": "Maria rings are circular protruding glass rings usually found on the neck or below the mouthpiece of a water pipe or dab rig."
+    },
+    {
+      "name": "puck chamber",
+      "def": "This concentrate pipe features a unique chamber that resembles a hockey puck. The flat circular chamber of the puck rig provides an awesome aesthetic as well as making sure the dab rig always has a flat sturdy base."
+    },
+    {
+      "name": "pendant rig",
+      "def": "Pendants contain a small circle that you can put a string through. These tiny concentrate pipes can be worn around your neck for easy transportation and portability."
+    },
+    {
+      "name": "dome splashguard",
+      "def": "A domed splashguard is a domed piece of glass at the bottom of a straight neck that prevents water from splashing up into your mouth no matter how hard you pull."
+    },
+    {
+      "name": "deep bowl",
+      "def": "This water pipe features a deep bowl to allow for a large amount of dry herbs or tobacco to be packed at one time."
+    },
+    {
+      "name": "vapor stone",
+      "def": "This concentrate pipe features a vapor stone. A vapor stone takes the place of a standard joint and sucks all of the vapor into the metal stone. This causes you to lose none of your valuable vapor as a vapor stone ensures all of it goes into the rig and none is emitted into the air."
+    },
+    {
+      "name": "snorkel",
+      "def": "This oil rig features a snorkel design that uses a standard nail but no dome. Instead, there is a curved glass piece that resides above the nail. As your concentrates vaporize on the nail and you inhale, the vapor is sucked upwards into the above glass tube and then flows into the concentrate pipe."
+    },
+    {
+      "name": "american glass",
+      "def": "This glass piece is certified to be hand blown right here in the USA. American glass has earned the reputation of being more reliable and of higher quality."
+    },
+    {
+      "name": "glass opals",
+      "def": "This dab rig features beautiful heady glass opals. Glass opals are raised circles on the pipe that hold a detailed colored glass design."
+    },
+    {
+      "name": "angle-cut dome",
+      "def": "An angle-cut dome is a specific type of dome that features an angled design rather than the stand circular dome."
+    },
+    {
+      "name": "direct inject",
+      "def": "A direct inject design does exactly what the name would suggest; it directly injects vapor from the joint to the chamber rather than have the vapor immediately go through a perc when it leaves the joint."
+    },
+    {
+      "name": "can chamber",
+      "def": "This water pipe or dab rig features a can shaped chamber. The cylindrical chamber has a cool design that resembles a can."
+    },
+    {
+      "name": "glow in the dark",
+      "def": "Glow in the Dark → This glass piece glows in the dark. Turn the lights off and watch the amazing visual effect that comes from glow in the dark glass."
+    },
+    {
+      "name": "donut splashguard",
+      "def": "A donut splashguard is a circular glass piece with a hole in the center that is usually located between the chamber and the neck. The circle design with the hole in the middle makes sure water stays in the chamber but still allows all of your vapor to flow upwards through to the neck."
+    },
+    {
+      "name": "dichroic glass",
+      "def": "This glass piece features stunning dichroic glass. Dichro glass is worked colored glass with sparkles inside of it that changes color in certain lighting conditions."
+    },
+    {
+      "name": "nano",
+      "def": "This water pipe, bubbler, or concentrate rig is a small and portable size that gives it a discreet appearance as well as makes it easily transportable."
+    },
+    {
+      "name": "mini",
+      "def": "This water pipe, bubbler, or concentrate rig is a small and portable size that gives it a discreet appearance as well as makes it easily transportable."
+    },
+    {
+      "name": "micro",
+      "def": "This water pipe, bubbler, or concentrate rig is a small and portable size that gives it a discreet appearance as well as makes it easily transportable."
+    },
+    {
+      "name": "wigwag",
+      "def": "This water pipe or concentrate pipe features a detailed wigwag glass design. Wigwag glass is a beautiful swirl of multiple colors of glass that adds an incredible aesthetic touch to any glass piece."
+    },
+    {
+      "name": "sandblasted glass",
+      "def": "Sandblasted glass is raised frosted glass visual feature that causes any glass piece to immediately stand out in your glass collection. Sandblasted glass generally is located on the chamber or the neck and showcases a themed design."
+    },
+    {
+      "name": "diffused downstem",
+      "def": "This is the most simple design for a percolator. The glass straight tube has slits or holes at its base under the water which allows the smoke to cool down as it travels through it."
+    },
+    {
+      "name": "tree perc",
+      "def": "When it comes to tree percs, the more arms it has the more diffusion that can happen, creating a larger separation of the smoke. The arms of the tree usually have slits on the side, and constructed with either a closed or open bottom. Smaller slits lead to smaller bubbles which results in more diffusion, filtration, and percolation."
+    },
+    {
+      "name": "disc perc",
+      "def": "Disc percolators are circular percs which resemble a disc. Disc percs have slits or holes for filtration and diffusion. They usually come in specific types such as turbine disc percs, honeycomb percs, or ratchet disc percs."
+    },
+    {
+      "name": "turbine disc perc",
+      "def": "Turbine disc percs are a type of diffusion system consisting of a solid disc of angled slits placed inside the water chamber. The angled slits create a spinning effect which both cools and diffuses the smoke while creating a unique visual effect."
+    },
+    {
+      "name": "crystal ball perc",
+      "def": "Crystal ball percs are a circular perc with angled slits intertwining across it. Its shape and the intertwining slits make the perc appear like a crystal ball."
+    },
+    {
+      "name": "dome perc",
+      "def": "Dome percolators are called this because of their shape. They have slits and holes where the dome touches the bottom. Diffusion happens when the smoke passes through the dome, and separates when going through the holes or slits."
+    },
+    {
+      "name": "barrel perc",
+      "def": "Barrel percolators are a specific type of dome perc. They have more slits than a traditional dome perc, while the inner chamber isn 't as large which creates less drag."
+    },
+    {
+      "name": "showerhead perc",
+      "def": "Showerhead percolators have a thin vertical tube that widens into a round chamber. They have slits or holes for increased filtration and diffusion. Their name comes from their resemblance to a showerhead."
+    },
+    {
+      "name": "honeycomb perc",
+      "def": "Honeycomb percs are a type of disc perc, but they have more diffusion because they usually have at least 30 small holes through which the smoke must pass. The holes must be the correct size because large holes won't filter the smoke efficiently and small holes will create too much drag."
+    },
+    {
+      "name": "ratchet perc",
+      "def": "Ratchet percs are a type of disc perc with holes lining the perimeter of the disc to increase filtration and the flow of smoke."
+    },
+    {
+      "name": "waffle perc",
+      "def": "Waffle percs are similar to disc percs except they have holes rather than slits. Their appearance is similar to that of a waffle fry."
+    },
+    {
+      "name": "matrix perc",
+      "def": "Matrix percs are a cylindrical chamber with vertical and horizontal slits or grooves."
+    },
+    {
+      "name": "stereo matrix perc",
+      "def": "Stereo matrix percs consist of two smaller matrix percolators stacked on top of each other. This usually occurs in larger water pipes with two chambers, where one matrix perc is housed in each chamber."
+    },
+    {
+      "name": "reti perc",
+      "def": "Reti percolators consist of two cylinders, with a smaller one inside a larger one. Diffusion occurs when smoke passes through the slits of the cylinders."
+    },
+    {
+      "name": "ufo perc",
+      "def": "UFO percs feature a rounded top with a glass circle base. They have a series of slits around the circumference of the glass circle. Smoke passes through these slits to create serious diffusion and filtration. UFO percs are often sought after because of their efficiency and ease of cleaning."
+    },
+    {
+      "name": "swiss perc",
+      "def": "Swiss percs are a vertical diffusion system with holes on a large disc. The name derives from the percolators resemblance to swiss cheese."
+    },
+    {
+      "name": "inline perc",
+      "def": "Inline percolators are a straight perc composed of a slit or gridded tube inside a perpendicular chamber."
+    },
+    {
+      "name": "stemline perc",
+      "def": "Stemline percs are a type of inline percolator that branches straight off of the joint."
+    },
+    {
+      "name": "donut perc",
+      "def": "Donut percs are a circular perc that has a hole in the middle to provide extra filtering of the smoke and also stops water from splashing up towards the mouthpiece. This type of percolator gets its name because of it looks like a donut."
+    },
+    {
+      "name": "cross perc",
+      "def": "Cross percs are one of the latest inventions from one of the leading percolator innovators out there, JM Flow. This percolator has an intricate design with a circular center with multiple circle pieces branching out from it. Each of these circles has slits in the form of a cross that leads to the most smoke filtration and a smoother hit for the smoker."
+    },
+    {
+      "name": "inset perc",
+      "def": "Inset percs are contained inside the chamber of the water pipe and are an indented perc that creates a pocket. Inset percolators have slits around their circumference to filter and diffuse the smoke."
+    },
+    {
+      "name": "circ perc",
+      "def": "A circ perc is a circular percolator that usually contains numerous rings with spacing between them. This spacing and the holes/slits of the perc allow for intense filtration."
+    },
+    {
+      "name": "sprinkler perc",
+      "def": "A sprinkler perc is a circular perc featuring multiple tubes branching out in all directions. Similar to a tree perc, the smoke goes through the circular part and leaves out through the many different arms. The separation of the smoke/vapor causes filtration and diffusion for optimal pulls."
+    },
+    {
+      "name": "j-hook perc",
+      "def": "A J-Hook perc gets its name because it has the shape of an upside-down J. It usually connects to a different type of perc and is generally houses in the upper chamber of a water pipe or concentrate rig."
+    },
+    {
+      "name": "tongue perc",
+      "def": "A tongue perc resembles a tongue and its unique design has slits and holes to rigorously diffuse and filter vapor and smoke."
+    }
+  ],
+  "type": {
+    "dab rig": {
+      "url": "/concentrate-pipes-and-dab-rigs/",
+      "description": "Dab Rigs (also known as vapor rigs, concentrate rigs, concentrate pipes, or oil rigs) are a specific type of water pipe used for the consumption of essential oils, legal concentrates, and legal waxes. Vapor Rigs feature a joint (10mm, 14mm, or 18mm) and have a different process depending on the type of nail used. With a standard dome and nail, simply remove the dome and heat the nail with a butane torch. Place the dome back over the nail and use a dabber or dab tool to put the desired amount of concentrates on to the nail and inhale. A domeless nail requires the same process except with more convenience as there is no need to remove and replace the dome. The essential oils will vaporize due to the high temperature of the nail, and vapor will travel through the concentrate rig ready for smooth inhalation."
+    },
+    "concentrate pipe": {
+      "url": "/concentrate-pipes-and-dab-rigs/",
+      "description": "Dab Rigs (also known as vapor rigs, concentrate rigs, concentrate pipes, or oil rigs) are a specific type of water pipe used for the consumption of essential oils, legal concentrates, and legal waxes. Vapor Rigs feature a joint (10mm, 14mm, or 18mm) and have a different process depending on the type of nail used. With a standard dome and nail, simply remove the dome and heat the nail with a butane torch. Place the dome back over the nail and use a dabber or dab tool to put the desired amount of concentrates on to the nail and inhale. A domeless nail requires the same process except with more convenience as there is no need to remove and replace the dome. The essential oils will vaporize due to the high temperature of the nail, and vapor will travel through the concentrate rig ready for smooth inhalation."
+    },
+    "concentrate rig": {
+      "url": "/concentrate-pipes-and-dab-rigs/",
+      "description": "Dab Rigs (also known as vapor rigs, concentrate rigs, concentrate pipes, or oil rigs) are a specific type of water pipe used for the consumption of essential oils, legal concentrates, and legal waxes. Vapor Rigs feature a joint (10mm, 14mm, or 18mm) and have a different process depending on the type of nail used. With a standard dome and nail, simply remove the dome and heat the nail with a butane torch. Place the dome back over the nail and use a dabber or dab tool to put the desired amount of concentrates on to the nail and inhale. A domeless nail requires the same process except with more convenience as there is no need to remove and replace the dome. The essential oils will vaporize due to the high temperature of the nail, and vapor will travel through the concentrate rig ready for smooth inhalation."
+    },
+    "vapor rig": {
+      "url": "/concentrate-pipes-and-dab-rigs/",
+      "description": "Dab Rigs (also known as vapor rigs, concentrate rigs, concentrate pipes, or oil rigs) are a specific type of water pipe used for the consumption of essential oils, legal concentrates, and legal waxes. Vapor Rigs feature a joint (10mm, 14mm, or 18mm) and have a different process depending on the type of nail used. With a standard dome and nail, simply remove the dome and heat the nail with a butane torch. Place the dome back over the nail and use a dabber or dab tool to put the desired amount of concentrates on to the nail and inhale. A domeless nail requires the same process except with more convenience as there is no need to remove and replace the dome. The essential oils will vaporize due to the high temperature of the nail, and vapor will travel through the concentrate rig ready for smooth inhalation."
+    },
+    "water pipe": {
+      "url": "/glass-water-pipes/",
+      "description": "Water pipes are usually larger pipes that contain water that bubbles as you pull from them. The water, combined with the many different structured percolators, filters and diffuses your smoke for smooth hits. Glass water pipes can contain features such as bent necks, ice catchers, and flared mouthpieces that make your smoking experience even more enjoyable."
+    },
+    "tobacco bong": {
+      "url": "/glass-water-pipes/",
+      "description": "Water pipes are usually larger pipes that contain water that bubbles as you pull from them. The water, combined with the many different structured percolators, filters and diffuses your smoke for smooth hits. Glass water pipes can contain features such as bent necks, ice catchers, and flared mouthpieces that make your smoking experience even more enjoyable."
+    },
+    "glass pipe": {
+      "url": "/glass-pipes/",
+      "description": "Hand pipes (also known as pipes, glass pipes, spoons, or tobacco bowls) are hand held smoking devices that feature a mouthpiece, tubing, and a bowl for your dry herbs and tobacco. Spoons feature a carb on the side of the bowl to allow you to control the airflow that travels through the pipe. The carb allows the user to control the intensity of the hits as the smoke flows from the bowl to the mouthpiece."
+    },
+    "glass hand pipe": {
+      "url": "/glass-pipes/",
+      "description": "Hand pipes (also known as pipes, glass pipes, spoons, or tobacco bowls) are hand held smoking devices that feature a mouthpiece, tubing, and a bowl for your dry herbs and tobacco. Spoons feature a carb on the side of the bowl to allow you to control the airflow that travels through the pipe. The carb allows the user to control the intensity of the hits as the smoke flows from the bowl to the mouthpiece."
+    },
+    "spoon": {
+      "url": "/glass-pipes/",
+      "description": "Hand pipes (also known as pipes, glass pipes, spoons, or tobacco bowls) are hand held smoking devices that feature a mouthpiece, tubing, and a bowl for your dry herbs and tobacco. Spoons feature a carb on the side of the bowl to allow you to control the airflow that travels through the pipe. The carb allows the user to control the intensity of the hits as the smoke flows from the bowl to the mouthpiece."
+    },
+    "recycler": {
+      "url": "/recycler-rigs/",
+      "description": "Recyclers are a type of dab rig that features a unique dual chamber design. The main chamber houses the perc, or in some cases multiple percolators, that begin the diffusion process. After the vapor and water travel through the main chamber, it moves through separation tubes to the recycling chamber. Because of these concentrate rigs’ functional design, the water and vapor loop between the two chambers. The vapor passes through the percs multiple times before leaving out of the mouthpiece, ensuring that it is completely filtered and smooth."
+    },
+    "vaporizer": {
+      "url": "/vaporizers/",
+      "description": "Vaporizers are generally considered a healthier alternative to traditional smoking methods. Depending on the model, vapes can be used for dry herbs or tobacco, legal concentrates or essential oils, or both. Vaporizing does just what it sounds like; creates vapor for inhalation rather than smoke due to combustion. This happens through a process that uses convection technology."
+    },
+    "concentrate vaporizer": {
+      "url": "/concentrate-vaporizers/",
+      "description": "Concentrate vaporizers are vapes specifically designed for use with legal concentrates, essential oils, and legal waxes. Concentrate vaporizers contain a metal coil that heats up to vaporize your substances and turn them into tasty vapor ready for inhalation."
+    },
+    "dry herb vaporizer": {
+      "url": "/dry-herb-vaporizers",
+      "description": "Dry herb vaporizers are vapes manufactured specifically for use with dry herbs and tobacco. These vaporizers contain a heating chamber that uses convection technology. Vaporizing does just what it sounds like; creates vapor for inhalation rather than smoke due to combustion."
+    },
+    "pendant": {
+      "url": "/glass-pendants/",
+      "description": "Pendant dab rigs contain a small circle that you can put a string through. These tiny concentrate pipes can be worn around your neck for easy transportation and portability."
+    },
+    "puck": {
+      "url": "/glass-water-pipes/",
+      "description": "A puck concentrate rig features a unique chamber that resembles a hockey puck. The flat circular chamber of the puck rig provides an awesome aesthetic as well as making sure the dab rig always has a flat sturdy base."
+    },
+    "snorkel": {
+      "url": "/glass-water-pipes/",
+      "description": "Snorkel Rigs are a unique type of oil rig that uses a standard nail but no dome. Instead, there is a curved glass piece that resides above the nail. As your concentrates vaporize on the nail and you inhale, the vapor is sucked upwards into the above glass tube and then flows into the concentrate pipe."
+    },
+    "glass pendant": {
+      "url": "/glass-pendants/",
+      "description": "Glass pendants are intricately crafted necklaces that feature awesome designs and stunning glass artwork. Some glass pendants contain a dabber at the end so no matter where you go, you can always have this concentrate tool at your disposal."
+    },
+    "grinder": {
+      "url": "/grinders/",
+      "description": "Grinders are a convenient smoking accessory that shreds and breaks down your dry herbs, spices, or tobacco. The intent of grinders is to take your various substances and transform them into a more practical form. Grinders come in varying sizes from small to large and can contain two, three, or four sections depending on how functionable you want this smoking accessory to be. Grinders allow for a quick process and you never lose any of your dry herbs or tobacco, both of which can save you time and money."
+    },
+    "bubbler": {
+      "url": "/glass-bubblers",
+      "description": "Bubblers are the perfect hybrid of a water pipe and a hand pipe. Bubblers are hand held and portable like hand pipes, but contain water and percolators to give you all the benefits that water pipes provide. Glass bubblers give you the smooth and filtered hits that water pipes provide, while still being not too cumbersome to transport."
+    },
+    "bowl": {
+      "url": "/glass-accessories-downstems-and-adapters/",
+      "description": "Bowls (also commonly called slides) are an integral part of any water pipe or pipe for dry herbs and tobacco that contains a joint. Depending on the joint type, these bowls fit in or over the joint with the sole purpose of holding your dry herbs and tobacco. Some bowls include glass screens to ensure your tobacco doesn’t fall into the glass pipe."
+    },
+    "slide": {
+      "url": "/glass-accessories-downstems-and-adapters/",
+      "description": "Bowls (also commonly called slides) are an integral part of any water pipe or pipe for dry herbs and tobacco that contains a joint. Depending on the joint type, these bowls fit in or over the joint with the sole purpose of holding your dry herbs and tobacco. Some bowls include glass screens to ensure your tobacco doesn’t fall into the glass pipe."
+    },
+    "ashcatcher": {
+      "url": "/ashcatchers/",
+      "description": "Ashcatchers are a glass accessory that function exactly as the name would suggest, catching your ash or debris to keep your water pipe clean. Ashcatchers attach to the joint of a water pipe and contain a percolator or numerous percs. These percs start the diffusion process before smoke even reaches the water pipe, increasing the overall filtration for optimal inhalation."
+    },
+    "titanium nail": {
+      "url": "/concentrate-nails-dabbers-and-carb-caps/",
+      "description": "Titanium nails are an accessory used with concentrate rigs to consume legal waxes, concentrates, or essential oils. TI nails are known for their longevity and durability, as they are constructed from strong materials. To add to their numerous benefits, titanium nails have superb heat retention and are very easy to use. Just heat them with a butane torch, then use a dabber or dab tool to place your concentrates on the nail. Rather than combust like dry herbs or tobacco, the essential oils vaporize and the vapor travels through the dab rig as you inhale."
+    },
+    "quartz nail": {
+      "url": "/concentrate-nails-dabbers-and-carb-caps/",
+      "description": "Quartz nails are an accessory used with vapor rigs to consume legal concentrates, waxes, or essential oils. Quartz nails are a great replacement option over a standard glass nail as they are more durable and have a very simple cleaning process. Many people say they prefer quartz nails to titanium nails because of the clean taste that comes with using a quartz nail. To use a quartz nail, just heat it with a butane torch then place your legal concentrates on it and inhale the vapor that is produced."
+    },
+    "ceramic nail": {
+      "url": "/concentrate-nails-dabbers-and-carb-caps/",
+      "description": "Ceramic nails are a replacement to standard glass nails for use with legal concentrates and essential oils. Ceramic nails are preferred by some because of their longer heat retention than titanium and quartz nails. To use a ceramic nail, just place it in the appropriate joint of a dab rig and heat it with a torch. Using a dabber, place your concentrates or waxes on the nail and inhale the vapor created."
+    },
+    "dabber": {
+      "url": "/concentrate-nails-dabbers-and-carb-caps/",
+      "description": "Dabbers are a tool used to make your dabbing experience simpler and more convenient. Dabbers come in different sizes and styles, but their function is to easily and safely transport your concentrates on to the heated nail of your concentrate rig."
+    },
+    "dropdown": {
+      "url": "/glass-accessories-downstems-and-adapters/",
+      "description": "Dropdowns are a glass accessory that features two joints connected by a glass tube. Dropdowns have two extremely beneficial functions. The first is that it allows you to heat your nail away from the joint of your vapor rig, avoiding heat stress, fractures, or heat cracking that can occur when a nail is heated too close to the joint. The second is that, depending on the joints, dropdowns can turn your female jointed water pipe into a dab rig or your male jointed concentrate rig into a water pipe."
+    },
+    "reclaim catcher": {
+      "url": "/glass-accessories-downstems-and-adapters/",
+      "description": "Reclaim catchers are a glass accessory for use with vapor rigs that can save you money and legal concentrates. Reclaimers branch off of the appropriate sized joint, and contain a dish that connects to the bottom of the joint. When using a dab rig, oils will naturally trickle down into the joint causing dirty residue. In addition to making sure your joint doesn’t get dirty, the dish of the reclaim catcher will collect the excess concentrates so you can reuse them later."
+    },
+    "glass on glass adapter": {
+      "url": "/glass-accessories-downstems-and-adapters/",
+      "description": "Glass on glass adapters are an accessory that allows the user to optimize their jointed water pipe or dab rig to their specific preference. Depending on the adapter, they can either change the joint size or whether the joint is male or female. Glass adapters can change a female jointed water pipe into a male jointed concentrate pipe or a male jointed vapor rig into a female jointed water pipe."
+    },
+    "chillum": {
+      "url": "/glass-pipes/",
+      "description": "Chillums are miniature glass hand pipes that have the benefit of being discreet and easily portable. Also referred to as one hitters, these pipes offer a convenient smoking experience. Simply pack your dry herbs or tobacco in the bowl, light it up, and inhale."
+    },
+    "one hitter": {
+      "url": "/glass-pipes/",
+      "description": "Chillums are miniature glass hand pipes that have the benefit of being discreet and easily portable. Also referred to as one hitters, these pipes offer a convenient smoking experience. Simply pack your dry herbs or tobacco in the bowl, light it up, and inhale."
+    },
+    "carb cap": {
+      "url": "/concentrate-nails-dabbers-and-carb-caps/",
+      "description": "Carb caps are an extremely functional accessory for dab rigs that allow you to take low temperature dabs while not losing any valuable vapor. After the standard process of heating up your domeless nail and adding the concentrates to it, immediately place your carb cap on top of it. Carb caps have a hole that provides ventilation and airflow while acting as a cover to ensure no vapor escapes. The added airflow gives great heat retention while also providing a low temperature dab hit. \r Glass Domes → Glass domes come with standard glass, quartz, ceramic, and titanium nails. While the nail goes inside the joint, the glass dome goes over the joint and the nail. The purpose of glass domes is to confine vapor once concentrates are added to the heated nail. The design of domes ensures vapor doesn’t escape into the air and is instead all inhaled into the concentrate pipe."
+    },
+    "stash jar": {
+      "url": "/smoking-accessories/",
+      "description": "Stash jars are glass jars intended to hold your dry herbs or tobacco. They come with a sealable lid or cork to be smell-proof, sturdy, and portable."
+    },
+    "concentrate jar": {
+      "url": "/smoking-accessories/",
+      "description": "Concentrate jars are silicon jars intended to hold your legal concentrates or essential oils. Coming in a variety of shapes, these jars contain a sealable lid to guarantee your concentrates are safe and still portable."
+    },
+    "rolling tray": {
+      "url": "/smoking-accessories/",
+      "description": "Rolling trays contain a flat surface and depending on the product, are made from stainless steel or aluminum. Rolling trays give you a nice flat surface to give you enough space for all of your rolling needs."
+    },
+    "rolling papers": {
+      "url": "/rolling-papers/",
+      "description": "Rolling papers are leafed tobacco papers made from various materials depending on the product. These papers are intended to allow you to roll your own cigarettes with as much tobacco as you prefer."
+    },
+    "downstem": {
+      "url": "/glass-accessories-downstems-and-adapters/",
+      "description": "Glass downstems are an addition to water pipes that increase filtration of your smoke. Removable downstems go into your jointed water pipe and add extra percolation. Downstems contain holes or slits to diffuse your smoke for cleaner and smoother hits."
+    }
+  },
+  "videos": {
+    "78": "-r1v5Cu_yj8",
+    "79": "DQoi4FfyO40",
+    "82": "-da46e3WDBA",
+    "91": "RIuMdSvYZ7o",
+    "92": "gWMlfGteBO4",
+    "97": "II3vVOXlP7E",
+    "98": "d9LYwGFpvnA",
+    "99": "DmTH46Zy6JU",
+    "189": "QRBKbFpqsiM",
+    "190": "QRBKbFpqsiM",
+    "191": "Ysem3a5di7M",
+    "227": "1YIpDZWSHY0",
+    "231": "ZmH74Ymfs-0",
+    "232": "TIgVLHhRbA8",
+    "238": "ZmH74Ymfs-0",
+    "240": "wVpTXNiewW0",
+    "244": "Ve3LX-dhTMc",
+    "247": "kpCY5YHkRbU",
+    "253": "7_oEvOfVy-U",
+    "254": "deolTetaRtw",
+    "284": "Yk0ZNEJOn5A",
+    "287": "oqAzUkvYdao",
+    "288": "x4wPOs6eeYI",
+    "289": "IwZzvJaf_28",
+    "290": "deolTetaRtw",
+    "297": "QMWebgFB9Yk",
+    "305": "xmA3SWn5L_k",
+    "308": "gWMlfGteBO4",
+    "312": "sGR7tZsjhRc",
+    "383": "EMB1572bQgM",
+    "398": "GKsi81PXazs",
+    "400": "u1WFvrYg1_U",
+    "401": "Zsjr46Vv13A",
+    "404": "0Z2BC57hRgQ",
+    "418": "67LcMc1nP2o",
+    "429": "DW_xxdMFM5Y",
+    "430": "9EHTONEXvGo",
+    "431": "HjMP-b8gnzQ",
+    "436": "OCUnN5UnyOo",
+    "438": "PicS6EO2_0o",
+    "442": "0vBcqmn4T1g",
+    "443": "eknCAjOWxuA",
+    "444": "pRUqG429t48",
+    "445": "3mmS5yxU7CE",
+    "449": "xcD9o6LvQW8",
+    "450": "jK-QeGsZNr8",
+    "451": "Ol9SMLEqK6E",
+    "452": "boafhMwTfx4",
+    "454": "PWArc1WKaz0",
+    "455": "8Q5IYHQG_vA",
+    "456": "FDvhNVBd3oo",
+    "457": "dZQakj6BHyA",
+    "458": "yqHilJ-rHaI",
+    "459": "4G5mrDvqdcY",
+    "461": "Zsjr46Vv13A",
+    "470": "mMUKzwz0G5s",
+    "484": "0Ngm-dc5JdE",
+    "485": "hhlPsgA2uec",
+    "486": "uM6eQ7bocpk",
+    "487": "gsyi9UK__vA",
+    "489": "jomnkggoL3k",
+    "505": "IerWg3I80C0",
+    "515": "zYkxegcQib4",
+    "518": "TDhJBRw3BJw",
+    "527": "ePrZ22Pg3AA",
+    "528": "_II6sKOzEGk",
+    "529": "-77GdbhtOJo",
+    "531": "IfaJl3f3K84",
+    "532": "83bitpG22tY",
+    "534": "AhdJx8rTmEg",
+    "535": "wWnntlM-uac",
+    "536": "426k_Rjzrno",
+    "537": "1l3dcQ027T0",
+    "539": "QZCjHjhw-y4",
+    "540": "CzydiLU2k_I",
+    "541": "jI43P9-BtEU",
+    "542": "qec6NalpC3s",
+    "543": "qdOQ9Eet5IU",
+    "544": "lvNNfpRYsik",
+    "545": "Oz5NJrfy_hE",
+    "549": "YglootmGJ6A",
+    "550": "NsW2-6E3JtQ",
+    "551": "scJ2Tvvr0bM",
+    "552": "AhVMaPvCvhQ",
+    "553": "2iu1wTAJJgY",
+    "554": "gAF_A8H0kj8",
+    "555": "sIf1MOdo6FQ",
+    "556": "sQnJm2pOVR4",
+    "557": "BtvshdF37WU",
+    "558": "euDUybStO9g",
+    "559": "HHqXPR5qASY",
+    "560": "3Se03JobCf4",
+    "561": "5L06y5avOqE",
+    "563": "cHaFwJdWhMU",
+    "564": "LcgIHmRfIQ4",
+    "565": "g6pdzEDbqKc",
+    "566": "x6P0g4t-QL8",
+    "569": "2Dv_ecAiu3U",
+    "570": "_7yhlPH9Qxc",
+    "573": "SXzi2V-_mGw",
+    "576": "yqxSBhwqiaA",
+    "577": "DaV2opCCUys",
+    "578": "WMWjTjMz7Qc",
+    "580": "9MssIMBd85A",
+    "581": "0CbThboRD94",
+    "586": "snY0wpg7TxE",
+    "587": "Ai9sXwi7yXw",
+    "588": "hBxe809-Dho",
+    "589": "16Kyvr5vWng",
+    "596": "KoMmc_EFkrM",
+    "597": "5ejHbtd1C9s",
+    "598": "YMbYo3SZOjk",
+    "599": "8SFWHYfeQZ8",
+    "602": "SAs_7lTQmnY",
+    "607": "cmGyjsqi66A",
+    "608": "CMBzGHdbQ2A",
+    "609": "VPJmygaTbMk",
+    "610": "xbaPKZsMOIA",
+    "611": "qQUapTx4ZHM",
+    "612": "OCUnN5UnyOo",
+    "613": "wjgue6gdCwU",
+    "614": "q2EbifObHX8",
+    "615": "2V-_wtfgJJQ",
+    "616": "O4oGg03gTaQ",
+    "620": "mnhA7U4eD0Y",
+    "621": "WK216Hsk_kw",
+    "622": "O86KcqynCoY",
+    "623": "64NvFp3dk30",
+    "624": "KBsObxbFM3M",
+    "625": "mG7YMPWXWoY",
+    "626": "P6xLqhOEejI",
+    "627": "T3vFW7noBpo",
+    "638": "eEI6mvTe48k",
+    "656": "LUkocC_-O4Y",
+    "658": "O3s5bCYxDEk",
+    "659": "BLSmXcfwDEo",
+    "660": "2PMnnibq0qI",
+    "662": "zhfXvX8kBVA",
+    "663": "5sGvdCZOjGg",
+    "668": "GvZV_BJjSNY",
+    "670": "ZSXLwXUW0As",
+    "672": "bHA8sg5nUtI",
+    "673": "JdLnJaLdTEo",
+    "674": "yes",
+    "675": "yes",
+    "677": "dWy9RHKUaYE",
+    "678": "-TkO8tFaTpA",
+    "679": "9l33Az5i0VQ",
+    "684": "4bw4rVEJxhk",
+    "688": "kaXju-uP6gM",
+    "690": "BqwK8OLAeFA",
+    "691": "eGVsVmAVq5E",
+    "692": "XremypU29vM",
+    "693": "DeUVDcukyYQ",
+    "694": "gTUbdslDiRE",
+    "695": "ZVKNCasOYhM",
+    "697": "KoUQfAuJR8s",
+    "699": "AW4TdSyJ9ug",
+    "700": "bNyOldWMudk",
+    "705": "gPH7Rbb4gGk",
+    "706": "BdpguFOTmYo",
+    "707": "Nc850jeW7oM",
+    "724": "yjQCKjqCyiw",
+    "725": "P-5hfL2AaME",
+    "728": "fOxPC_bpwEQ",
+    "729": "mnhA7U4eD0Y",
+    "730": "nN_03r4BPYI",
+    "731": "78I-UTaEX0s",
+    "733": "tb0nl38VZGM",
+    "736": "PPIz8g0GAus",
+    "742": "Ih60R599hGo",
+    "755": "y8N6JjsqJuA",
+    "757": "x_NhNRSX4V0",
+    "769": "dxSjlTBIxUs",
+    "770": "Dkp43Cc-jWE",
+    "772": "yes",
+    "774": "5oyo2cEbsm0",
+    "778": "Pl7o8J5WRBY",
+    "780": "uGKN2TN3yU8",
+    "781": "61cCsHmDMrA",
+    "782": "WZxWjuAS_Is",
+    "783": "Bv1hJYrPpfc",
+    "787": "VK0V6laYAU0",
+    "791": "fqHCwLJ-3aM",
+    "792": "ewTkl0wu27k",
+    "795": "INJH-3g6p8o",
+    "799": "53k30QI6tl8",
+    "800": "xBqF-dxWVdM",
+    "801": "Ka8AWKnIV9Q",
+    "802": "242mYjrLkYc",
+    "805": "H6XnVY1cRAw",
+    "806": "xZi1BaGxIqU",
+    "811": "4Gf7MQgrFno",
+    "812": "yes",
+    "813": "nJuySvDsi5E",
+    "814": "nJuySvDsi5E",
+    "815": "_NQeZjX52ug",
+    "817": "HYAN5ljS1Dw",
+    "818": "yes",
+    "819": "C5dLCa_HJeI",
+    "820": "-01Uvk-PI5U",
+    "832": "yes",
+    "835": "ngzeYqkos1E",
+    "840": "KMe8PoZ_NRc",
+    "842": "7HXYLDfqFjs",
+    "845": "YH9xH4gGn8k",
+    "853": "T7xersSWWMI",
+    "858": "K63TQFQqb7c",
+    "862": "Hu5N98pyKpo",
+    "863": "Hu5N98pyKpo",
+    "864": "Hu5N98pyKpo",
+    "865": "C5x5D6GtFXQ",
+    "866": "OhBMY6mLmvQ",
+    "867": "eh_8PGVLOWk",
+    "868": "3JT1dSmoSLs",
+    "869": "KaJEC6YExH0",
+    "870": "rN0N0DgbD6I",
+    "872": "OLBrIQLG-_c",
+    "873": "K_CfdWTOeeE",
+    "874": "GNNIWUgaN5U",
+    "875": "rp6BA-EUopo",
+    "876": "8VsJLeGRepk",
+    "877": "q0H8icohwPE",
+    "878": "kSEPy-11zp8",
+    "879": "IebsJwE4qcM",
+    "880": "EvO3Y96eRxg",
+    "882": "2do6cJEFZ5s",
+    "883": "CwbSqtrzeoM",
+    "884": "aFUv_RLSD7o",
+    "885": "_xSRLxjIfkA",
+    "886": "2SBdAz_WIa8",
+    "887": "yes",
+    "888": "Cr81aC6o03w",
+    "889": "5yquxfrJN-g",
+    "891": "xF1e9mIEd4E",
+    "892": "7_Gh-M42WvA",
+    "893": "TCIYPiBYwnE",
+    "897": "K63TQFQqb7c",
+    "899": "e-62yal0tE4",
+    "900": "SZxIfcrPK1Q",
+    "902": "8F2VEc3puJI",
+    "916": "88ldK0yCmEA",
+    "918": "WDJ7FAw5Mww",
+    "926": "j36H0VEEgfQ",
+    "927": "CfkXur3_6BQ",
+    "929": "nK0d7K6k0vk",
+    "933": "bbzvH7PjTX8",
+    "934": "MfjJrZRX_R8",
+    "936": "qbClf46vnpE",
+    "937": "Y2U-_aJWggk",
+    "938": "ypdYj8XXopA",
+    "943": "7VTj43V0iFs",
+    "944": "RPtBK4Ahm8I",
+    "945": "1mnDE5rFx0k",
+    "946": "mzlvVeucvbQ",
+    "947": "4GwEGA0pryA",
+    "948": "3ke3RnB4A2I",
+    "961": "Kb8EVZm1zk0",
+    "964": "KyT2ErZQU_0",
+    "965": "EIBowatxtK0",
+    "966": "j9nQBtJ0-1g",
+    "967": "MUnkTx1WZ3k",
+    "980": "d9LYwGFpvnA",
+    "981": "xTpLnO7bDno",
+    "982": "8AGQvon06eI",
+    "983": "420axDgQlqY",
+    "985": "oRl0nWkQgX8",
+    "986": "SE4C8FcexTI",
+    "987": "bGPoOnfdACM",
+    "990": "7ejc85h_sG4",
+    "991": "Et6clQDn79Q",
+    "992": "Z-xxsraL3_4",
+    "993": "Z-xxsraL3_4",
+    "998": "n2mbyXHheck",
+    "999": "VcS37uThJx0",
+    "1001": "ODRQoj5Vsv4",
+    "1003": "oDJxHSJjgsg",
+    "1006": "d2AUp4w18GE",
+    "1010": "ihijJHPU-SQ",
+    "1012": "roUwZAO0aiw",
+    "1045": "RvhUpJcXqzY",
+    "1046": "YH1nvZJc3fU",
+    "1047": "SI0SYXfUK3A",
+    "1048": "zr97J2g26Y4",
+    "1049": "T5wKIcOruYA",
+    "1054": "wb1fnoc9Y7w",
+    "1057": "HcoS9Htw-ew",
+    "1059": "XfBOLfREJts",
+    "1094": "OeG-nwL1O_o",
+    "1102": "u35uqZQ2PlQ",
+    "1104": "yIj1lo5eP6A",
+    "1106": "pSiVzDltt8Q",
+    "1107": "3YohwnjyaSs",
+    "1108": "7ejc85h_sG4",
+    "1109": "YDfYU2Sjc5g",
+    "1114": "ReGntb6VHEc",
+    "1116": "yes",
+    "1117": "xjOvyhSXeOg",
+    "1118": "qaZpGvez7uQ",
+    "1119": "3-nvKxXG0H8",
+    "1120": "8RQDoDtrZOA",
+    "1121": "uKX233jhpY0",
+    "1132": "07dX4ApIahA",
+    "1135": "vHiwNz-Y1TM",
+    "1136": "SyurfkZY_Hw",
+    "1137": "WA7Z27ARKdo",
+    "1158": "3KRVAj8ibXo",
+    "1174": "s4n5Q03VwNw",
+    "1179": "NJiIm4twFIk",
+    "1183": "vs7ZQXo53R0",
+    "1185": "vimJrcGOhOU",
+    "1187": "BxSGKCrrp4o",
+    "1199": "NDKUAOLAH44",
+    "1203": "jpXFZROvJo0",
+    "1204": "YewQUUMNC4w",
+    "1217": "NYvq9OI3nLE",
+    "1218": "rcXhBfvHImc",
+    "1220": "z-2FOo_lePs",
+    "1221": "XvBMgfGAdUE",
+    "1222": "CyPbyVJ0XAc",
+    "1223": "L3OoIe9ivdI",
+    "1224": "qk-cNQKIDug",
+    "1226": "KG5iTo5aYJU",
+    "1227": "BlOaCRy67Nw",
+    "1228": "hvOzzSjAers",
+    "1229": "KLzkI7QAdo0",
+    "1238": "tXaclMhSSSE",
+    "1239": "apAYEpZv8Nw",
+    "1240": "M0r8b1aqcHo",
+    "1248": "Q3Q9Gpc1h28",
+    "1251": "9JjkJhB57Rs",
+    "1252": "hH8zuUfloVM",
+    "1263": "jhUkduxElfs",
+    "1271": "7btLGAy031w",
+    "1301": "IGHtD7vqZmQ",
+    "1302": "V9vLYdnrAaM",
+    "1306": "b5XaN60wWHw",
+    "1308": "XnnYEZTZllE",
+    "1309": "nz1xKvITxBw",
+    "1311": "wDDuyxlE6-Q",
+    "1331": "giTFC-1blpo",
+    "1335": "8RqyJc5mpA0",
+    "1336": "FkLiDvzpRXA",
+    "1338": "RuTvhIZYmwI",
+    "1340": "atKJY9aC0w8",
+    "1342": "r7IQygv49ys",
+    "1343": "9ANEdaqUYgY",
+    "1351": "rVa3mFqivDc",
+    "1352": "1zRwTWrYRbw",
+    "1353": "iLcaFv7uJtg",
+    "1354": "0vG7tR3QcOo",
+    "1355": "ZD4c8f59zXQ",
+    "1360": "8EHA6dFwJtc",
+    "1363": "Yk5tn6D-1Gs",
+    "1366": "NzmpQ33krgM",
+    "1367": "GcxE-uevuaI",
+    "": "",
+    "params": "?enablejsapi=1&autoplay=1&loop=1&playlist='+ YouTubeVideoId + '&theme=light&controls=0&origin=' + window.location.origin"
+  },
+  "misc": "misc"
+};
+    
+	var httpPrefix = (window.location.protocol === 'http:' ? 'http:' : 'https:');
+	var productNumber = $('#productDetailsAddToCartForm').find('input[name=product_id]').attr('value');
+	var topSep = '<hr class="top-sep">';
+	var placingSelector = $('.ProductDescriptionContainer');
+	var thisProdType = $('.JointSizeHeightContainer .DetailRow:eq(2)').find('.Label').text().trim().toLowerCase();
+
+	window.browserIsMobileOrTablet = function() {
+		var check = false;
+		(function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))check = true})(navigator.userAgent||navigator.vendor||window.opera);
+		return check;
+	}
+
+	//FIX for mobile devices where "hovered" is automatically added to fthe first ".m(agic)t(humb)-active-selector"
+	$('#ProductDetails .ProductTinyImageList  ul li .mt-active-selector').removeClass('hovered');
+
+	//Product Type
+	function prodType() {
+		var dankStopBoxProduct = $('.productTypeSpan');
+		if(thisProdType){
+			var entry = DankStopGlossary.type[thisProdType];
+			if (entry) {
+				var aboutTitle = '<h3>About '+thisProdType+'s</h3>';
+				var aboutLink = ' <a href="'+entry.url+'" class="about-link">Shop More '+thisProdType+'s...</a>';
+				var aboutText = '<p>'+entry.description+aboutLink+'</p>';
+				var aboutCont = '<div class="about-this-prod">'+aboutTitle+aboutText+'</div>';
+				placingSelector.append(topSep, aboutCont);
+			}
+		}
+	}
+	
+	//Product Features
+	function prodFeatures() {
+		var typeFeatTitle = thisProdType ? thisProdType : 'Piece';
+		var prodFeaturesTitle = '<h3>Features Of This '+typeFeatTitle+'</h3>';
+		var prodFeaturesCont = '<div class="prod-features">'+prodFeaturesTitle+'<dl></dl></div>';
+		var thisDescText = $('.ProductDescriptionContainer > p').text().toLowerCase();
+		var thisBulletsText = '';
+		var firstFeature = true;
+		$('.ProductWarrantyContainer ul li').each( function() {
+			thisBulletsText += ' ' + $(this).text().toLowerCase() + '';
+		});
+		$(DankStopGlossary.feature).each(function (i, value) {
+			if ((thisDescText.indexOf(this.name) != -1) || (thisBulletsText.indexOf(this.name) != -1) ) {
+				if (firstFeature) {
+					placingSelector.append(topSep, prodFeaturesCont);
+					firstFeature = false;
+				}
+				var prodFeatureName = '<dt><span>'+this.name+'</span></dt>';
+				var prodFeatureText = '<dd><span>'+this.def+'</span></dd>';
+				var prodFeature = ''+prodFeatureName+prodFeatureText+'';
+				$('.prod-features').show();
+				$('.prod-features dl').show().append(prodFeature);
+			}
+		});
+	}
+	
+	// Product Brand
+	function prodBrand() {
+		var bN = '%%GLOBAL_BrandName%%';
+		var bO = DankStopGlossary.brand[bN] ? DankStopGlossary.brand[bN] : false;
+		if (bO) {
+			var bU = bO.url;
+			var bL = bO.logo;
+			var bD = $('<div>').html(bO.description).text();
+			var iCDN = 'http://cdn6.bigcommerce.com/s-ss4br/product_images/';
+			var brandLogo = '<div class="brand-banner"><div class="brand-logo"><a href="'+bU+'">';
+				brandLogo += '<img id="_logo6" itemprop="logo" class="brand-image" src="'+iCDN+bL;
+				brandLogo += '" alt="'+bN+' Logo" height="100"></a></div>';
+			var brandName = '<div class="brand-info"><h3 class="brand-name"><a href="'+bU;
+				brandName += '">'+bN+'</a></h3>';
+			var brandDesc = '<p>'+bD+'</p></div></div>';
+			var brandInfo = $('<div />').html(brandLogo + brandName + brandDesc);
+			placingSelector.append(topSep, brandInfo);
+		}
+	}
+
+	//DankStop's The Best
+	function dSB() {
+		var dsObj = DankStopGlossary.DankStop;
+		var dsTitle = dsObj.title;
+		var dsTitleText = $("<div/>").html($(dsObj.title).html()).text();
+		var dsText = dsObj.text;
+		var dsImg = '<div><i class="fa fa-trophy"></i><img src="'+dsObj.img+'" alt="'+dsTitleText+'" /></div>';
+		var dsBox = $('<div id="Dank-Stop-Best">').html('<div><div>'+$("<div/>").html(dsTitle+dsText).text()+'</div>'+dsImg+'</div>');
+		placingSelector.append("<hr class='top-sep'>");
+		placingSelector.append(dsBox);                            
+		var dankStopBoxProduct = $('.productTypeSpan');
+		if (thisProdType != '') {
+			dankStopBoxProduct.text(thisProdType); 
+		}
+	}
+	
+	function legacyVideo() {
+	    // Legacy -- remove obsolete HasDemoVideo trigger for products which haven't been updated yet
+		//  Existance checker function
+		$.fn.exists = function(callback) {
+		    var args = [].slice.call(arguments, 1);
+		    if (this.length) {
+		        callback.call(this, args);
+		    }
+		    return this;
+		};
+	    $("span:contains('HasDemoVideo')").exists(function() {
+	        $(this).closest('.productAttributeRow').hide();
+	    });
+	}    
+	
+	//load Youtube Script
+	var player;
+	function onYouTubeIframeAPIReady() {
+		player = new YT.Player('yTV');
+	}
+	function loadYTS() {
+	    var tag = document.createElement('script');
+	    tag.src = "https://www.youtube.com/iframe_api";
+	    var firstScriptTag = document.getElementsByTagName('script')[0];
+	    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	}
+	loadYTS();
+
+	function checkForVideo() {
+		MagicScrollOptions = {
+			items: 'fit',
+			arrows: 'outside',
+			loop: 'off'
+		};
+		MagicScrollExtraOptions = {};
+		MagicScrollOptionsMobile = {};
+		MagicScrollExtraOptionsMobile = {};
+		if (DankStopGlossary.videos[productNumber]) {
+	        var ProductThumb = $('.ProductThumb');
+	        var ProductTinyImageList = $('.ProductTinyImageList ul');
+	        ProductThumb.append('<span id="videoDemoBtn" class=""><div class="triangle"></div></span>');
+	        $('#videoDemoThumb').css('display','block'); //, #videoDemoBtn
+	        $('#videoDemoThumb').css('height', $('.MagicThumb-swap:first').outerHeight())
+			if (DankStopGlossary.videos[productNumber] != 'yes') {
+				var vidId = DankStopGlossary.videos[productNumber];
+				var wLO = window.location.origin;
+				//&autoplay=1
+				var yTParams = '?enablejsapi=1&modestbranding=1&showinfo=0&controls=0&rel=0&theme=light&fs=0';
+					yTParams += '&loop=1&playlist='+ vidId + '&origin=' + wLO;
+	            var videoContainer = '<div id="prodVid" class="yTV"><iframe id="yTV" src="https://www.youtube.com/embed/'; 
+	            	videoContainer += '' + vidId + yTParams +'" height="100%" width="100%" ';
+	            	videoContainer += 'frameborder="0"></iframe></div>';
+	        } else {
+				var videoContainer = '<div id="prodVid">' +
+					'<video id="demoVideo" class="video" preload autoplay loop autobuffer muted controls ' + 
+					'width="100%" height="100%" poster="/content/images/dankstop-loading-running-cat-wbg3.gif">' +
+					'<source src="/content/videos/' + productNumber + '.mp4">' +
+					'<source src="/content/videos/' + productNumber + '.ogv" type="video/ogg">' +
+					'<p>Your browser does not support this video.  Please upgrade your browser!</p>' +
+					'</video>' +
+					'</div>';
+			}
+			$('.ProductThumbImage, .MagicToolboxContainer').append(videoContainer);
+    		//loadYTS();
+	    } else {
+		    MagicScroll.stop();
+		    $('#videoDemoThumb, #videoDemoBtn').remove();
+		    MagicScroll.start();
+	    }
+	};
+
+	//thumb link hover
+	$('.magictoolbox-li a').on({
+		mouseenter: function(e) {
+			$(this).addClass('hovered');
+		},
+		mouseleave: function(e) {
+			$(this).removeClass('hovered');
+		},
+		click: function(e) {
+			$('.magictoolbox-li a').not(this).removeClass('hovered');
+		}
+	});
+
+	//Play/Stop button click triggering functionality
+	function playStopButton () {
+		//Define playStopBtns onClick functonality
+		$('.ProductThumb').on('click', '#videoDemoThumb,', playStopLogic); // #videoDemoBtn
+		
+		var firstTime = 'true';
+		function playStopLogic() {
+			var playStopBtns = $('#videoDemoThumb'); //, #videoDemoBtn
+			var pVC = $('#prodVid');
+			//IF video is playing, stop video
+			if ($('#videoDemoThumb.videoPlaying')[0]) {
+				$('.previous-thumb').addClass('mt-active-selector');
+				$('.previous-thumb.mt-active-selector').removeClass('previous-thumb');
+	            stopDemoVideo();
+	        //ELSE play video
+			} else {
+				playDemoVideo();
+			}
+	        function playDemoVideo() {
+				$('.magictoolbox-li a.mt-active-selector').addClass('previous-thumb');
+				$(playStopBtns).addClass('videoPlaying mt-active-selector');
+				player.playVideo();
+				pVC.addClass('videoPlaying');
+				if (!pVC.hasClass('yTV')) {
+					var video = document.getElementById('demoVideo');
+					if (video) video.play();
+				}
+				//Attach stop event to all thumbnail anchors
+			    $('.magictoolbox-li a').on('click', clickThumbStopVideo);
+	        }
+		    function clickThumbStopVideo() {
+				$('.MagicThumb-swap.previous-thumb').removeClass('previous-thumb');
+	            stopDemoVideo();
+		    }
+		    function stopDemoVideo() {
+				$(playStopBtns).removeClass('videoPlaying mt-active-selector');
+				pVC.removeClass('videoPlaying');
+				//destroy thumbOnClick stop event
+			    $('.magictoolbox-li a').off('click', clickThumbStopVideo);
+				player.stopVideo();
+		    }
+	    }
+	};
+	
+	function purrShip() {
+		var bN = '%%GLOBAL_BrandName%%';
+		var sM = '<span class="purr-msg"><i class="fa fa-exclamation-triangle fa-2x"></i><span>For this product, ';
+			sM += 'please add 1-2 business days to the above shipping estimate.</spoan></spoan>';
+		if (bN.toLowerCase() == 'purr glass') {
+			$('.DetailRow.qty').before(sM);
+		}
+	}
+
+	function priceFormat() {
+		var p = $('.ProductDetailsGrid.desktop .DetailRow.PriceRow .ProductPrice.VariationProductPrice');
+		var sP = p.text().split('.');
+		var dF = sP[0].replace(/\$/g,'<span class="price-dollars">$</span>')
+		var cF = '<span class="price-cents">'+sP[1]+'</span>';
+		p.html(dF+'.'+cF);
+		var mPF = $('.ProductDetailsGrid.mobile .DetailRow.PriceRow .ProductPrice.VariationProductPrice');
+		var sMPF = mPF.text().split(' + ');
+		var mPFT = sMPF[1];
+		var mSP = sMPF[0].split('.');
+		var mDF = mSP[0].replace(/\$/g,'<span class="price-dollars">$</span>')
+		var mDC = '<span class="price-cents">'+mSP[1]+'</span>';
+		mPF.html('<span>'+dF+'.'+cF+'</span> + '+mPFT);
+	}
+
+	function newInputSty() {
+		$('#InStockNotifyEmailAddress').focus(function(){
+			$(this).parents('.OutOfStockMessage.InfoMessage').addClass('isFocused');
+		}).blur(function(){
+			$(this).parents('.OutOfStockMessage.InfoMessage').removeClass('isFocused');
+		});
+		$('#InStockNotifyEmailAddress').on('keyup', function(e){
+			if ($(this).val() != '') {
+				$(this).parents('.OutOfStockMessage').addClass('hasValue');
+			} else {
+				$(this).parents('.OutOfStockMessage').removeClass('hasValue');
+			}
+		});
+	}
+	// re-initialize if selector html is changed
+	$('.OutOfStockMessage').on('DOMSubtreeModified', function() {
+		newInputSty();
+	});
+	
+	
+	function checkDOMChange() {
+		if ($('#ProductDetails .ProductMain .yotpo.bottomLine.yotpo-small').length) {
+			//$('#ProductDetails .ProductMain .yotpo.bottomLine.yotpo-small').addClass('loaded');
+			setTimeout(function(){ $('#ProductDetails .ProductMain .yotpo.bottomLine.yotpo-small').animate({ opacity: 1 }, 700); }, 375);
+			return;
+		}
+	    // call the function again after 100 milliseconds
+	    setTimeout( checkDOMChange, 100 );
+	}
+
+
+	// Initialization - init - inits
+	function productPageVideoInit() {
+		legacyVideo();
+		checkForVideo();
+		playStopButton();
+	}
+	    
+    function prodInfo() {
+	    checkDOMChange();
+	    priceFormat();
+	    purrShip();
+		prodType();
+		prodFeatures();
+		prodBrand();
+		dSB();
+		productPageVideoInit();
+    }	    
+    
+	prodInfo();
+
+	$(window).load(function() {
+		newInputSty();
+	});
+	
+</script>

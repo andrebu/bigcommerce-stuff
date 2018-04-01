@@ -1,0 +1,101 @@
+/*
+
+
+   Magic Scroll v1.0.29 
+   Copyright 2014 Magic Toolbox
+   Buy a license: www.magictoolbox.com/magicscroll/
+   License agreement: http://www.magictoolbox.com/license/
+
+
+*/
+.MagicScroll {
+    display: none;
+    border: none;
+    z-index: 1;
+}
+
+.MagicScrollItem {
+    text-align: center;
+}
+
+.MagicScrollItem img {
+    display: block;
+    margin: 0 auto;
+}
+
+.MagicScrollArrows {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background: url('graphics/arrows.png');
+    padding: 0px !important;
+}
+
+.MagicScrollArrowTop {
+    background-position: 24px 0;
+}
+
+.MagicScrollArrowRight {
+    background-position: 0 0;
+}
+
+.MagicScrollArrowBottom {
+    background-position: 24px 24px;
+}
+
+.MagicScrollArrowLeft {
+    background-position: 0 24px;
+}
+
+.MagicScrollSliderWrapper {
+    background: #f3f3f3;
+    border-top: 1px solid #e1e1e1;
+}
+
+.MagicScrollSlider {
+    background: #f7f7f7;
+    border:1px outset #e1e1e1;
+    border-style: solid outset outset solid;
+}
+
+.MagicScrollSliderShadow {
+    background: #dfdfdf;
+    border:1px solid #dfdfdf;
+}
+
+/* Style for scroll with borders and background */
+.MagicScroll.msborder {
+    background:#efefef;
+    border:1px solid #e1e1e1;
+}
+.MagicScroll.msborder .MagicScrollItem {
+    background:#fff;
+    border-right:1px solid #efefef;
+    padding: 6px 0;
+}
+.MagicScroll.msborder.vertical .MagicScrollItem {
+    border-right:none;
+    border-bottom:1px solid #efefef;
+}
+.MagicScroll.msborder .MagicScrollArrows {
+    width: 36px;
+    height: 36px;
+    background: url('graphics/arrows-padding.png');
+}
+
+.MagicScroll.msborder .MagicScrollArrowTop {
+    background-position: 36px 0;
+}
+.MagicScroll.msborder .MagicScrollArrowBottom {
+    background-position: 36px 36px;
+}
+.MagicScroll.msborder .MagicScrollArrowLeft {
+    background-position: 0 36px;
+}
+
+.MagicScroll.mstext .MagicScrollItem {
+    text-align: left;
+    line-height:1.2;
+    padding:9px;
+    border:none;
+}

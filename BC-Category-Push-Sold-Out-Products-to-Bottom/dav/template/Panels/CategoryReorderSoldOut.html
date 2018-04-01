@@ -1,0 +1,12 @@
+<script type="text/javascript">
+	var productList = $(".ProductList");
+	var listItems = productList.children('li');
+	var soldOutItems = listItems.find('[class*="Sold"]').parents('li');
+	function reorderCategoryListItems() {
+		soldOutItems.appendTo(productList);
+	};
+	
+	$(document).ready(function() {
+		reorderCategoryListItems();
+	});
+</script>

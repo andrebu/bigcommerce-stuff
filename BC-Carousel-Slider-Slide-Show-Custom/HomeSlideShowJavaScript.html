@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="%%GLOBAL_CdnStorePath%%/content/BxSlider/jquery.bxslider.css" type="text/css" />
+<script type="text/javascript" src="%%GLOBAL_CdnStorePath%%/content/BxSlider/jquery.easing.1.3.min.js"></script>
+<script type="text/javascript" src="%%GLOBAL_CdnStorePath%%/content/BxSlider/jquery.bxslider.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+//    $(window).load(function() {
+        $('.bxslider').bxSlider({
+              auto: true,
+              pager: false,
+              nextText: '<i class="icon-right-open"></i>',
+              prevText: '<i class="icon-left-open"></i>',
+              startSlide: 0,
+              speed: 800,
+              infiniteLoop: true,
+//              pause: 6000,
+//              video: true,
+              autoHover: true,
+              easing: 'ease-in-out',
+			  preloadImages: 'all',
+			  onSliderLoad: function(){
+			    //$('#bx-slider-wrapper').css('visibility', 'visible').css('height', 'auto');
+			    $('#bx-slider-wrapper').hide().css('visibility', 'visible').css('height', 'auto').fadeIn('slow');
+         }
+
+        });
+    });
+</script>

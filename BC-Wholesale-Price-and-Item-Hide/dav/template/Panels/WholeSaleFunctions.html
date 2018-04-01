@@ -1,0 +1,84 @@
+<script type="text/javascript">
+//<![CDATA[
+	var $this = $(this);
+	var $wholesaleSpecials = $('.CategoryList ul li:contains("Wholesale Specials")');
+	var $wholesaleBreadcrumb = $('.Breadcrumb:contains("Wholesale")');
+    var $headerLogoText = $('.Left.fleft .header-logo-text');
+    var $subHeaderWholesaleLink = $('.wholesaleSHLink');
+    var $mainLeftCatNavTitle = $('#SideCategoryList h4');
+    var $mainLeftCatNavTree = $('.CategoryList ul');
+	//var signInText = "<span>" + "%%GLOBAL_LoginOrLogoutText%%" + " to see prices</span>";
+    var $wholeSaleBtns = $('.wholesaleBtnContainer');
+	var $prodPrice = $('.p-price');
+
+    var globalFirstName= "%%GLOBAL_CurrentCustomerFirstName%%";
+    var wholesaleHeaderLogoText = '<a href="/wholesale/"><span>DANKSTOP.COM <br>THE <span class="green">WHOLESALE</span> SUPPLIER!</span></a>';
+    var wholesaleSHLink = '<a href="/">Back to Retail</a>';
+    var wholesaleNavTree = '<li><a href="/wholesale-water-pipes">Wholesale Water Pipes ' + 
+    						'<img class="navBrandListingImage" src="http://dankstop.com/content/images/wholesale-water-pipes.png"></a></li>' +
+						'<li><a href="/wholesale-dab-rigs-and-concentrate-pipes">Wholesale Dab Rigs and Concentrate Pipes ' + 
+    						'<img class="navBrandListingImage" src="http://dankstop.com/content/images/wholesale-dab-rigs-and-concentrate-pipes.png"></a></li>' +
+						'<li><a href="/wholesale-recyclers">Wholesale Recyclers ' + 
+    						'<img class="navBrandListingImage" src="http://dankstop.com/content/images/wholesale-recyclers.png"></a></li>' +
+						'<li><a href="/wholesale-glass-pipes">Wholesale Hand Pipes ' + 
+    						'<img class="navBrandListingImage" src="http://dankstop.com/content/images/wholesale-glass-hand-pipes.png"></a></li>' +
+						'<li><a href="/wholesale-glass-adapters-and-parts">Wholesale Glass Adapters and Parts ' + 
+    						'<img class="navBrandListingImage" src="http://dankstop.com/content/images/wholesale-glass-adapters-and-parts.png"></a></li>' +
+    					'<li><a href="/wholesale">Wholesale Homepage</a></li>';
+	var applyForWholesaleText = '<div><span class="upgradeToWholesaleText">You are logged in as a Retail Customer.  Please apply for a Wholesale Account to shop Wholesale.</span><a href="#wholesale-form-container" class="wholesaleApply btn cta">Apply for a wholesale account</a></div>';
+	var loggedInAsWholesale = '<div><span class="green">You are logged in as a Wholesale Customer!  Have fun shopping and making money with us!</span>' +
+								'<span>Please select a category below.</span></div>';
+	var signInText = '<span class="createAcc green"><a href="/login.php" onclick="">Sign in</a> or <a href="/contact-us/">Contact Us</a> to see prices</span>';
+	var upgradeAccText = '<span class="upgradeAcc green"><a href="/contact-us/">Contact Us</a> to see wholesale prices</span>';
+
+	function hideWholesaleCategory() {
+		$('.CategoryList ul li:contains("Wholesale Glass Pipes")').hide();
+	}
+	
+	function wholesalePageUI() {
+		$('.wholesaleCategory').on({
+	        mouseenter: function(event) {
+	            $(this).addClass('hovered');
+	        },
+	        mouseleave: function(event) {
+	            $(this).removeClass('hovered');
+	        },
+	        click: function(event) {
+		        $(this).find('.wholesaleCatLink').click();
+            }
+        });
+	}
+
+	function wholesaleFeatures() {
+		if (!$wholesaleSpecials.length && $wholesaleBreadcrumb.length) {
+	        if (globalFirstName!="" && globalFirstName!="Guest")
+	        {
+				$prodPrice.html(upgradeAccText);
+				$wholeSaleBtns.html(applyForWholesaleText);
+	        } else {
+				$prodPrice.html(signInText);
+	        };
+		} else {
+			$wholeSaleBtns.html(loggedInAsWholesale);
+		};
+		if ($wholesaleBreadcrumb.length) {
+			$headerLogoText.html(wholesaleHeaderLogoText);
+			$subHeaderWholesaleLink.html(wholesaleSHLink);
+			$mainLeftCatNavTitle.text('Wholesale Categories');
+			$mainLeftCatNavTree.addClass('wholesaleTree').html(wholesaleNavTree);
+		};
+	}
+	
+	function newItemsCatLink() {
+		$('.CategoryList ul li:contains("New Items")').console.log('HELLO!!');
+		//find('a').attr('href', 'dankstop.com/categories/?sort=newest');
+	}
+	
+	wholesalePageUI();
+	wholesaleFeatures();
+	$(document).ready( function () {
+		hideWholesaleCategory();
+		newItemsCatLink();
+	});
+//]]>
+</script>

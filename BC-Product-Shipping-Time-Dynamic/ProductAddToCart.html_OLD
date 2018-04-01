@@ -1,0 +1,191 @@
+%%GLOBAL_AddToCartButtonControlScript%%
+ 
+<form method="post" action="%%GLOBAL_CartLink%%" onsubmit="return check_add_to_cart(this, %%GLOBAL_ProductOptionRequired%%) %%GLOBAL_FastCartButtonJs%%"  enctype="multipart/form-data" id="productDetailsAddToCartForm">
+    <input type="hidden" name="action" value="add" />
+    <input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%" />
+    <input type="hidden" name="variation_id" class="CartVariationId" value="" />
+    <input type="hidden" name="currency_id" value="" />
+    <div class="ProductDetailsGrid ProductAddToCart">
+        
+        <!-- details grid -->
+      
+      
+
+        <div class="DetailRow ProductSKU" style="display: %%GLOBAL_HideSKU%%">
+                    <div class="Label">%%LNG_SKU%%:</div>
+                    <div class="Value">
+                        <span class="VariationProductSKU">
+                            %%GLOBAL_SKU%%
+                        </span>
+                    </div>
+                </div>
+     
+        <div class="DetailRow" style="%%GLOBAL_HideVendorDetails%%">
+            <div class="Label">%%LNG_Vendor%%:</div>
+            <div class="Value">
+                %%GLOBAL_VendorName%%
+            </div>
+        </div>
+
+        <div class="DetailRow" style="display: %%GLOBAL_HideCondition%%">
+            <div class="Label">%%LNG_Condition%%:</div>
+            <div class="Value">
+                %%GLOBAL_ProductCondition%%
+            </div>
+        </div>
+
+      <div class="DetailRow" style="display: %%GLOBAL_HideWeight%%">
+            <div class="Label">%%LNG_Weight%%:</div>
+            <div class="Value">
+                <span class="VariationProductWeight">
+                    %%GLOBAL_ProductWeight%%
+                </span>
+            </div>
+        </div>
+        
+
+        <div class="DetailRow" style="display: %%GLOBAL_HideAvailability%%">
+            <div class="Label" style="">%%LNG_Availability%%:</div>
+            <div class="Value">
+                %%GLOBAL_Availability%%
+            </div>
+        </div>
+
+        <div class="DetailRow FreeShippingContainer" style="display: %%GLOBAL_HideShipping%%">
+           <!-- <div class="Label">%%LNG_Shipping%%:</div>-->
+            <div class="Value" data-tooltip="&lt;ul class=&quot;free-shipping-list&quot;&gt;&lt;li&gt;&lt;b class=&quot;green&quot;&gt;FREE&lt;/b&gt; USA Shipping&lt;/li&gt;&lt;li&gt;&lt;em&gt;Discreet&lt;/em&gt; Packaging and Shipping&lt;/li&gt;&lt;li&gt;Ordered Before 2PM? Ships Same Day&lt;/li&gt;&lt;li&gt;All Orders Shipped Within 24 hours&lt;/li&gt;&lt;li&gt;WorlWide Shipping Available&lt;/li&gt;&lt;li&gt;NO Tax, except for NJ&lt;/li&gt;&lt;/ul&gt;" data-tooltip-my="bottom center" data-tooltip-at="top center" data-hasqtip="305">
+                <!--%%GLOBAL_ShippingPrice%%--> 
+                <H4 class="FreeShippingHeading">Free shipping &amp; no tax! </H4>
+                <p class="FreeShippingText" style="display:none;"><em>What you see is what you pay!</em> We offer <b class="green">FREE</b> &amp; <em>discreet</em> <span class="usa-u">U</span><span class="green">S</span><span class="usa-a">A</span> shipping on <em>every order</em>. Worldwide shipping is available at checkout. Orders placed before 2pm EST are shipped same day. All items are shipped out within 24 hours, Monday - Friday. Only NJ orders are taxed.</p>
+                <ul class="FreeShippingList" style="display:none;">
+                    <li><b class="green">FREE</b> <span class="usa-shipping"><b class="usa-u">&nbsp;U</b><b class="usa-s">S</b><b class="usa-a">A</b></span> Shipping</li>
+                    <li>WorlWide Shipping Avail</li>
+                    <li><em>Discreet</em> Packaging</li>
+                    <li>NO Tax, except for NJ</li>
+                    <li>Ordered Before 2PM? Ships Same Day</li>
+                    <li>All Orders Shipped Within 24 hours</li>
+                </ul>
+            </div>
+            <div id="shipping-time" data-tooltip="&lt;ul class=&quot;free-shipping-list&quot;&gt;&lt;li&gt;&lt;b class=&quot;green&quot;&gt;FREE&lt;/b&gt; USA Shipping&lt;/li&gt;&lt;li&gt;&lt;em&gt;Discreet&lt;/em&gt; Packaging and Shipping&lt;/li&gt;&lt;li&gt;Ordered Before 2PM? Ships Same Day&lt;/li&gt;&lt;li&gt;All Orders Shipped Within 24 hours&lt;/li&gt;&lt;li&gt;WorlWide Shipping Available&lt;/li&gt;&lt;li&gt;NO Tax, except for NJ&lt;/li&gt;&lt;/ul&gt;" data-tooltip-my="bottom center" data-tooltip-at="top center" data-hasqtip="305"></div>
+        </div>
+
+        <div class="DetailRow" style="%%GLOBAL_HideMinQty%%">
+            <div class="Label">%%LNG_ProductMinQty%%:</div>
+            <div class="Value">
+                %%GLOBAL_MinQty%% %%LNG_units%%
+            </div>
+        </div>
+
+        <div class="DetailRow" style="%%GLOBAL_HideMaxQty%%">
+            <div class="Label">%%LNG_ProductMaxQty%%:</div>
+            <div class="Value">
+                %%GLOBAL_MaxQty%% %%LNG_units%%
+            </div>
+        </div>
+
+        <!--WHERE iT GOES -->
+        
+
+
+        <div class="DetailRow" style="%%GLOBAL_HideGiftWrapMessage%%">
+            <div class="Label">%%LNG_GiftWrapping%%:</div>
+            <div class="Value">
+                %%GLOBAL_GiftWrappingAvailable%%
+            </div>
+        </div>
+        
+        
+        <!-- details grid -->
+        
+        %%SNIPPET_ProductFieldsList%%
+        
+        <div class="ProductOptionList">
+            %%SNIPPET_VariationList%%
+        </div>
+
+        <div class="productAttributeList" style="%%GLOBAL_HideProductAttributeList%%">
+            %%GLOBAL_ProductAttributeList%%
+        </div>
+
+        %%SNIPPET_EventDate%%
+
+        <div class="DetailRow qty" style="display:">            
+            <!-- addto -->
+            <div class="addto">
+                <div class="quantitySelectorContainer">
+                    <div class="Label QuantityInput">Quantity:</div>
+                    <div class="Value AddCartButton">
+                        <span style="display: %%GLOBAL_DisplayAddQty%%;">
+                            %%GLOBAL_AddToCartQty%%
+                        </span>
+                        <div class="clear"></div>
+                    </div>
+                </div> <!-- END .quantitySelectorContainer -->
+                <div class="BulkDiscount" style="display: %%GLOBAL_DisplayAdd%%">
+                    %%GLOBAL_AddToCartButtonOptimizerScriptTag%%
+                    <input type="submit" class="btn add-to-cart cta" value="Add To Cart" />
+                    %%GLOBAL_AddToCartButtonOptimizerNoScriptTag%%
+                </div>
+                <div class="BulkDiscountLink" style="display: %%GLOBAL_HideBulkDiscountLink%%;">
+                    <a href="#" class="alt" onclick="$.iModal({data: $('#ProductDetailsBulkDiscountThickBox').html(), width: 600}); return false;">
+                        %%LNG_BulkDiscountLink%%
+                    </a>
+                </div>
+                <!-- //Custom Add to Wishlist -->
+            </div>
+        </div>
+        
+        
+<div class="DetailRow InventoryLevel" style="%%GLOBAL_HideCurrentStock%%">
+            <div class="Label">%%GLOBAL_CurrentStockLabel%%:</div>
+            <div class="Value">
+                <span class="VariationProductInventory">
+                    %%GLOBAL_InventoryList%%
+                </span>
+            </div>
+    </div>
+        
+        
+        <div class="OutOfStockMessage InfoMessage ErrorMessage">
+            %%SNIPPET_SideAddItemSoldOut%%
+        </div>
+    </div>
+    
+   
+</form>
+            
+<!-- Add to Wishlist -->
+
+<div class="Block Moveable Panel AddToWishlistLink" id="SideProductAddToWishList" style="display: none">
+    <div class="BlockContent">
+        <form name="frmWishList" id="frmWishList" action="%%GLOBAL_ShopPath%%/wishlist.php" method="get">
+            <input type="hidden" name="action" value="add" />
+            <input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%" />
+            <input type="hidden" name="variation_id" value="" class="WishListVariationId"/>
+            <input type="submit" class="wishlist-button" value="Add to wishlist" alt="%%LNG_AddToWishList%%" />
+        </form>
+    </div>
+</div>
+
+<!-- //Custom Add to Wishlist -->
+
+
+
+%%GLOBAL_ProductBulkDiscountThickBox%%
+
+<script language="javascript" type="text/javascript">//<![CDATA[
+lang.OptionMessage = "%%GLOBAL_OptionMessage%%";
+lang.VariationSoldOutMessage = "%%LNG_VariationSoldOutMessage%%";
+lang.InvalidQuantity = "%%LNG_InvalidQuantity%%";
+lang.EnterRequiredField = "%%LNG_EnterRequiredField%%";
+lang.InvalidFileTypeJS = "%%LNG_InvalidFileTypeJS%%";
+var ShowAddToCartQtyBox = "%%GLOBAL_ShowAddToCartQtyBox%%";
+%%GLOBAL_ProductMinMaxQtyJavascript%%
+//]]></script>
+
+%%GLOBAL_EventDateJavascript%%
+
+
+%%Panel.ProductAccessoryOptionsUpsellChoice%%
+
+​

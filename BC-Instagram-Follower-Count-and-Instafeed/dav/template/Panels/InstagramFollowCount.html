@@ -1,0 +1,187 @@
+<!-- %%Panel.InstagramCount%% -->
+<script type="text/javascript">
+	$('<style type="text/css">\
+		.ig-follow { margin:0px; }\
+		.ig-follow {\
+		  position:relative;\
+		  display:inline-block;\
+		  vertical-align:middle;\
+		}\
+		.ig-count {\
+		  color:#333;\
+		  position:relative;\
+		  background:#fff;\
+		  border:#bbb solid 1px;\
+		  -moz-border-radius:3px;\
+		  -webkit-border-radius:3px;\
+		  border-radius:3px;\
+		  min-height:20px;\
+		  min-width:15px;\
+		  _width:15px;\
+		  display:inline-block;\
+		  zoom:1;\
+		  -moz-box-sizing:border-box;\
+		  -webkit-box-sizing:border-box;\
+		  -ms-box-sizing:border-box;\
+		  box-sizing:border-box;\
+		  max-width:100%;\
+		  margin:0 0 0 5px;\
+		}\
+		.ig-count a {\
+		  color:#666 !important;\
+		  display:inline-block;\
+		  vertical-align:middle;\
+		  padding:4px 2px 4px 2px;\
+		  display:inline-block;\
+		  vertical-align:middle;\
+		  color:#666;\
+		  text-decoration:none;\
+		}\
+		.ig-count a.ig-err {\
+		  text-decoration:underline !important;\
+		  color:red !important;\
+		}\
+		.ig-count i,\
+		.ig-count u {\
+		  position:absolute;\
+		  zoom:1;\
+		  line-height:0;\
+		  width:0;\
+		  height:0;\
+		  left:0;\
+		  top:50%;\
+		  margin:-4px 0 0 -4px;\
+		  border:4px transparent solid;\
+		  _border-color:pink;\
+		  _filter:chroma(color=pink);\
+		  border-right-color:#aaa;\
+		  border-left:0;\
+		}\
+		.ig-count u {\
+		  margin-left:-3px;\
+		  border-right-color:#fff;\
+		  padding:0px !important;\
+		}\
+		.ig-background {\
+		  cursor:pointer;\
+		  background:rgb(81,129,166);\
+		  background:-moz-linear-gradient(top,rgba(81,129,166,1) 0%,rgba(47,82,131,1) 100%);\
+		  background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(81,129,166,1)),color-stop(100%,rgba(47,82,131,1)));\
+		  background:-webkit-linear-gradient(top,rgba(81,129,166,1) 0%,rgba(47,82,131,1) 100%);\
+		  background:-o-linear-gradient(top,rgba(81,129,166,1) 0%,rgba(47,82,131,1) 100%);\
+		  background:-ms-linear-gradient(top,rgba(81,129,166,1) 0%,rgba(47,82,131,1) 100%);\
+		  background:linear-gradient(to bottom,rgba(81,129,166,1) 0%,rgba(47,82,131,1) 100%);\
+<<<<<<< HEAD
+		  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5181a6',endColorstr='#2f5283',GradientType=0);\
+=======
+		  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#5181a6",endColorstr="#2f5283",GradientType=0);\
+>>>>>>> origin/master
+		  padding:1px;\
+		  display:inline-block;\
+		  border-radius:3px;\
+		  box-shadow:inset 0px 1px 0px 0px #7fa4bf,0px 0px 1px 0px #333;\
+		  border:1px solid #2f5283;\
+		  vertical-align:top;\
+		  font-family:Arial;\
+		}\
+		.ig-background:active {\
+		  background:rgb(47,82,131);\
+		  background:-moz-linear-gradient(top,rgba(47,82,131,1) 0%,rgba(81,129,166,1) 100%);\
+		  background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(47,82,131,1)),color-stop(100%,rgba(81,129,166,1)));\
+		  background:-webkit-linear-gradient(top,rgba(47,82,131,1) 0%,rgba(81,129,166,1) 100%);\
+		  background:-o-linear-gradient(top,rgba(47,82,131,1) 0%,rgba(81,129,166,1) 100%);\
+		  background:-ms-linear-gradient(top,rgba(47,82,131,1) 0%,rgba(81,129,166,1) 100%);\
+		  background:linear-gradient(to bottom,rgba(47,82,131,1) 0%,rgba(81,129,166,1) 100%);\
+<<<<<<< HEAD
+		  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2f5283',endColorstr='#5181a6',GradientType=0);\
+=======
+		  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#2f5283",endColorstr="#5181a6",GradientType=0);\
+>>>>>>> origin/master
+		  box-shadow:inset 0px -1px 0px 0px #7fa4bf,0px 0px 1px 0px #333;\
+		}\
+		#ig-camera,\
+		#ig-text {\
+		  color:white;\
+		  vertical-align:top;\
+		  display:inline-block;\
+		}\
+		.IGF {\
+		  display:inline-block;\
+		  font-size:11px;\
+		  letter-spacing:0px;\
+		  margin:0;\
+		  padding:0;\
+		  border:0;\
+		  font-size:100%;\
+		  font:inherit;\
+		  vertical-align:baseline;\
+		  line-height:1;\
+		}\
+		.IGF .ig-background { font-size:10px; }\
+		.IGF.medium { font-size:13px; }\
+		.IGF.medium .ig-background { padding:3px; }\
+		.ig-camera,\
+		.ig-text {\
+		  color:white !important;\
+		  vertical-align:middle;\
+		  display:inline-block;\
+		  margin:0px !important;\
+		}\
+		.ig-text {\
+		  vertical-align:middle;\
+		  padding:0px 3px 0px 3px !important;\
+		  font:10px Arial;\
+		  font-family:Arial;\
+		  text-transform:none;\
+		}\
+		.ig-background,\
+		.ig-count { vertical-align:middle; }\
+		.IGF {\
+		  display:inline-block;\
+		  vertical-align:top;\
+		  font-size:10px;\
+		}\
+		.IGF .ig-count {\
+		  font-size:1em !important;\
+		  font-family:arial !important;\
+<<<<<<< HEAD
+=======
+		  padding: 3px;\
+>>>>>>> origin/master
+		}\
+		.IGF.large .ig-text { padding:0px 3px 0px 4px !important; }\
+		.IGF.small .ig-text { padding:0px 4px 0px 4px !important; }\
+		.IGF.medium .ig-text { padding:0px 4px 0px 4px !important; }\
+		.IGF.medium { font-size:12px; }\
+		.IGF.medium .ig-background { padding:2px; }\
+		.IGF.large { font-size:14px; }\
+<<<<<<< HEAD
+		.IGF.large .ig-background { padding:3px; }\
+=======
+		.IGF.large .ig-background { padding:5px; }\
+>>>>>>> origin/master
+		.IGF.large img {\
+		  height:19px;\
+		  width:19px;\
+		}\
+		.IGF.large .ig-count a { padding:4px; }\
+		.IGF.followed .ig-background {\
+		  background:rgba(133,165,190,1) !important;\
+		  color:#ddd !important;\
+		  border-color:#5D779B;\
+		  cursor:auto;\
+		}\
+		.IGF.followed .ig-text { color:#ddd; }\
+	</style>')
+    .appendTo('head');
+	function kFormatter(num) {
+    	return num > 999 ? (num/1000).toFixed(1) + 'k' : num
+	}
+	// Instagram Count
+	var instaurl = 'http://andrebulatov.com/InstagramCount.php';
+	$.getJSON(instaurl, function(data){
+		var instacount = kFormatter(data.data.counts.followed_by);
+		//console.log(instacount);
+		$('.ig-count a').html(instacount);
+	});
+</script>

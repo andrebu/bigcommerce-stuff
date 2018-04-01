@@ -1,0 +1,287 @@
+<style>
+	#ProductDetails .ProductTinyImageList ul {
+		overflow: hidden !important;
+	}
+	#ProductDetails .ProductTinyImageList ul li {
+		border: 0 !important;
+		margin: 0 auto;
+		background: none;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#ProductDetails .ProductTinyImageList .mcs-item { 
+		vertical-align: middle;
+	}
+	#ProductDetails .ProductTinyImageList .mcs-item::after, 
+	#ProductDetails .ProductTinyImageList .mcs-item > a::after {
+		vertical-align: baseline;
+		display: inline;
+	}
+	#ProductDetails .ProductTinyImageList .mcs-item a, 
+	#ProductDetails .ProductTinyImageList .mcs-item img {
+		max-width: inherit;
+	}
+	#ProductDetails .ProductTinyImageList ul li a,
+	#videoDemoThumb .ProdVideoPlayBtn {
+		box-sizing: border-box;
+		border: 3px solid #f0efee;
+		border-radius: 3px;
+		-webkit-transition: border-color 137ms ease;
+		-moz-transition: border-color 137ms ease;
+		-o-transition: border-color 137ms ease;
+		transition: border-color 137ms ease;
+	}
+	#ProductDetails .ProductTinyImageList ul li .hovered,
+	#videoDemoThumb .ProdVideoPlayBtn.hovered {
+		border-color: #999;
+	}
+	#ProductDetails .ProductTinyImageList ul li .mt-active-selector,
+	#ProductDetails .ProductTinyImageList ul li.mt-active-selector .ProdVideoPlayBtn {
+		border-color: #6ada78;
+	}
+	#ProductDetails .ProductTinyImageList ul li .mt-active-selector.previous-thumb {
+		border-color: #f0efee;
+	}
+	#ProductDetails .ProductTinyImageList .MagicScroll-horizontal button.mcs-button.mcs-disabled,
+	#ProductDetails .ProductTinyImageList .MagicScroll-horizontal button.mcs-button.mcs-button-arrow:disabled {
+		display: none !important;
+	}
+	@media screen and (max-width: 767px) {
+		#ProductDetails .ProductTinyImageList ul li {
+			margin: 0 auto;			
+			height: auto;
+		}
+		#ProductDetails .ProductTinyImageList ul li#videoDemoThumb {
+			height: 100%;
+        }
+		#ProductDetails .ProductTinyImageList ul li a, 
+		#videoDemoThumb .ProdVideoPlayBtn {
+			height: 100%;
+		}
+        #videoDemoBtn {
+            display: block;
+            right: 0px;
+            top: 0px;
+            opacity: 1;
+        }
+    }
+</style>
+<script type="text/javascript">
+// Product Page Demo Videos
+    $('<style type="text/css"> \
+    /* Product Page Video CSS */\
+    #videoDemoBtn {\
+        width: 70px;\
+        height: 73px;\
+        border-radius: 60px;\
+        position: absolute;\
+        cursor: pointer;\
+        z-index: 13;\
+        display: none;\
+        clip: rect(auto, auto, auto, auto);\
+        background-color: #39B54A;\
+		right: 0;\
+		top: 0;\
+		display:none !important;\
+    }\
+    #videoDemoBtn.videoPlaying {\
+        background-color: #e53b2c;\
+    }\
+    #videoDemoBtn .triangle {\
+        width: 0px;\
+        height: 0px;\
+        left: 28px;\
+        top: 12px;\
+        position: absolute;\
+        border-top: 8px solid transparent;\
+        border-bottom: 10px solid transparent;\
+        border-left: 16px solid #fff;\
+        z-index: 1;\
+        border-radius: 2px;\
+        color: #fff;\
+    }\
+    #videoDemoBtn .triangle:after {\
+        content: "Show Video";\
+        position: absolute;\
+        left: -28px;\
+        top: 12px;\
+        text-transform: uppercase;\
+    }\
+    #videoDemoBtn.videoPlaying .triangle {\
+        border: 8px solid #fff;\
+        left: 26px;\
+        top: 12px; \
+    }\
+    #videoDemoBtn.videoPlaying .triangle:after {\
+        content: "Hide Video";\
+        left: -18px;\
+    }\
+    .ProductList li:hover #videoDemoBtn {\
+        opacity: 1;\
+    }\
+    #productDemoVideo {\
+        position: absolute;\
+        top: 0;\
+        left: 0;\
+        width: 100%;\
+    }\
+    #productDemoVideo video {\
+        height: 100%;\
+        width: 100%;\
+    }\
+    .ProductDetailsGrid .productAttributeList {\
+        /*     display: none; */\
+    }\
+    #videoDemoThumb {\
+        cursor: pointer;\
+		height:%%GLOBAL_ProductTinyBoxHeight%%px;\
+		width:%%GLOBAL_ProductTinyBoxWidth%%px;\
+    }\
+    #videoDemoThumb .ProdVideoPlayBtn {\
+        position: relative;\
+        background-color: #39B54A;\
+        height: 100%;\
+        display: block;\
+    }\
+    #videoDemoThumb .triangle {\
+        width: 0px;\
+        height: 0px;\
+        left: 18px;\
+        top: 12px;\
+        position: absolute;\
+        border-top: 10px solid transparent !important;\
+        border-bottom: 12px solid transparent !important;\
+        border-left: 23px solid white!important;\
+        z-index: 1;\
+        border-radius: 2px;\
+    }\
+    /* Play Video Button */\
+    #videoDemoThumb .triangle:after {\
+        content:" Play \\A Video";\
+        position: absolute;\
+        left: -29px;\
+        top: 18px;\
+        color: #fff;\
+        text-transform: uppercase;\
+        white-space: pre;\
+    }\
+    /* Stop Video Button */\
+    #videoDemoThumb.videoPlaying .ProdVideoPlayBtn {\
+        background-color: #DD4B39;\
+    }\
+    #videoDemoThumb.videoPlaying .triangle {\
+        border: 10px solid #fff !important;\
+    }\
+    #videoDemoThumb.videoPlaying .triangle:after {\
+        content:" Stop \\A Video";\
+        left: -17px;\
+    }\
+    </style>')
+        .appendTo('head');
+
+	//  Existance checker function
+	$.fn.exists = function(callback) {
+	    var args = [].slice.call(arguments, 1);
+	    if (this.length) {
+	        callback.call(this, args);
+	    }
+	    return this;
+	};
+	
+	// Using ECF to check for Video Option Trigger, hiding it, and adding buttons 
+	function checkForVideo() {
+	    // Legacy -- remove obsolete HasDemoVideo trigger for products which haven't been updated yet
+	    $("span:contains('HasDemoVideo')").exists(function() {
+	        $(this).closest('.productAttributeRow').hide();
+	    });
+	    var productNumber = $('#productDetailsAddToCartForm').find('input[name=product_id]').attr('value');
+	    $.ajax({
+	        url: '/content/videos/' + productNumber + '.mp4',
+	        type: 'HEAD',
+	    }).success(function() {
+	        var ProductThumb = $('.ProductThumb');
+	        var ProductTinyImageList = $('.ProductTinyImageList ul');
+	        ProductThumb.append('<span id="videoDemoBtn" class=""><div class="triangle"></div></span>');
+	        $('#videoDemoThumb, #videoDemoBtn').css('display','block');
+	        $('#videoDemoThumb').css('height', $('.MagicThumb-swap:first').outerHeight())
+	    }).fail(function() {
+		    MagicScroll.stop();
+		    $('#videoDemoThumb, #videoDemoBtn').remove();
+		    MagicScroll.start();
+	    });
+	};
+
+	//thumb link hover
+	$('.magictoolbox-li a').on({
+		mouseenter: function(e) {
+			$(this).addClass('hovered');
+		},
+		mouseleave: function(e) {
+			$(this).removeClass('hovered');
+		},
+		click: function(e) {
+			$('.magictoolbox-li a').not(this).removeClass('hovered');
+		}
+	});
+	
+	//Play/Stop button click triggering functionality
+	function playStopButton () {
+		var productNumber = $('#productDetailsAddToCartForm').find('input[name=product_id]').attr('value');
+		var videoContainer = '<div id="productDemoVideo">' +
+			'<video id="demoVideo" class="video" preload autoplay loop autobuffer muted controls ' + 
+			'width="100%" height="100%" poster="/content/images/dankstop-loading-running-cat-wbg3.gif">' +
+			'<source src="/content/videos/' + productNumber + '.mp4">' +
+			'<source src="/content/videos/' + productNumber + '.ogv" type="video/ogg">' +
+			'<p>Your browser does not support this video.  Please upgrade your browser!</p>' +
+			'</video>' +
+			'</div>';
+		
+		//FIX for mobile devices where "hovered" is automatically added to fthe first ".m(agic)t(humb)-active-selector"
+		$('#ProductDetails .ProductTinyImageList  ul li .mt-active-selector').removeClass('hovered');
+		
+		//Define playStopBtns onClick functonality
+		$('.ProductThumb').on('click', '#videoDemoThumb, #videoDemoBtn', playStopLogic);
+		
+		function playStopLogic() {
+			var playStopBtns = $('#videoDemoThumb, #videoDemoBtn');
+			//IF video is playing, stop video
+			if ($('#videoDemoThumb.videoPlaying')[0]) {
+				$('.previous-thumb').addClass('mt-active-selector');
+				$('.previous-thumb.mt-active-selector').removeClass('previous-thumb');
+	            stopDemoVideo();
+	        //ELSE play video
+			} else {
+				playDemoVideo();
+			}
+	        function playDemoVideo() {
+				$('.magictoolbox-li a.mt-active-selector').addClass('previous-thumb');
+				$('.ProductThumbImage, .MagicToolboxContainer').append(videoContainer);
+				$('#productDemoVideo').hide();
+				$(playStopBtns).addClass('videoPlaying mt-active-selector');
+				$('#productDemoVideo').show();
+				$('#productDemoVideo').css('height', $('.ProductThumbImage').height() + 'px');
+				var video = document.getElementById('demoVideo');
+				video.play();
+			    $('.magictoolbox-li a').on('click', clickThumbStopVideo);
+	        }
+		    function clickThumbStopVideo() {
+				$('.MagicThumb-swap.previous-thumb').removeClass('previous-thumb');
+	            stopDemoVideo();
+		    }
+		    function stopDemoVideo() {
+				$(playStopBtns).removeClass('videoPlaying mt-active-selector');
+				$('#productDemoVideo').remove();
+			    $('.magictoolbox-li a').off('click', clickThumbStopVideo);
+		    }
+	    }
+	};
+
+	function productPageVideoInit() {
+		checkForVideo();
+		playStopButton();
+	}
+
+	$(window).load(function() {
+		productPageVideoInit();
+	});
+</script>

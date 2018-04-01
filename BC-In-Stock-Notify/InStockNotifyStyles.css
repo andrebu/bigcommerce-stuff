@@ -1,0 +1,292 @@
+
+#InStockNotifyOutOfStock {font-weight:bold; margin-bottom:5px;}
+#InStockNotifyComplete {font-weight:bold;}
+#InStockNotifyEmail {margin-bottom:5px;}
+#InStockNotifyEmailAddress {color:#000000 !important; width:100%px;}
+#InStockNotifyButton {margin-bottom:5px;}
+#InStockNotifyInvalidEmail {color:#b94a48 !important;}
+
+#InStockNotifyClick:hover{background-color:#39b54a}
+#InStockNotifyClick 
+    {
+    color: #FFFFFF;
+    background-color: #39b54a;
+    font-family: Raleway;
+    font-size: 14px;
+    width: 100%px !important;
+    font-weight: bold;
+    text-align:center;
+    margin-top: 8px;
+    padding: 7px 10px !important;
+    text-decoration: none!important;
+    text-transform: uppercase;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    padding: 8px 10px!important;
+    display: inline-block;
+    width: auto;
+    cursor: pointer;
+    overflow: visible;
+    border: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    }
+​
+
+
+.OutOfStockMessage.InfoMessage .instock-head {
+	text-align: center;
+	padding: 10px 20px 0;
+	margin-bottom: -9px;
+}
+.OutOfStockMessage.InfoMessage .instock-head span {
+	font-size: 17px;
+	font-family: futura;
+	font-style: italic;
+	color: #a7a7a7;
+	font-weight: 100;
+}
+#InStockNotifyLabel {
+	color: rgba(0,0,0,0.54);
+	font: 300 16px/24px Roboto,arial,sans-serif;
+	-webkit-transform-origin: top left;
+	transform-origin: top left;
+	-webkit-transition: all .3s cubic-bezier(0.4,0,0.2,1);
+	transition: all .3s cubic-bezier(0.4,0,0.2,1);
+	-webkit-transition-property: color,top,transform,width;
+	transition-property: color,top,transform,width;
+	color: rgba(0,0,0,0.38);
+	font-family: futura;
+	font-size: 17px;
+	pointer-events: none;
+	position: absolute;
+	top: 28px;
+}
+#ProductDetails .ProductMain #InStockNotifyEmail {
+	position: relative;
+	width: 80%;
+	display: table-cell;
+	margin-bottom: 0;
+	height: 75px;
+	vertical-align: middle;
+}
+#ProductDetails .ProductMain #InStockNotifyEmail #InStockNotifyEmailAddress {
+	width: 100% !important;
+	color: rgba(0,0,0,0.54) !important;
+	background: transparent;
+	text-align: left;
+	border: 0;
+	padding: 0;
+	height: 31px;
+	position: relative;
+	top: 0;
+	margin-bottom: 0;
+	font-size: 17px;
+	font-family: futura;
+}
+#ProductDetails .ProductMain #InStockNotifyEmailAddress::-webkit-input-placeholder {
+	display: none !important;
+}
+#ProductDetails .ProductMain #InStockNotifyEmailAddress:-moz-placeholder {
+	display: none !important;
+}
+#ProductDetails .ProductMain #InStockNotifyEmailAddress::-moz-placeholder {
+	display: none !important;
+}
+#ProductDetails .ProductMain #InStockNotifyEmailAddress:-ms-input-placeholder {  
+	display: none !important;
+}
+#ProductDetails .ProductMain #InStockNotifyEmail .inputUnderline {
+	bottom: 21px;
+	height: 1px;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 99%;
+	background-color: rgba(0,0,0,0.38);
+}
+#ProductDetails .ProductMain #InStockNotifyEmail .animatedUnderline {
+	background-color: #6ADA78;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	bottom: 21px;
+	height: 2px;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 99%;
+	-webkit-animation: quantumWizPaperInputRemoveUnderline .3s cubic-bezier(0.4,0,0.2,1);
+	animation: quantumWizPaperInputRemoveUnderline .3s cubic-bezier(0.4,0,0.2,1);
+	transform-origin: 232px 50% 0px;
+}
+#ProductDetails .ProductMain .hasValue #InStockNotifyLabel {
+	-webkit-transform: scale(.57);
+	transform: scale(.57);
+	top: 18px;
+	color: rgba(0,0,0,0.54);
+	width: 137%;
+}
+#ProductDetails .ProductMain .isFocused #InStockNotifyLabel {
+	-webkit-transform: scale(.57);
+	transform: scale(.57);
+    color: #6ADA78;
+	top: 15px;
+	width: 137%;
+}
+#ProductDetails .ProductMain .isFocused #InStockNotifyInline .animatedUnderline {
+	-webkit-animation: quantumWizPaperInputAddUnderline .3s cubic-bezier(0.4,0,0.2,1);
+	animation: quantumWizPaperInputAddUnderline .3s cubic-bezier(0.4,0,0.2,1);
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1)
+}
+#ProductDetails .ProductMain #InStockNotifyInvalidEmail {
+	color: #F47D77!important;
+	font-weight: lighter;
+	position: absolute;
+	top: -29px;
+	text-align: center;
+	left: 70px;
+	padding: 5px 10px;
+	border-radius: 3px;
+	background-color: #fff;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+#ProductDetails .ProductMain #InStockNotifyInvalidEmail:before, 
+#ProductDetails .ProductMain #InStockNotifyInvalidEmail:after {
+	background-color: #fff;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #fff;
+	display: block;
+	content: '';
+	position: absolute;
+	left: 86px;
+	top: 24px;
+	/* -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+	/* -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+	/* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+#ProductDetails .ProductMain #InStockNotifyInvalidEmail:before {
+	border-left: 10px solid transparent;
+	border-right: 9px solid transparent;
+	border-top: 9px solid;
+	border-top-color: inherit;
+	top: 26px;
+	left: 86px;
+}
+#ProductDetails .ProductMain #InStockNotifyButton {
+	width: 20%;
+	display: table-cell;
+	margin: 0;
+	vertical-align: middle;
+}
+#ProductDetails .ProductMain #InStockNotifyClick {
+	width: 100% !important;
+}
+#ProductDetails .ProductMain .OutOfStockMessage #InStockNotifyInline #InStockNotifyClick {
+	text-shadow: none;
+	box-shadow: none;
+	font-family: Questrial;
+	font-weight: normal;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 2px solid #39b54a;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	margin: 0;
+	font-size: 9px;
+	height: 33px;
+}
+#ProductDetails .ProductMain .OutOfStockMessage #InStockNotifyInline #InStockNotifyClick:hover {
+	background-color: #fff;
+	color: #39b54a;
+}
+#ProductDetails .ProductMain #InStockNotifyComplete {
+	color: rgba(0,0,0,0.54);
+	font-weight: 100;
+	font-size: 14px;
+	text-align: center;
+	height: 75px;
+	display: table-cell;
+	vertical-align: middle;
+}
+#InStockNotifyComplete .fa-check-circle {
+    color: #6ADA78;
+    font-size: 40px;
+    vertical-align: top;
+    display: table-cell;
+    width: 13%;
+}
+#InStockNotifyComplete span {
+    display: table-cell;
+}
+@keyframes quantumWizPaperInputRemoveUnderline {
+    0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        opacity: 1
+    }
+
+    to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes quantumWizPaperInputRemoveUnderline {
+    0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        opacity: 1
+    }
+
+    to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        opacity: 0
+    }
+}
+
+@keyframes quantumWizPaperInputAddUnderline {
+    0% {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0)
+    }
+
+    to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+}
+
+@-webkit-keyframes quantumWizPaperInputAddUnderline {
+    0% {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0)
+    }
+
+    to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+}

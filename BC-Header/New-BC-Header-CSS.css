@@ -1,0 +1,830 @@
+/* Site Wide to go with new header */
+body#home {
+}
+.Content.Widest.Two#LayoutColumn1 {
+	top: inherit;
+}
+.Left.fleft {
+	padding-right: 54px;
+}
+.green {
+	color: #39b54a;
+}
+.lightgreen {
+	color: #6ADA78;
+}
+/* caret arrow down up */
+.fa-caret-up:before {
+	content: "\f0d8";
+}
+.fa-caret-down:before {
+	content: "\f0d7";
+}
+/* mobile */
+.fa-mobile-phone:before, .fa-mobile:before {
+  content: "\f10b";
+}
+/* envelope */
+.fa-envelope:before {
+	content: "\f0e0";
+}
+/* home */
+.fa-home:before {
+	content: "\f015";
+}
+
+/* Category list improvements */
+#biosnippet {
+	display: none;
+}
+.page .main {
+	margin-top: 20px;
+}
+.page .main .inner .Left.fleft {
+	border: 2px solid #eaeaea;
+	padding: 0 15px;
+	margin: 0 30px 0 0;
+	width: 200px;
+}
+.page .main .inner .Left #SideCategoryList .treeview li {
+	margin: 0;
+	border: 0;
+}
+.page .main .inner .Left #SideCategoryList .treeview li a {
+	border-bottom: 0;
+}
+
+/* New Header */
+.header {
+}
+
+/* Top Header - top section of three section header */
+.header .TopMenu {
+    background-color: #fff;
+    border-top: 0; 
+    border-bottom: 3px solid #eeeeee;
+    color: #666;
+}
+.header .TopMenu .inner {
+    padding: 0;
+    line-height: 30px;
+}
+.header .TopMenu .inner #loginContainer {
+    float: left;
+}
+.header .TopMenu .inner #loginContainer #loginGreeting #loginGreetingName {
+    font-weight: 600;
+}
+.header .TopMenu .inner #loginContainer #loginGreeting a {
+    color: #39B54A;
+}
+.header .TopMenu .inner #loginContainer #loginGreeting a:hover {
+    color: #666;
+}
+.header .TopMenu .inner #newTopMenu {
+    color: #777;
+    position: relative;
+    overflow: visible;
+}
+.header .TopMenu .inner #newTopMenu > li {
+    line-height: 30px;
+}
+.header .TopMenu .inner #newTopMenu li a {
+    color:#777;
+}
+.header .TopMenu .inner #newTopMenu li a:hover {
+    color:#39b54a
+}
+#wikiMenuTrigger {
+	position: relative;
+	padding: 0;
+}
+#wikiMenuTrigger > a {
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+    line-height: 24px !important;
+    padding: 2px 9px !important;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px 1px 0 1px;
+    background-color: #fff;
+}
+#wikiMenuTrigger.open > a {
+    border-color: #999;
+    box-shadow: 2px -4px 4px 3px rgba(0,0,0,0.1);
+    color: #39B54A;
+    z-index: 999 !important;
+    position: relative;
+}
+#wikiMenuDropDown {
+    border: solid 1px #999;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 28px;
+    z-index: 101;
+    padding: 13px 27px;
+    left: -410px;
+    width: 730px;
+    display: none;
+}
+#wikiMenuDropDown ul.wiki-item-menu {
+    position: static;
+    float: none;
+    overflow: visible;
+    white-space: normal;
+}
+#wikiMenuDropDown ul.wiki-item-menu li.wiki-item {
+    display: block;
+    text-align: left;
+    padding: 2% 1%;
+    font-size: 15px;
+    border-radius: 3px;
+    display: inline-block;
+    width: 31%;
+}
+#wikiMenuDropDown ul.wiki-item-menu li.wiki-item:hover {
+    border-left-color: #39B54A;
+    background: #F3F4F4;
+}
+#wikiMenuDropDown ul.wiki-item-menu li.wiki-item a .wiki-inner > div {
+    vertical-align: middle;
+}
+#wikiMenuDropDown ul.wiki-item-menu li.wiki-item a .wiki-inner .wiki-left img {
+    width: 37px;
+    height: 37px;
+}
+#wikiMenuDropDown ul.wiki-item-menu li.wiki-item a .wiki-inner .wiki-right {
+	    white-space: normal;
+    width: 170px;
+    font-size: 13px;
+    line-height: 17px;
+}
+.header .TopMenu .inner #newTopMenu #helpMenuTrigger {
+    line-height: 30px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 106;
+    cursor: default;
+}
+.header .TopMenu .inner #newTopMenu #helpMenuTrigger.open {
+    padding: 0 !important;
+}
+.header .TopMenu .inner #newTopMenu #helpMenuTrigger.open .helpMenuText {
+    line-height: 24px !important;     
+    padding: 2px 9px !important;
+    border-color: #999;     
+    border-style: solid;     
+    border-width: 1px 1px 0 1px;     
+    background-color: #fff;     
+    box-shadow: 2px -4px 4px 3px rgba(0,0,0,0.1);     
+    color: #39B54A;     
+    z-index: 999 !important;
+    position: relative;
+}
+.header .TopMenu .inner #newTopMenu #helpMenuDropDown {
+    border: solid 1px #999;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 28px;
+    z-index:101;
+    padding: 4px 4px 13px;
+    right: -2px;
+    display: none;
+}
+.header .TopMenu .inner #newTopMenu #helpMenuDropDown ul {
+    position: static;
+    float: none;
+    overflow: visible;
+}
+.header .TopMenu .inner #newTopMenu #helpMenuDropDown li {
+    display: block;
+    text-align: center;
+    padding: 7px 10px;
+    font-size: 15px;
+}
+.header .TopMenu .inner #newTopMenu #helpMenuDropDown li .customerService {
+    text-transform: uppercase;
+    cursor: default;
+}
+.header .TopMenu .inner #newTopMenu #helpMenuDropDown li .fa-mobile {
+    font-size: 28px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+.header .TopMenu .inner #newTopMenu #helpMenuDropDown li .phoneNumber {
+    vertical-align: middle;
+    font-size: 15px;
+}
+.header .TopMenu .inner #newTopMenu #helpMenuDropDown li .phoneTime {
+    display: block;
+    font-size: 10px;
+}
+.header .TopMenu .inner #newTopMenu #helpMenuDropDown li .helpMenuEmailLink {
+    font-size: 15px;
+}
+.header .TopMenu .inner #newTopMenu #helpMenuDropDown li .btn {
+    height:auto;
+    padding: 6px;
+    color:#fff;
+}
+.header .TopMenu .inner #newTopMenu #helpMenuDropDown li .btn:hover {
+    color:#39b54a;
+}
+
+/* Main Header - middle section of three section header */
+.header #Header {
+    margin: 10px 0;
+}
+.header #Header .header-logo {
+    height: auto;
+}
+.header #Header .header-logo a img {
+    width: 50px;
+    height: 50px;
+}
+.header #Header .header-logo-text {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 0 0 4px;
+}
+.header #Header #LayoutColumn1 {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.header #Header .headerSearchContainer {
+    overflow: auto;
+    width: 65%;
+    margin-right: 1%;
+}
+.header #Header .headerSearchContainer #SearchForm {
+    float: left;
+    display: block;
+    width: 100%;
+    margin: 3px auto;
+    border: 2px solid #39B54A;
+    border-radius: 3px;
+    min-height: 40px;
+    box-sizing: border-box;
+}
+.header #Header .headerSearchContainer #SearchForm form {
+}
+.header #Header .headerSearchContainer #SearchForm input.Textbox#search_query {
+    float: none;
+    height: auto;
+    line-height: 3;
+    line-height: 38px;
+    font-size: 17px;
+    width: 80%;
+}
+.header #Header .headerSearchContainer #SearchForm .Button {
+    float: right;
+    height: 40px;
+    color: #fff;
+    background-color: #39B54A;
+    width: 40px;
+}
+.header #Header .headerSearchContainer #SearchForm .Button:hover {
+    background-color: #666;
+}
+.header #Header .search-mobile #SearchForm input.Textbox#search_query {
+    float: right;
+}
+.header #Header .search-mobile #SearchForm .Button {
+    float: left;
+}
+body table#QuickSearch.QuickSearch {
+    left: 37% !important;
+}
+.header #Header .inner #myAccountMenuTrigger {
+    display: block;
+    font-size: 13px;
+    min-width: 122px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid transparent;
+    border-width: 1px 1px 0 1px;
+}
+.header #Header .inner #myAccountMenuTrigger .myAccountHi {
+    font-size: 12px;
+}
+.header #Header .inner #myAccountMenuTrigger .myAccountMyDS {
+    font-weight: 600;
+}
+.header #Header .inner #myAccountMenuTrigger .myAccountMyDS .fa-caret.down {
+    color: #111 !important;
+}
+.header #Header .inner #myAccountMenuTrigger #myAccountMenuLink {
+    display: block;
+    padding: 10px 10px 10px 14px;
+    z-index: 100;
+    position: relative;
+    background-color: #fff;
+}
+.header #Header .inner #myAccountMenuTrigger.open {
+    border-color: #999;
+    border-style: solid;
+    border-width: 1px 1px 0 1px;
+    box-shadow: 4px -1px 4px -1px rgba(0,0,0,0.1);
+    color: #39B54A;
+    z-index: 999 !important;
+}
+.header #Header .inner #myAccountMenuDropDown {
+    border: solid 1px #999;
+    background-color: #fff;
+    box-shadow: 1px 2px 5px 2px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 50px;
+    z-index: 99;
+    right: -1px;
+    font-size: 15px;
+    display: none; 
+}
+.header #Header .inner #myAccountMenuDropDown ul {
+    margin:0;
+    padding: 10px 0;
+}
+.header #Header .inner #myAccountMenuDropDown ul li {
+    display: block;
+    text-align: left;
+    line-height: 27px;
+    width: 200px;
+}
+.header #Header .inner #myAccountMenuDropDown ul li a {
+    width: 90%;
+    display: block;
+    padding: 0 10px 0 10px;
+    margin: 6px 0 6px 15px;
+    box-sizing: border-box;
+    border-left: 4px solid #eee;
+}
+.header #Header .inner #myAccountMenuDropDown ul li a:hover {
+    border-left-color: #39B54A;
+    background: #F3F4F4;
+}
+.header #Header .inner .header-secondary {
+    top: 0;
+    position: relative;
+    margin-left: 1%;
+}
+
+/* SubHeader Header - bottom section of three section header */
+.header #subHeader {
+    background-color: #666;
+}
+.header #subHeader .inner {
+    margin: 0 auto;
+    width: 91%;    
+    max-width: 1280px;
+}
+.header #subHeader .inner {
+    color: #fff;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.header #subHeader .inner .shopByContainer {
+    vertical-align: middle;
+    height: 40px;
+    padding: 0 121px 0 68px;
+}
+.header #subHeader .inner .shopByContainer i {
+    padding: 5px;
+}
+.header #subHeader .inner .PageMenu {
+    display: block;
+    -webkit-box-flex: 7;
+    -moz-box-flex: 7;
+    width: 70%;
+    -webkit-flex: 7;
+    -ms-flex: 7;
+    flex: 7;
+}
+.header #subHeader .inner .PageMenu ul {
+    margin:0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.header #subHeader .inner .PageMenu ul li {
+    -webkit-box-flex: 1; 
+       -moz-box-flex: 1; 
+        -webkit-flex: 1; 
+            -ms-flex: 1;   
+    flex: 1;
+}
+.header #subHeader .inner .PageMenu ul li#headerPipesUnder100Link, 
+.header #subHeader .inner .PageMenu ul li#headerFeeStuffLink {
+    display: none;
+}
+.header #subHeader .inner .PageMenu ul li a {
+    text-transform: none;
+    line-height: 40px;
+    color: #eaeaea;
+    display: block;
+    padding: 0 !important;
+    text-align: center;
+}
+.header #subHeader .inner .PageMenu ul li:hover {
+    background-color: #333;
+}
+.header #subHeader .inner .PageMenu ul li:hover a {
+    color: #fff;
+}
+#headerShippingReturnsLink {
+    display: none;
+}
+.header #subHeader .inner .freeShippingContainer {
+    vertical-align: middle;
+    height: 40px;
+    -webkit-box-flex: 3;
+    -moz-box-flex: 3;
+    width: 30%;
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+}
+.header #subHeader .inner .freeShippingContainer a {
+    display: block;
+    height: 40px;
+}
+.header #subHeader .inner .freeShippingContainer .freeShippingText {
+    float: right;
+    font-style: italic;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    display: inline-block;
+    font-family: "Futura";
+    color: #fff;
+    -webkit-transition: all 0.27s ease;
+    -moz-transition: all 0.27s ease;
+    -o-transition: all 0.27s ease;
+    transition: all 0.27s ease;
+    font-size: 11px;
+}
+.header #subHeader .inner .freeShippingContainer .freeShippingTruck {
+    background-image: url('//cdn6.bigcommerce.com/s-ss4br/templates/__custom/images/dankstop-sprite.png?t=1441330339');
+    background-position: -8px -1px;
+    background-repeat: no-repeat;
+    background-size: 250%;
+    width: 37px;
+    height: 21px;
+    margin: 8px 0;
+    line-height: 40px;
+    display: inline-block;
+    float: right;
+    -moz-transform: scaleX(-1) skewX(33deg);
+    -o-transform: scaleX(-1) skewX(33deg);
+    -webkit-transform: scaleX(-1) skewX(33deg);
+    transform: scaleX(-1) skewX(33deg);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-1, M12=-0.6494075931975105, M21=0, M22=1, SizingMethod='auto expand')";
+    filter: progid:DXImageTransform.Microsoft.Matrix(
+            M11=-1,
+            M12=-0.6494075931975105,
+            M21=0,
+            M22=1,
+            SizingMethod='auto expand');
+    vertical-align: middle;
+}
+.header #subHeader .inner .freeShippingContainer .shippingLines {
+    content: "";
+    height: 40px;
+    width: 30px;
+    line-height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    margin: 0px 4px;
+    -webkit-transition: all 0.27s ease;
+    -moz-transition: all 0.27s ease;
+    -o-transition: all 0.27s ease;
+    transition: all 0.27s ease;
+}
+.header #subHeader .inner .freeShippingContainer .shippingLines:before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 20px;
+    background: #777;
+    position: relative;
+    top: 17px;
+    left: 23px;
+}
+.header #subHeader .inner .freeShippingContainer .shippingLines:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 25px;
+    background: #777;
+    position: relative;
+    top: -21px;
+    left: 18px;
+}
+.header #subHeader .inner .freeShippingContainer .shippingLines span {
+    content: "";
+    height: 1px;
+    line-height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 19px;
+    background: #eaeaea;
+    position: relative;
+    top: -3px;
+    left: 19px;
+    -webkit-transition: all 0.27s ease;
+    -moz-transition: all 0.27s ease;
+    -o-transition: all 0.27s ease;
+    transition: all 0.27s ease;
+}
+.header #subHeader .inner .freeShippingContainer .shippingLines span:before {
+    content: "";
+    height: 1px;
+    line-height: 40px;
+    display: block;
+    vertical-align: middle;
+    width: 15px;
+    background: #eaeaea;
+    position: relative;
+    top: -3px;
+    left: 9px;
+}
+.header #subHeader .inner .freeShippingContainer .shippingLines span:after {
+    content: "";
+    height: 1px;
+    line-height: 40px;
+    display: block;
+    vertical-align: middle;
+    width: 25px;
+    background: #eaeaea;
+    position: relative;
+    top: 2px;
+    left: -8px;
+}
+.header #subHeader .inner .freeShippingContainer:hover .freeShippingText {
+    color: #6ADA78;
+}
+#nav-cover {
+	visibility: hidden;
+	-ms-filter: opacity(0);
+	filter: alpha(opacity=0);
+	-webkit-opacity: 0;
+	-moz-opacity: 0;
+	-o-opacity: 0;
+	opacity: 0;
+	-webkit-transition: all 137ms;
+	-moz-transition: all 137ms;
+	-ms-transition: all 137ms;
+	-o-transition: all 137ms;
+	transition: all 137ms;
+	position: absolute;
+	top: 148px;
+	left: 0;
+	width: 100%;
+	height: calc( 100% - 148px );
+	background-color: #000;
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	z-index: 4;
+}
+.modal-open #nav-cover {
+	visibility: visible;
+    -ms-filter: opacity(.5);
+    filter: alpha(opacity=50);
+    -webkit-opacity: .5;
+    -moz-opacity: .5;
+    -o-opacity: .5;
+    opacity: .5;
+}
+
+.ProductList.MagicScroll li { min-height:auto !important; height:auto !important; }
+.ProductList.MagicScroll li .ProductPriceRating { display:none; }
+
+@media screen and (max-width: 480px) {
+/* Top Header - top section of three section header */
+/* Main Header - middle section of three section header */
+    .header #Header {
+        margin: 0;
+    }
+    .header #Header .headerSearchContainer {
+        display: none;
+    }
+    .header #Header .inner #myAccountMenuTrigger {
+        display: none;
+    }
+    .header #Header .inner .header-secondary {
+        top: 12px;
+        position: absolute;
+    }
+/* SubHeader Header - bottom section of three section header */
+    #subHeader {
+        display:none;
+    }
+/*     Front page */
+    #home .MagicScroll-horizontal .mcs-item {
+        width: 49% !important;
+    }
+}
+@media screen and (max-width: 767px) {
+/* Top Header - top section of three section header */
+/* Main Header - middle section of three section header */
+    .header #Header {
+        margin: 0;
+    }
+    .header #Header .headerSearchContainer {
+        display: none;
+    }
+    .header #Header .inner #myAccountMenuTrigger {
+        display: none;
+    }
+    .header #Header .inner .header-secondary {
+        top: 12px;
+        position: absolute;
+    }
+/* SubHeader Header - bottom section of three section header */
+    #subHeader {
+        display:none;
+    }
+/*     Front page */
+    #home .MagicScroll-horizontal .mcs-item {
+        width: 49% !important;
+    }
+}
+@media screen and (max-width: 768px) {
+/* Top Header - top section of three section header */
+/* Main Header - middle section of three section header */
+    .header #Header {
+        margin: 0;
+    }
+    .header #Header .headerSearchContainer {
+        display: none;
+    }
+    .header #Header .inner #myAccountMenuTrigger {
+        display: none;
+    }
+    .header #Header .inner .header-secondary {
+        top: 12px;
+        position: absolute;
+    }
+/* SubHeader Header - bottom section of three section header */
+    #subHeader {
+        display:none;
+    }
+/*     Front page */
+    #home .MagicScroll-horizontal .mcs-item {
+/*         width: 49% !important; */
+    }
+}
+@media screen and (device-aspect-ratio: 2/3) {
+    /* Top Header - top section of three section header */
+/* Main Header - middle section of three section header */
+    .header #Header {
+        margin: 0;
+    }
+}
+
+@media screen and (device-aspect-ratio: 40/71) {
+    /* Top Header - top section of three section header */
+/* Main Header - middle section of three section header */
+    .header #Header {
+        margin: 0;
+    }
+    .header #Header .headerSearchContainer {
+        display: none;
+    }
+    .header #Header .inner #myAccountMenuTrigger {
+        display: none;
+    }
+    .header #Header .inner .header-secondary {
+        top: 12px;
+    }
+/* SubHeader Header - bottom section of three section header */
+    #subHeader {
+        display:none;
+    }
+}
+
+@media screen and (device-aspect-ratio: 667/375) {
+    /* Top Header - top section of three section header */
+/* Main Header - middle section of three section header */
+    .header #Header {
+        margin: 0;
+    }
+    .header #Header .headerSearchContainer {
+        display: none;
+    }
+    .header #Header .inner #myAccountMenuTrigger {
+        display: none;
+    }
+    .header #Header .inner .header-secondary {
+        top: 12px;
+    }
+/* SubHeader Header - bottom section of three section header */
+    #subHeader {
+        display:none;
+    }
+}
+
+@media screen and (device-aspect-ratio: 16/9) {
+    /* Top Header - top section of three section header */
+/* Main Header - middle section of three section header */
+    .header #Header {
+        margin: 0;
+    }
+}
+
+@media screen and (device-aspect-ratio: 3/4) {
+    /* Top Header - top section of three section header */
+/* Main Header - middle section of three section header */
+    .header #Header {
+        margin: 0;
+    }
+}
+
+@media only screen and (device-width : 800px) and (orientation: portrait) {
+	.header #Header .inner #myAccountTrigger {
+		margin: 0 20px;
+	}
+}
+@media only screen and (width : 603px) and (orientation: portrait) {
+	.header #Header .inner #myAccountTrigger {
+		margin: 0 20px;
+	}
+}
+@media only screen and (width : 961px) and (orientation: landscape) {
+	.header #Header .inner #myAccountTrigger {
+		margin: 0 20px;
+	}
+}
+/*– iPad 1Gen/2Gen iPad Mini, Kindle Fire –*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1) and (max-device-width:1024px) {
+	.header #Header .inner #myAccountTrigger {
+		margin: 0 20px;
+	}
+}
+/*– Nexus 7 (2012)–*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.325) and (max-device-width:1280px) {
+	.header #Header .inner #myAccountTrigger {
+		margin: 0 20px;
+	}
+}
+/*– Nexus 7, Samsung Galaxy Note III, iPad 3 / 4 –*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width:1920px) {
+	.header #Header .inner #myAccountTrigger {
+		margin: 0 20px;
+	}
+}
+/*– iPad 3Gen/4Gen, –*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width:2048px) {
+	.header #Header .inner #myAccountTrigger {
+		margin: 0 20px;
+	}
+}
+/*– Macbook Pro 13″, Samsung Nexus 10 –*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width:2560px) {
+	.header #Header .inner #myAccountTrigger {
+		margin: 0 20px;
+	}
+}
+/*– Macbook Pro 15″ –*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width:2880px) {
+	.header #Header .inner #myAccountTrigger {
+		margin: 0 20px;
+	}
+}

@@ -1,0 +1,38 @@
+<script type="text/javascript">
+// Out of Stock / Sold Out Ribbon
+    $('<style type="text/css">\
+		/* Out Of Stock Ribbon CSS */\
+		.sold-out-overlay {\
+			position: absolute;\
+			z-index: 1;\
+			top: 8%;\
+			left: -28%;\
+			background-color: rgba(165, 165, 165, 0.5);\
+			width: 100%;\
+			text-align: center;\
+			font-size: 14px;\
+			line-height: 40px;\
+			color: black;\
+			-webkit-transform:rotate(-45deg);\
+			-o-transform:rotate(-45deg);\
+			transform: rotate(-45deg);\
+			text-transform: uppercase;\
+			text-shadow: 0px 0.5px 1px #fff;\
+		}\
+		</style>')
+        .appendTo('head');
+    
+	function applySoldOutRibbons() {
+		var soldOutOverlay = ('<span class="sold-out-overlay">Out of Stock</span>');
+		$(".ProductList li .ProductActionAdd a:contains('Sold out')").each(function( index ) {
+			$(this).parents('li').addClass('SoldOut'); 
+			$(this).parents('li').find('.ProductImage a').append(soldOutOverlay);
+			$(this).parent().parent().find('.on-sale-badge').hide();
+		});
+	};
+
+	// Out of Stock selector
+	$(document).ready(function() {
+		applySoldOutRibbons();
+	});
+</script>
